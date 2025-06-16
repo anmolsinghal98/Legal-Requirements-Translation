@@ -209,7 +209,7 @@ Key dependencies include:
 
 ## Artifact Location
 
-The artifact can be found at: link
+The artifact can be found at: https://doi.org/10.5281/zenodo.15670090
 
 ## How to cite
 
