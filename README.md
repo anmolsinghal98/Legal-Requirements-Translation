@@ -78,15 +78,12 @@ This repository contains code and tools for translating legal requirements into 
   - Checks for runtime errors
 
 ### Evaluation Notebooks
-- `Compute-attribute-level-scores.ipynb`: Calculates attribute-level performance metrics:
-  - Computes average scores for each attribute
-  - Handles multiple result dataframes
-  - Generates aggregated statistics
 
 - `Compute-pass-at-k.ipynb`: Implements pass@k evaluation:
   - Calculates pass rates across multiple attempts
   - Consolidates best results
   - Generates distribution statistics
+  - Analyzes attribute-level scores
 
 ### Test Files (`/test files`)
 Contains CSV files with test cases from different states:
@@ -99,6 +96,9 @@ Contains CSV files with test cases from different states:
 
 ### Data
 - `development-set.csv`: Contains the development dataset for the translation model
+
+### Intermediate Results
+- Contains the sample output on `MS.csv` in the test set. 
 
 ## System Requirements
 
@@ -163,7 +163,7 @@ jupyter notebook
 ```
 
 ### Obtaining Intermediate Results within 60 minutes
-Executing the pipeline across all the sentences in the development and test set may take longer than 60 minutes. This is because the OpenAI API response time can depend on several external factors such as downtime, response latency, and request overload. Consequently, we also provide intermediate results by running the pipeline across a single test file `MS.csv`. 
+Executing the pipeline across all the sentences in the development and test set may take longer than 60 minutes. This is because the OpenAI API response time can depend on several external factors such as downtime, response latency, and request overload. Consequently, we also provide `intermediate-results` by running the pipeline across a single test file `MS.csv`. 
 
 
 ## Usage Instructions
@@ -173,15 +173,16 @@ Executing the pipeline across all the sentences in the development and test set 
    - Understand the code generation pipeline
    - Study example translations
    - Learn best practices for legal requirement translation
+   - Execute the notebook by following the instructions provided in comments
 
 2. Use the testing notebooks to evaluate translations:
    - Compilation testing for validating compilation errors 
    - Structural testing for running structural tests
    - Semantic testing for running semantic tests
 
-3. Use evaluation notebooks to compute metrics:
-   - Attribute-level scores for attribute-level analysis
+3. Use the pass@k evaluation notebook to compute metrics:
    - Pass@k for checking how many test examples pass all the test cases in k passes
+   - Calculate the attribute-level accuracy, precision and recall scores 
 
 ## Dependencies
 
@@ -199,7 +200,7 @@ Key dependencies include:
 2. For reproducing the results on the test set, follow the steps in the `Code-with-Demo-with-Class.ipynb` notebook. Generate model outputs for each test file and compute the average scores by executing the testing and evaluation notebooks. 
 3. A potential threat to reproducibility is that GPT-4o is a closed-source model by OpenAI. The scores reported in the paper may be subject to minor changes due to repeated updates to the GPT-4o model. Nevertheless, the key findings reported in the paper are likely to remain valid.
 4. A potential issue that may lead to errors in testing and evaluation can be the presence of unwanted spaces and characters at the beginning and end of model output, which can affect code compilability. We have largely mitigated this issue by including the necessary post-processing steps. However, in rare occurrences, we cannot rule out the need for minor updates to post-processing that may be necessary to the output. To support these efforts, we have pointed out the lines in the code that may require changes in the comments. 
-5. Generating the output for all the folds in the development set and the test set may take longer than 60 minutes. Therefore, we have provided intermediate results by executing the code on a single test file `MS.csv`. 
+5. Generating the output for all the folds in the development set and the test set may take longer than 60 minutes. Therefore, we have provided intermediate results by executing the code on a single test file `MS.csv`. The notebooks also contain the output after executing the same test file. 
 
 ## Author Information
 

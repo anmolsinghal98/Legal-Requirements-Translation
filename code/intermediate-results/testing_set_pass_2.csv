@@ -1,0 +1,196 @@
+text,code,tags
+"(1) This section applies to any person who conducts business in this state and who, in the ordinary course of the person's business functions, owns, licenses or maintains personal information of any resident of this state.","```python
+s = Section(""(1)"")
+i = Information(s, Expression(s, ""This section applies to any person who conducts business in this state and who, in the ordinary course of the person's business functions, owns, licenses or maintains personal information of any resident of this state""))
+```",['#condition']
+"(2) For purposes of this section, the following terms shall have the meanings ascribed unless the context clearly requires otherwise:
+(a) ""Breach of security"" means unauthorized acquisition of electronic files, media, databases or computerized data containing personal information of any resident of this state when access to the personal information has not been secured by encryption or by any other method or technology that renders the personal information unreadable or unusable;","```python
+s2 = Section(sectionNumber=""(2)"")
+
+sa = Section(""(a)"")
+s2.add_subsection(sa)
+
+e_breach_of_security = Expression(section=sa, text=""Breach of security"")
+
+d_breach_of_security = Definition(sa, defined_term=e_breach_of_security)
+
+d_meaning_exp = Expression(sa, ""unauthorized acquisition of electronic files, media, databases or computerized data containing personal information of any resident of this state when access to the personal information has not been secured by encryption or by any other method or technology that renders the personal information unreadable or unusable"")
+d_breach_of_security.meaning.append(d_meaning_exp)
+```","['#definition', '#continuation']"
+"(2) For purposes of this section, the following terms shall have the meanings ascribed unless the context clearly requires otherwise:
+(b) ""Personal information"" means an individual's first name or first initial and last name in combination with any one or more of the following data elements:
+
+(i) Social security number;
+
+(ii) Driver's license number, state identification card number or tribal identification card number; or
+
+(iii) An account number or credit or debit card number in combination with any required security code, access code or password that would permit access to an individual's financial account; ""personal information"" does not include publicly available information that is lawfully made available to the general public from federal, state or local government records or widely distributed media;
+
+(iv) ""Affected individual"" means any individual who is a resident of this state whose personal information was, or is reasonably believed to have been, intentionally acquired by an unauthorized person through a breach of security.","```python
+s2 = Section(""(2)"")
+
+# Definition for ""Personal information""
+sb = Section(""(b)"")
+s2.add_subsection(sb)
+e_personal_info = Expression(sb, ""Personal information"")
+d_personal_info = Definition(sb, e_personal_info)
+d_meaning_exp = Expression(sb, ""an individual's first name or first initial and last name in combination with any one or more of the following data elements:"")
+d_personal_info.meaning.append(d_meaning_exp)
+
+# Subsections for data elements
+sb_i = Section(""(i)"")
+sb.add_subsection(sb_i)
+e_ssn = Expression(sb_i, ""Social security number"")
+d_meaning_exp.includes.append(e_ssn)
+
+sb_ii = Section(""(ii)"")
+sb.add_subsection(sb_ii)
+e_dl = Expression(sb_ii, ""Driver's license number, state identification card number or tribal identification card number"")
+d_meaning_exp.includes.append(e_dl)
+
+sb_iii = Section(""(iii)"")
+sb.add_subsection(sb_iii)
+e_account = Expression(sb_iii, ""An account number or credit or debit card number in combination with any required security code, access code or password that would permit access to an individual's financial account"")
+d_meaning_exp.includes.append(e_account)
+
+# Exclusion for ""personal information""
+e_exclusion = Expression(sb, ""publicly available information that is lawfully made available to the general public from federal, state or local government records or widely distributed media"")
+d_personal_info.exclusions.append(e_exclusion)
+
+# Definition for ""Affected individual""
+sb_iv = Section(""(iv)"")
+s2.add_subsection(sb_iv)
+e_affected_individual = Expression(sb_iv, ""Affected individual"")
+d_affected_individual = Definition(sb_iv, e_affected_individual)
+d_affected_individual.meaning.append(Expression(sb_iv, ""any individual who is a resident of this state whose personal information was, or is reasonably believed to have been, intentionally acquired by an unauthorized person through a breach of security""))
+```","['#definition', '#continuation', '#exclusion']"
+"(3) A person who conducts business in this state shall disclose any breach of security to all affected individuals. The disclosure shall be made without unreasonable delay, subject to the provisions of subsections (4) and (5) of this section and the completion of an investigation by the person to determine the nature and scope of the incident, to identify the affected individuals, or to restore the reasonable integrity of the data system. Notification shall not be required if, after an appropriate investigation, the person reasonably determines that the breach will not likely result in harm to the affected individuals.","```python
+s = Section(sectionNumber=""(3)"")
+
+r1 = Rule(s, Expression(s, ""A person who conducts business in this state""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(s, ""shall disclose any breach of security to all affected individuals"")
+r1.conditions.append(Expression(s, ""The disclosure shall be made without unreasonable delay""))
+ref1 = Reference(s, ""subsections (4) and (5) of this section"", target=r1)
+r1.add_follows(ref1)
+r1.conditions.append(Expression(s, ""subject to the provisions of subsections (4) and (5) of this section and the completion of an investigation by the person to determine the nature and scope of the incident, to identify the affected individuals, or to restore the reasonable integrity of the data system""))
+
+r2 = Rule(s, Expression(s, ""Notification""))
+r2.rule_type = Rule.PROHIBITION
+r2.description = Expression(s, ""shall not be required if, after an appropriate investigation, the person reasonably determines that the breach will not likely result in harm to the affected individuals"")
+r2.add_is_exception_to(r1)
+```
+","['#obligation', '#condition', '#prohibition', '#refines', '#follows']"
+"(4) Any person who conducts business in this state that maintains computerized data which includes personal information that the person does not own or license shall notify the owner or licensee of the information of any breach of the security of the data as soon as practicable following its discovery, if the personal information was, or is reasonably believed to have been, acquired by an unauthorized person for fraudulent purposes.","```python
+s4 = Section(""(4)"")
+r4 = Rule(s4, Expression(s4, ""Any person who conducts business in this state that maintains computerized data which includes personal information that the person does not own or license""))
+r4.rule_type = Rule.OBLIGATION
+r4.description = Expression(s4, ""shall notify the owner or licensee of the information of any breach of the security of the data as soon as practicable following its discovery"")
+r4.conditions.append(Expression(s4, ""the personal information was, or is reasonably believed to have been, acquired by an unauthorized person for fraudulent purposes""))
+```","['#obligation', '#condition']"
+(5) Any notification required by this section shall be delayed for a reasonable period of time if a law enforcement agency determines that the notification will impede a criminal investigation or national security and the law enforcement agency has made a request that the notification be delayed. Any such delayed notification shall be made after the law enforcement agency determines that notification will not compromise the criminal investigation or national security and so notifies the person of that determination.,"```python
+s5 = Section(""(5)"")
+r1 = Rule(s5, Expression(s5, ""Any notification required by this section""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(s5, ""shall be delayed for a reasonable period of time"")
+r1.conditions.append(Expression(s5, ""a law enforcement agency determines that the notification will impede a criminal investigation or national security and the law enforcement agency has made a request that the notification be delayed""))
+
+r2 = Rule(s5, Expression(s5, ""Any such delayed notification""))
+r2.rule_type = Rule.OBLIGATION
+r2.description = Expression(s5, ""shall be made"")
+r2.conditions.append(Expression(s5, ""after the law enforcement agency determines that notification will not compromise the criminal investigation or national security and so notifies the person of that determination""))
+r2.add_follows(r1)
+```","['#obligation', '#condition']"
+"(6) Any notice required by the provisions of this section may be provided by one (1) of the following methods: (a) written notice; (b) telephone notice; (c) electronic notice, if the person's primary means of communication with the affected individuals is by electronic means or if the notice is consistent with the provisions regarding electronic records and signatures set forth in 15 USCS 7001; or (d) substitute notice, provided the person demonstrates that the cost of providing notice in accordance with paragraph (a), (b) or (c) of this subsection would exceed Five Thousand Dollars ($5,000.00), that the affected class of subject persons to be notified exceeds five thousand (5,000) individuals or the person does not have sufficient contact information. Substitute notice shall consist of the following: electronic mail notice when the person has an electronic mail address for the affected individuals; conspicuous posting of the notice on the website of the person if the person maintains one; and notification to major statewide media, including newspapers, radio and television.","```python
+s = Section(sectionNumber=""(6)"")
+
+# General Rule: Notice may be provided by one of the following methods
+r1 = Rule(s, Expression(s, ""Any notice required by the provisions of this section""))
+r1.rule_type = Rule.PERMISSION
+r1.description = Expression(s, ""may be provided by one (1) of the following methods:"")
+
+# Method (a): Written notice
+sa = Section(""(a)"")
+s.add_subsection(sa)
+ea = Expression(sa, ""written notice"")
+r1.description.includes.append(ea)
+
+# Method (b): Telephone notice
+sb = Section(""(b)"")
+s.add_subsection(sb)
+eb = Expression(sb, ""telephone notice"")
+r1.description.includes.append(eb)
+
+# Method (c): Electronic notice
+sc = Section(""(c)"")
+s.add_subsection(sc)
+ec = Expression(sc, ""electronic notice, if the person's primary means of communication with the affected individuals is by electronic means or if the notice is consistent with the provisions regarding electronic records and signatures set forth in 15 USCS 7001"")
+r1.description.includes.append(ec)
+ref1 = Reference(sc, ""15 USCS 7001"", target=r1)
+r1.add_follows(ref1)
+
+# Method (d): Substitute notice
+sd = Section(""(d)"")
+s.add_subsection(sd)
+ed = Expression(sd, ""substitute notice, provided the person demonstrates that the cost of providing notice in accordance with paragraph (a), (b) or (c) of this subsection would exceed Five Thousand Dollars ($5,000.00), that the affected class of subject persons to be notified exceeds five thousand (5,000) individuals or the person does not have sufficient contact information"")
+r1.description.includes.append(ed)
+ref2 = Reference(sd, ""paragraph (a), (b) or (c) of this subsection"", target=r1)
+r1.add_follows(ref2)
+
+r2 = Rule(sd, Expression(sd, ""substitute notice""))
+r2.rule_type = Rule.OBLIGATION
+r2.description = Expression(sd, ""shall consist of the following:"")
+
+# Substitute notice - Electronic mail notice
+sda = Section(""(a)"")
+sd.add_subsection(sda)
+eda = Expression(sda, ""electronic mail notice when the person has an electronic mail address for the affected individuals"")
+r2.description.includes.append(eda)
+
+# Substitute notice - Conspicuous posting
+sdb = Section(""(b)"")
+sd.add_subsection(sdb)
+edb = Expression(sdb, ""conspicuous posting of the notice on the website of the person if the person maintains one"")
+r2.description.includes.append(edb)
+
+# Substitute notice - Notification to major statewide media
+sdc = Section(""(c)"")
+sd.add_subsection(sdc)
+edc = Expression(sdc, ""notification to major statewide media, including newspapers, radio and television"")
+r2.description.includes.append(edc)
+```","['#obligation', '#condition', '#permission', '#follows', '#continuation']"
+"(7) Any person who conducts business in this state that maintains its own security breach procedures as part of an information security policy for the treatment of personal information, and otherwise complies with the timing requirements of this section, shall be deemed to be in compliance with the security breach notification requirements of this section if the person notifies affected individuals in accordance with the person's policies in the event of a breach of security. Any person that maintains such a security breach procedure pursuant to the rules, regulations, procedures or guidelines established by the primary or federal functional regulator, as defined in 15 USCS 6809(2), shall be deemed to be in compliance with the security breach notification requirements of this section, provided the person notifies affected individuals in accordance with the policies or the rules, regulations, procedures or guidelines established by the primary or federal functional regulator in the event of a breach of security of the system.","```python
+s = Section(""(7)"")
+
+# First Rule
+r1 = Rule(s, Expression(s, ""Any person who conducts business in this state""))
+r1.rule_type = Rule.PERMISSION
+r1.description = Expression(s, ""shall be deemed to be in compliance with the security breach notification requirements of this section"")
+c1a = Expression(s, ""maintains its own security breach procedures as part of an information security policy for the treatment of personal information"")
+c1b = Expression(s, ""otherwise complies with the timing requirements of this section"")
+c1c = Expression(s, ""the person notifies affected individuals in accordance with the person's policies in the event of a breach of security"")
+r1.conditions.extend([c1a, c1b, c1c])
+
+# Second Rule
+r2 = Rule(s, Expression(s, ""Any person that maintains such a security breach procedure pursuant to the rules, regulations, procedures or guidelines established by the primary or federal functional regulator""))
+r2.rule_type = Rule.PERMISSION
+r2.description = Expression(s, ""shall be deemed to be in compliance with the security breach notification requirements of this section"")
+c2 = Expression(s, ""the person notifies affected individuals in accordance with the policies or the rules, regulations, procedures or guidelines established by the primary or federal functional regulator in the event of a breach of security of the system"")
+r2.conditions.append(c2)
+
+# Reference to 15 USCS 6809(2)
+ref1 = Reference(s, ""15 USCS 6809(2)"", r2)
+r2.add_follows(ref1)
+```","['#condition', '#refined_by', '#permission', '#follows', '#reference']"
+"(8) Failure to comply with the requirements of this section shall constitute an unfair trade practice and shall be enforced by the Attorney General; however, nothing in this section may be construed to create a private right of action.","```python
+s8 = Section(sectionNumber=""8"")
+
+r1 = Rule(s8, Expression(s8, ""Failure to comply with the requirements of this section""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(s8, ""shall constitute an unfair trade practice and shall be enforced by the Attorney General"")
+
+r2 = Rule(s8, Expression(s8, ""nothing in this section""))
+r2.rule_type = Rule.PROHIBITION
+r2.description = Expression(s8, ""may be construed to create a private right of action"")
+r2.add_is_exception_to(r1)
+```","['#refines', '#prohibition', '#penalty']"
