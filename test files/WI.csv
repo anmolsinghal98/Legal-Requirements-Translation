@@ -1,0 +1,280 @@
+text,code,tags
+"134.98 Notice of unauthorized acquisition of personal information.
+(1) Definitions. In this section:
+(a)
+1. ""Entity"" means a person, other than an individual, that does any of the following:
+a. Conducts business in this state and maintains personal information in the ordinary course of business.
+b. Licenses personal information in this state.
+c. Maintains for a resident of this state a depository account as defined in s. 815.18 (2) (e).
+d. Lends money to a resident of this state.
+2. ""Entity"" includes all of the following:
+a. The state and any office, department, independent agency, authority, institution, association, society, or other body in state government created or authorized to be created by the constitution or any law, including the legislature and the courts.
+b. A city, village, town, or county.
+(am) ""Name"" means an individual's last name combined with the individual's first name or first initial.","# Creation of Section 134.98 with subsection (1)
+s134_98 = Section(""134.98"", ""Notice of unauthorized acquisition of personal information"")
+
+s1 = Section(""(1)"", ""Definitions"")
+s134_98.add_subsection(s1)
+
+# Define ""Entity"" with its meanings and inclusions
+e_entity = Expression(s1, ""Entity"")
+d_entity = Definition(s1, e_entity)
+
+s1_a = Section(""(a)"")
+s1.add_subsection(s1_a)
+
+s1_a1 = Section(""1"")
+s1_a.add_subsection(s1_a1)
+
+d_entity.meaning.append(Expression(s1_a1, ""a person, other than an individual, that does any of the following:""))
+s1_a1a = Section(""a."")
+s1_a1.add_subsection(s1_a1a)
+e_maintains_personal_info = Expression(s1_a1a, ""Conducts business in this state and maintains personal information in the ordinary course of business."")
+s1_a1b = Section(""b."")
+s1_a1.add_subsection(s1_a1b)
+e_licenses_personal_info = Expression(s1_a1b, ""Licenses personal information in this state."")
+s1_a1c = Section(""c."")
+s1_a1.add_subsection(s1_a1c)
+e_maintains_depository_account = Expression(s1_a1c, ""Maintains for a resident of this state a depository account as defined in s. 815.18 (2) (e)."")
+s1_a1d = Section(""d."")
+s1_a1.add_subsection(s1_a1d)
+e_lends_money = Expression(s1_a1d, ""Lends money to a resident of this state."")
+
+d_entity.meaning[0].includes.extend([
+    e_maintains_personal_info, 
+    e_licenses_personal_info, 
+    e_maintains_depository_account, 
+    e_lends_money,
+])
+ref1=Reference(s1_a1c, ""s. 815.18 (2) (e)"", target=d_entity)
+d_entity.add_is_refined_by(ref1)
+
+s1_a2 = Section(""2"")
+s1_a.add_subsection(s1_a2)
+d_entity.meaning.append(Expression(s1_a2, ""includes all of the following""))
+s1_a2a = Section(""a."")
+s1_a2.add_subsection(s1_a2a)
+e_state_government = Expression(s1_a2a, ""The state and any office, department, independent agency, authority, institution, association, society, or other body in state government created or authorized to be created by the constitution or any law, including the legislature and the courts."")
+s1_a2b = Section(""b."")
+s1_a2.add_subsection(s1_a2b)
+e_local_government = Expression(s1_a2b, ""A city, village, town, or county."")
+
+d_entity.meaning[-1].includes.extend([
+    e_state_government,
+    e_local_government,
+])
+
+# Define ""Name""
+e_name = Expression(s1, ""Name"")
+d_name = Definition(s1, e_name)
+
+s1_am = Section(""(am)"")
+s1.add_subsection(s1_am)
+
+e_name_definition = Expression(s1_am, ""an individual's last name combined with the individual's first name or first initial."")
+d_name.meaning.append(Expression(s1_am, ""means an individual's last name combined with the individual's first name or first initial.""))","{'#definition', '#continuation'}"
+"(b) ""Personal information"" means an individual's last name and the individual's first name or first initial, in combination with and linked to any of the following elements, if the element is not publicly available information and is not encrypted, redacted, or altered in a manner that renders the element unreadable:
+1. The individual's social security number.
+2. The individual's driver's license number or state identification number.
+3. The number of the individual's financial account number, including a credit or debit card account number, or any security code, access code, or password that would permit access to the individual's financial account.
+4. The individual's deoxyribonucleic acid profile, as defined in s. 939.74 (2d) (a).
+5. The individual's unique biometric data, including fingerprint, voice print, retina or iris image, or any other unique physical representation.","s_b = Section(sectionNumber=""(b)"")
+
+e_personal_info = Expression(section=s_b, text=""Personal information"")
+d_personal_info = Definition(s_b, defined_term=e_personal_info)
+
+e_meaning = Expression(s_b, ""an individual's last name and the individual's first name or first initial, in combination with and linked to any of the following elements, if the element is not publicly available information and is not encrypted, redacted, or altered in a manner that renders the element unreadable:"")
+d_personal_info.meaning.append(e_meaning)
+
+s1 = Section(""1"")
+s_b.add_subsection(s1)
+e_ssn = Expression(s1, ""The individual's social security number."")
+s2 = Section(""2"")
+s_b.add_subsection(s2)
+e_dl = Expression(s2, ""The individual's driver's license number or state identification number."")
+s3 = Section(""3"")
+s_b.add_subsection(s3)
+e_financial = Expression(s3, ""The number of the individual's financial account number, including a credit or debit card account number, or any security code, access code, or password that would permit access to the individual's financial account."")
+s4 = Section(""4"")
+s_b.add_subsection(s4)
+e_dna_profile = Expression(s4, ""The individual's deoxyribonucleic acid profile, as defined in s. 939.74 (2d) (a)."")
+ref1=Reference(s4, ""s. 939.74 (2d) (a)"", target= d_personal_info)
+d_personal_info.add_is_refined_by(ref1)
+s5 = Section(""5"")
+s_b.add_subsection(s5)
+e_biometric = Expression(s5, ""The individual's unique biometric data, including fingerprint, voice print, retina or iris image, or any other unique physical representation."")
+
+e_meaning.includes.extend([e_ssn, e_dl, e_financial, e_dna_profile, e_biometric])","{'#definition', '#continuation'}"
+"(c) ""Publicly available information"" means any information that an entity reasonably believes is one of the following:
+1. Lawfully made widely available through any media.
+2. Lawfully made available to the general public from federal, state, or local government records or disclosures to the general public that are required to be made by federal, state, or local law","s = Section(sectionNumber=""(c)"")
+d_publicly_available_info = Definition(s, Expression(s, ""Publicly available information""))
+
+d_meaning_exp = Expression(s, ""any information that an entity reasonably believes is one of the following:"")
+d_publicly_available_info.meaning.append(d_meaning_exp)
+
+s1 = Section(""1."")
+s.add_subsection(s1)
+e_widely_available = Expression(s1, ""Lawfully made widely available through any media."")
+d_meaning_exp.includes.append(e_widely_available)
+
+s2 = Section(""2."")
+s.add_subsection(s2)
+e_gov_records = Expression(s2, ""Lawfully made available to the general public from federal, state, or local government records or disclosures to the general public that are required to be made by federal, state, or local law"")
+d_meaning_exp.includes.append(e_gov_records)","{'#definition', '#continuation'}"
+"(2) Notice required.
+(a) If an entity whose principal place of business is located in this state or an entity that maintains or licenses personal information in this state knows that personal information in the entity's possession has been acquired by a person whom the entity has not authorized to acquire the personal information, the entity shall make reasonable efforts to notify each subject of the personal information. The notice shall indicate that the entity knows of the unauthorized acquisition of personal information pertaining to the subject of the personal information.","s2 = Section(""(2)"", ""Notice required"")
+
+sa = Section(""(a)"")
+s2.add_subsection(sa)
+
+# Define the rule for the entity's obligation to notify
+r1 = Rule(sa, Expression(sa, ""an entity whose principal place of business is located in this state or an entity that maintains or licenses personal information in this state""))
+r1.rule_type = Rule.OBLIGATION
+r1.conditions.append(Expression(sa, ""knows that personal information in the entity's possession has been acquired by a person whom the entity has not authorized to acquire the personal information""))
+r1.description = Expression(sa, ""the entity shall make reasonable efforts to notify each subject of the personal information"")
+
+r2 = Rule(sa, Expression(sa, ""the notice""))
+r2.rule_type=Rule.OBLIGATION
+r2.description=Expression(sa, ""shall indicate that the entity knows of the unauthorized acquisition of personal information pertaining to the subject of the personal information"")
+r2.add_follows(r1)","{'#obligation', '#refines' , '#condition'}"
+"(b) If an entity whose principal place of business is not located in this state knows that personal information pertaining to a resident of this state has been acquired by a person whom the entity has not authorized to acquire the personal information, the entity shall make reasonable efforts to notify each resident of this state who is the subject of the personal information. The notice shall indicate that the entity knows of the unauthorized acquisition of personal information pertaining to the resident of this state who is the subject of the personal information.","s = Section(sectionNumber=""(b)"", sectionTitle="""")
+
+r1 = Rule(s, Expression(s, ""an entity whose principal place of business is not located in this state""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(s, ""the entity shall make reasonable efforts to notify each resident of this state who is the subject of the personal information"")
+r1.conditions.append(Expression(s, ""if the entity knows that personal information pertaining to a resident of this state has been acquired by a person whom the entity has not authorized to acquire the personal information""))
+
+r2 = Rule(s, Expression(s, ""The notice""))
+r2.rule_type = Rule.OBLIGATION
+r2.description = Expression(s, ""shall indicate that the entity knows of the unauthorized acquisition of personal information pertaining to the resident of this state who is the subject of the personal information"")
+r2.add_refines(r1)","{'#obligation', '#refines' , '#condition'}"
+"(bm) If a person, other than an individual, that stores personal information pertaining to a resident of this state, but does not own or license the personal information, knows that the personal information has been acquired by a person whom the person storing the personal information has not authorized to acquire the personal information, and the person storing the personal information has not entered into a contract with the person that owns or licenses the personal information, the person storing the personal information shall notify the person that owns or licenses the personal information of the acquisition as soon as practicable.","s = Section(sectionNumber=""(bm)"", sectionTitle="""")
+
+r1 = Rule(s, Expression(s, ""a person, other than an individual, that stores personal information pertaining to a resident of this state, but does not own or license the personal information""))
+r1.rule_type = Rule.OBLIGATION
+r1.conditions.append(Expression(s, ""knows that the personal information has been acquired by a person whom the person storing the personal information has not authorized to acquire the personal information""))
+r1.conditions.append(Expression(s, ""and the person storing the personal information has not entered into a contract with the person that owns or licenses the personal information""))
+r1.description = Expression(s, ""shall notify the person that owns or licenses the personal information of the acquisition as soon as practicable"")","{'#obligation' , '#condition'}"
+"(br) If, as the result of a single incident, an entity is required under par. (a) or (b) to notify 1,000 or more individuals that personal information pertaining to the individuals has been acquired, the entity shall without unreasonable delay notify all consumer reporting agencies that compile and maintain files on consumers on a nationwide basis, as defined in 15 USC 1681a(p), of the timing, distribution, and content of the notices sent to the individuals.","s = Section(sectionNumber=""(br)"", sectionTitle="""")
+
+r1 = Rule(s, Expression(s, ""the entity""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(s, ""shall without unreasonable delay notify all consumer reporting agencies that compile and maintain files on consumers on a nationwide basis, as defined in 15 USC 1681a(p), of the timing, distribution, and content of the notices sent to the individuals"")
+r1.conditions.append(Expression(s, ""If, as the result of a single incident, an entity is required under par. (a) or (b) to notify 1,000 or more individuals that personal information pertaining to the individuals has been acquired""))
+ref1 = Reference(s, ""par. (a) or (b)"", target=r1)
+r1.add_follows(ref1)
+ref2=Reference(s, ""15 USC 1681a(p)"", target=r1)
+r1.add_is_refined_by(ref2)","{'#obligation', '#refines' , '#condition'}"
+"(cm) Notwithstanding pars. (a), (b), (bm), and (br), an entity is not required to provide notice of the acquisition of personal information if any of the following applies:
+1. The acquisition of personal information does not create a material risk of identity theft or fraud to the subject of the personal information.
+2. The personal information was acquired in good faith by an employee or agent of the entity, if the personal information is used for a lawful purpose of the entity.","s_cm = Section(""cm"")
+
+e_cm = Exemption(s_cm, description=Expression(s_cm, ""an entity is not required to provide notice of the acquisition of personal information if any of the following applies""))
+ref1=Reference(s_cm, ""pars. (a), (b), (bm), and (br)"", target=e_cm)
+e_cm.add_is_exception_to(ref1)
+
+subsection_1 = Section(""1"")
+s_cm.add_subsection(subsection_1)
+expression_1 = Expression(subsection_1, ""The acquisition of personal information does not create a material risk of identity theft or fraud to the subject of the personal information."")
+e_cm.description.append(expression_1)
+
+subsection_2 = Section(""2"")
+s_cm.add_subsection(subsection_2)
+expression_2 = Expression(subsection_2, ""The personal information was acquired in good faith by an employee or agent of the entity, if the personal information is used for a lawful purpose of the entity."")
+e_cm.description.append(expression_2)","{'#obligation', '#refines' , '#condition', '#exception_to'}"
+"(3) Timing and manner of notice; other requirements.
+(a) Subject to sub. (5), an entity shall provide the notice required under sub. (2) within a reasonable time, not to exceed 45 days after the entity learns of the acquisition of personal information. A determination as to reasonableness under this paragraph shall include consideration of the number of notices that an entity must provide and the methods of communication available to the entity.","s = Section(sectionNumber=""(3)"", sectionTitle=""Timing and manner of notice; other requirements"")
+sa = Section(""(a)"", parent=s)
+s.add_subsection(sa)
+
+r1 = Rule(sa, Expression(sa, ""an entity""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(sa, ""shall provide the notice required under sub. (2) within a reasonable time, not to exceed 45 days after the entity learns of the acquisition of personal information"")
+ref1=Reference(sa, ""sub. (5)"", target=r1)
+r1.add_follows(ref1)
+ref2=Reference(sa, ""sub. (2)"", target=r1)
+r1.add_is_refined_by(ref2)
+
+r2=Rule(sa, Expression(sa, ""A determination as to reasonableness under this paragraph""))
+r2.rule_type=Rule.OBLIGATION
+r2.description=Expression(sa, ""shall include consideration of the number of notices that an entity must provide and the methods of communication available to the entity"")
+r2.add_refines(r1)","{'#obligation', '#refined_by' , '#exception_to', '#follows', '#information'}"
+"(b) An entity shall provide the notice required under sub. (2) by mail or by a method the entity has previously employed to communicate with the subject of the personal information. If an entity cannot with reasonable diligence determine the mailing address of the subject of the personal information, and if the entity has not previously communicated with the subject of the personal information, the entity shall provide notice by a method reasonably calculated to provide actual notice to the subject of the personal information.","s = Section(sectionNumber=""(b)"")
+
+r1 = Rule(s, Expression(s, ""entity""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(s, ""shall provide the notice required under sub. (2) by mail or by a method the entity has previously employed to communicate with the subject of the personal information"")
+ref1=Reference(s, ""sub. (2)"", target=r1)
+r1.add_follows(ref1)
+
+r2 = Rule(s, Expression(s, ""entity""))
+r2.rule_type = Rule.OBLIGATION
+r2.description = Expression(s, ""shall provide notice by a method reasonably calculated to provide actual notice to the subject of the personal information"")
+r2.conditions.append(Expression(s, ""an entity cannot with reasonable diligence determine the mailing address of the subject of the personal information, and if the entity has not previously communicated with the subject of the personal information""))
+r2.add_refines(r1)","{'#obligation', '#refined_by' , '#condition', '#refines'}"
+"(c) Upon written request by a person who has received a notice under sub. (2) (a) or (b), the entity that provided the notice shall identify the personal information that was acquired.","s = Section(sectionNumber=""(c)"", sectionTitle="""")
+r1 = Rule(s, Expression(s, ""entity that provided the notice""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(s, ""shall identify the personal information that was acquired"")
+r1.conditions.append(Expression(s, ""upon written request by a person who has received a notice under sub. (2) (a) or (b)""))
+ref1=Reference(s, ""sub. (2) or (b)"", target=r1)
+r1.add_follows(ref1)","{'#obligation', '#refined_by' , '#condition'}"
+"(3m) Regulated entities exempt. This section does not apply to any of the following:
+(a) An entity that is subject to, and in compliance with, the privacy and security requirements of 15 USC 6801 to 6827, or a person that has a contractual obligation to such an entity, if the entity or person has in effect a policy concerning breaches of information security.
+(b) An entity that is described in 45 CFR 164.104 (a), if the entity complies with the requirements of 45 CFR part 164.","s = Section(sectionNumber=""(3m)"", sectionTitle=""Regulated entities exempt"")
+
+e1 = Exemption(s, Expression(s, ""this section does not apply to any of the following:""))
+
+sa = Section(""(a)"")
+s.add_subsection(sa)
+e1.description.append(Expression(sa, ""An entity that is subject to, and in compliance with, the privacy and security requirements of 15 USC 6801 to 6827, or a person that has a contractual obligation to such an entity, if the entity or person has in effect a policy concerning breaches of information security.""))
+ref1=Reference(sa, ""15 USC 6801 to 6827"", target=e1)
+e1.add_follows(ref1)
+
+sb = Section(""(b)"")
+s.add_subsection(sb)
+e1.description.append(Expression(sb, ""An entity that is described in 45 CFR 164.104 (a), if the entity complies with the requirements of 45 CFR part 164."")) 
+ref2=Reference(sb, ""45 CFR part 164"", target=e1)
+e1.add_follows(ref2)
+ref3=Reference(sb, ""45 CFR 164.104 (a)"", target=e1)
+e1.add_is_refined_by(ref3)","{'#information', '#exemption', '#follows', '#refined_by'}"
+"(4) Effect on civil claims. Failure to comply with this section is not negligence or a breach of any duty, but may be evidence of negligence or a breach of a legal duty.","s = Section(sectionNumber=""(4)"", sectionTitle=""Effect on civil claims"")
+i1 = Information(s, Expression(s, ""Failure to comply with this section is not negligence or a breach of any duty may be evidence of negligence or a breach of a legal duty""))",{'#information'}
+"(5) Request by law enforcement not to notify. A law enforcement agency may, in order to protect an investigation or homeland security, ask an entity not to provide a notice that is otherwise required under sub. (2) for any period of time and the notification process required under sub. (2) shall begin at the end of that time period. Notwithstanding subs. (2) and (3), if an entity receives such a request, the entity may not provide notice of or publicize an unauthorized acquisition of personal information, except as authorized by the law enforcement agency that made the request.","s = Section(sectionNumber=""(5)"", sectionTitle=""Request by law enforcement not to notify."")
+r1 = Rule(s, Expression(s, ""A law enforcement agency""))
+r1.rule_type = Rule.PERMISSION
+r1.description = Expression(s, ""ask an entity not to provide a notice that is otherwise required under sub. (2) for any period of time"")
+r1.conditions.append(Expression(s, ""in order to protect an investigation or homeland security""))
+ref1=Reference(s, ""sub. (2)"", target=r1)
+r1.add_is_exception_to(ref1)
+
+r2 = Rule(s, Expression(s, ""the notification process required under sub. (2)""))
+r2.rule_type = Rule.OBLIGATION
+r2.description = Expression(s, ""shall begin at the end of that time period"")
+ref2=Reference(s, ""sub. (2)"", target=r2)
+r2.add_follows(ref2)
+r2.add_follows(r1)
+
+r3 = Rule(s, Expression(s, ""entity""))
+r3.rule_type = Rule.PROHIBITION
+r3.description = Expression(s, ""may not provide notice of or publicize an unauthorized acquisition of personal information"")
+r3.conditions.append(Expression(s, ""an entity receives such a request""))
+ref3=Reference(s, ""subs. (2) and (3)"", target=r3)
+r3.add_is_exception_to(ref3)
+r3.add_exception(Expression(s, ""except as authorized by the law enforcement agency that made the request""))
+r3.add_is_exception_to(r2)","{'#permission', '#condition', '#follows', '#exception', '#exception_to', '#prohibition', '#obligation'}"
+"(6m) Local ordinances or regulations prohibited. No city, village, town, or county may enact or enforce an ordinance or regulation that relates to notice or disclosure of the unauthorized acquisition of personal information.","s = Section(sectionNumber=""(6m)"", sectionTitle=""Local ordinances or regulations prohibited"")
+r1 = Rule(s, Expression(s, ""No city, village, town, or county""))
+r1.rule_type = Rule.PROHIBITION
+r1.description = Expression(s, ""may enact or enforce an ordinance or regulation that relates to notice or disclosure of the unauthorized acquisition of personal information"")",{'#prohibition'}
+"(7m) Effect of federal legislation. If the joint committee on administrative rules determines that the federal government has enacted legislation that imposes notice requirements substantially similar to the requirements of this section and determines that the legislation does not preempt this section, the joint committee on administrative rules shall submit to the legislative reference bureau for publication in the Wisconsin administrative register a notice of its determination. This section does not apply after publication of a notice under this subsection.","s7m = Section(sectionNumber=""(7m)"", sectionTitle=""Effect of federal legislation."")
+
+r1 = Rule(s7m, Expression(s7m, ""joint committee on administrative rules""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(s7m, ""shall submit to the legislative reference bureau for publication in the Wisconsin administrative register a notice of its determination"")
+r1.conditions.append(Expression(s7m, ""the joint committee on administrative rules determines that the federal government has enacted legislation that imposes notice requirements substantially similar to the requirements of this section and determines that the legislation does not preempt this section""))
+
+
+e1 = Exemption(s7m, Expression(s7m, ""This section does not apply after publication of a notice under this subsection""))
+e1.add_is_exception_to(r1)","{'#obligation', '#condition', '#exemption', '#follows'}"

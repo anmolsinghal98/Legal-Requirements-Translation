@@ -1,0 +1,1418 @@
+text,code,tags
+646A.600 Short title. ORS 646A.600 to 646A.628 shall be known as the Oregon Consumer Information Protection Act. [2007 c.759 §1; 2019 c.180 §1],"s = Section(sectionNumber=""646A.600"", sectionTitle=""Short title."")
+i = Information(s, Expression(s, ""ORS 646A.600 to 646A.628 shall be known as the Oregon Consumer Information Protection Act. [2007 c.759 §1; 2019 c.180 §1]""))","['#information', '#reference']"
+"646A.602 Definitions for ORS 646A.600 to 646A.628. As used in ORS 646A.600 to 646A.628:
+      (1)(a) ""Breach of security"" means an unauthorized acquisition of computerized data that materially compromises the security, confidentiality or integrity of personal information that a person maintains or possesses.
+      (b) ""Breach of security"" does not include an inadvertent acquisition of personal information by a person or the person's employee or agent if the personal information is not used in violation of applicable law or in a manner that harms or poses an actual threat to the security, confidentiality or integrity of the personal information.","s = Section(sectionNumber=""646A.602"", sectionTitle=""Definitions for ORS 646A.600 to 646A.628"")
+
+s1 = Section(""(1)"")
+s.add_subsection(s1)
+
+d = Definition(s1, Expression(s1, ""breach of security""))
+
+
+s1a = Section(""(a)"")
+s1.add_subsection(s1a)
+d.meaning.append(Expression(s1a, ""an unauthorized acquisition of computerized data that materially compromises the security, confidentiality or integrity of personal information that a person maintains or possesses""))
+
+s1b = Section(""(b)"")
+s1.add_subsection(s1b)
+d.exclusions.append(Expression(s1b, ""an inadvertent acquisition of personal information by a person or the person's employee or agent if the personal information is not used in violation of applicable law or in a manner that harms or poses an actual threat to the security, confidentiality or integrity of the personal information""))","{'#exclusion', '#definition'}"
+"646A.602 Definitions for ORS 646A.600 to 646A.628. As used in ORS 646A.600 to 646A.628:
+      (2) ""Consumer"" means an individual resident of this state.","# Creation of Section object for section 646A.602
+s = Section(sectionNumber=""646A.602"", sectionTitle=""Definitions for ORS 646A.600 to 646A.628"")
+
+# Subsection (2)
+s2 = Section(""(2)"")
+s.add_subsection(s2)
+
+# Definition of ""Consumer""
+e_consumer = Expression(s2, ""Consumer"")
+d_consumer = Definition(s2, defined_term=e_consumer)
+d_consumer.meaning.append(Expression(s2, ""an individual resident of this state""))",{'#definition'}
+"646A.602 Definitions for ORS 646A.600 to 646A.628. As used in ORS 646A.600 to 646A.628:
+      (3) ""Consumer report"" means a consumer report as described in section 603(d) of the federal Fair Credit Reporting Act (15 U.S.C. 1681a(d)), as that Act existed on January 1, 2020, that a consumer reporting agency compiles and maintains.","s = Section(sectionNumber=""646A.602"", sectionTitle=""Definitions for ORS 646A.600 to 646A.628"")
+
+s3 = Section(""(3)"")
+s.add_subsection(s3)
+
+e_consumer_report = Expression(section=s3, text=""Consumer report"")
+d_consumer_report = Definition(s3, defined_term=e_consumer_report)
+
+e_meaning = Expression(s3, ""a consumer report as described in section 603(d) of the federal Fair Credit Reporting Act (15 U.S.C. 1681a(d)), as that Act existed on January 1, 2020, that a consumer reporting agency compiles and maintains"")
+d_consumer_report.meaning.append(e_meaning)
+
+ref1=Reference(s3, ""section 603(d) of the federal Fair Credit Reporting Act (15 U.S.C. 1681a(d))"", target=d_consumer_report)
+d_consumer_report.add_is_refined_by(ref1)","{'#refined_by', '#definition', '#reference'}"
+"646A.602 Definitions for ORS 646A.600 to 646A.628. As used in ORS 646A.600 to 646A.628:
+      (4) ""Consumer reporting agency"" means a consumer reporting agency as described in section 603(p) of the federal Fair Credit Reporting Act (15 U.S.C. 1681a(p)) as that Act existed on January 1, 2020.","s = Section(sectionNumber=""646A.602"", sectionTitle=""Definitions for ORS 646A.600 to 646A.628"")
+s4 = Section(""(4)"")
+s.add_subsection(s4)
+d_consumer_reporting_agency = Definition(s4, Expression(s4, ""Consumer reporting agency""))
+
+e_definition = Expression(s4, ""a consumer reporting agency as described in section 603(p) of the federal Fair Credit Reporting Act (15 U.S.C. 1681a(p)) as that Act existed on January 1, 2020"")
+
+d_consumer_reporting_agency.meaning.append(e_definition)
+
+ref1=Reference(s4, ""section 603(p) of the federal Fair Credit Reporting Act (15 U.S.C. 1681a(p))"", target=d_consumer_reporting_agency)
+d_consumer_reporting_agency.add_is_refined_by(ref1)","{'#definition', '#refined_by', '#reference'}"
+"646A.602 Definitions for ORS 646A.600 to 646A.628. As used in ORS 646A.600 to 646A.628:
+(5)(a) ""Covered entity"" means a person that owns, licenses, maintains, stores, manages, collects, processes, acquires or otherwise possesses personal information in the course of the person's business, vocation, occupation or volunteer activities.
+      (b) ""Covered entity"" does not include a person described in paragraph (a) of this subsection to the extent that the person acts solely as a vendor.","s = Section(sectionNumber=""646A.600"", sectionTitle=""Definitions for ORS 646A.600 to 646A.628"")
+s5 = Section(""(5)"")
+s.add_subsection(s5)
+s5a = Section(""(a)"")
+s5.add_subsection(s5a)
+d = Definition(s5a, Expression(s5a, ""Covered entity""))
+d.meaning.append(Expression(s5a, ""a person that owns, licenses, maintains, stores, manages, collects, processes, acquires or otherwise possesses personal information in the course of the person's business, vocation, occupation or volunteer activities""))
+s5b = Section(""(b)"")
+s5.add_subsection(s5b)
+d.exclusions.append(Expression(s5b, ""a person described in paragraph (a) of this subsection to the extent that the person acts solely as a vendor""))
+ref1=Reference(s5b, ""paragraph (a) of this subsection"", target=d)","{'#exclusion', '#definition', '#refined_by', '#reference'}"
+"646A.602 Definitions for ORS 646A.600 to 646A.628. As used in ORS 646A.600 to 646A.628:
+      (6) ""Debt"" means any obligation or alleged obligation arising out of a consumer transaction.","s = Section(sectionNumber=""646A.602"", sectionTitle=""Definitions for ORS 646A.600 to 646A.628"")
+s6 = Section(""(6)"")
+s.add_subsection(s6)
+d = Definition(s6, Expression(s6, ""Debt""))
+d.meaning.append(Expression(s6, ""any obligation or alleged obligation arising out of a consumer transaction""))",{'#definition'}
+"646A.602 Definitions for ORS 646A.600 to 646A.628. As used in ORS 646A.600 to 646A.628:
+      (7) ""Encryption"" means an algorithmic process that renders data unreadable or unusable without the use of a confidential process or key.","s = Section(sectionNumber=""646A.602"", sectionTitle=""Definitions for ORS 646A.600 to 646A.628"")
+s7 = Section(""(7)"")
+s.add_subsection(s7)
+d_encryption = Definition(s7, Expression(s7, ""Encryption""))
+
+e_encryption_meaning = Expression(s7, ""an algorithmic process that renders data unreadable or unusable without the use of a confidential process or key."")
+d_encryption.meaning.append(e_encryption_meaning)",{'#definition'}
+"646A.602 Definitions for ORS 646A.600 to 646A.628. As used in ORS 646A.600 to 646A.628:
+      (8) ""Extension of credit"" means a right to defer paying debt or a right to incur debt and defer paying the debt, that is offered or granted primarily for personal, family or household purposes.","s = Section(sectionNumber=""646A.602"", sectionTitle=""Definitions for ORS 646A.600 to 646A.628"")
+s8 = Section(""(8)"")
+s.add_subsection(s8)
+
+d1 = Definition(s8, Expression(s8, ""Extension of credit""))
+d1.meaning.append(Expression(s8, ""a right to defer paying debt or a right to incur debt and defer paying the debt, that is offered or granted primarily for personal, family or household purposes""))",{'#definition'}
+"(9) ""Identity theft"" has the meaning set forth in ORS 165.800.","s = Section(sectionNumber=""(9)"")
+d_identity_theft = Definition(s, Expression(s, ""Identity theft""))
+e_identity_theft_meaning = Expression(s, ""has the meaning set forth in ORS 165.800"")
+d_identity_theft.meaning.append(e_identity_theft_meaning)
+ref1=Reference(s, ""ORS 165.800"", target=d_identity_theft)
+d_identity_theft.add_is_refined_by(ref1)","{'#definition', '#refined_by', '#reference'}"
+"(10) ""Identity theft declaration"" means a completed and signed statement that documents alleged identity theft, using a form available from the Federal Trade Commission, or another substantially similar form.","# Creation of the Section object for Section (10)
+s = Section(sectionNumber=""(10)"")
+
+# Definition and Expression for ""Identity theft declaration""
+d_identity_theft_declaration = Definition(s, Expression(s, ""Identity theft declaration""))
+d_identity_theft_declaration.meaning.append(Expression(s, ""a completed and signed statement that documents alleged identity theft, using a form available from the Federal Trade Commission, or another substantially similar form""))",{'#definition'}
+"(11) ""Person"" means an individual, private or public corporation, partnership, cooperative, association, estate, limited liability company, organization or other entity, whether or not organized to operate at a profit, or a public body as defined in ORS 174.109.","s = Section(sectionNumber=""(11)"")
+d_person = Definition(s, Expression(s, ""Person""))
+d_person.meaning.append(Expression(s, ""an individual, private or public corporation, partnership, cooperative, association, estate, limited liability company, organization or other entity, whether or not organized to operate at a profit, or a public body as defined in ORS 174.109""))
+ref1=Reference(s, ""ORS 174.109"", target= d_person)
+d_person.add_is_refined_by(ref1)","{'#definition', '#refined_by'}"
+"(12)(a) ""Personal information"" means:
+      (A) A consumer's first name or first initial and last name in combination with any one or more of the following data elements, if encryption, redaction or other methods have not rendered the data elements unusable or if the data elements are encrypted and the encryption key has been acquired:
+      (i) A consumer's Social Security number;
+      (ii) A consumer's driver license number or state identification card number issued by the Department of Transportation;
+      (iii) A consumer's passport number or other identification number issued by the United States;
+      (iv) A consumer's financial account number, credit card number or debit card number, in combination with any required security code, access code or password that would permit access to a consumer's financial account, or any other information or combination of information that a person reasonably knows or should know would permit access to the consumer's financial account;
+      (v) Data from automatic measurements of a consumer's physical characteristics, such as an image of a fingerprint, retina or iris, that are used to authenticate the consumer's identity in the course of a financial transaction or other transaction;
+      (vi) A consumer's health insurance policy number or health insurance subscriber identification number in combination with any other unique identifier that a health insurer uses to identify the consumer; or
+      (vii) Any information about a consumer's medical history or mental or physical condition or about a health care professional's medical diagnosis or treatment of the consumer.
+      (B) A user name or other means of identifying a consumer for the purpose of permitting access to the consumer's account, together with any other method necessary to authenticate the user name or means of identification.
+      (C) Any of the data elements or any combination of the data elements described in subparagraph (A) or (B) of this paragraph without the consumer's user name, or the consumer's first name or first initial and last name, if:
+      (i) Encryption, redaction or other methods have not rendered the data element or combination of data elements unusable; and
+      (ii) The data element or combination of data elements would enable a person to commit identity theft against a consumer.
+      (b) ""Personal information"" does not include information in a federal, state or local government record, other than a Social Security number, that is lawfully made available to the public.","s = Section(sectionNumber=""(12)(a)"")
+d_personal_info = Definition(s, defined_term=Expression(s, ""Personal information""))
+
+s_A = Section(""(A)"")
+s.add_subsection(s_A)
+e_combination = Expression(s_A, ""A consumer's first name or first initial and last name in combination with any one or more of the following data elements, if encryption, redaction or other methods have not rendered the data elements unusable or if the data elements are encrypted and the encryption key has been acquired:"")
+
+d_personal_info.meaning.append(e_combination)
+
+s_i = Section(""(i)"")
+s_A.add_subsection(s_i)
+e_ssn = Expression(s_i, ""A consumer's Social Security number"")
+s_ii = Section(""(ii)"")
+s_A.add_subsection(s_ii)
+e_dl = Expression(s_ii, ""A consumer's driver license number or state identification card number issued by the Department of Transportation"")
+s_iii = Section(""(iii)"")
+s_A.add_subsection(s_iii)
+e_passport = Expression(s_iii, ""A consumer's passport number or other identification number issued by the United States"")
+s_iv = Section(""(iv)"")
+s_A.add_subsection(s_iv)
+e_financial = Expression(s_iv, ""A consumer's financial account number, credit card number or debit card number, in combination with any required security code, access code or password that would permit access to a consumer's financial account, or any other information or combination of information that a person reasonably knows or should know would permit access to the consumer's financial account"")
+s_v = Section(""(v)"")
+s_A.add_subsection(s_v)
+e_biometric = Expression(s_v, ""Data from automatic measurements of a consumer's physical characteristics, such as an image of a fingerprint, retina or iris, that are used to authenticate the consumer's identity in the course of a financial transaction or other transaction"")
+s_vi = Section(""(vi)"")
+s_A.add_subsection(s_vi)
+e_health_insurance = Expression(s_vi, ""A consumer's health insurance policy number or health insurance subscriber identification number in combination with any other unique identifier that a health insurer uses to identify the consumer"")
+s_vii = Section(""(vii)"")
+s_A.add_subsection(s_vii)
+e_medical_history = Expression(s_vii, ""Any information about a consumer's medical history or mental or physical condition or about a health care professional's medical diagnosis or treatment of the consumer"")
+
+e_combination.includes.extend([e_ssn, e_dl, e_passport, e_financial, e_biometric, e_health_insurance, e_medical_history])
+
+s_B = Section(""(B)"")
+s.add_subsection(s_B)
+e_username = Expression(s_B, ""A user name or other means of identifying a consumer for the purpose of permitting access to the consumer's account, together with any other method necessary to authenticate the user name or means of identification"")
+d_personal_info.meaning.append(e_username)
+
+s_C = Section(""(C)"")
+s.add_subsection(s_C)
+e_data_elements = Expression(s_C, ""Any of the data elements or any combination of the data elements described in subparagraph (A) or (B) of this paragraph without the consumer's user name, or the consumer's first name or first initial and last name, if:"")
+d_personal_info.meaning.append(e_data_elements)
+
+s_C_i = Section(""(i)"")
+s_C.add_subsection(s_C_i)
+e_unusable = Expression(s_C_i, ""Encryption, redaction or other methods have not rendered the data element or combination of data elements unusable"")
+s_C_ii = Section(""(ii)"")
+s_C.add_subsection(s_C_ii)
+e_identity_theft = Expression(s_C_ii, ""The data element or combination of data elements would enable a person to commit identity theft against a consumer"")
+
+e_data_elements.includes.extend([e_unusable, e_identity_theft])
+
+exclusion_info = Expression(s, ""Personal information does not include information in a federal, state or local government record, other than a Social Security number, that is lawfully made available to the public."")
+d_personal_info.exclusions.append(exclusion_info)","{'#exclusion', '#definition', '#continuation'}"
+"(13) ""Proper identification"" means written information or documentation that a consumer or representative can present to another person as evidence of the consumer's or representative's identity, examples of which include:
+      (a) A valid Social Security number or a copy of a valid Social Security card;
+      (b) A certified or otherwise official copy of a birth certificate that a governmental body issued; and
+      (c) A copy of a driver license or other government-issued identification.","s13 = Section(sectionNumber=""(13)"")
+
+e_proper_identification = Expression(s13, ""Proper identification"")
+
+d_proper_identification = Definition(s13, defined_term=e_proper_identification)
+d_means_exp = Expression(s13, ""written information or documentation that a consumer or representative can present to another person as evidence of the consumer's or representative's identity, examples of which include:"")
+d_proper_identification.meaning.append(d_means_exp)
+
+sa = Section(""(a)"")
+s13.add_subsection(sa)
+e_ssn = Expression(sa, ""A valid Social Security number or a copy of a valid Social Security card"")
+d_means_exp.includes.append(e_ssn)
+
+sb = Section(""(b)"")
+s13.add_subsection(sb)
+e_birth_certificate = Expression(sb, ""A certified or otherwise official copy of a birth certificate that a governmental body issued"")
+d_means_exp.includes.append(e_birth_certificate)
+
+sc = Section(""(c)"")
+s13.add_subsection(sc)
+e_driver_license = Expression(sc, ""A copy of a driver license or other government-issued identification"")
+d_means_exp.includes.append(e_driver_license)","{'#definition', '#continuation'}"
+"(14) ""Protected consumer"" means an individual who is:
+      (a) Not older than 16 years old at the time a representative requests a security freeze on the individual's behalf; or
+      (b) Incapacitated or for whom a court or other authority has appointed a guardian or conservator.","# Creation of the Section object for Section (14)
+s = Section(sectionNumber=""(14)"")
+
+# Definition for ""Protected consumer""
+d_protected_consumer = Definition(s, Expression(s, ""Protected consumer""))
+
+# Adding meaning expressions to the definition of ""Protected consumer""
+s14a = Section(""(a)"")
+s.add_subsection(s14a)
+d_protected_consumer.meaning.append(Expression(s14a, ""Not older than 16 years old at the time a representative requests a security freeze on the individual's behalf""))
+
+s14b = Section(""(b)"")
+s.add_subsection(s14b)
+d_protected_consumer.meaning.append(Expression(s14b, ""Incapacitated or for whom a court or other authority has appointed a guardian or conservator""))",{'#definition'}
+"(15) ""Protective record"" means information that a consumer reporting agency compiles to identify a protected consumer for whom the consumer reporting agency has not prepared a consumer report.","# Creation of the Section object for section (15)
+s = Section(sectionNumber=""(15)"")
+
+# Create the expression for the definition of ""Protective record""
+e_protective_record = Expression(s, ""Protective record"")
+
+# Create a Definition object for ""Protective record""
+d_protective_record = Definition(s, defined_term=e_protective_record)
+
+# Add the meaning of ""Protective record"" to the definition
+e_meaning = Expression(s, ""information that a consumer reporting agency compiles to identify a protected consumer for whom the consumer reporting agency has not prepared a consumer report"")
+d_protective_record.meaning.append(e_meaning)",{'#definition'}
+"(16) ""Redacted"" means altered or truncated so that no more than the last four digits of a Social Security number, driver license number, state identification card number, passport number or other number issued by the United States, financial account number, credit card number or debit card number is visible or accessible.","# Creation of Section object for section (16)
+s16 = Section(sectionNumber=""(16)"")
+
+# Creation of expression for the defined term ""Redacted""
+e_redacted = Expression(section=s16, text=""Redacted"")
+
+# Creation of Definition object for ""Redacted""
+d_redacted = Definition(s16, defined_term=e_redacted)
+
+# Creation of the meaning expression for ""Redacted""
+e_meaning = Expression(s16, ""altered or truncated so that no more than the last four digits of a Social Security number, driver license number, state identification card number, passport number or other number issued by the United States, financial account number, credit card number or debit card number is visible or accessible"")
+
+# Adding the meaning expression to the definition of ""Redacted""
+d_redacted.meaning.append(e_meaning)",{'#definition'}
+"(17) ""Representative"" means a consumer who provides a consumer reporting agency with sufficient proof of the consumer's authority to act on a protected consumer's behalf.","s = Section(sectionNumber=""(17)"")
+d_representative = Definition(s, Expression(s, ""Representative""))
+e_meaning = Expression(s, ""a consumer who provides a consumer reporting agency with sufficient proof of the consumer's authority to act on a protected consumer's behalf"")
+d_representative.meaning.append(e_meaning)",{'#definition'}
+"(18) ""Security freeze"" means a notice placed in a consumer report at a consumer's request or a representative's request or in a protective record at a representative's request that, subject to certain exemptions, prohibits a consumer reporting agency from releasing information in the consumer report or the protective record for an extension of credit, unless the consumer temporarily lifts the security freeze on the consumer's consumer report or a protected consumer or representative removes the security freeze on or deletes the protective record.","s18 = Section(sectionNumber=""(18)"")
+
+d_security_freeze = Definition(s18, Expression(s18, ""Security freeze""))
+d_security_freeze.meaning.append(Expression(s18, ""a notice placed in a consumer report at a consumer's request or a representative's request or in a protective record at a representative's request that, subject to certain exemptions, prohibits a consumer reporting agency from releasing information in the consumer report or the protective record for an extension of credit""))
+d_security_freeze.exclusions.append(Expression(s18, ""the consumer temporarily lifts the security freeze on the consumer's consumer report or a protected consumer or representative removes the security freeze on or deletes the protective record""))","{'#exclusion', '#definition', '#condition'}"
+"(19) ""Vendor"" means a person with which a covered entity contracts to maintain, store, manage, process or otherwise access personal information for the purpose of, or in connection with, providing services to or on behalf of the covered entity.","# Creation of the Section object for section (19)
+s19 = Section(sectionNumber=""(19)"")
+
+# Creating an expression for the term ""Vendor""
+e_vendor = Expression(s19, ""Vendor"")
+
+# Definition object for ""Vendor""
+d_vendor = Definition(s19, defined_term=e_vendor)
+
+# Adding the meaning to the definition
+d_meaning_vendor = Expression(s19, ""a person with which a covered entity contracts to maintain, store, manage, process or otherwise access personal information for the purpose of, or in connection with, providing services to or on behalf of the covered entity."")
+d_vendor.meaning.append(d_meaning_vendor)",{'#definition'}
+"646A.604 Notice of breach of security; delay; methods of notification; contents of notice; application of notice requirement. (1) If a covered entity is subject to a breach of security or receives notice of a breach of security from a vendor, the covered entity shall give notice of the breach of security to:
+      (a) The consumer to whom the personal information pertains.
+      (b) The Attorney General, either in writing or electronically, if the number of consumers to whom the covered entity must send the notice described in paragraph (a) of this subsection exceeds 250.","s = Section(sectionNumber=""646A.604"", sectionTitle=""Notice of breach of security; delay; methods of notification; contents of notice; application of notice requirement"")
+s1 = Section(sectionNumber=""(1)"")
+s.add_subsection(s1)
+condition = Expression(s1, ""a covered entity is subject to a breach of security or receives notice of a breach of security from a vendor"")
+
+s1a = Section(""(a)"")
+s1.add_subsection(s1a)
+r1 = Rule(s1a, Expression(s1a, ""the covered entity""))
+r1.conditions.append(condition)
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(s1a, ""shall give notice of the breach of security to the consumer to whom the personal information pertains"")
+
+s1b = Section(""(b)"")
+s1.add_subsection(s1b)
+r2 = Rule(s1b, Expression(s1b, ""the covered entity""))
+r2.conditions.append(condition)
+r2.rule_type = Rule.OBLIGATION
+
+condition2 = Expression(s1b, ""the number of consumers to whom the covered entity must send the notice described in paragraph (a) of this subsection exceeds 250"")
+r2.conditions.append(condition2)
+
+r2.description = Expression(s1b, ""shall give notice of the breach of security to the Attorney General, either in writing or electronically"")
+r2.add_follows(r1)","{'#obligation', '#continuation', '#condition', '#follows'}"
+"(2)(a) A vendor that discovers a breach of security or has reason to believe that a breach of security has occurred shall notify a covered entity with which the vendor has a contract as soon as is practicable but not later than 10 days after discovering the breach of security or having a reason to believe that the breach of security occurred.
+      (b) If a vendor has a contract with another vendor that, in turn, has a contract with a covered entity, the vendor shall notify the other vendor of a breach of security as provided in paragraph (a) of this subsection.
+      (c) A vendor shall notify the Attorney General in writing or electronically if the vendor was subject to a breach of security that involved the personal information of more than 250 consumers or a number of consumers that the vendor could not determine. This paragraph does not apply to the vendor if the covered entity described in paragraph (a) or (b) of this subsection has notified the Attorney General in accordance with the requirements of this section.","s2 = Section(sectionNumber=""(2)"")
+
+sa = Section(""(a)"")
+s2.add_subsection(sa)
+r1 = Rule(sa, Expression(sa, ""vendor that discovers a breach of security or has reason to believe that a breach of security has occurred""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(sa, ""shall notify a covered entity with which the vendor has a contract as soon as is practicable but not later than 10 days after discovering the breach of security or having a reason to believe that the breach of security occurred"")
+
+sb = Section(""(b)"")
+s2.add_subsection(sb)
+r2 = Rule(sb, Expression(sb, ""vendor""))
+r2.rule_type = Rule.OBLIGATION
+r2.description = Expression(sb, ""shall notify the other vendor of a breach of security"")
+r2.add_follows(r1)
+r2.conditions.append(Expression(sb, ""If a vendor has a contract with another vendor that, in turn, has a contract with a covered entity""))
+
+sc = Section(""(c)"")
+s2.add_subsection(sc)
+r3 = Rule(sc, Expression(sc, ""vendor""))
+r3.rule_type = Rule.OBLIGATION
+r3.description = Expression(sc, ""shall notify the Attorney General in writing or electronically"")
+r3.conditions.append(Expression(sc, ""if the vendor was subject to a breach of security that involved the personal information of more than 250 consumers or a number of consumers that the vendor could not determine""))
+e1 = Exemption(sc, Expression(sc, ""This paragraph does not apply to the vendor if the covered entity described in paragraph (a) or (b) of this subsection has notified the Attorney General in accordance with the requirements of this section.""))
+r3.add_exception(e1)
+ref2a = Reference(sc, ""paragraph (a) of this subsection"", target=r3)
+e1.add_is_refined_by(ref2a)
+ref2b = Reference(sc, ""paragraph (b) of this subsection"", target=r3)
+e1.add_is_refined_by(ref2b)","{'#obligation', '#follows', '#condition', '#exemption', '#exception', '#refined_by'}"
+"(3)(a) A covered entity shall give notice of a breach of security in the most expeditious manner possible, without unreasonable delay, but not later than 45 days after discovering or receiving notification of the breach of security.
+      (b) Before providing the notice described in paragraph (a) of this subsection, a covered entity shall undertake reasonable measures that are necessary to:
+      (A) Determine sufficient contact information for the intended recipient of the notice;
+      (B) Determine the scope of the breach of security; and
+      (C) Restore the reasonable integrity, security and confidentiality of the personal information.
+      (c) A covered entity may delay giving the notice described in paragraph (a) of this subsection only if a law enforcement agency determines that a notification will impede a criminal investigation and if the law enforcement agency requests in writing that the covered entity delay the notification.","s3 = Section(""3"")
+sa = Section(""(a)"")
+s3.add_subsection(sa)
+
+# Rule for giving notice of a breach of security
+r1 = Rule(sa, Expression(sa, ""a covered entity""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(sa, ""shall give notice of a breach of security in the most expeditious manner possible, without unreasonable delay, but not later than 45 days after discovering or receiving notification of the breach of security"")
+
+sb = Section(""(b)"")
+s3.add_subsection(sb)
+
+# Rule for undertaking reasonable measures before providing notice
+r2 = Rule(sb, Expression(sb, ""a covered entity""))
+r2.rule_type = Rule.OBLIGATION
+r2.description = Expression(sb, ""shall undertake reasonable measures that are necessary to:"")
+r2.add_is_followed_by(r1)
+
+sba = Section(""(A)"")
+sb.add_subsection(sba)
+r2.description.includes.append(Expression(sba, ""determine sufficient contact information for the intended recipient of the notice""))
+
+sbb = Section(""(B)"")
+sb.add_subsection(sbb)
+r2.description.includes.append(Expression(sbb, ""determine the scope of the breach of security""))
+
+sbc = Section(""(C)"")
+sb.add_subsection(sbc)
+r2.description.includes.append(Expression(sbc, ""restore the reasonable integrity, security and confidentiality of the personal information""))
+
+sc = Section(""(c)"")
+s3.add_subsection(sc)
+
+# Rule for delay in giving notice
+r3 = Rule(sc, Expression(sc, ""a covered entity""))
+r3.rule_type = Rule.PERMISSION
+r3.description = Expression(sc, ""may delay giving the notice described in paragraph (a) of this subsection"")
+r3.conditions.append(Expression(sc, ""if a law enforcement agency determines that a notification will impede a criminal investigation and if the law enforcement agency requests in writing that the covered entity delay the notification""))
+r3.add_is_exception_to(r1)","{'#obligation', '#continuation', '#exception_to', '#followed_by'}"
+"(4) A covered entity may notify a consumer of a breach of security:
+      (a) In writing;
+      (b) Electronically, if the covered entity customarily communicates with the consumer electronically or if the notice is consistent with the provisions regarding electronic records and signatures set forth in the Electronic Signatures in Global and National Commerce Act (15 U.S.C. 7001) as that Act existed on January 1, 2020;
+      (c) By telephone, if the covered entity contacts the affected consumer directly; or
+      (d) With substitute notice, if the covered entity demonstrates that the cost of notification otherwise would exceed $250,000 or that the affected class of consumers exceeds 350,000, or if the covered entity does not have sufficient contact information to notify affected consumers. For the purposes of this paragraph, ""substitute notice"" means:
+      (A) Posting the notice or a link to the notice conspicuously on the covered entity's website if the covered entity maintains a website; and
+      (B) Notifying major statewide television and newspaper media.","s = Section(sectionNumber=""(4)"")
+r = Rule(s, Expression(s, ""A covered entity""))
+r.rule_type = Rule.PERMISSION
+r.description = Expression(s, ""may notify a consumer of a breach of security"")
+
+s_a = Section(""(a)"", parent=s)
+s.add_subsection(s_a)
+r.description.includes.append(Expression(s_a, ""In writing;""))
+
+s_b = Section(""(b)"", parent=s)
+s.add_subsection(s_b)
+r.description.includes.append(Expression(s_b, ""Electronically, if the covered entity customarily communicates with the consumer electronically or if the notice is consistent with the provisions regarding electronic records and signatures set forth in the Electronic Signatures in Global and National Commerce Act (15 U.S.C. 7001) as that Act existed on January 1, 2020;""))
+ref1=Reference(s_b, ""the Electronic Signatures in Global and National Commerce Act (15 U.S.C. 7001)"", target=r)
+r.add_follows(ref1)
+
+s_c = Section(""(c)"", parent=s)
+s.add_subsection(s_c)
+r.description.includes.append(Expression(s_c, ""By telephone, if the covered entity contacts the affected consumer directly; or""))
+
+s_d = Section(""(d)"", parent=s)
+s.add_subsection(s_d)
+r.description.includes.append(Expression(s_d, ""With substitute notice, if the covered entity demonstrates that the cost of notification otherwise would exceed $250,000 or that the affected class of consumers exceeds 350,000, or if the covered entity does not have sufficient contact information to notify affected consumers.""))
+
+d=Definition(s_d, Expression(s_d, ""substitute notice""))
+d.add_refines(r)
+s_d_a = Section(""(A)"", parent=s_d)
+s_d.add_subsection(s_d_a)
+d.meaning.append(Expression(s_d_a, ""Posting the notice or a link to the notice conspicuously on the covered entity's website if the covered entity maintains a website; and""))
+
+s_d_b = Section(""(B)"", parent=s_d)
+s_d.add_subsection(s_d_b)
+d.meaning.append(Expression(s_d_b, ""Notifying major statewide television and newspaper media.""))","{'#permission', '#definition', '#continuation', '#refines', '#follows'}"
+"(5) Notice under this section must include, at a minimum:
+      (a) A description of the breach of security in general terms;
+      (b) The approximate date of the breach of security;
+      (c) The type of personal information that was subject to the breach of security;
+      (d) Contact information for the covered entity;
+      (e) Contact information for national consumer reporting agencies; and
+      (f) Advice to the consumer to report suspected identity theft to law enforcement, including the Attorney General and the Federal Trade Commission.","s = Section(sectionNumber=""(5)"", sectionTitle=""Notice under this section must include, at a minimum:"")
+r = Rule(s, Expression(s, ""Notice under this section""))
+r.rule_type = Rule.OBLIGATION
+r.description = Expression(s, ""must include, at a minimum"")
+
+s5a = Section(""(a)"")
+s.add_subsection(s5a)
+r.description.includes.append(Expression(s5a, ""a description of the breach of security in general terms""))
+
+s5b = Section(""(b)"")
+s.add_subsection(s5b)
+r.description.includes.append(Expression(s5b, ""the approximate date of the breach of security""))
+
+s5c = Section(""(c)"")
+s.add_subsection(s5c)
+r.description.includes.append(Expression(s5c, ""the type of personal information that was subject to the breach of security""))
+
+s5d = Section(""(d)"")
+s.add_subsection(s5d)
+r.description.includes.append(Expression(s5d, ""contact information for the covered entity""))
+
+s5e = Section(""(e)"")
+s.add_subsection(s5e)
+r.description.includes.append(Expression(s5e, ""contact information for national consumer reporting agencies""))
+
+s5f = Section(""(f)"")
+s.add_subsection(s5f)
+r.description.includes.append(Expression(s5f, ""advice to the consumer to report suspected identity theft to law enforcement, including the Attorney General and the Federal Trade Commission""))","{'#obligation', '#continuation'}"
+"(6) If a covered entity discovers or receives notice of a breach of security that affects more than 1,000 consumers, the covered entity shall notify, without unreasonable delay, all consumer reporting agencies that compile and maintain reports on consumers on a nationwide basis of the timing, distribution and content of the notice the covered entity gave to affected consumers and shall include in the notice any police report number assigned to the breach of security. A covered entity may not delay notifying affected consumers of a breach of security in order to notify consumer reporting agencies.","s = Section(sectionNumber=""(6)"")
+
+# Obligation for a covered entity to notify consumer reporting agencies
+r1 = Rule(s, Expression(s, ""covered entity""))
+r1.rule_type = Rule.OBLIGATION
+r1.conditions.append(Expression(s, ""covered entity discovers or receives notice of a breach of security that affects more than 1,000 consumers""))
+r1.description = Expression(s, ""shall notify, without unreasonable delay, all consumer reporting agencies that compile and maintain reports on consumers on a nationwide basis of the timing, distribution and content of the notice the covered entity gave to affected consumers and shall include in the notice any police report number assigned to the breach of security."")
+
+r2 = Rule(s, Expression(s, ""covered entity""))
+r2.rule_type = Rule.PROHIBITION
+r2.description = Expression(s, ""may not delay notifying affected consumers of a breach of security  in order to notify consumer reporting agencies"")
+r2.add_follows(r1)","{'#obligation', '#prohibition', '#condition', '#refines'}"
+"(7)(a) If a covered entity must notify a consumer of a breach of security under this section, and in connection with the notification the covered entity or an agent or affiliate of the covered entity offers to provide credit monitoring services or identity theft prevention and mitigation services without charge to the consumer, the covered entity, the agent or the affiliate may not condition the provision of the services on the consumer's providing the covered entity, the agent or the affiliate with a credit or debit card number or on the consumer's acceptance of any other service the covered entity offers to provide for a fee.
+      (b) If a covered entity or an agent or affiliate of the covered entity offers additional credit monitoring services or identity theft prevention and mitigation services for a fee to a consumer under the circumstances described in paragraph (a) of this subsection, the covered entity, the agent or the affiliate must separately, distinctly, clearly and conspicuously disclose in the offer for the additional credit monitoring services or identity theft prevention and mitigation services that the covered entity, the agent or the affiliate will charge the consumer a fee.
+      (c) The terms and conditions of any contract under which one person offers or provides credit monitoring services or identity theft prevention and mitigation services on behalf of another person under the circumstances described in paragraph (a) of this subsection must require compliance with the requirements of paragraphs (a) and (b) of this subsection.","s7 = Section(sectionNumber=""(7)"")
+sa = Section(sectionNumber=""(a)"", parent=s7)
+s7.add_subsection(sa)
+
+r1 = Rule(sa, Expression(sa, ""covered entity, the agent or the affiliate""))
+r1.rule_type = Rule.PROHIBITION
+r1.description = Expression(sa, ""may not condition the provision of the services on the consumer's providing the covered entity, the agent or the affiliate with a credit or debit card number or on the consumer's acceptance of any other service the covered entity offers to provide for a fee"")
+r1.conditions.append(Expression(sa, ""If a covered entity must notify a consumer of a breach of security under this section, and in connection with the notification the covered entity or an agent or affiliate of the covered entity offers to provide credit monitoring services or identity theft prevention and mitigation services without charge to the consumer""))
+
+sb = Section(sectionNumber=""(b)"", parent=s7)
+s7.add_subsection(sb)
+
+r2 = Rule(sb, Expression(sb, ""covered entity, the agent or the affiliate""))
+r2.rule_type = Rule.OBLIGATION
+r2.description = Expression(sb, ""must separately, distinctly, clearly and conspicuously disclose in the offer for the additional credit monitoring services or identity theft prevention and mitigation services that the covered entity, the agent or the affiliate will charge the consumer a fee"")
+r2.conditions.append(Expression(sb, ""If a covered entity or an agent or affiliate of the covered entity offers additional credit monitoring services or identity theft prevention and mitigation services for a fee to a consumer under the circumstances described in paragraph (a) of this subsection""))
+r2.add_refines(r1)
+
+sc = Section(sectionNumber=""(c)"", parent=s7)
+s7.add_subsection(sc)
+
+r3 = Rule(sc, Expression(sc, ""the terms and conditions of any contract under which one person offers or provides credit monitoring services or identity theft prevention and mitigation services on behalf of another person""))
+r3.rule_type = Rule.OBLIGATION
+r3.description = Expression(sc, ""must require compliance with the requirements of paragraphs (a) and (b) of this subsection"")
+r3.conditions.append(Expression(sc, ""under the circumstances described in paragraph (a) of this subsection""))
+ref_a = Reference(sc, ""paragraph (a) of this subsection"", target=r3)
+ref_b = Reference(sc, ""paragraph (b) of this subsection"", target=r3)
+r3.add_follows(ref_a)
+r3.add_follows(ref_b)","{'#obligation', '#prohibition', '#follows', '#condition'}"
+"(8) Notwithstanding subsection (1) of this section, a covered entity does not need to notify consumers of a breach of security if, after an appropriate investigation or after consultation with relevant federal, state or local law enforcement agencies, the covered entity reasonably determines that the consumers whose personal information was subject to the breach of security are unlikely to suffer harm. The covered entity must document the determination in writing and maintain the documentation for at least five years.","s8 = Section(""(8)"")
+e1 = Expression(s8, ""Notwithstanding subsection (1) of this section, a covered entity does not need to notify consumers of a breach of security if, after an appropriate investigation or after consultation with relevant federal, state or local law enforcement agencies, the covered entity reasonably determines that the consumers whose personal information was subject to the breach of security are unlikely to suffer harm."")
+exemption = Exemption(s8, e1)
+ref1 = Reference(s8, ""subsection (1) of this section"", target=exemption)
+exemption.add_is_exception_to(ref1)
+
+r2 = Rule(s8, Expression(s8, ""covered entity""))
+r2.rule_type = Rule.OBLIGATION
+r2.description = Expression(s8, ""must document the determination in writing and maintain the documentation for at least five years"")
+r2.add_refines(exemption)","{'#obligation', '#exception_to', '#permission'}"
+"(9) This section does not apply to:
+      (a) Personal information that is subject to, and a person that complies with, notification requirements or procedures for a breach of security that the person's primary or functional federal regulator adopts, promulgates or issues in rules, regulations, procedures, guidelines or guidance, if the personal information and the person would otherwise be subject to ORS 646A.600 to 646A.628.
+      (b) Personal information that is subject to, and a person that complies with, a state or federal law that provides greater protection to personal information and disclosure requirements at least as thorough as the protections and disclosure requirements provided under this section.
+      (c) A covered entity or vendor that complies with regulations promulgated under Title V of the Gramm-Leach-Bliley Act of 1999 (15 U.S.C. 6801 to 6809) as that Act existed on January 1, 2020, if personal information that is subject to ORS 646A.600 to 646A.628 is also subject to that Act.
+      (d) A covered entity or vendor that complies with regulations promulgated under the Health Insurance Portability and Accountability Act of 1996 (P.L. 104-191, 110 Stat. 1936) and the Health Information Technology for Economic and Clinical Health Act of 2009 (P.L. 111-5, Title XIII, 123 Stat. 226), as those Acts existed on January 1, 2020, if personal information that is subject to ORS 646A.600 to 646A.628 is also subject to those Acts.","s9 = Section(""(9)"")
+ex1 = Expression(s9, ""this section does not apply to:"")
+e9 = Exemption(s9, ex1)
+
+s9a = Section(""(a)"")
+s9.add_subsection(s9a)
+ex1a = Expression(s9a, ""personal information that is subject to, and a person that complies with, notification requirements or procedures for a breach of security that the person's primary or functional federal regulator adopts, promulgates or issues in rules, regulations, procedures, guidelines or guidance, if the personal information and the person would otherwise be subject to ORS 646A.600 to 646A.628"")
+e9.description.append(ex1a)
+
+s9b = Section(""(b)"")
+s9.add_subsection(s9b)
+ex1b = Expression(s9b, ""personal information that is subject to, and a person that complies with, a state or federal law that provides greater protection to personal information and disclosure requirements at least as thorough as the protections and disclosure requirements provided under this section"")
+e9.description.append(ex1b)
+
+s9c = Section(""(c)"")
+s9.add_subsection(s9c)
+ex1c = Expression(s9c, ""a covered entity or vendor that complies with regulations promulgated under Title V of the Gramm-Leach-Bliley Act of 1999 (15 U.S.C. 6801 to 6809) as that Act existed on January 1, 2020, if personal information that is subject to ORS 646A.600 to 646A.628 is also subject to that Act"")
+e9.description.append(ex1c)
+ref1=Reference(s9c, ""Title V of the Gramm-Leach-Bliley Act of 1999 (15 U.S.C. 6801 to 6809)"", target=e9)
+e9.add_follows(ref1)
+
+s9d = Section(""(d)"")
+s9.add_subsection(s9d)
+ex1d = Expression(s9d, ""a covered entity or vendor that complies with regulations promulgated under the Health Insurance Portability and Accountability Act of 1996 (P.L. 104-191, 110 Stat. 1936) and the Health Information Technology for Economic and Clinical Health Act of 2009 (P.L. 111-5, Title XIII, 123 Stat. 226), as those Acts existed on January 1, 2020, if personal information that is subject to ORS 646A.600 to 646A.628 is also subject to those Acts"")
+ref2=Reference(s9d, ""the Health Insurance Portability and Accountability Act of 1996 (P.L. 104-191, 110 Stat. 1936)"", e9)
+e9.add_follows(ref2)
+ref3=Reference(s9d, ""the Health Information Technology for Economic and Clinical Health Act of 2009 (P.L. 111-5, Title XIII, 123 Stat. 226)"", e9)
+e9.add_follows(ref3)
+e9.description.append(ex1d)","{'#exemption', '#follows', '#continuation'}"
+"(10) Notwithstanding the exemptions set forth in subsection (9) of this section, a person, a covered entity or a vendor shall provide to the Attorney General within a reasonable time at least one copy of any notice the person, the covered entity or the vendor sends to consumers or to the person's, the covered entity's or the vendor's primary or functional regulator in compliance with this section or with other state or federal laws or regulations that apply to the person, the covered entity or the vendor as a consequence of a breach of security, if the breach of security affects more than 250 consumers.","s10 = Section(""(10)"")
+r = Rule(s10, Expression(s10, ""person, a covered entity or a vendor""))
+r.rule_type = Rule.OBLIGATION
+r.description = Expression(s10, ""shall provide to the Attorney General within a reasonable time at least one copy of any notice the person, the covered entity or the vendor sends to consumers or to the person's, the covered entity's or the vendor's primary or functional regulator in compliance with this section or with other state or federal laws or regulations that apply to the person, the covered entity or the vendor as a consequence of a breach of security"")
+r.conditions.append(Expression(s10, ""if the breach of security affects more than 250 consumers""))
+ref1=Reference(s10, ""subsection (9) of this section"", r)
+r.add_is_exception_to(ref1)","{'#obligation', '#exception_to', '#condition'}"
+"(11)(a) A person's violation of a provision of ORS 646A.600 to 646A.628 is an unlawful practice under ORS 646.607.
+      (b) A covered entity or vendor in an action or proceeding may affirmatively defend against an allegation that the covered entity or vendor has not developed, implemented and maintained reasonable safeguards to protect the security, confidentiality and integrity of personal information that is subject to ORS 646A.600 to 646A.628 but is not subject to an Act described in subsection (9)(c) or (d) of this section by showing that, with respect to the personal information that is subject to ORS 646A.600 to 646A.628, the covered entity or vendor developed, implemented and maintained reasonable security measures that would be required for personal information subject to the applicable Act.
+      (c) The rights and remedies available under this section are cumulative and are in addition to any other rights or remedies that are available under law.","s11 = Section(""(11)"")
+
+sa = Section(""(a)"")
+s11.add_subsection(sa)
+r1 = Rule(sa, Expression(sa, ""person""))
+r1.rule_type = Rule.PROHIBITION
+r1.description = Expression(sa, ""violation of a provision of ORS 646A.600 to 646A.628 is an unlawful practice under ORS 646.607"")
+ref1 = Reference(sa, ""ORS 646A.600 to 646A.628"", target=r1)
+ref2 = Reference(sa, ""ORS 646.607"", target=r1)
+r1.add_is_refined_by(ref1)
+r1.add_is_refined_by(ref2)
+
+sb = Section(""(b)"")
+s11.add_subsection(sb)
+r2 = Rule(sb, Expression(sb, ""covered entity or vendor""))
+r2.rule_type = Rule.PERMISSION
+r2.description = Expression(sb, ""may affirmatively defend against an allegation that the covered entity or vendor has not developed, implemented and maintained reasonable safeguards"")
+r2.conditions.append(Expression(sb, ""to protect the security, confidentiality and integrity of personal information that is subject to ORS 646A.600 to 646A.628 but is not subject to an Act described in subsection (9)(c) or (d) of this section""))
+r2.description.includes.append(Expression(sb, ""by showing that, with respect to the personal information that is subject to ORS 646A.600 to 646A.628, the covered entity or vendor developed, implemented and maintained reasonable security measures that would be required for personal information subject to the applicable Act""))
+ref3 = Reference(sb, ""ORS 646A.600 to 646A.628"", target=r2)
+ref4 = Reference(sb, ""subsection (9)(c) or (d)"", target=r2)
+r2.add_is_refined_by(ref3)
+r2.add_is_refined_by(ref4)
+
+sc = Section(""(c)"")
+s11.add_subsection(sc)
+i3 = Information(sc, Expression(sc, ""The rights and remedies available under this section are cumulative and are in addition to any other rights or remedies that are available under law""))","{'#exception', '#prohibition', '#condition', '#permission', '#information', '#refines'}"
+"646A.606 Security freeze; requirements; proof of authority; effect. (1) A consumer may elect to place a security freeze on the consumer's consumer report or, if the consumer is a representative, on a protected consumer's consumer report or protective record by sending a written request to a consumer reporting agency at an address the agency designates to receive such requests, or a secure electronic request at a website the agency designates to receive such requests if the consumer reporting agency, at the agency's discretion, makes a secure electronic method available.","s = Section(sectionNumber=""646A.606"", sectionTitle=""Security freeze; requirements; proof of authority; effect."")
+s1 = Section(sectionNumber=""(1)"")
+s.add_subsection(s1)
+
+r1 = Rule(s1, Expression(s1, ""consumer""))
+r1.rule_type = Rule.PERMISSION
+r1.description = Expression(s1, ""may elect to place a security freeze on the consumer's consumer report or, if the consumer is a representative, on a protected consumer's consumer report or protective record by sending a written request to a consumer reporting agency at an address the agency designates to receive such requests, or a secure electronic request at a website the agency designates to receive such requests if the consumer reporting agency, at the agency's discretion, makes a secure electronic method available"")",{'#permission'}
+"(2) If the consumer or protected consumer is the victim of identity theft or has reported a theft of personal information to a law enforcement agency, the consumer or representative may include a copy of the police report, incident report or identity theft declaration.","s = Section(sectionNumber=""(2)"")
+r1 = Rule(s, Expression(s, ""consumer or representative""))
+r1.rule_type = Rule.PERMISSION
+r1.description = Expression(s, ""may include a copy of the police report, incident report or identity theft declaration"")
+r1.conditions.append(Expression(s, ""the consumer or protected consumer is the victim of identity theft or has reported a theft of personal information to a law enforcement agency""))","{'#permission', '#condition'}"
+"(3)(a) The consumer or representative must provide proper identification.
+      (b)(A) In addition to the information described in paragraph (a) of this subsection, a representative who seeks to place a security freeze on a protected consumer's consumer report or protective record shall provide sufficient proof of the representative's authority to act on the protected consumer's behalf.
+      (B) For purposes of subparagraph (A) of this paragraph, sufficient proof of authority consists of:
+      (i) A court order that identifies or describes the relationship between the representative and the protected consumer;
+      (ii) A valid and lawfully executed power of attorney that permits the representative to act on the protected consumer's behalf; or
+      (iii) A written affidavit that the representative signs and has notarized in which the representative expressly describes the relationship between the representative and the protected consumer and the representative's authority to act on the protected consumer's behalf.","s3 = Section(""(3)"")
+sa = Section(""(a)"")
+s3.add_subsection(sa)
+r1 = Rule(sa, Expression(sa, ""the consumer or representative""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(sa, ""must provide proper identification"")
+
+sb = Section(""(b)"")
+s3.add_subsection(sb)
+sbA = Section(""(A)"")
+sb.add_subsection(sbA)
+r2 = Rule(sbA, Expression(sbA, ""a representative who seeks to place a security freeze on a protected consumer's consumer report or protective record""))
+r2.conditions.append(Expression(sbA, ""in addition to the information described in paragraph (a) of this subsection""))
+r2.rule_type = Rule.OBLIGATION
+r2.description = Expression(sbA, ""shall provide sufficient proof of the representative's authority to act on the protected consumer's behalf"")
+ref1=Reference(sbA, ""paragraph (a) of this subsection"", r2)
+r2.add_is_refined_by(ref1)
+
+sbB = Section(""sbA, "")
+sb.add_subsection(sbB)
+r3 = Definition(sbB, Expression(sbB, ""sufficient proof of authority""))
+e=Expression(sbB, ""consists of:"")
+r3.meaning.append(e)
+
+sbBi = Section(""(i)"")
+sbB.add_subsection(sbBi)
+e1 = Expression(sbBi, ""a court order that identifies or describes the relationship between the representative and the protected consumer"")
+e.includes.append(e1)
+
+sbBii = Section(""(ii)"")
+sbB.add_subsection(sbBii)
+e2 = Expression(sbBii, ""a valid and lawfully executed power of attorney that permits the representative to act on the protected consumer's behalf"")
+e.includes.append(e2)
+
+sbBiii = Section(""(iii)"")
+sbB.add_subsection(sbBiii)
+e3 = Expression(sbBiii, ""a written affidavit that the representative signs and has notarized in which the representative expressly describes the relationship between the representative and the protected consumer and the representative's authority to act on the protected consumer's behalf"")
+e.includes.append(e3)
+
+ref2=Reference(sbB, ""subparagraph (A) of this paragraph"", r3)
+r3.add_refines(ref2)","{'#obligation', '#definition', '#continuation', '#refines', '#refined_by'}"
+"(4)(a) Except as provided in ORS 646A.614, if a security freeze is in place for a consumer report, information from the consumer report may not be released without prior express authorization from the consumer.
+      (b) Information from a protective record may not be released until the protected consumer for whom the consumer reporting agency created the protective record, or a representative of the protected consumer, removes the security freeze.","s = Section(sectionNumber=""(4)"")
+
+sa = Section(""(a)"", parent=s)
+s.add_subsection(sa)
+r1 = Rule(sa, Expression(sa, ""information from the consumer report""))
+r1.rule_type = Rule.PROHIBITION
+r1.description = Expression(sa, ""may not be released without prior express authorization from the consumer"")
+r1.conditions.append(Expression(sa, ""if a security freeze is in place for a consumer report""))
+ref1=Reference(sa, ""ORS 646A.614"", r1)
+r1.add_exception(ref1)
+
+sb = Section(""(b)"", parent=s)
+s.add_subsection(sb)
+r2 = Rule(sb, Expression(sb, ""information from a protective record""))
+r2.rule_type = Rule.PROHIBITION
+r2.description = Expression(sb, ""may not be released until the protected consumer for whom the consumer reporting agency created the protective record, or a representative of the protected consumer, removes the security freeze"")","{'#exception', '#prohibition', '#condition'}"
+(5) This section does not prevent a consumer reporting agency from advising a third party that a security freeze is in effect with respect to the consumer report or protective record.,"s5 = Section(""(5)"")
+e = Exemption(s5, Expression(s5, ""this section does not prevent a consumer reporting agency advising a third party that a security freeze is in effect with respect to the consumer report or protective record""))",{'#exemption'}
+"646A.608 Deadline for placing security freeze; protective record creation; use and release of information; confirmation; personal identification number; exception; lifting and removal. (1)(a) A consumer reporting agency shall place a security freeze on a consumer report not later than five business days after receiving from a consumer:
+      (A) The request described in ORS 646A.606 (1); and
+      (B) Proper identification.
+      (b) If a consumer report does not exist for a protected consumer on behalf of whom a representative seeks to place a security freeze, a consumer reporting agency shall create a protective record after receiving from the representative the request described in ORS 646A.606 (1), proper identification for both the representative and the protected consumer and sufficient proof of authority, as described in ORS 646A.606 (3)(b). After creating a protective record for a protected consumer under this paragraph, the consumer reporting agency shall place the security freeze that the representative requested on the protected consumer's protective record.
+      (c) The protective record that the consumer reporting agency creates under paragraph (b) of this subsection does not need to contain any information other than the protected consumer's personal information, if other information for the protected consumer is not available. Except as provided in ORS 646A.614, a consumer reporting agency may not use or release to another person the information in a protective record for the purpose of assessing a protected consumer's eligibility or capacity for an extension of credit, as a basis for evaluating a protected consumer's character, reputation or personal characteristics or for other purposes that are not related to protecting the protected consumer from identity theft.","s = Section(sectionNumber=""646A.608"", sectionTitle=""Deadline for placing security freeze; protective record creation; use and release of information; confirmation; personal identification number; exception; lifting and removal."")
+
+s1 = Section(""(1)"")
+s.add_subsection(s1)
+sa= Section(""(a)"")
+s1.add_subsection(sa)
+r1 = Rule(s1, Expression(sa, ""A consumer reporting agency""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(sa, ""shall place a security freeze on a consumer report not later than five business days after receiving from a consumer:"")
+s1a = Section(""(A)"")
+sa.add_subsection(s1a)
+e1a = Expression(s1a, ""the request described in ORS 646A.606 (1);"")
+ref1=Reference(s1a, ""ORS 646A.606 (1)"", r1)
+r1.add_is_refined_by(ref1)
+s1b = Section(""(B)"")
+sa.add_subsection(s1b)
+e1b = Expression(s1b, ""proper identification."")
+r1.description.includes.extend([e1a, e1b])
+
+sb = Section(""(b)"")
+s.add_subsection(sb)
+r2 = Rule(sb, Expression(sb, ""If a consumer report does not exist for a protected consumer on behalf of whom a representative seeks to place a security freeze""))
+r2.rule_type = Rule.OBLIGATION
+r2.description = Expression(s1b, ""a consumer reporting agency shall create a protective record after receiving from the representative the request described in ORS 646A.606 (1), proper identification for both the representative and the protected consumer and sufficient proof of authority, as described in ORS 646A.606 (3)(b). After creating a protective record for a protected consumer under this paragraph, the consumer reporting agency shall place the security freeze that the representative requested on the protected consumer's protective record."")
+r2.add_refines(r1)
+ref2=Reference(sb, ""ORS 646A.606 (1)"", r2)
+r2.add_is_refined_by(ref2)
+ref3=Reference(sb, ""ORS 646A.606 (3)(b)"", r2)
+r2.add_is_refined_by(ref3)
+
+r2a=Rule(sb, Expression(sb, ""the consumer reporting agency""))
+r2a.rule_type = Rule.OBLIGATION
+r2a.description = Expression(sb, ""shall place the security freeze that the representative requested on the protected consumer's protective record"")
+r2a.conditions.append(Expression(sb, ""After creating a protective record for a protected consumer under this paragraph""))
+r2a.add_refines(r2)
+
+sc = Section(""(c)"")
+s.add_subsection(sc)
+r3 = Rule(sc, Expression(sc, ""The protective record that the consumer reporting agency creates under paragraph (b) of this subsection""))
+r3.rule_type = Rule.PROHIBITION
+r3.description = Expression(sc, ""does not need to contain any information other than the protected consumer's personal information, if other information for the protected consumer is not available."")
+r3.add_refines(r2)
+
+
+r3a=Rule(sc, Expression(sc, ""a consumer reporting agency""))
+r3a.rule_type = Rule.PROHIBITION
+r3a.description=Expression(sc, ""may not use or release to another person the information in a protective record for the purpose of assessing a protected consumer's eligibility or capacity for an extension of credit, as a basis for evaluating a protected consumer's character, reputation or personal characteristics or for other purposes that are not related to protecting the protected consumer from identity theft"")
+ref4=Reference(sc, ""ORS 646A.614"", r3a)
+r3a.add_exception(ref4)
+r3a.add_refines(r3)","{'#obligation', '#prohibition', '#exception', '#condition', '#refines', '#refined_by'}"
+"(2)(a) A consumer reporting agency shall send a written confirmation of a security freeze on a consumer's consumer report to the consumer at the last known address for the consumer shown in the consumer report that the consumer reporting agency maintains, within 10 business days after placing the security freeze and, with the confirmation, shall provide the consumer with a unique personal identification number or password or similar device the consumer must use to authorize the consumer reporting agency to release the consumer's consumer report for a specific period of time or to permanently remove the security freeze. The consumer reporting agency shall include with the written confirmation information that describes how to remove a security freeze and how to temporarily lift a security freeze on a consumer report, other than a consumer report for a protected consumer, in order to allow access to information from the consumer's consumer report for a period of time while the security freeze is in place.
+      (b) This subsection does not require a consumer reporting agency to provide a consumer or representative with a personal identification number or password for the consumer or representative to use to authorize the consumer reporting agency to release information from a protective record.","s = Section(sectionNumber=""(2)"")
+
+sa = Section(""(a)"")
+s.add_subsection(sa)
+r1 = Rule(sa, Expression(sa, ""A consumer reporting agency""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(sa, ""shall send a written confirmation of a security freeze on a consumer's consumer report to the consumer at the last known address for the consumer shown in the consumer report that the consumer reporting agency maintains, within 10 business days after placing the security freeze and, with the confirmation, shall provide the consumer with a unique personal identification number or password or similar device the consumer must use to authorize the consumer reporting agency to release the consumer's consumer report for a specific period of time or to permanently remove the security freeze"")
+r1a = Rule(sa, Expression(sa, ""The consumer reporting agency""))
+r1a.rule_type = Rule.OBLIGATION
+r1a.description=Expression(sa, ""shall include with the written confirmation information that describes how to remove a security freeze and how to temporarily lift a security freeze on a consumer report, other than a consumer report for a protected consumer, in order to allow access to information from the consumer's consumer report for a period of time while the security freeze is in place"")
+r1a.add_refines(r1)
+
+sb = Section(""(b)"")
+s.add_subsection(sb)
+e1=Exemption(sb, Expression(sb, ""This subsection does not require a consumer reporting agency to provide a consumer or representative with a personal identification number or password for the consumer or representative to use to authorize the consumer reporting agency to release information from a protective record.""))
+e1.add_refines(r1)","{'#obligation', '#exemption', '#refines'}"
+"(3)(a) If a consumer wishes to allow the consumer's consumer report to be accessed for a specific period of time while a security freeze is in effect, the consumer shall contact the consumer reporting agency using a point of contact the consumer reporting agency designates, request that the security freeze be temporarily lifted and provide the following:
+      (A) Proper identification;
+      (B) The unique personal identification number or password or similar device the consumer reporting agency provided under subsection (2) of this section; and
+      (C) An indication of the period of time during which the consumer report must be available to users of the consumer report.
+      (b) A protective record is not subject to a temporary lift of a security freeze.
+      (c) Except as provided in ORS 646A.612 (2)(a), a consumer report for a protected consumer is not subject to a temporary lift of a security freeze.","s3a = Section(""(3)(a)"")
+
+r = Rule(s3a, Expression(s3a, ""the consumer""))
+r.rule_type = Rule.OBLIGATION
+r.description = Expression(s3a, ""shall contact the consumer reporting agency using a point of contact the consumer reporting agency designates, request that the security freeze be temporarily lifted and provide the following"")
+r.conditions.append(Expression(s3a, ""If a consumer wishes to allow the consumer's consumer report to be accessed for a specific period of time while a security freeze is in effect""))
+
+s3aA = Section(""(A)"")
+s3a.add_subsection(s3aA)
+r.description.includes.append(Expression(s3aA, ""Proper identification""))
+
+s3aB = Section(""(B)"")
+s3a.add_subsection(s3aB)
+r.description.includes.append(Expression(s3aB, ""The unique personal identification number or password or similar device the consumer reporting agency provided under subsection (2) of this section""))
+ref1=Reference(s3aB, ""subsection (2) of this section"", r)
+r.add_follows(ref1)
+
+s3aC = Section(""(C)"")
+s3a.add_subsection(s3aC)
+r.description.includes.append(Expression(s3aC, ""An indication of the period of time during which the consumer report must be available to users of the consumer report""))
+
+s3b = Section(""(b) A protective record"")
+r1 = Rule(s3b, Expression(s3b, ""A protective record""))
+r1.rule_type = Rule.PROHIBITION
+r1.description = Expression(s3b, ""is not subject to a temporary lift of a security freeze"")
+
+s3c = Section(""(c)"")
+r2 = Rule(s3c, Expression(s3c, ""a consumer report""))
+r2.rule_type = Rule.PROHIBITION
+r2.description = Expression(s3c, ""is not subject to a temporary lift of a security freeze"")
+ref2=Reference(s3c, ""ORS 646A.612 (2)(a)"", r2)
+r2.add_exception(ref2)","{'#continuation', '#obligation', '#prohibition', '#condition', '#exception'}"
+"(4) A consumer reporting agency that receives a request from a consumer to temporarily lift a security freeze on a consumer report, other than a consumer report for a protected consumer, under subsection (3) of this section shall comply with the request not later than three business days after receiving from the consumer:
+      (a) Proper identification;
+      (b) The unique personal identification number or password or similar device the consumer reporting agency provided under subsection (2) of this section; and
+      (c) An indication of the period of time during which the consumer report must be available to users of the consumer report.","s4 = Section(""(4)"")
+r1 = Rule(s4, Expression(s4, ""a consumer reporting agency that receives a request from a consumer to temporarily lift a security freeze on a consumer report, other than a consumer report for a protected consumer, under subsection (3) of this section""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(s4, ""shall comply with the request not later than three business days after receiving from the consumer:"")
+ref1=Reference(s4, ""subsection (3) of this section"", r1)
+r1.add_follows(ref1)
+
+s4a = Section(""(a)"")
+s4.add_subsection(s4a)
+e1 = Expression(s4a, ""proper identification"")
+r1.description.includes.append(e1)
+
+s4b = Section(""(b)"")
+s4.add_subsection(s4b)
+e2 = Expression(s4b, ""the unique personal identification number or password or similar device the consumer reporting agency provided under subsection (2) of this section"")
+r1.description.includes.append(e2)
+ref2=Reference(s4b, ""subsection (2) of this section"", r1)
+r1.add_follows(ref2)
+
+s4c = Section(""(c)"")
+s4.add_subsection(s4c)
+e3 = Expression(s4c, ""an indication of the period of time during which the consumer report must be available to users of the consumer report"")
+r1.description.includes.append(e3)","{'#continuation', '#obligation', '#follows'}"
+"(5)(a) A security freeze for a consumer report must remain in place until the consumer requests, using a point of contact the consumer reporting agency designates, that the security freeze be removed. A consumer reporting agency shall remove a security freeze within three business days after receiving a request for removal from the consumer, who provides:
+      (A) Proper identification; and
+      (B) The unique personal identification number or password or similar device the consumer reporting agency provided under subsection (2) of this section.
+      (b) A security freeze for a protective record must remain in place until the protected consumer or a representative requests, using a point of contact the consumer reporting agency designates, that the security freeze be removed or that the protective record be deleted. The consumer reporting agency does not have an affirmative duty to notify the protected consumer or the representative that a security freeze is in place or to remove the security freeze or delete the protective record once the protected consumer is no longer a protected consumer. A protected consumer or a representative has the affirmative duty to request that the consumer reporting agency remove the security freeze or delete the protective record. A consumer reporting agency shall remove a security freeze or delete a protective record within 30 business days after receiving a request for removal or deletion from the protected consumer or a representative, who provides:
+      (A) Proper identification;
+      (B) Sufficient proof of authority, as described in ORS 646A.606 (3)(b), if the representative seeks to remove the security freeze or delete the protective record; and
+      (C) Proof that the representative's authority to act on the protected consumer's behalf is no longer valid or applicable, if the protected consumer seeks to remove the security freeze or delete the protective record.","s5 = Section(""(5)"")
+s5a = Section(""(a)"")
+s5.add_subsection(s5a)
+r1 = Rule(s5a, Expression(s5a, ""security freeze for a consumer report""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(s5a, ""must remain in place"")
+r1.conditions.append(Expression(s5a, ""until the consumer requests, using a point of contact the consumer reporting agency designates, that the security freeze be removed""))
+r1a= Rule(s5a, Expression(s5a, ""A consumer reporting agency""))
+r1a.rule_type = Rule.OBLIGATION
+r1a.description=Expression(s5a, ""shall remove a security freeze within three business days after receiving a request for removal from the consumer, who provides:"")
+r1a.add_follows(r1)
+
+s5aA = Section(""(A)"")
+s5a.add_subsection(s5aA)
+r1a.description.includes.append(Expression(s5aA, ""Proper identification""))
+s5aB = Section(""(B)"")
+s5a.add_subsection(s5aB)
+r1a.description.includes.append(Expression(s5aB, ""The unique personal identification number or password or similar device the consumer reporting agency provided under subsection (2) of this section""))
+ref1=Reference(s5aB, ""subsection (2) of this section"", r1a)
+r1a.add_follows(ref1)
+
+s5b = Section(""(b)"")
+r2 = Rule(s5b, Expression(s5b, ""security freeze for a protective record""))
+r2.rule_type = Rule.OBLIGATION
+r2.description = Expression(s5b, ""must remain in place"")
+r2.conditions.append(Expression(s5b, ""until the protected consumer or a representative requests, using a point of contact the consumer reporting agency designates, that the security freeze be removed or that the protective record be deleted""))
+
+
+r3=Rule(s5b, Expression(s5b, ""The consumer reporting agency""))
+r3.rule_type= Rule.PERMISSION
+r3.description=Expression(s5b, ""does not have an affirmative duty to notify the protected consumer or the representative that a security freeze is in place or to remove the security freeze or delete the protective record once the protected consumer is no longer a protected consumer"")
+r3.add_refines(r2)
+
+r3a=Rule(s5b, Expression(s5b, ""A protected consumer or a representative""))
+r3a.rule_type= Rule.OBLIGATION
+r3a.description=Expression(s5b, ""has the affirmative duty to request that the consumer reporting agency remove the security freeze or delete the protective record"")
+
+r4 = Rule(s5b, Expression(s5b, ""consumer reporting agency""))
+r4.rule_type = Rule.OBLIGATION
+r4.description = Expression(s5b, ""shall remove a security freeze or delete a protective record within 30 business days after receiving a request for removal or deletion from the protected consumer or a representative, who provides: "")
+r4.add_follows(r3)
+
+s5bA = Section(""(A)"")
+s5b.add_subsection(s5bA)
+r4.description.includes.append(Expression(s5bA, ""Proper identification""))
+s5bB = Section(""(B)"")
+s5b.add_subsection(s5bB)
+r4.description.includes.append(Expression(s5bB, ""Sufficient proof of authority, as described in ORS 646A.606 (3)(b), if the representative seeks to remove the security freeze or delete the protective record""))
+ref2 = Reference(s5bB, ""ORS 646A.606 (3)(b)"", target=r4)
+r4.add_is_refined_by(ref2)
+s5bC = Section(""(C)"")
+s5b.add_subsection(s5bC)
+r4.description.includes.append(Expression(s5bC, ""Proof that the representative's authority to act on the protected consumer's behalf is no longer valid or applicable, if the protected consumer seeks to remove the security freeze or delete the protective record""))","{'#obligation', '#refines', '#continuation', '#permission'}"
+"646A.610 Fees not permitted. A consumer reporting agency may not charge a consumer a fee or collect from a consumer any money or item of value for:
+      (1) Placing, temporarily lifting or removing a security freeze on the consumer's consumer report.
+      (2) Creating or deleting a protective record.
+      (3) Placing or removing a security freeze on a protective record for a protected consumer.
+      (4) Replacing a lost personal identification number, password or similar device the consumer reporting agency previously provided to the consumer.","s = Section(sectionNumber=""646A.610"", sectionTitle=""Fees not permitted"")
+
+r1 = Rule(s, Expression(s, ""A consumer reporting agency""))
+r1.rule_type = Rule.PROHIBITION
+r1.description = Expression(s, ""may not charge a consumer a fee or collect from a consumer any money or item of value for:"")
+
+s1 = Section(""(1)"")
+s.add_subsection(s1)
+e1 = Expression(s1, ""Placing, temporarily lifting or removing a security freeze on the consumer's consumer report"")
+r1.description.includes.append(e1)
+
+s2 = Section(""(2)"")
+s.add_subsection(s2)
+e2 = Expression(s2, ""Creating or deleting a protective record"")
+r1.description.includes.append(e2)
+
+s3 = Section(""(3)"")
+s.add_subsection(s3)
+e3 = Expression(s3, ""Placing or removing a security freeze on a protective record for a protected consumer"")
+r1.description.includes.append(e3)
+
+s4 = Section(""(4)"")
+s.add_subsection(s4)
+e4 = Expression(s4, ""Replacing a lost personal identification number, password or similar device the consumer reporting agency previously provided to the consumer"")
+r1.description.includes.append(e4)","{'#prohibition', '#continuation'}"
+"646A.612 Conditions for lifting or removing security freeze. (1)(a) A consumer reporting agency shall temporarily lift or remove a security freeze placed on a consumer report only if a consumer requests that the consumer reporting agency lift or remove the security freeze for the consumer report in accordance with ORS 646A.608.
+      (b) A consumer reporting agency shall remove a security freeze from a protected consumer's consumer report or protective record or delete a protective record only if the protected consumer or a representative requests that the consumer reporting agency remove the security freeze from the consumer report or protective record or delete the protective record in accordance with ORS 646A.608.","s = Section(sectionNumber=""646A.612"", sectionTitle=""Conditions for lifting or removing security freeze"")
+s1 = Section(""(1)"")
+s.add_subsection(s1)
+
+sa = Section(""(a)"")
+s1.add_subsection(sa)
+r1 = Rule(sa, Expression(sa, ""A consumer reporting agency""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(sa, ""shall temporarily lift or remove a security freeze placed on a consumer report"")
+r1.conditions.append(Expression(sa, ""only if a consumer requests that the consumer reporting agency lift or remove the security freeze for the consumer report in accordance with ORS 646A.608""))
+ref1=Reference(sa, ""ORS 646A.608"", r1)
+r1.add_refines(ref1)
+
+sb = Section(""(b)"")
+s1.add_subsection(sb)
+r2 = Rule(sb, Expression(sb, ""A consumer reporting agency""))
+r2.rule_type = Rule.OBLIGATION
+r2.description = Expression(sb, ""shall remove a security freeze from a protected consumer's consumer report or protective record or delete a protective record"")
+r2.conditions.append(Expression(sb, ""only if the protected consumer or a representative requests that the consumer reporting agency remove the security freeze from the consumer report or protective record or delete the protective record in accordance with ORS 646A.608""))
+ref2=Reference(sa, ""ORS 646A.608"", r2)
+r2.add_refines(ref2)","{'#obligation', '#follows', '#condition'}"
+"(2)(a) A consumer reporting agency may temporarily lift or remove a security freeze placed on a consumer report if the security freeze was placed because of a consumer's, a protected consumer's or a representative's material misrepresentation of fact.
+      (b) A consumer reporting agency may remove a security freeze from or delete a protective record if the consumer reporting agency placed the security freeze or created the protective record as a result of the protected consumer's or the representative's material misrepresentation of fact.
+      (c) If a consumer reporting agency intends to remove a security freeze or delete a protective record under this subsection, the consumer reporting agency shall notify the consumer, protected consumer or representative, as appropriate, in writing at least five business days before removing the security freeze or deleting the protective record.","s = Section(sectionNumber=""(2)"", sectionTitle="""")
+sa = Section(""(a)"")
+s.add_subsection(sa)
+r1 = Rule(sa, Expression(sa, ""A consumer reporting agency""))
+r1.rule_type = Rule.PERMISSION
+r1.description = Expression(sa, ""may temporarily lift or remove a security freeze placed on a consumer report"")
+r1.conditions.append(Expression(sa, ""the security freeze was placed because of a consumer's, a protected consumer's or a representative's material misrepresentation of fact""))
+
+sb = Section(""(b)"")
+s.add_subsection(sb)
+r2 = Rule(sb, Expression(sb, ""A consumer reporting agency""))
+r2.rule_type = Rule.PERMISSION
+r2.description = Expression(sb, ""may remove a security freeze from or delete a protective record"")
+r2.conditions.append(Expression(sb, ""the consumer reporting agency placed the security freeze or created the protective record as a result of the protected consumer's or the representative's material misrepresentation of fact""))
+
+sc = Section(""(c)"")
+s.add_subsection(sc)
+r3 = Rule(sc, Expression(sc, ""A consumer reporting agency""))
+r3.rule_type = Rule.OBLIGATION
+r3.description = Expression(sc, ""shall notify the consumer, protected consumer or representative, as appropriate, in writing at least five business days before removing the security freeze or deleting the protective record"")
+r3.conditions.append(Expression(sc, ""If a consumer reporting agency intends to remove a security freeze or delete a protective record under this subsection""))","{'#permission', '#obligation', '#condition'}"
+"646A.614 Effect of security freeze on use of consumer reports or protective records. (1) The provisions of ORS 646A.606 to 646A.610 do not apply to the use of a consumer report or a protective record by or for any of the following:
+      (a) A person, or the person's subsidiary, affiliate, agent or assignee with which the consumer or protected consumer has or, prior to assignment, had an account, contract or debtor-creditor relationship for the purposes of reviewing the account or collecting the financial obligation owing for the account, contract or debtor-creditor relationship. For purposes of this subsection, ""reviewing the account"" includes activities related to account maintenance, monitoring, credit line increases and account upgrades and enhancements.
+      (b) Any person acting pursuant to a judgment, court order, warrant or subpoena.
+      (c) A federal, state or local governmental entity, a law enforcement agency or court, or an agent or assignee of the federal, state or local governmental entity, law enforcement agency or court, for the purpose of investigating fraud or investigating or collecting delinquent taxes, unpaid judgments or court orders or acting otherwise to fulfill statutory or regulatory duties, if the activities or statutory or regulatory duties are consistent with a permissible purpose under section 604 of the federal Fair Credit Reporting Act (15 U.S.C. 1681b) as that Act existed on October 1, 2007.
+      (d) The use of credit information for the purposes of prescreening in accordance with the federal Fair Credit Reporting Act (15 U.S.C. 1681 et seq.) as that Act existed on October 1, 2007.
+      (e) Any person for the sole purpose of providing a credit file monitoring subscription service, or similar service to which the consumer or protected consumer has subscribed or to which a representative has subscribed on behalf of the protected consumer.
+      (f) A consumer reporting agency for the sole purpose of providing a consumer, a protected consumer or a representative with a copy of the consumer's or protected consumer's consumer report upon the consumer's, protected consumer's or representative's request.
+      (g) Any person or entity for the purpose of setting or adjusting rates, for handling claims or underwriting for insurance purposes, to the extent permitted by law.
+      (h) A subsidiary, affiliate, agent, assignee or prospective assignee of a person to whom access has been granted under ORS 646A.608 (3) for purposes of facilitating the extension of credit or other permissible use.
+      (i) A child support agency acting pursuant to Title IV-D of the Social Security Act (42 U.S.C. 651 et seq.) as that Act existed on October 1, 2007.
+      (j) A person for the sole purpose of screening an applicant for a residential dwelling unit as described in ORS 90.295 (1).","s = Section(sectionNumber=""646A.614"", sectionTitle=""Effect of security freeze on use of consumer reports or protective records."")
+s1 = Section(""(1)"")
+s.add_subsection(s1)
+
+# Exemption for subsection defining exclusions
+ex = Expression(s1, ""The provisions of ORS 646A.606 to 646A.610 do not apply to the use of a consumer report or a protective record by or for any of the following:"")
+e = Exemption(s1, ex)
+
+s1a = Section(""(a)"")
+s1.add_subsection(s1a)
+ex_a = Expression(s1a, ""a person, or the person's subsidiary, affiliate, agent or assignee with which the consumer or protected consumer has or had an account, contract or debtor-creditor relationship for reviewing the account or collecting the financial obligation"")
+ex_a.includes.append(Expression(s1a, ""reviewing the account includes activities related to account maintenance, monitoring, credit line increases and account upgrades and enhancements""))
+ex.includes.append(ex_a)
+
+s1b = Section(""(b)"")
+s1.add_subsection(s1b)
+ex_b = Expression(s1b, ""any person acting pursuant to a judgment, court order, warrant or subpoena"")
+ex.includes.append(ex_b)
+
+s1c = Section(""(c)"")
+s1.add_subsection(s1c)
+ex_c = Expression(s1c, ""a federal, state or local governmental entity, a law enforcement agency or court, or an agent or assignee for investigating fraud or collecting delinquent taxes or unpaid judgments consistent with section 604 of the federal Fair Credit Reporting Act  (15 U.S.C. 1681b) as that Act existed on October 1, 2007"")
+ex.includes.append(ex_c)
+ref1=Reference(s1c, ""section 604 of the federal Fair Credit Reporting Act  (15 U.S.C. 1681b)"", e)
+e.add_follows(ref1)
+
+s1d = Section(""(d)"")
+s1.add_subsection(s1d)
+ex_d = Expression(s1d, ""the use of credit information for prescreening in accordance with the federal Fair Credit Reporting Act (15 U.S.C. 1681 et seq.) as that Act existed on October 1, 2007"")
+ex.includes.append(ex_d)
+ref2=Reference(s1d, ""federal Fair Credit Reporting Act (15 U.S.C. 1681 et seq.)"", e)
+e.add_follows(ref2)
+
+s1e = Section(""(e)"")
+s1.add_subsection(s1e)
+ex_e = Expression(s1e, ""any person for the sole purpose of providing a credit file monitoring subscription service"")
+ex.includes.append(ex_e)
+
+s1f = Section(""(f)"")
+s1.add_subsection(s1f)
+ex_f = Expression(s1f, ""a consumer reporting agency for providing a consumer or representative with a copy of the consumer's report upon request"")
+ex.includes.append(ex_f)
+
+s1g = Section(""(g)"")
+s1.add_subsection(s1g)
+ex_g = Expression(s1g, ""any person or entity for setting or adjusting rates, for handling claims or underwriting for insurance purposes"")
+ex.includes.append(ex_g)
+
+s1h = Section(""(h)"")
+s1.add_subsection(s1h)
+ex_h = Expression(s1h, ""a subsidiary, affiliate, agent, assignee or prospective assignee for facilitating the extension of credit under ORS 646A.608"")
+ex.includes.append(ex_h)
+ref3=Reference(s1h, ""ORS 646A.608"", e)
+e.add_follows(ref3)
+
+s1i = Section(""(i)"")
+s1.add_subsection(s1i)
+ex_i = Expression(s1i, ""a child support agency acting pursuant to Title IV-D of the Social Security Act"")
+ex.includes.append(ex_i)
+ref4=Reference(s1i, ""Title IV-D of the Social Security Act"", e)
+e.add_follows(ref4)
+
+s1j = Section(""(j)"")
+s1.add_subsection(s1j)
+ex_j = Expression(s1j, ""a person for the sole purpose of screening an applicant for a residential dwelling unit as described in ORS 90.295 (1)"")
+ex.includes.append(ex_j)
+ref5=Reference(s1j,  ""ORS 90.295 (1)"", e)
+e.add_is_refined_by(ref5)","{'#exemption', '#refined_by', '#follows'}"
+"(2) The provisions of ORS 646A.606 to 646A.610 do not apply to a protective record used:
+      (a) By an entity listed in ORS 646A.618 (2); or
+      (b) For purposes other than an extension of credit, including:
+      (A) Compiling a criminal record;
+      (B) Detecting or preventing fraud;
+      (C) Compiling a personal loss history; or
+      (D) Screening an applicant for employment, tenancy or other background checking purposes.","s2 = Section(""(2)"")
+e1 = Expression(s2, ""The provisions of ORS 646A.606 to 646A.610 do not apply to a protective record used:"")
+exemption=Exemption(s2, e1)
+
+s2a = Section(""(a)"")
+s2.add_subsection(s2a)
+e1.includes.append(Expression(s2, ""an entity listed in ORS 646A.618 (2)""))
+ref1=Reference(s2a, ""ORS 646A.618 (2)"", exemption)
+exemption.add_is_refined_by(ref1)
+
+s2b = Section(""(b)"")
+s2.add_subsection(s2b)
+e1b=Expression(s2b, ""purposes other than an extension of credit, including:"")
+e1.includes.append(e1b)
+
+s2bA = Section(""(A)"")
+s2b.add_subsection(s2bA)
+e1b.includes.append(Expression(s2bA, ""Compiling a criminal record""))
+
+s2bB = Section(""(B)"")
+s2b.add_subsection(s2bB)
+e1b.includes.append(Expression(s2bB, ""Detecting or preventing fraud""))
+
+s2bC = Section(""(C)"")
+s2b.add_subsection(s2bC)
+e1b.includes.append(Expression(s2bC, ""Compiling a personal loss history""))
+
+s2bD = Section(""(D)"")
+s2b.add_subsection(s2bD)
+e1b.includes.append(Expression(s2bD, ""Screening an applicant for employment, tenancy or other background checking purposes""))","{'#continuation', '#exemption', '#refined_by'}"
+"646A.616 Effect of request for consumer report subject to security freeze. If a third party requests access to a consumer report on which a security freeze is in effect, the request is in connection with an application for credit or any other use, the consumer does not allow the consumer's consumer report to be accessed for that period of time, and the third party cannot obtain the consumer report through ORS 646A.614, the third party may treat the application as incomplete.","s = Section(sectionNumber=""646A.616"", sectionTitle=""Effect of request for consumer report subject to security freeze"")
+r1 = Rule(s, Expression(s, ""third party""))
+r1.rule_type = Rule.PERMISSION
+r1.description = Expression(s, ""may treat the application as incomplete"")
+r1.conditions.append(Expression(s, ""third party requests access to a consumer report on which a security freeze is in effect""))
+r1.conditions.append(Expression(s, ""the request is in connection with an application for credit or any other use""))
+r1.conditions.append(Expression(s, ""the consumer does not allow the consumer's consumer report to be accessed for that period of time""))
+r1.conditions.append(Expression(s, ""the third party cannot obtain the consumer report through ORS 646A.614""))
+ref1=Reference(s, ""ORS 646A.614"", r1)
+r1.add_follows(ref1)","{'#permission', '#condition', '#follows'}"
+"646A.618 Prohibition on changes to consumer report subject to security freeze; entities subject to requirement to place security freeze. (1) If a security freeze is in place, a consumer reporting agency shall not change any of the following official information in a consumer credit report without sending a written confirmation of the change to the consumer within 30 days of the change being posted to the consumer's report: name, date of birth, Social Security number and address. Written confirmation is not required for technical modifications of a consumer's official information, including name and street abbreviations, complete spellings or transposition of numbers or letters. In the case of an address change, the written confirmation shall be sent to both the new address and to the former address.","s = Section(sectionNumber=""646A.618"", sectionTitle=""Prohibition on changes to consumer report subject to security freeze; entities subject to requirement to place security freeze."")
+
+r1 = Rule(s, Expression(s, ""a consumer reporting agency""))
+r1.rule_type = Rule.PROHIBITION
+r1.description = Expression(s, ""shall not change any of the following official information in a consumer credit report without sending a written confirmation of the change to the consumer within 30 days of the change being posted to the consumer's report:"")
+e1a = Expression(s, ""name"")
+e1b = Expression(s, ""date of birth"")
+e1c = Expression(s, ""Social Security number"")
+e1d = Expression(s, ""address"")
+r1.description.includes.extend([e1a, e1b, e1c, e1d])
+r1.conditions.append(Expression(s, ""If a security freeze is in place""))
+
+r2 = Rule(s, Expression(s, ""Written confirmation""))
+r2.rule_type = Rule.PERMISSION
+r2.description = Expression(s, ""is not required for technical modifications of a consumer's official information, including name and street abbreviations, complete spellings or transposition of numbers or letters"")
+r2.add_is_exception_to(r1)
+
+r3 = Rule(s, Expression(s, ""the written confirmation""))
+r3.rule_type = Rule.OBLIGATION
+r3.conditions.append(Expression(s, ""In the case of an address change""))
+r3.description = Expression(s, ""shall be sent to both the new address and to the former address"")
+r3.add_follows(r1)","{'#obligation', '#prohibition', '#condition', '#permission', '#exception_to', '#refines'}"
+"(2) The following entities are not required to place a security freeze on a credit report:
+      (a) A consumer reporting agency that acts only as a reseller of credit information by assembling and merging information contained in the database of another consumer reporting agency or multiple consumer reporting agencies, and does not maintain a database of credit information from which new consumer credit reports are produced. However, a consumer reporting agency acting as a reseller shall honor any security freeze placed on a consumer report by another consumer reporting agency.
+      (b) A check services or fraud prevention services company that issues reports on incidents of fraud or authorizations for the purpose of approving or processing negotiable instruments, electronic funds transfers or similar methods of payments.
+      (c) A deposit account information service company that issues reports regarding account closures due to fraud, substantial overdrafts, ATM abuse or similar negative information regarding a consumer, to inquiring banks or other financial institutions for use only in reviewing a consumer request for a deposit account at the inquiring bank or financial institution.","s2 = Section(""(2)"")
+sa = Section(""(a)"")
+s2.add_subsection(sa)
+e = Exemption(sa, Expression(sa, ""The following entities are not required to place a security freeze on a credit report""))
+ex = Expression(sa, ""a consumer reporting agency that acts only as a reseller of credit information by assembling and merging information contained in the database of another consumer reporting agency or multiple consumer reporting agencies, and does not maintain a database of credit information from which new consumer credit reports are produced"")
+e.description.append(ex)
+r1 = Rule(sa, Expression(sa, ""a consumer reporting agency acting as a reseller""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(sa, ""shall honor any security freeze placed on a consumer report by another consumer reporting agency"")
+r1.add_refines(e)
+
+sb = Section(""(b)"")
+s2.add_subsection(sb)
+ex2 = Expression(sb, ""a check services or fraud prevention services company that issues reports on incidents of fraud or authorizations for the purpose of approving or processing negotiable instruments, electronic funds transfers or similar methods of payments"")
+e.description.append(ex2)
+
+sc = Section(""(c)"")
+s2.add_subsection(sc)
+ex3 = Expression(sc, ""a deposit account information service company that issues reports regarding account closures due to fraud, substantial overdrafts, ATM abuse or similar negative information regarding a consumer, to inquiring banks or other financial institutions for use only in reviewing a consumer request for a deposit account at the inquiring bank or financial institution"")
+e.description.append(ex3)","{'#exemption', '#refines' '#continuation', '#obligation'}"
+"646A.620 Prohibition on printing, displaying or posting Social Security numbers; exemptions. (1) Except as otherwise specifically provided by law, a person may not:
+      (a) Print a consumer's Social Security number on mail to the consumer that is:
+      (A) Material the consumer did not request; or
+      (B) Part of any documentation the consumer requested for a transaction or service, unless the Social Security number is redacted.
+      (b) Print a consumer's Social Security number on any card required for the consumer to access products or services provided by the person.
+      (c) Publicly post or publicly display a consumer's Social Security number unless the Social Security number is redacted. As used in this paragraph, ""publicly post or publicly display"" means to communicate or otherwise make available to the public.
+      (d) Dispose of, or transfer to another person for disposal, material or media that display a consumer's Social Security number unless the person makes the Social Security number unreadable or unrecoverable or ensures that any person that ultimately disposes of the material or media makes the Social Security number unreadable or unrecoverable.","s = Section(sectionNumber=""646A.620"", sectionTitle=""Prohibition on printing, displaying or posting Social Security numbers; exemptions."")
+s1 = Section(""(1)"")
+s.add_subsection(s1)
+
+r1 = Rule(s1, Expression(s1, ""a person""))
+r1.rule_type = Rule.PROHIBITION
+r1.description = Expression(s1, ""may not:"")
+r1.add_exception(Expression(s1, ""otherwise specifically provided by law""))
+
+sa = Section(""(a)"")
+s1.add_subsection(sa)
+e1=Expression(sa, ""Print a consumer's Social Security number on mail to the consumer that is:"")
+r1.description.includes.append(e1)
+sa_a = Section(""(A)"")
+sa.add_subsection(sa_a)
+e1.includes.append(Expression(sa_a, ""Material the consumer did not request""))
+
+sa_b = Section(""(B)"")
+sa.add_subsection(sa_b)
+e1.includes.append(Expression(sa_b, ""Part of any documentation the consumer requested for a transaction or service, unless the Social Security number is redacted""))
+
+sb = Section(""(b)"")
+s1.add_subsection(sb)
+r1.description.includes.append(Expression(sb, ""Print a consumer's Social Security number on any card required for the consumer to access products or services provided by the person""))
+
+sc = Section(""(c)"")
+s1.add_subsection(sc)
+r1.description.includes.append(Expression(sc, ""Publicly post or publicly display a consumer's Social Security number unless the Social Security number is redacted""))
+
+d1=Definition(sc, Expression(sc, ""publicly post or publicly display""))
+d1.meaning.append(Expression(sc, ""to communicate or otherwise make available to the public""))
+r1.add_refines(d1)
+
+sd = Section(""(d)"")
+s1.add_subsection(sd)
+r1.description.includes.append(Expression(sd, ""Dispose of, or transfer to another person for disposal, material or media that display a consumer's Social Security number unless the person makes the Social Security number unreadable or unrecoverable or ensures that any person that ultimately disposes of the material or media makes the Social Security number unreadable or unrecoverable""))","{'#exception', '#prohibition', '#continuation', '#definition', '#refines'}"
+"(2) This section does not prevent the collection, use or release of a Social Security number as required by state or federal law or rule adopted by the Chief Justice of the Supreme Court, the Chief Judge of the Court of Appeals or the judge of the Oregon Tax Court and does not prevent the use or printing of a Social Security number for internal verification or administrative purposes or to enforce a judgment or court order.","s2 = Section(""(2)"")
+ex = Expression(s2, ""This section does not prevent the collection, use or release of a Social Security number as required by state or federal law or rule adopted by the Chief Justice of the Supreme Court, the Chief Judge of the Court of Appeals or the judge of the Oregon Tax Court and does not prevent the use or printing of a Social Security number for internal verification or administrative purposes or to enforce a judgment or court order."")
+e = Exemption(s2, ex)",{'#exemption'}
+"(3) This section does not apply to records that must be made available to the public under state or federal law or rule adopted by the Chief Justice of the Supreme Court, the Chief Judge of the Court of Appeals or the judge of the Oregon Tax Court.","s3 = Section(sectionNumber=""(3)"")
+
+e = Exemption(s3, description=Expression(s3, ""this section does not apply to records that must be made available to the public under state or federal law or rule adopted by the Chief Justice of the Supreme Court, the Chief Judge of the Court of Appeals or the judge of the Oregon Tax Court.""))",{'#exemption'}
+"(4) This section does not apply to a Social Security number in any of the following records or copies of records in any form or storage medium maintained or otherwise possessed by a court, the State Court Administrator or the Secretary of State:
+      (a) A record received on or before October 1, 2007;
+      (b) A record received after October 1, 2007, if, by state or federal statute or rule, the person that submitted the record could have caused the record to be filed or maintained in a manner that protected the Social Security number from public disclosure; or
+      (c) A record, regardless of the date created or received, that is:
+      (A) An accusatory instrument charging a violation or crime;
+      (B) A record of oral proceedings in a court;
+      (C) An exhibit offered as evidence in a proceeding; or
+      (D) A judgment or court order.","s4 = Section(""(4)"")
+e1=Expression(s4, ""this section does not apply to a Social Security number in any of the following records or copies of records in any form or storage medium maintained or otherwise possessed by a court, the State Court Administrator or the Secretary of State:"")
+exemption = Exemption(s4, description=e1)
+
+s4a = Section(""(a)"")
+s4.add_subsection(s4a)
+e1.includes.append(Expression(s4a, ""A record received on or before October 1, 2007""))
+
+s4b = Section(""(b)"")
+s4.add_subsection(s4b)
+e1.includes.append(Expression(s4b, ""A record received after October 1, 2007, if, by state or federal statute or rule, the person that submitted the record could have caused the record to be filed or maintained in a manner that protected the Social Security number from public disclosure""))
+
+s4c = Section(""(c)"")
+s4.add_subsection(s4c)
+e1c=Expression(s4c, ""A record, regardless of the date created or received, that is"")
+e1.includes.append(e1c)
+
+s4cA = Section(""(A)"")
+s4c.add_subsection(s4cA)
+e1c.includes.append(Expression(s4cA, ""An accusatory instrument charging a violation or crime""))
+
+s4cB = Section(""(B)"")
+s4c.add_subsection(s4cB)
+e1c.includes.append(Expression(s4cB, ""A record of oral proceedings in a court""))
+
+s4cC = Section(""(C)"")
+s4c.add_subsection(s4cC)
+e1c.includes.append(Expression(s4cC, ""An exhibit offered as evidence in a proceeding""))
+
+s4cD = Section(""(D)"")
+s4c.add_subsection(s4cD)
+e1c.includes.append(Expression(s4cD, ""A judgment or court order""))","{'#continuation', '#exemption'}"
+"646A.622 Requirement to develop safeguards for personal information; conduct deemed to comply with requirement; defenses. (1) A covered entity and a vendor shall develop, implement and maintain reasonable safeguards to protect the security, confidentiality and integrity of personal information, including safeguards that protect the personal information when the covered entity or vendor disposes of the personal information.","s = Section(sectionNumber=""646A.622"", sectionTitle=""Requirement to develop safeguards for personal information; conduct deemed to comply with requirement; defenses."")
+
+s1 = Section(""(1)"")
+s.add_subsection(s1)
+r1 = Rule(s1, Expression(s1, ""A covered entity and a vendor""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(s1, ""shall develop, implement and maintain reasonable safeguards to protect the security, confidentiality and integrity of personal information, including safeguards that protect the personal information when the covered entity or vendor disposes of the personal information"")",{'#obligation'}
+"(2) A covered entity or vendor complies with subsection (1) of this section if the covered entity or vendor:
+      (a) Complies with a state or federal law that provides greater protection to personal information than the protections that this section provides.
+      (b) Complies with regulations promulgated under Title V of the Gramm-Leach-Bliley Act of 1999 (15 U.S.C. 6801 to 6809) as in effect on January 1, 2020, if personal information that is subject to ORS 646A.600 to 646A.628 is also subject to the Act.
+      (c) Complies with regulations that implement the Health Insurance Portability and Accountability Act of 1996 (45 C.F.R. parts 160 and 164) and the Health Information Technology for Economic and Clinical Health Act of 2009 (P.L. 111-5, Title XIII, 123 Stat. 226), as those Acts were in effect on January 1, 2020, if personal information that is subject to ORS 646A.600 to 646A.628 is also subject to those Acts.
+      (d) Implements an information security program that includes:
+      (A) Administrative safeguards such as:
+      (i) Designating one or more employees to coordinate the security program;
+      (ii) Identifying reasonably foreseeable internal and external risks with reasonable regularity;
+      (iii) Assessing whether existing safeguards adequately control the identified risks;
+      (iv) development and managing employees in security program practices and procedures with reasonable regularity;
+      (v) Selecting service providers that are capable of maintaining appropriate safeguards and practices, and requiring the service providers by contract to maintain the safeguards and practices;
+      (vi) Adjusting the security program in light of business changes, potential threats or new circumstances; and
+      (vii) Reviewing user access privileges with reasonable regularity;
+      (B) Technical safeguards such as:
+      (i) Assessing risks and vulnerabilities in network and software design and taking reasonably timely action to address the risks and vulnerabilities;
+      (ii) Applying security updates and a reasonable security patch management program to software that might reasonably be at risk of or vulnerable to a breach of security;
+      (iii) Monitoring, detecting, preventing and responding to attacks or system failures; and
+      (iv) Regularly testing, monitoring and taking action to address the effectiveness of key controls, systems and procedures; and
+      (C) Physical safeguards such as:
+      (i) Assessing, in light of current technology, risks of information collection, storage, usage, retention, access and disposal and implementing reasonable methods to remedy or mitigate identified risks;
+      (ii) Monitoring, detecting, preventing, isolating and responding to intrusions timely and with reasonable regularity;
+      (iii) Protecting against unauthorized access to or use of personal information during or after collecting, using, storing, transporting, retaining, destroying or disposing of the personal information; and
+      (iv) Disposing of personal information, whether the covered entity or vendor disposes of the personal information on or off the covered entity's or vendor's premises or property, after the covered entity or vendor no longer needs the personal information for business purposes or as required by local, state or federal law by burning, pulverizing, shredding or modifying a physical record and by destroying or erasing electronic media so that the information cannot be read or reconstructed.","s = Section(sectionNumber=""(2)"")
+
+r1 = Rule(s, Expression(s, ""A covered entity or vendor""))
+r1.rule_type = Rule.PERMISSION
+r1.description=Expression(s, ""complies with subsection (1) of this section if the covered entity or vendor:"")
+
+s2a = Section(""(a)"")
+s.add_subsection(s2a)
+e_a = Expression(s2a, ""Complies with a state or federal law that provides greater protection to personal information than the protections that this section provides"")
+r1.description.includes.append(e_a)
+
+s2b = Section(""(b)"")
+s.add_subsection(s2b)
+e_b = Expression(s2b, ""Complies with regulations promulgated under Title V of the Gramm-Leach-Bliley Act of 1999 (15 U.S.C. 6801 to 6809) as in effect on January 1, 2020, if personal information that is subject to ORS 646A.600 to 646A.628 is also subject to the Act"")
+r1.description.includes.append(e_b)
+ref1=Reference(s2b, ""Title V of the Gramm-Leach-Bliley Act of 1999 (15 U.S.C. 6801 to 6809)"", r1)
+r1.add_follows(ref1)
+
+s2c = Section(""(c)"")
+s.add_subsection(s2c)
+e_c = Expression(s2c, ""Complies with regulations that implement the Health Insurance Portability and Accountability Act of 1996 (45 C.F.R. parts 160 and 164) and the Health Information Technology for Economic and Clinical Health Act of 2009 (P.L. 111-5, Title XIII, 123 Stat. 226), as those Acts were in effect on January 1, 2020, if personal information that is subject to ORS 646A.600 to 646A.628 is also subject to those Acts"")
+r1.description.includes.append(e_c)
+ref2=Reference(s2c, ""the Health Insurance Portability and Accountability Act of 1996 (45 C.F.R. parts 160 and 164)"", r1)
+r1.add_follows(ref2)
+ref3=Reference(s2c, ""the Health Information Technology for Economic and Clinical Health Act of 2009 (P.L. 111-5, Title XIII, 123 Stat. 226)"", r1)
+r1.add_follows(ref3)
+
+s2d = Section(""(d)"")
+s.add_subsection(s2d)
+e_d = Expression(s2d, ""Implements an information security program that includes:"")
+r1.description.includes.append(e_d)
+
+s2da = Section(""(A)"")
+s2d.add_subsection(s2da)
+e_da = Expression(s2da, ""Administrative safeguards such as:"")
+e_d.includes.append(e_da)
+
+s2dai = Section(""(i)"")
+s2da.add_subsection(s2dai)
+e_dai = Expression(s2dai, ""Designating one or more employees to coordinate the security program"")
+e_da.includes.append(e_dai)
+
+s2daii = Section(""(ii)"")
+s2da.add_subsection(s2daii)
+e_daii = Expression(s2daii, ""Identifying reasonably foreseeable internal and external risks with reasonable regularity"")
+e_da.includes.append(e_daii)
+
+s2daiii = Section(""(iii)"")
+s2da.add_subsection(s2daiii)
+e_daiii = Expression(s2daiii, ""Assessing whether existing safeguards adequately control the identified risks"")
+e_da.includes.append(e_daiii)
+
+s2daiv = Section(""(iv)"")
+s2da.add_subsection(s2daiv)
+e_daiv = Expression(s2daiv, ""development and managing employees in security program practices and procedures with reasonable regularity"")
+e_da.includes.append(e_daiv)
+
+s2dav = Section(""(v)"")
+s2da.add_subsection(s2dav)
+e_dav = Expression(s2dav, ""Selecting service providers that are capable of maintaining appropriate safeguards and practices, and requiring the service providers by contract to maintain the safeguards and practices"")
+e_da.includes.append(e_dav)
+
+s2davi = Section(""(vi)"")
+s2da.add_subsection(s2davi)
+e_davi = Expression(s2davi, ""Adjusting the security program in light of business changes, potential threats or new circumstances"")
+e_da.includes.append(e_davi)
+
+s2davii = Section(""(vii)"")
+s2da.add_subsection(s2davii)
+e_davii = Expression(s2davii, ""Reviewing user access privileges with reasonable regularity"")
+e_da.includes.append(e_davii)
+
+s2db = Section(""(B)"")
+s2d.add_subsection(s2db)
+e_db = Expression(s2db, ""Technical safeguards such as:"")
+e_d.includes.append(e_db)
+
+s2dbi = Section(""(i)"")
+s2db.add_subsection(s2dbi)
+e_dbi = Expression(s2dbi, ""Assessing risks and vulnerabilities in network and software design and taking reasonably timely action to address the risks and vulnerabilities"")
+e_db.includes.append(e_dbi)
+
+s2dbii = Section(""(ii)"")
+s2db.add_subsection(s2dbii)
+e_dbii = Expression(s2dbii, ""Applying security updates and a reasonable security patch management program to software that might reasonably be at risk of or vulnerable to a breach of security"")
+e_db.includes.append(e_dbii)
+
+s2dbiii = Section(""(iii)"")
+s2db.add_subsection(s2dbiii)
+e_dbiii = Expression(s2dbiii, ""Monitoring, detecting, preventing and responding to attacks or system failures"")
+e_db.includes.append(e_dbiii)
+
+s2dbiv = Section(""(iv)"")
+s2db.add_subsection(s2dbiv)
+e_dbiv = Expression(s2dbiv, ""Regularly testing, monitoring and taking action to address the effectiveness of key controls, systems and procedures"")
+e_db.includes.append(e_dbiv)
+
+s2dc = Section(""(C)"")
+s2d.add_subsection(s2dc)
+e_dc = Expression(s2dc, ""Physical safeguards such as:"")
+e_d.includes.append(e_dc)
+
+s2dci = Section(""(i)"")
+s2dc.add_subsection(s2dci)
+e_dci = Expression(s2dci, ""Assessing, in light of current technology, risks of information collection, storage, usage, retention, access and disposal and implementing reasonable methods to remedy or mitigate identified risks"")
+e_dc.includes.append(e_dci)
+
+s2dcii = Section(""(ii)"")
+s2dc.add_subsection(s2dcii)
+e_dcii = Expression(s2dcii, ""Monitoring, detecting, preventing, isolating, and responding to intrusions timely and with reasonable regularity"")
+e_dc.includes.append(e_dcii)
+
+s2dciii = Section(""(iii)"")
+s2dc.add_subsection(s2dciii)
+e_dciii = Expression(s2dciii, ""Protecting against unauthorized access to or use of personal information during or after collecting, using, storing, transporting, retaining, destroying or disposing of the personal information"")
+e_dc.includes.append(e_dciii)
+
+s2dciv = Section(""(iv)"")
+s2dc.add_subsection(s2dciv)
+e_dciv = Expression(s2dciv, ""Disposing of personal information, whether the covered entity or vendor disposes of the personal information on or off the covered entity's or vendor's premises or property, after the covered entity or vendor no longer needs the personal information for business purposes or as required by local, state or federal law by burning, pulverizing, shredding or modifying a physical record and by destroying or erasing electronic media so that the information cannot be read or reconstructed"")
+e_dc.includes.append(e_dciv)","{'#continuation', '#obligation', '#refines'}"
+(3) A covered entity or vendor complies with subsection (2)(d)(C)(iv) of this section if the covered entity or vendor contracts with another person engaged in the business of record destruction to dispose of personal information in a manner that is consistent with subsection (2)(d)(C)(iv) of this section.,"s = Section(sectionNumber=""(3)"")
+
+r1 = Rule(s, Expression(s, ""A covered entity or vendor""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(s, ""complies with subsection (2)(d)(C)(iv) of this section"")
+r1.conditions.append(Expression(s, ""if the covered entity or vendor contracts with another person engaged in the business of record destruction to dispose of personal information in a manner that is consistent with subsection (2)(d)(C)(iv) of this section""))
+ref1=Reference(s, ""subsection (2)(d)(C)(iv) of this section"", r1)
+r1.add_follows(ref1)","{'#follows', '#obligation'}"
+"(4) A covered entity or vendor in an action or proceeding may affirmatively defend against an allegation that the covered entity or vendor has not complied with subsection (1) of this section with respect to personal information that is subject to ORS 646A.600 to 646A.628 but is not subject to an Act described in subsection (2)(b) or (c) of this section by showing that, with respect to the personal information that is subject to ORS 646A.600 to 646A.628, the covered entity or vendor developed, implemented and maintained reasonable security measures that would be required for personal information subject to the applicable Act.","s4 = Section(""(4)"")
+r = Rule(s4, Expression(s4, ""A covered entity or vendor in an action or proceeding""))
+r.rule_type = Rule.PERMISSION
+r.description = Expression(s4, ""may affirmatively defend against an allegation that the covered entity or vendor has not complied with subsection (1) of this section with respect to personal information"")
+r.conditions.append(Expression(s4, ""the personal information is subject to ORS 646A.600 to 646A.628 but is not subject to an Act described in subsection (2)(b) or (c) of this section""))
+r.description.includes.append(Expression(s4, ""by showing that, with respect to the personal information that is subject to ORS 646A.600 to 646A.628, the covered entity or vendor developed, implemented and maintained reasonable security measures that would be required for personal information subject to the applicable Act""))
+ref1=Reference(s4, ""subsection (2)(b) or (c) of this section"", r)
+r.add_is_refined_by(ref1)","{'#permission', '#refined_by', '#condition'}"
+"(5) Notwithstanding subsection (2) of this section, a person that is an owner of a small business as defined in ORS 285B.123 (2) complies with subsection (1) of this section if the person's information security and disposal program contains administrative, technical and physical safeguards and disposal measures that are appropriate for the size and complexity of the small business, the nature and scope of the small business's activities, and the sensitivity of the personal information the small business collects from or about consumers.","s5 = Section(sectionNumber=""(5)"")
+
+r1 = Rule(s5, Expression(s5, ""a person that is an owner of a small business as defined in ORS 285B.123 (2)""))
+r1.rule_type = Rule.PERMISSION
+
+r1.conditions.append(Expression(s5, ""the person's information security and disposal program contains administrative, technical and physical safeguards and disposal measures that are appropriate for the size and complexity of the small business, the nature and scope of the small business's activities, and the sensitivity of the personal information the small business collects from or about consumers""))
+
+r1.description = Expression(s5, ""complies with subsection (1) of this section"")
+ref1=Reference(s5, ""subsection (2) of this section"", r1)
+r1.add_is_exception_to(r1)
+ref2=Reference(s5, ""subsection (1) of this section"", r1)
+r1.add_follows(ref2)
+ref3=Reference(s5, ""ORS 285B.123 (2)"", r1)
+r1.add_is_refined_by(ref3)","{'#obligation', '#refined_by', '#exception_to', '#condition', '#follows'}"
+"646A.624 Powers of director; penalties. (1) The Director of the Department of Consumer and Business Services may:
+      (a) Make such public or private investigations within or outside this state as the director deems necessary to determine whether a person has violated any provision of ORS 646A.600 to 646A.628, or to aid in the enforcement of ORS 646A.600 to 646A.628.
+      (b) Require or permit a person to file a statement in writing, under oath or otherwise as the director determines, as to all the facts and circumstances concerning the matter to be investigated.
+      (c) Administer oaths and affirmations, subpoena witnesses, compel attendance, take evidence and require the production of books, papers, correspondence, memoranda, agreements or other documents or records that the director deems relevant or material to the inquiry. Each witness who appears before the director under a subpoena shall receive the fees and mileage provided for witnesses in ORS 44.415 (2).","s = Section(sectionNumber=""646A.624"", sectionTitle=""Powers of director; penalties."")
+
+s1 = Section(sectionNumber=""(1)"")
+s.add_subsection(s1)
+
+sa = Section(sectionNumber=""(a)"")
+s1.add_subsection(sa)
+
+r1 = Rule(sa, Expression(sa, ""The Director of the Department of Consumer and Business Services""))
+r1.rule_type = Rule.PERMISSION
+r1.description = Expression(sa, ""may make such public or private investigations within or outside this state as the director deems necessary to determine whether a person has violated any provision of ORS 646A.600 to 646A.628, or to aid in the enforcement of ORS 646A.600 to 646A.628"")
+
+sb = Section(sectionNumber=""(b)"")
+s1.add_subsection(sb)
+
+r2 = Rule(sb, Expression(sb, ""The Director of the Department of Consumer and Business Services""))
+r2.rule_type = Rule.PERMISSION
+r2.description = Expression(sb, ""may require or permit a person to file a statement in writing, under oath or otherwise as the director determines, as to all the facts and circumstances concerning the matter to be investigated"")
+r2.add_refines(r1)
+
+sc = Section(sectionNumber=""(c)"")
+s1.add_subsection(sc)
+
+r3 = Rule(sc, Expression(sc, ""The Director of the Department of Consumer and Business Services""))
+r3.rule_type = Rule.PERMISSION
+r3.description = Expression(sc, ""may administer oaths and affirmations, subpoena witnesses, compel attendance, take evidence and require the production of books, papers, correspondence, memoranda, agreements or other documents or records that the director deems relevant or material to the inquiry"")
+r3.add_refines(r1)
+
+i = Information(sc, Expression(sc, ""Each witness who appears before the director under a subpoena shall receive the fees and mileage provided for witnesses in ORS 44.415 (2)""))
+ref1=Reference(sc, ""ORS 44.415 (2)"", i)
+i.add_follows(ref1)","{'#permission', '#follows', '#refines', '#continuation'}"
+"(2) If a person fails to comply with a subpoena so issued or a party or witness refuses to testify on any matters, the judge of the circuit court or of any county, on the application of the director, shall compel obedience by proceedings for contempt as in the case of disobedience of the requirements of a subpoena issued from such court or a refusal to testify therein.","s = Section(sectionNumber=""(2)"")
+r1 = Rule(s, Expression(s, ""judge of the circuit court or of any county""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(s, ""shall compel obedience by proceedings for contempt as in the case of disobedience of the requirements of a subpoena issued from such court or a refusal to testify therein"")
+r1.conditions.append(Expression(s, ""a person fails to comply with a subpoena so issued or a party or witness refuses to testify on any matters""))","{'#obligation', '#condition'}"
+"(3) If the director has reason to believe that any person has engaged or is engaging in any violation of ORS 646A.600 to 646A.628, the director may issue an order, subject to ORS chapter 183, directed to the person to cease and desist from the violation, or require the person to pay compensation to consumers injured by the violation. The director may order compensation to consumers only upon a finding that enforcement of the rights of the consumers by private civil action would be so burdensome or expensive as to be impractical.","s3 = Section(sectionNumber=""(3)"")
+r1 = Rule(s3, Expression(s3, ""the director""))
+r1.rule_type = Rule.PERMISSION
+r1.description = Expression(s3, ""may issue an order, subject to ORS chapter 183, directed to the person to cease and desist from the violation, or require the person to pay compensation to consumers injured by the violation"")
+r1.conditions.append(Expression(s3, ""the director has reason to believe that any person has engaged or is engaging in any violation of ORS 646A.600 to 646A.628""))
+ref1=Reference(s3, ""ORS chapter 183"", r1)
+r1.add_follows(ref1)
+
+r2 = Rule(s3, Expression(s3, ""The director""))
+r2.rule_type = Rule.PERMISSION
+r2.description = Expression(s3, ""may order compensation to consumers only upon a finding that enforcement of the rights of the consumers by private civil action would be so burdensome or expensive as to be impractical"")
+r2.add_refines(r1)","{'#permission', '#follows', '#condition', '#refines'}"
+"(4)(a) In addition to all other penalties and enforcement provisions provided by law, any person who violates or who procures, aids or abets in the violation of ORS 646A.600 to 646A.628 shall be subject to a penalty of not more than $1,000 for every violation, which shall be paid to the General Fund of the State Treasury.
+      (b) Every violation is a separate offense and, in the case of a continuing violation, each day's continuance is a separate violation, but the maximum penalty for any occurrence shall not exceed $500,000.
+      (c) Civil penalties under this section shall be imposed as provided in ORS","s = Section(sectionNumber=""(4)"", sectionTitle="""")
+
+sa = Section(""(a)"")
+s.add_subsection(sa)
+r1 = Rule(sa, Expression(sa, ""any person who violates or who procures, aids or abets in the violation of ORS 646A.600 to 646A.628""))
+r1.rule_type = Rule.PENALTY
+r1.description = Expression(sa, ""shall be subject to a penalty of not more than $1,000 for every violation, which shall be paid to the General Fund of the State Treasury"")
+r1.description.includes.append(Expression(sa, ""In addition to all other penalties and enforcement provisions provided by law""))
+
+sb = Section(""(b)"")
+s.add_subsection(sb)
+r2 = Rule(sb, Expression(sb, ""Every violation is a separate offense""))
+r2.rule_type = Rule.PENALTY
+r2.description = Expression(sb, ""in the case of a continuing violation, each day's continuance is a separate violation, but the maximum penalty for any occurrence shall not exceed $500,000"")
+r2.add_refines(r1)
+
+sc = Section(""(c)"")
+s.add_subsection(sc)
+r3 = Rule(sc, Expression(sc, ""Civil penalties under this section""))
+r3.rule_type = Rule.OBLIGATION
+r3.description = Expression(sc, ""shall be imposed as provided in ORS"")
+r3.add_refines(r1)","{'#follows', '#penalty', '#refines'}"
+"646A.626 Rules. In accordance with ORS chapter 183, the Director of the Department of Consumer and Business Services may adopt rules for the purpose of carrying out the provisions of ORS 646A.600 to 646A.628.","s = Section(sectionNumber=""646A.626"", sectionTitle=""Rules"")
+r1 = Rule(s, Expression(s, ""Director of the Department of Consumer and Business Services""))
+r1.rule_type = Rule.PERMISSION
+r1.description = Expression(s, ""may adopt rules for the purpose of carrying out the provisions of ORS 646A.600 to 646A.628"")
+ref1=Reference(s, ""ORS chapter 183"", r1)
+r1.add_follows(ref1)","{'#permission', '#follows'}"

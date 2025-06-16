@@ -1,0 +1,295 @@
+text,code,tags
+"§ 18.2-186.6. Breach of personal information notification.
+A. As used in this section:
+""Breach of the security of the system"" means the unauthorized access and acquisition of unencrypted and unredacted computerized data that compromises the security or confidentiality of personal information maintained by an individual or entity as part of a database of personal information regarding multiple individuals and that causes, or the individual or entity reasonably believes has caused, or will cause, identity theft or other fraud to any resident of the Commonwealth. Good faith acquisition of personal information by an employee or agent of an individual or entity for the purposes of the individual or entity is not a breach of the security of the system, provided that the personal information is not used for a purpose other than a lawful purpose of the individual or entity or subject to further unauthorized disclosure.","s = Section(sectionNumber=""§ 18.2-186.6"", sectionTitle=""Breach of personal information notification"")
+
+sa = Section(""A."")
+s.add_subsection(sa)
+
+d = Definition(sa, Expression(sa, ""Breach of the security of the system""))
+d.meaning.append(Expression(sa, ""the unauthorized access and acquisition of unencrypted and unredacted computerized data that compromises the security or confidentiality of personal information maintained by an individual or entity as part of a database of personal information regarding multiple individuals and that causes, or the individual or entity reasonably believes has caused, or will cause, identity theft or other fraud to any resident of the Commonwealth""))
+d.exclusions.append(Expression(sa, ""Good faith acquisition of personal information by an employee or agent of an individual or entity for the purposes of the individual or entity is not a breach of the security of the system, provided that the personal information is not used for a purpose other than a lawful purpose of the individual or entity or subject to further unauthorized disclosure""))","{'#exclusion', '#definition'}"
+"A. ""Encrypted"" means the transformation of data through the use of an algorithmic process into a form in which there is a low probability of assigning meaning without the use of a confidential process or key, or the securing of the information by another method that renders the data elements unreadable or unusable.","s = Section(sectionNumber=""A."")
+d_encrypted = Definition(s, Expression(s, ""Encrypted""))
+
+d_encrypted.meaning.append(Expression(s, ""the transformation of data through the use of an algorithmic process into a form in which there is a low probability of assigning meaning without the use of a confidential process or key""))
+d_encrypted.meaning.append(Expression(s, ""the securing of the information by another method that renders the data elements unreadable or unusable""))",{'#definition'}
+"A. ""Entity"" includes corporations, business trusts, estates, partnerships, limited partnerships, limited liability partnerships, limited liability companies, associations, organizations, joint ventures, governments, governmental subdivisions, agencies, or instrumentalities or any other legal entity, whether for profit or not for profit.
+","s = Section(sectionNumber=""A."")
+
+d_entity = Definition(s, Expression(s, ""Entity""))
+d_entity.meaning.append(Expression(s, ""corporations, business trusts, estates, partnerships, limited partnerships, limited liability partnerships, limited liability companies, associations, organizations, joint ventures, governments, governmental subdivisions, agencies, or instrumentalities or any other legal entity, whether for profit or not for profit""))
+",{'#definition'}
+"A. ""Financial institution"" has the meaning given that term in 15 U.S.C. § 6809(3).","s = Section(sectionNumber=""A."")
+d = Definition(s, Expression(s, ""Financial institution""))
+d.meaning.append(Expression(s, ""the meaning given that term in 15 U.S.C. § 6809(3)""))
+ref1=Reference(s, ""15 U.S.C. § 6809(3)"", target=d)
+d.add_is_refined_by(ref1)","{'#definition', '#refined_by', '#reference'}"
+"A. ""Individual"" means a natural person.","s = Section(sectionNumber=""A."")
+
+e_individual = Expression(s, ""Individual"")
+d_individual = Definition(s, defined_term=e_individual)
+
+e_meaning = Expression(s, ""a natural person"")
+d_individual.meaning.append(e_meaning)
+",{'#definition'}
+"A. ""Notice"" means:
+1. Written notice to the last known postal address in the records of the individual or entity;
+2. Telephone notice;
+3. Electronic notice; or
+4. Substitute notice, if the individual or the entity required to provide notice demonstrates that the cost of providing notice will exceed $50,000, the affected class of Virginia residents to be notified exceeds 100,000 residents, or the individual or the entity does not have sufficient contact information or consent to provide notice as described in subdivisions 1, 2, or 3 of this definition. Substitute notice consists of all of the following:
+a. E-mail notice if the individual or the entity has e-mail addresses for the members of the affected class of residents;
+b. Conspicuous posting of the notice on the website of the individual or the entity if the individual or the entity maintains a website; and
+c. Notice to major statewide media.
+Notice required by this section shall not be considered a debt communication as defined by the Fair Debt Collection Practices Act in 15 U.S.C. § 1692a.
+Notice required by this section shall include a description of the following:
+(1) The incident in general terms;
+(2) The type of personal information that was subject to the unauthorized access and acquisition;
+(3) The general acts of the individual or entity to protect the personal information from further unauthorized access;
+(4) A telephone number that the person may call for further information and assistance, if one exists; and
+(5) Advice that directs the person to remain vigilant by reviewing account statements and monitoring free credit reports.","s = Section(sectionNumber=""A."")
+
+# Define a Definition for ""Notice""
+d = Definition(s, Expression(s, ""Notice""))
+
+s1=Section(""1."")
+s.add_subsection(s1)
+d.meaning.append(Expression(s1, ""Written notice to the last known postal address in the records of the individual or entity""))
+s2=Section(""2."")
+s.add_subsection(s2)
+d.meaning.append(Expression(s2, ""Telephone notice""))
+s3=Section(""3."")
+s.add_subsection(s3)
+d.meaning.append(Expression(s3, ""Electronic notice""))
+s4 = Section(""4"")
+s.add_subsection(s4)
+substitute_notice = Expression(s4, ""Substitute notice, if the individual or the entity required to provide notice demonstrates that the cost of providing notice will exceed $50,000, the affected class of Virginia residents to be notified exceeds 100,000 residents, or the individual or the entity does not have sufficient contact information or consent to provide notice as described in subdivisions 1, 2, or 3 of this definition"")
+d.meaning.append(substitute_notice)
+ref1=Reference(s4, ""subdivisions 1, 2, or 3 of this definition"", target=d)
+d.add_is_refined_by(ref1)
+
+r1 = Rule(s4, Expression(s4, ""Substitute notice""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(s4, ""consists of all of the following:"")
+r1.add_refines(substitute_notice)
+
+s4a = Section(""a."")
+s4.add_subsection(s4a)
+r1.description.includes.append(Expression(s4a, ""E-mail notice if the individual or the entity has e-mail addresses for the members of the affected class of residents""))
+
+s4b = Section(""b."")
+s4.add_subsection(s4b)
+r1.description.includes.append(Expression(s4b, ""Conspicuous posting of the notice on the website of the individual or the entity if the individual or the entity maintains a website""))
+
+s4c = Section(""c."")
+s4.add_subsection(s4c)
+r1.description.includes.append(Expression(s4c, ""Notice to major statewide media""))
+
+notice_prohibition = Rule(s, Expression(s, ""Notice required by this section""))
+notice_prohibition.rule_type = Rule.PROHIBITION
+notice_prohibition.description = Expression(s, ""shall not be considered a debt communication as defined by the Fair Debt Collection Practices Act in 15 U.S.C. § 1692a"")
+ref2=Reference(s, ""Fair Debt Collection Practices Act in 15 U.S.C. § 1692a"", target=notice_prohibition)
+notice_prohibition.add_is_refined_by(ref2)
+
+# Obligation for notice content
+r2 = Rule(s, Expression(s, ""Notice required by this section""))
+r2.rule_type = Rule.OBLIGATION
+r2.description = Expression(s, ""shall include a description of the following:"")
+
+# Details to be included in the notice
+s1 = Section(""(1)"")
+s.add_subsection(s1)
+r2.description.includes.append(Expression(s1, ""The incident in general terms""))
+
+s2 = Section(""(2)"")
+s.add_subsection(s2)
+r2.description.includes.append(Expression(s2, ""The type of personal information that was subject to the unauthorized access and acquisition""))
+
+s3 = Section(""(3)"")
+s.add_subsection(s3)
+r2.description.includes.append(Expression(s3, ""The general acts of the individual or entity to protect the personal information from further unauthorized access""))
+
+s4 = Section(""(4)"")
+s.add_subsection(s4)
+r2.description.includes.append(Expression(s4, ""A telephone number that the person may call for further information and assistance, if one exists""))
+
+s5 = Section(""(5)"")
+s.add_subsection(s5)
+r2.description.includes.append(Expression(s5, ""Advice that directs the person to remain vigilant by reviewing account statements and monitoring free credit reports""))","{'#definition', '#continuation', '#obligation', '#prohibition', '#refined_by', '#reference'}"
+"A. ""Personal information"" means the first name or first initial and last name in combination with and linked to any one or more of the following data elements that relate to a resident of the Commonwealth, when the data elements are neither encrypted nor redacted:
+1. Social security number;
+2. Driver's license number or state identification card number issued in lieu of a driver's license number;
+3. Financial account number, or credit card or debit card number, in combination with any required security code, access code, or password that would permit access to a resident's financial accounts;
+4. Passport number; or
+5. Military identification number.
+The term does not include information that is lawfully obtained from publicly available information, or from federal, state, or local government records lawfully made available to the general public.","sec = Section(sectionNumber=""A."")
+d = Definition(sec, Expression(sec, ""Personal information""))
+d.meaning.append(Expression(sec, ""the first name or first initial and last name in combination with and linked to any one or more of the following data elements that relate to a resident of the Commonwealth, when the data elements are neither encrypted nor redacted:""))
+
+s1 = Section(""1."")
+sec.add_subsection(s1)
+d.meaning[-1].includes.append(Expression(s1, ""Social security number""))
+
+s2 = Section(""2."")
+sec.add_subsection(s2)
+d.meaning[-1].includes.append(Expression(s2, ""Driver's license number or state identification card number issued in lieu of a driver's license number""))
+
+s3 = Section(""3."")
+sec.add_subsection(s3)
+d.meaning[-1].includes.append(Expression(s3, ""Financial account number, or credit card or debit card number, in combination with any required security code, access code, or password that would permit access to a resident's financial accounts""))
+
+s4 = Section(""4."")
+sec.add_subsection(s4)
+d.meaning[-1].includes.append(Expression(s4, ""Passport number""))
+
+s5 = Section(""5."")
+sec.add_subsection(s5)
+d.meaning[-1].includes.append(Expression(s5, ""Military identification number""))
+
+d.exclusions.append(Expression(sec, ""information that is lawfully obtained from publicly available information, or from federal, state, or local government records lawfully made available to the general public""))","{'#exclusion', '#definition', '#condition'}"
+"A. ""Redact"" means alteration or truncation of data such that no more than the following are accessible as part of the personal information:
+1. Five digits of a social security number; or
+2. The last four digits of a driver's license number, state identification card number, or account number.","s = Section(sectionNumber=""A."")
+
+# Create a definition for ""Redact""
+d_redact = Definition(s, Expression(s, ""Redact""))
+
+# Define the meaning of ""Redact""
+e_meaning_redact = Expression(s, ""alteration or truncation of data such that no more than the following are accessible as part of the personal information:"")
+d_redact.meaning.append(e_meaning_redact)
+
+# Add subsections for the specific meanings
+s1 = Section(""1."")
+s.add_subsection(s1)
+e_ssn_redact = Expression(s1, ""Five digits of a social security number"")
+e_meaning_redact.includes.append(e_ssn_redact)
+
+s2 = Section(""2."")
+s.add_subsection(s2)
+e_dl_redact = Expression(s2, ""The last four digits of a driver's license number, state identification card number, or account number"")
+e_meaning_redact.includes.append(e_dl_redact)","{'#definition', '#continuation'}"
+"B. If unencrypted or unredacted personal information was or is reasonably believed to have been accessed and acquired by an unauthorized person and causes, or the individual or entity reasonably believes has caused or will cause, identity theft or another fraud to any resident of the Commonwealth, an individual or entity that owns or licenses computerized data that includes personal information shall disclose any breach of the security of the system following discovery or notification of the breach of the security of the system to the Office of the Attorney General and any affected resident of the Commonwealth without unreasonable delay. Notice required by this section may be reasonably delayed to allow the individual or entity to determine the scope of the breach of the security of the system and restore the reasonable integrity of the system. Notice required by this section may be delayed if, after the individual or entity notifies a law-enforcement agency, the law-enforcement agency determines and advises the individual or entity that the notice will impede a criminal or civil investigation, or homeland or national security. Notice shall be made without unreasonable delay after the law-enforcement agency determines that the notification will no longer impede the investigation or jeopardize national or homeland security.","sB = Section(sectionNumber=""B."")
+
+r1 = Rule(sB, Expression(sB, ""an individual or entity that owns or licenses computerized data that includes personal information""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(sB, ""shall disclose any breach of the security of the system following discovery or notification of the breach of the security of the system to the Office of the Attorney General and any affected resident of the Commonwealth without unreasonable delay"")
+r1.conditions.append(Expression(sB, ""unencrypted or unredacted personal information was or is reasonably believed to have been accessed and acquired by an unauthorized person and causes, or the individual or entity reasonably believes has caused or will cause, identity theft or another fraud to any resident of the Commonwealth""))
+
+r1a = Rule(sB, Expression(sB, ""Notice required by this section""))
+r1a.rule_type=Rule.PERMISSION
+r1a.description=Expression(sB, ""may be reasonably delayed to allow the individual or entity to determine the scope of the breach of the security of the system and restore the reasonable integrity of the system"")
+r1a.add_is_exception_to(r1)
+
+r1b = Rule(sB, Expression(sB, ""Notice required by this section""))
+r1b.rule_type=Rule.PERMISSION
+r1b.description=Expression(sB, ""may be delayed"")
+r1b.conditions.append(Expression(sB, ""after the individual or entity notifies a law-enforcement agency, the law-enforcement agency determines and advises the individual or entity that the notice will impede a criminal or civil investigation, or homeland or national security""))
+r1b.add_is_exception_to(r1)
+
+r2 = Rule(sB, Expression(sB, ""Notice""))
+r2.rule_type = Rule.OBLIGATION
+r2.description = Expression(sB, ""shall be made without unreasonable delay"")
+r2.conditions.append(Expression(sB, ""after the law-enforcement agency determines that the notification will no longer impede the investigation or jeopardize national or homeland security""))
+r2.add_follows(r1b)","{'#obligation', '#exception_to', '#permission', '#condition', '#follows'}"
+"C. An individual or entity shall disclose the breach of the security of the system if encrypted information is accessed and acquired in an unencrypted form, or if the security breach involves a person with access to the encryption key and the individual or entity reasonably believes that such a breach has caused or will cause identity theft or other fraud to any resident of the Commonwealth.","s = Section(sectionNumber=""C."")
+
+r1 = Rule(s, Expression(s, ""An individual or entity""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(s, ""shall disclose the breach of the security of the system"")
+r1.conditions.append(Expression(s, ""if encrypted information is accessed and acquired in an unencrypted form""))
+r1.conditions.append(Expression(s, ""if the security breach involves a person with access to the encryption key and the individual or entity reasonably believes that such a breach has caused or will cause identity theft or other fraud to any resident of the Commonwealth""))","{'#obligation', '#condition'}"
+"D. An individual or entity that maintains computerized data that includes personal information that the individual or entity does not own or license shall notify the owner or licensee of the information of any breach of the security of the system without unreasonable delay following discovery of the breach of the security of the system, if the personal information was accessed and acquired by an unauthorized person or the individual or entity reasonably believes the personal information was accessed and acquired by an unauthorized person.","s = Section(sectionNumber=""D."")
+r1 = Rule(s, Expression(s, ""An individual or entity that maintains computerized data that includes personal information that the individual or entity does not own or license""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(s, ""shall notify the owner or licensee of the information of any breach of the security of the system without unreasonable delay following discovery of the breach of the security of the system"")
+r1.conditions.append(Expression(s, ""the personal information was accessed and acquired by an unauthorized person or the individual or entity reasonably believes the personal information was accessed and acquired by an unauthorized person""))","{'#obligation', '#condition'}"
+"E. In the event an individual or entity provides notice to more than 1,000 persons at one time pursuant to this section, the individual or entity shall notify, without unreasonable delay, the Office of the Attorney General and all consumer reporting agencies that compile and maintain files on consumers on a nationwide basis, as defined in 15 U.S.C. § 1681a (p), of the timing, distribution, and content of the notice.","s = Section(sectionNumber=""E."")
+r1 = Rule(s, Expression(s, ""individual or entity""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(s, ""shall notify, without unreasonable delay, the Office of the Attorney General and all consumer reporting agencies that compile and maintain files on consumers on a nationwide basis, as defined in 15 U.S.C. § 1681a (p), of the timing, distribution, and content of the notice"")
+r1.conditions.append(Expression(s, ""an individual or entity provides notice to more than 1,000 persons at one time pursuant to this section""))
+ref1=Reference(s, ""15 U.S.C. § 1681a (p)"", target=r1)
+r1.add_is_refined_by(ref1)","{'#obligation', '#condition', '#refined_by', '#reference'}"
+F. An entity that maintains its own notification procedures as part of an information privacy or security policy for the treatment of personal information that are consistent with the timing requirements of this section shall be deemed to be in compliance with the notification requirements of this section if it notifies residents of the Commonwealth in accordance with its procedures in the event of a breach of the security of the system.,"s = Section(sectionNumber=""F."")
+r1 = Rule(s, Expression(s, ""An entity that maintains its own notification procedures as part of an information privacy or security policy for the treatment of personal information that are consistent with the timing requirements of this section""))
+r1.rule_type = Rule.PERMISSION
+r1.description = Expression(s, ""shall be deemed to be in compliance with the notification requirements of this section"")
+r1.conditions.append(Expression(s, ""it notifies residents of the Commonwealth in accordance with its procedures in the event of a breach of the security of the system""))","{'#obligation', '#condition'}"
+"G. An entity that is subject to Title V of the Gramm-Leach-Bliley Act (15 U.S.C. § 6801 et seq.) and maintains procedures for notification of a breach of the security of the system in accordance with the provision of that Act and any rules, regulations, or guidelines promulgated thereto shall be deemed to be in compliance with this section.","s = Section(sectionNumber=""G."")
+r1 = Rule(s, Expression(s, ""an entity)""))
+r1.rule_type = Rule.PERMISSION
+r1.description = Expression(s, ""shall be deemed to be in compliance with this section"")
+r1.description.includes.append(Expression(s, ""that is subject to Title V of the Gramm-Leach-Bliley Act (15 U.S.C. § 6801 et seq. maintains procedures for notification of a breach of the security of the system in accordance with the provision of that Act and any rules, regulations, or guidelines promulgated thereto""))
+ref1=Reference(s, ""Title V of the Gramm-Leach-Bliley Act (15 U.S.C. § 6801 et seq."", target=r1)
+r1.add_follows(ref1)","{'#permission', '#follows', '#condition', '#reference'}"
+"H. An entity that complies with the notification requirements or procedures pursuant to the rules, regulations, procedures, or guidelines established by the entity's primary or functional state or federal regulator shall be in compliance with this section.","s = Section(sectionNumber=""H."")
+
+r1 = Rule(s, Expression(s, ""An entity that complies with the notification requirements or procedures pursuant to the rules, regulations, procedures, or guidelines established by the entity's primary or functional state or federal regulator""))
+r1.rule_type = Rule.PERMISSION
+r1.description = Expression(s, ""shall be in compliance with this section"")","{'#permission', '#condition'}"
+"I. Except as provided by subsections J and K, pursuant to the enforcement duties and powers of the Office of the Attorney General, the Attorney General may bring an action to address violations of this section. The Office of the Attorney General may impose a civil penalty not to exceed $150,000 per breach of the security of the system or a series of breaches of a similar nature that are discovered in a single investigation. Nothing in this section shall limit an individual from recovering direct economic damages from a violation of this section.","s = Section(sectionNumber=""I."")
+r1 = Rule(s, Expression(s, ""the Attorney General""))
+r1.rule_type = Rule.PERMISSION
+r1.description = Expression(s, ""may bring an action to address violations of this section"")
+r1.conditions.append(Expression(s, ""pursuant to the enforcement duties and powers of the Office of the Attorney General""))
+ref_J = Reference(s, ""subsection J"", target=r1)
+ref_K = Reference(s, ""subsection K"", target=r1)
+r1.add_exception(ref_J)
+r1.add_exception(ref_K)
+r2 = Rule(s, Expression(s, ""The Office of the Attorney General""))
+r2.rule_type = Rule.PENALTY
+r2.description = Expression(s, ""may impose a civil penalty not to exceed $150,000 per breach of the security of the system or a series of breaches of a similar nature that are discovered in a single investigation"")
+r2.add_refines(r1)
+
+e=Exemption(s, Expression(s, ""Nothing in this section shall limit an individual from recovering direct economic damages from a violation of this section""))
+e.add_refines(r1)","{'#penalty', '#exception', '#permission', '#refines', '#condition', '#exemption'}"
+J. A violation of this section by a state-chartered or licensed financial institution shall be enforceable exclusively by the financial institution's primary state regulator.,"s = Section(sectionNumber=""J."")
+
+r1 = Rule(s, Expression(s, ""A violation of this section by a state-chartered or licensed financial institution""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(s, ""shall be enforceable exclusively by the financial institution's primary state regulator"")",{'#obligation'}
+K. Nothing in this section shall apply to an individual or entity regulated by the State Corporation Commission's Bureau of Insurance.,"s = Section(sectionNumber=""K."")
+e = Exemption(s, Expression(s, ""Nothing in this section shall apply to an individual or entity regulated by the State Corporation Commission's Bureau of Insurance""))
+",{'#exemption'}
+"L. The provisions of this section shall not apply to criminal intelligence systems subject to the restrictions of 28 C.F.R. Part 23 that are maintained by law-enforcement agencies of the Commonwealth and the organized Criminal Gang File of the Virginia Criminal Information Network (VCIN), established pursuant to Chapter 2 (§ 52-12 et seq.) of Title 52.","s = Section(sectionNumber=""L."")
+
+e1 = Expression(s, ""The provisions of this section shall not apply to criminal intelligence systems subject to the restrictions of 28 C.F.R. Part 23 that are maintained by law-enforcement agencies of the Commonwealth and the organized Criminal Gang File of the Virginia Criminal Information Network (VCIN), established pursuant to Chapter 2 (§ 52-12 et seq.) of Title 52."")
+exemption = Exemption(s, description=e1)
+ref1=Reference(s, ""28 C.F.R. Part 23"", target=exemption)
+exemption.add_follows(ref1)
+ref2=Reference(s, ""Chapter 2 (§ 52-12 et seq.) of Title 52"", target=exemption)
+exemption.add_follows(ref2)","{'#follows', '#exemption', '#refines', '#follows', '#reference'}"
+"M. Notwithstanding any other provision of this section, any employer or payroll service provider that owns or licenses computerized data relating to income tax withheld pursuant to Article 16 (§ 58.1-460 et seq.) of Chapter 3 of Title 58.1 shall notify the Office of the Attorney General without unreasonable delay after the discovery or notification of unauthorized access and acquisition of unencrypted and unredacted computerized data containing a taxpayer identification number in combination with the income tax withheld for that taxpayer that compromises the confidentiality of such data and that creates a reasonable belief that an unencrypted and unredacted version of such information was accessed and acquired by an unauthorized person, and causes, or the employer or payroll provider reasonably believes has caused or will cause, identity theft or other fraud. With respect to employers, this subsection applies only to information regarding the employer's employees, and does not apply to information regarding the employer's customers or other non-employees.","s = Section(sectionNumber=""M."")
+
+r1 = Rule(s, Expression(s, ""any employer or payroll service provider that owns or licenses computerized data relating to income tax withheld pursuant to Article 16 (§ 58.1-460 et seq.) of Chapter 3 of Title 58.1""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(s, ""shall notify the Office of the Attorney General without unreasonable delay"")
+r1.conditions.append(Expression(s, ""after the discovery or notification of unauthorized access and acquisition of unencrypted and unredacted computerized data containing a taxpayer identification number in combination with the income tax withheld for that taxpayer that compromises the confidentiality of such data and that creates a reasonable belief that an unencrypted and unredacted version of such information was accessed and acquired by an unauthorized person, and causes, or the employer or payroll provider reasonably believes has caused or will cause, identity theft or other fraud""))
+
+r1.add_is_exception_to(Expression(s, ""any other provision of this section""))
+ref1=Reference(s, ""Article 16 (§ 58.1-460 et seq.) of Chapter 3 of Title 58.1"", target=r1)
+r1.add_follows(ref1)
+
+r2 = Rule(s, Expression(s, ""this subsection""))
+r2.rule_type=Rule.OBLIGATION
+r2.description=Expression(s, ""applies only to information regarding the employer's employees and does not apply to information regarding the employer's customers or other non-employees"")
+r2.conditions.append(Expression(s, ""With respect to employers""))
+r2.add_refines(r1)","{'#obligation', '#follows', '#exception_to', '#condition', '#exemption', '#refines', '#reference'}"
+"M. Such employer or payroll service provider shall provide the Office of the Attorney General with the name and federal employer identification number of the employer as defined in § 58.1-460 that may be affected by the compromise in confidentiality. Upon receipt of such notice, the Office of the Attorney General shall notify the Department of Taxation of the compromise in confidentiality. The notification required under this subsection that does not otherwise require notification under this section shall not be subject to any other notification, requirement, exemption, or penalty contained in this section.","s = Section(sectionNumber=""M."")
+
+# Obligation for employer or payroll service provider
+r1 = Rule(s, Expression(s, ""Such employer or payroll service provider""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(s, ""shall provide the Office of the Attorney General with the name and federal employer identification number of the employer as defined in § 58.1-460 that may be affected by the compromise in confidentiality"")
+ref1=Reference(s, ""§ 58.1-460"", target=r1)
+r1.add_is_refined_by(ref1)
+
+# Obligation for the Office of the Attorney General
+r2 = Rule(s, Expression(s, ""the Office of the Attorney General""))
+r2.rule_type = Rule.OBLIGATION
+r2.description = Expression(s, ""shall notify the Department of Taxation of the compromise in confidentiality"")
+r2.add_follows(r1)
+
+# Exemption for the notification requirement
+exemption = Exemption(s, Expression(s, ""The notification required under this subsection that does not otherwise require notification under this section shall not be subject to any other notification, requirement, exemption, or penalty contained in this section""))
+exemption.add_refines(r1)","{, '#penalty', '#obligation', '#refines', '#exemption', '#follows', '#reference'}"

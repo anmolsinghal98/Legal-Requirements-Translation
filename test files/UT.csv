@@ -1,0 +1,841 @@
+text,code,tags
+"13-44-101.  Title.
+     This chapter is known as the ""Protection of Personal Information Act.""","s = Section(sectionNumber=""13-44-101"", sectionTitle=""Title."")
+i = Information(s, Expression(s, ""This chapter is known as the 'Protection of Personal Information Act.'""))",['#information']
+"13-44-102.  Definitions.
+As used in this chapter:
+(1) (a) ""Breach of system security"" means an unauthorized acquisition of computerized data maintained by a person that compromises the security, confidentiality, or integrity of personal information.
+(b) ""Breach of system security"" does not include the acquisition of personal information by an employee or agent of the person possessing unencrypted computerized data unless the personal information is used for an unlawful purpose or disclosed in an unauthorized manner.","s = Section(sectionNumber=""13-44-102"", sectionTitle=""Definitions"")
+
+d = Definition(s1, Expression(s1, ""Breach of system security""))
+s1a = Section(""(a)"")
+s1.add_subsection(s1a)
+d.meaning.append(Expression(s1a, ""an unauthorized acquisition of computerized data maintained by a person that compromises the security, confidentiality, or integrity of personal information""))
+s1b = Section(""(b)"")
+s1.add_subsection(s1b)
+d.exclusions.append(Expression(s1b, ""the acquisition of personal information by an employee or agent of the person possessing unencrypted computerized data unless the personal information is used for an unlawful purpose or disclosed in an unauthorized manner""))","['#definition', '#exclusion']"
+"13-44-102.  Definitions.
+As used in this chapter:
+(2) ""Consumer"" means a natural person.","s = Section(sectionNumber=""13-44-102"", sectionTitle=""Definitions"")
+
+s_2 = Section(""(2)"")
+s.add_subsection(s_2)
+
+definition_consumer = Definition(s_2, Expression(s_2, ""Consumer""))
+definition_consumer.meaning.append(Expression(s_2, ""a natural person""))",['#definition']
+"13-44-102.  Definitions.
+As used in this chapter:
+(3) ""Financial institution"" means the same as that term is defined in 15 U.S.C. Sec. 6809.","s = Section(""13-44-102"", ""Definitions"")
+s_3 = Section(""(3)"")
+s.add_subsection(s_3)
+d = Definition(s_3, Expression(s_3, ""Financial institution""))
+d.meaning.append(Expression(s_3, ""the same as that term is defined in 15 U.S.C. Sec. 6809""))
+ref1 = Reference(s_3, ""15 U.S.C. Sec. 6809"", target=d)
+d.add_is_refined_by(ref1)","['#definition', '#reference', '#is_refined_by']"
+"13-44-102.  Definitions.
+As used in this chapter:
+(4) (a)""Personal information"" means a person's first name or first initial and last name, combined with any one or more of the following data elements relating to that person when either the name or date element is unencrypted or not protected by another method that renders the data unreadable or unusable:
+(i)Social Security number;
+(ii)
+(A) financial account number, or credit or debit card number; and
+(B) any required security code, access code, or password that would permit access to the person's account; or
+(iii) driver license number or state identification card number.
+(b) ""Personal information"" does not include information regardless of its source, contained in federal, state, or local government records or in widely distributed media that are lawfully made available to the general public.","s = Section(sectionNumber=""13-44-102"", sectionTitle=""Definitions"")
+
+s4 = Section(""(4)"")
+s.add_subsection(s4)
+d = Definition(s4, Expression(s4, ""Personal information""))
+
+s4a = Section(""(a)"")
+s4.add_subsection(s4a)
+meaning_exp = Expression(s4a, ""a person's first name or first initial and last name, combined with any one or more of the following data elements relating to that person when either the name or date element is unencrypted or not protected by another method that renders the data unreadable or unusable:"")
+d.meaning.append(meaning_exp)
+
+s4ai = Section(""(i)"")
+s4a.add_subsection(s4ai)
+e_ssn = Expression(s4ai, ""Social Security number"")
+meaning_exp.includes.append(e_ssn)
+
+s4aii = Section(""(ii)"")
+s4a.add_subsection(s4aii)
+
+s4aiiA = Section(""(A)"")
+s4aii.add_subsection(s4aiiA)
+e_financial = Expression(s4aiiA, ""financial account number, or credit or debit card number"")
+meaning_exp.includes.append(e_financial)
+
+s4aiiB = Section(""(B)"")
+s4aii.add_subsection(s4aiiB)
+e_access = Expression(s4aiiB, ""any required security code, access code, or password that would permit access to the person's account"")
+meaning_exp.includes.append(e_access)
+
+s4aiii = Section(""(iii)"")
+s4a.add_subsection(s4aiii)
+e_dl = Expression(s4aiii, ""driver license number or state identification card number"")
+meaning_exp.includes.append(e_dl)
+
+s4b = Section(""(b)"")
+s4.add_subsection(s4b)
+e_exclusion = Expression(s4b, ""information regardless of its source, contained in federal, state, or local government records or in widely distributed media that are lawfully made available to the general public"")
+d.exclusions.append(e_exclusion)","['#definition', '#exclusion', '#continuation']"
+"13-44-102.  Definitions.
+As used in this chapter:
+(5) ""Record"" includes materials maintained in any form, including paper and electronic.","s = Section(sectionNumber=""13-44-102"", sectionTitle=""Definitions"")
+s5 = Section(""(5)"")
+s.add_subsection(s5)
+d = Definition(s5, Expression(s5, ""Record""))
+d.meaning.append(Expression(s5, ""materials maintained in any form, including paper and electronic""))",['#definition']
+"13-44-103.  Applicability.
+This chapter does not apply to a financial institution or an affiliate, as defined in 15 U.S.C. Sec. 6809, of a financial institution.","s = Section(sectionNumber=""13-44-103"", sectionTitle=""Applicability"")
+ex = Expression(s, ""This chapter does not apply to a financial institution or an affiliate, as defined in 15 U.S.C. Sec. 6809, of a financial institution."")
+e = Exemption(s, ex)
+ref1 = Reference(s, ""15 U.S.C. Sec. 6809"", target=e)
+e.add_is_refined_by(ref1)","['#refined_by', '#reference', '#exemption']"
+"13-44-201.  Protection of personal information.
+(1) Any person who conducts business in the state and maintains personal information shall implement and maintain reasonable procedures to:
+(a) prevent unlawful use or disclosure of personal information collected or maintained in the regular course of business; and
+(b) destroy, or arrange for the destruction of, records containing personal information that are not to be retained by the person.","s = Section(sectionNumber=""13-44-201"", sectionTitle=""Protection of personal information"")
+s_1 = Section(""(1)"")
+s.add_subsection(s_1)
+
+rule_expression = Expression(s_1, ""Any person who conducts business in the state and maintains personal information"")
+r1 = Rule(s_1, rule_expression)
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(s_1, ""shall implement and maintain reasonable procedures to:"")
+
+s_1a = Section(""(a)"")
+s_1.add_subsection(s_1a)
+expr_1a = Expression(s_1a, ""prevent unlawful use or disclosure of personal information collected or maintained in the regular course of business"")
+r1.description.includes.append(expr_1a)
+
+s_1b = Section(""(b)"")
+s_1.add_subsection(s_1b)
+expr_1b = Expression(s_1b, ""destroy, or arrange for the destruction of, records containing personal information that are not to be retained by the person"")
+r1.description.includes.append(expr_1b)","['#obligation', '#continuation']"
+"13-44-201.  Protection of personal information.
+(2) The destruction of records under Subsection (1)(b) shall be by:
+(a) shredding;
+(b) erasing; or
+(c) otherwise modifying the personal information to make the information indecipherable.","s = Section(sectionNumber=""13-44-201"", sectionTitle=""Protection of personal information"")
+sb2 = Section(""(2)"")
+s.add_subsection(sb2)
+
+r = Rule(sb2, Expression(sb2, ""The destruction of records under Subsection (1)(b)""))
+r.rule_type = Rule.OBLIGATION
+r.description = Expression(sb2, ""shall be by:"")
+ref1=Reference(sb2, ""Subsection (1)(b)"", target=r)
+r.add_follows(ref1)
+
+sba = Section(""(a)"")
+sb2.add_subsection(sba)
+r.description.includes.append(Expression(sba, ""shredding""))
+
+sbb = Section(""(b)"")
+sb2.add_subsection(sbb)
+r.description.includes.append(Expression(sbb, ""erasing""))
+
+sbc = Section(""(c)"")
+sb2.add_subsection(sbc)
+r.description.includes.append(Expression(sbc, ""otherwise modifying the personal information to make the information indecipherable""))","['#obligation', '#continuation', '#reference', '#follows']"
+"13-44-202.  Personal information -- Disclosure of system security breach.
+(1)
+(a)
+A person who owns or licenses computerized data that includes personal information concerning a Utah resident shall, when the person becomes aware of a breach of system security, conduct in good faith a reasonable and prompt investigation to determine the likelihood that personal information has been or will be misused for identity theft or fraud purposes.
+(b)
+If an investigation under Subsection (1)(a) reveals that the misuse of personal information for identity theft or fraud purposes has occurred, or is reasonably likely to occur, the person shall provide notification to each affected Utah resident.
+(c)
+If an investigation under Subsection (1)(a) reveals that the misuse of personal information relating to 500 or more Utah residents, for identity theft or fraud purposes, has occurred or is reasonably likely to occur, the person shall, in addition to the notification required in Subsection (1)(b), provide notification to:
+(i)
+the Office of the Attorney General; and
+(ii)
+the Utah Cyber Center created in Section 63A-16-1102.
+(d)
+If an investigation under Subsection (1)(a) reveals that the misuse of personal information relating to 1,000 or more Utah residents, for identity theft or fraud purposes, has occurred or is reasonably likely to occur, the person shall, in addition to the notification required in Subsections (1)(b) and (c), provide notification to each consumer reporting agency that compiles and maintains files on consumers on a nationwide basis, as defined in 15 U.S.C. Sec. 1681a.","s1 = Section(""(1)"")
+
+# Section 13-44-202 Personal information -- Disclosure of system security breach
+
+# Obligation to conduct investigation upon awareness of breach
+s1a = Section(""(a)"")
+s1.add_subsection(s1a)
+r1 = Rule(s1a, Expression(s1a, ""A person who owns or licenses computerized data that includes personal information concerning a Utah resident""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(s1a, ""shall, when the person becomes aware of a breach of system security, conduct in good faith a reasonable and prompt investigation to determine the likelihood that personal information has been or will be misused for identity theft or fraud purposes"")
+
+# Obligation to notify affected residents if misuse of personal information is revealed
+s1b = Section(""(b)"")
+s1.add_subsection(s1b)
+r2 = Rule(s1b, Expression(s1b, ""the person""))
+r2.rule_type = Rule.OBLIGATION
+r2.description = Expression(s1b, ""shall provide notification to each affected Utah resident"")
+r2.conditions.append(Expression(s1b, ""If an investigation under Subsection (1)(a) reveals that the misuse of personal information for identity theft or fraud purposes has occurred, or is reasonably likely to occur""))
+r2.add_refines(r1)
+
+# Obligation to notify Attorney General and Utah Cyber Center if misuse relates to 500 or more residents
+s1c = Section(""(c)"")
+s1.add_subsection(s1c)
+r3 = Rule(s1c, Expression(s1c, ""the person""))
+r3.rule_type = Rule.OBLIGATION
+r3.description = Expression(s1c, ""shall, in addition to the notification required in Subsection (1)(b), provide notification to:"")
+r3.add_refines(r2)
+r3.conditions.append(Expression(s1c, ""If an investigation under Subsection (1)(a) reveals that the misuse of personal information relating to 500 or more Utah residents, for identity theft or fraud purposes, has occurred or is reasonably likely to occur""))
+r3.add_follows(r1)
+
+s1ci = Section(""(i)"")
+s1c.add_subsection(s1ci)
+e3a = Expression(s1ci, ""the Office of the Attorney General"")
+r3.description.includes.append(e3a)
+
+s1cii = Section(""(ii)"")
+s1c.add_subsection(s1cii)
+e3b = Expression(s1cii, ""the Utah Cyber Center created in Section 63A-16-1102"")
+r3.description.includes.append(e3b)
+ref1=Reference(s1cii, ""Section 63A-16-1102"", target=r3)
+r3.add_follows(ref1)
+
+# Obligation to notify consumer reporting agencies if misuse relates to 1,000 or more residents
+s1d = Section(""(d)"")
+s1.add_subsection(s1d)
+r4 = Rule(s1d, Expression(s1d, ""the person""))
+r4.rule_type = Rule.OBLIGATION
+r4.description = Expression(s1d, ""shall, in addition to the notification required in Subsections (1)(b) and (c), provide notification to each consumer reporting agency that compiles and maintains files on consumers on a nationwide basis, as defined in 15 U.S.C. Sec. 1681a"")
+r4.conditions.append(Expression(s1d, ""If an investigation under Subsection (1)(a) reveals that the misuse of personal information relating to 1,000 or more Utah residents, for identity theft or fraud purposes, has occurred or is reasonably likely to occur""))
+ref2=Reference(s1d, ""15 U.S.C. Sec. 1681a"", target=r4)
+r4.add_is_refined_by(ref2)
+r4.add_refines(r3)
+r4.add_refines(r2)
+r4.add_follows(r1)","['#obligation', '#continuation', '#reference', '#refined_by', '#condition', '#follows', '#refines']"
+"(2)
+A person required to provide notification under Subsection (1) shall provide the notification in the most expedient time possible without unreasonable delay:
+(a)
+considering legitimate investigative needs of law enforcement, as provided in Subsection (4)(a);
+(b)
+after determining the scope of the breach of system security; and
+(c)
+after restoring the reasonable integrity of the system.","s2 = Section(sectionNumber=""(2)"")
+r1 = Rule(s2, Expression(s2, ""A person required to provide notification under Subsection (1)""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(s2, ""shall provide the notification in the most expedient time possible without unreasonable delay"")
+ref1 = Reference(s2, ""Subsection (1)"", target=r1)
+r1.add_follows(ref1)
+
+sa = Section(sectionNumber=""(a)"")
+s2.add_subsection(sa)
+r1.conditions.append(Expression(sa, ""considering legitimate investigative needs of law enforcement, as provided in Subsection (4)(a)""))
+ref2 = Reference(sa, ""Subsection (4)(a)"", target=r1)
+r1.add_follows(ref2)
+
+sb = Section(sectionNumber=""(b)"")
+s2.add_subsection(sb)
+r1.conditions.append(Expression(sb, ""after determining the scope of the breach of system security""))
+
+sc = Section(sectionNumber=""(c)"")
+s2.add_subsection(sc)
+r1.conditions.append(Expression(sc, ""after restoring the reasonable integrity of the system""))","['#obligation', '#reference', '#condition', '#follows']"
+"(3)
+(a)
+A person who maintains computerized data that includes personal information that the person does not own or license shall notify and cooperate with the owner or licensee of the information of any breach of system security immediately following the person's discovery of the breach if misuse of the personal information occurs or is reasonably likely to occur.
+(b)
+Cooperation under Subsection (3)(a) includes sharing information relevant to the breach with the owner or licensee of the information.","s3 = Section(""(3)"")
+
+sa = Section(""(a)"")
+s3.add_subsection(sa)
+r1 = Rule(sa, Expression(sa, ""A person who maintains computerized data that includes personal information that the person does not own or license""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(sa, ""shall notify and cooperate with the owner or licensee of the information of any breach of system security immediately following the person's discovery of the breach"")
+r1.conditions.append(Expression(sa, ""misuse of the personal information occurs or is reasonably likely to occur""))
+
+sb = Section(""(b)"")
+s3.add_subsection(sb)
+r2 = Rule(sb, Expression(sb, ""Cooperation under Subsection (3)(a)""))
+r2.rule_type = Rule.OBLIGATION
+r2.description = Expression(sb, ""includes sharing information relevant to the breach with the owner or licensee of the information"")
+r2.add_refines(r1)","['#obligation', '#reference', '#refines', '#condition']"
+"(4)
+(a)
+Notwithstanding Subsection (2), a person may delay providing notification under Subsection (1)(b) at the request of a law enforcement agency that determines that notification may impede a criminal investigation.
+(b)
+A person who delays providing notification under Subsection (4)(a) shall provide notification in good faith without unreasonable delay in the most expedient time possible after the law enforcement agency informs the person that notification will no longer impede the criminal investigation.","s4 = Section(sectionNumber=""(4)"")
+
+sa = Section(sectionNumber=""(a)"")
+s4.add_subsection(sa)
+r1 = Rule(sa, Expression(sa, ""a person""))
+r1.rule_type = Rule.PERMISSION
+r1.description = Expression(sa, ""may delay providing notification under Subsection (1)(b)"")
+ref1 = Reference(sa, ""Subsection (2)"", target=r1)
+r1.add_is_exception_to(ref1)
+r1.conditions.append(Expression(sa, ""at the request of a law enforcement agency that determines that notification may impede a criminal investigation""))
+ref2= Reference(sa, ""Subsection (1)(b)"", target=r1)
+r1.add_is_exception_to(ref2)
+
+sb = Section(sectionNumber=""(b)"")
+s4.add_subsection(sb)
+r2 = Rule(sb, Expression(sb, ""A person who delays providing notification under Subsection (4)(a)""))
+r2.rule_type = Rule.OBLIGATION
+r2.description = Expression(sb, ""shall provide notification in good faith without unreasonable delay in the most expedient time possible"")
+r2.conditions.append(Expression(sb, ""after the law enforcement agency informs the person that notification will no longer impede the criminal investigation""))
+ref2 = Reference(sb, ""Subsection (4)(a)"", target=r2)
+r2.add_follows(ref2)","['#obligation', '#exception_to', '#condition', '#permission', '#reference', '#follows']"
+"(5)
+(a)
+A notification required by Subsection (1)(b) may be provided:
+(i)
+in writing by first-class mail to the most recent address the person has for the resident;
+(ii)
+electronically, if the person's primary method of communication with the resident is by electronic means, or if provided in accordance with the consumer disclosure provisions of 15 U.S.C. Section 7001;
+(iii)
+by telephone, including through the use of automatic dialing technology not prohibited by other law; or
+(iv)
+for residents of the state for whom notification in a manner described in Subsections (5)(a)(i) through (iii) is not feasible, by publishing notice of the breach of system security:
+(A)
+in a newspaper of general circulation; and
+(B)
+as required in Section 45-1-101.","s5 = Section(sectionNumber=""(5)"")
+
+sa = Section(sectionNumber=""(a)"")
+s5.add_subsection(sa)
+
+r1 = Rule(sa, Expression(sa, ""A notification required by Subsection (1)(b)""))
+r1.rule_type = Rule.PERMISSION
+r1.description = Expression(sa, ""may be provided:"")
+
+sai = Section(""(i)"")
+sa.add_subsection(sai)
+e1 = Expression(sai, ""in writing by first-class mail to the most recent address the person has for the resident"")
+r1.description.includes.append(e1)
+
+saii = Section(""(ii)"")
+sa.add_subsection(saii)
+e2 = Expression(saii, ""electronically, if the person's primary method of communication with the resident is by electronic means, or if provided in accordance with the consumer disclosure provisions of 15 U.S.C. Section 7001"")
+r1.description.includes.append(e2)
+ref1 = Reference(saii, ""15 U.S.C. Section 7001"", target=r1)
+r1.add_follows(ref1)
+
+saiii = Section(""(iii)"")
+sa.add_subsection(saiii)
+e3 = Expression(saiii, ""by telephone, including through the use of automatic dialing technology not prohibited by other law"")
+r1.description.includes.append(e3)
+
+saiv = Section(""(iv)"")
+sa.add_subsection(saiv)
+e4 = Expression(saiv, ""for residents of the state for whom notification in a manner described in Subsections (5)(a)(i) through (iii) is not feasible, by publishing notice of the breach of system security:"")
+r1.description.includes.append(e4)
+
+saivA = Section(""(A)"")
+saiv.add_subsection(saivA)
+e4A = Expression(saivA, ""in a newspaper of general circulation"")
+e4.includes.append(e4A)
+
+saivB = Section(""(B)"")
+saiv.add_subsection(saivB)
+e4B = Expression(saivB, ""as required in Section 45-1-101"")
+e4.includes.append(e4B)
+ref2 = Reference(saivB, ""Section 45-1-101"", target=r1)
+r1.add_follows(ref2)","['#reference', '#condition', '#continuation', '#permission']"
+"(5)
+(b)
+If a person maintains the person's own notification procedures as part of an information security policy for the treatment of personal information the person is considered to be in compliance with the notification requirement in Subsection (1)(b) if the procedures are otherwise consistent with this chapter's timing requirements and the person notifies each affected Utah resident in accordance with the person's information security policy in the event of a breach.
+(c)
+A person who is regulated by state or federal law and maintains procedures for a breach of system security under applicable law established by the primary state or federal regulator is considered to be in compliance with this part if the person notifies each affected Utah resident in accordance with the other applicable law in the event of a breach.","s5 = Section(sectionNumber=""(5)"")
+
+sb = Section(""(b)"")
+s5.add_subsection(sb)
+r1 = Rule(sb, Expression(sb, ""a person maintains the person's own notification procedures as part of an information security policy for the treatment of personal information""))
+r1.rule_type = Rule.PERMISSION
+r1.description = Expression(sb, ""the person is considered to be in compliance with the notification requirement in Subsection (1)(b) if the procedures are otherwise consistent with this chapter's timing requirements and the person notifies each affected Utah resident in accordance with the person's information security policy in the event of a breach"")
+
+sc = Section(""(c)"")
+s5.add_subsection(sc)
+r2 = Rule(sc, Expression(sc, ""A person who is regulated by state or federal law and maintains procedures for a breach of system security under applicable law established by the primary state or federal regulator""))
+r2.rule_type = Rule.PERMISSION
+r2.description = Expression(sc, ""is considered to be in compliance with this part if the person notifies each affected Utah resident in accordance with the other applicable law in the event of a breach"")","['#reference', '#permission', '#condition']"
+"(6)
+(a)
+The following information may be deemed confidential and classified as a protected record under Subsections 63G-2-305(1) and (2) if the requirements of Subsection 63G-2-309(1)(a)(i) are met:
+(i)
+a notification submitted under Subsection (1)(c), including supporting information provided under Subsection (6)(b); and
+(ii)
+information produced by the Office of the Attorney General or the Utah Cyber Center in providing coordination or assistance to the person providing notification under Subsection (1)(c).","s = Section(sectionNumber=""(6)"")
+
+# Subsection (a)
+sa = Section(""(a)"")
+s.add_subsection(sa)
+r1 = Rule(sa, Expression(sa, ""The following information""))
+r1.rule_type = Rule.PERMISSION
+r1.description = Expression(sa, ""may be deemed confidential and classified as a protected record under Subsections 63G-2-305(1) and (2) if the requirements of Subsection 63G-2-309(1)(a)(i) are met:"")
+ref1 = Reference(sa, ""Subsections 63G-2-305(1) and (2)"", target=r1)
+r1.add_follows(ref1)
+ref2 = Reference(sa, ""Subsection 63G-2-309(1)(a)(i)"", target=r1)
+r1.add_follows(ref2)
+
+# Subsection (i)
+sa_i = Section(""(i)"")
+sa.add_subsection(sa_i)
+e1 = Expression(sa_i, ""a notification submitted under Subsection (1)(c), including supporting information provided under Subsection (6)(b)"")
+r1.description.includes.append(e1)
+ref3 = Reference(sa_i, ""Subsection (1)(c)"", target=r1)
+ref4 = Reference(sa_i, ""Subsection (6)(b)"", target=r1)
+r1.add_follows(ref3)
+r1.add_follows(ref4)
+
+# Subsection (ii)
+sa_ii = Section(""(ii)"")
+sa.add_subsection(sa_ii)
+e2 = Expression(sa_ii, ""information produced by the Office of the Attorney General or the Utah Cyber Center in providing coordination or assistance to the person providing notification under Subsection (1)(c)"")
+r1.description.includes.append(e2)
+ref5 = Reference(sa_ii, ""Subsection (1)(c)"", target=r1)
+r1.add_follows(ref5)","['#reference', '#permission', '#continuation', '#follows']"
+"(6)
+(b)
+A person providing notification under Subsection (1)(c) to the Office of the Attorney General or the Utah Cyber Center of a breach of system security shall include the following information in the notification, to the extent the information is known or available at the time the person provides the notification:
+(i)
+the date the breach of system security occurred;
+(ii)
+the date the breach of system security was discovered;
+(iii)
+the total number of people affected by the breach of system security, including the total number of Utah residents affected;
+(iv)
+the type of personal information involved in the breach of system security; and
+(v)
+a short description of the breach of system security that occurred.","s6 = Section(""(6)"")
+s6b = Section(""(b)"")
+s6.add_subsection(s6b)
+r1 = Rule(s6b, Expression(s6b, ""A person providing notification under Subsection (1)(c) to the Office of the Attorney General or the Utah Cyber Center of a breach of system security""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(s6b, ""shall include the following information in the notification, to the extent the information is known or available at the time the person provides the notification:"")
+ref1=Reference(s6b, ""Subsection (1)(c)"", target=r1)
+r1.add_follows(ref1)
+
+s6b_i = Section(""(i)"")
+s6b.add_subsection(s6b_i)
+r1.description.includes.append(Expression(s6b_i, ""the date the breach of system security occurred""))
+
+s6b_ii = Section(""(ii)"")
+s6b.add_subsection(s6b_ii)
+r1.description.includes.append(Expression(s6b_ii, ""the date the breach of system security was discovered""))
+
+s6b_iii = Section(""(iii)"")
+s6b.add_subsection(s6b_iii)
+r1.description.includes.append(Expression(s6b_iii, ""the total number of people affected by the breach of system security, including the total number of Utah residents affected""))
+
+s6b_iv = Section(""(iv)"")
+s6b.add_subsection(s6b_iv)
+r1.description.includes.append(Expression(s6b_iv, ""the type of personal information involved in the breach of system security""))
+
+s6b_v = Section(""(v)"")
+s6b.add_subsection(s6b_v)
+r1.description.includes.append(Expression(s6b_v, ""a short description of the breach of system security that occurred""))","['#obligation', '#continuation']"
+"(7)
+A waiver of this section is contrary to public policy and is void and unenforceable.","s7 = Section(sectionNumber=""(7)"")
+
+r = Rule(s7, Expression(s7, ""A waiver of this section""))
+r.rule_type = Rule.PROHIBITION
+r.description = Expression(s7, ""is contrary to public policy and is void and unenforceable"")",['#prohibition']
+"13-44-301.  Enforcement -- Confidentiality agreement -- Penalties.
+(1)
+The attorney general may enforce this chapter's provisions.","s1 = Section(sectionNumber=""13-44-301"", sectionTitle=""Enforcement -- Confidentiality agreement -- Penalties"")
+subsection1 = Section(sectionNumber=""(1)"")
+s1.add_subsection(subsection1)
+
+r1 = Rule(subsection1, Expression(subsection1, ""attorney general""))
+r1.rule_type = Rule.PERMISSION
+r1.description = Expression(subsection1, ""may enforce this chapter's provisions"")",['#permission']
+"(2)
+(a)
+Nothing in this chapter creates a private right of action.
+(b)
+Nothing in this chapter affects any private right of action existing under other law, including contract or tort.","s2 = Section(sectionNumber=""(2)"")
+sa = Section(sectionNumber=""(a)"")
+s2.add_subsection(sa)
+sb = Section(sectionNumber=""(b)"")
+s2.add_subsection(sb)
+
+r1 = Rule(sa, Expression(sa, ""Nothing in this chapter""))
+r1.rule_type = Rule.PROHIBITION
+r1.description = Expression(sa, ""creates a private right of action"")
+
+r2 = Rule(sb, Expression(sb, ""Nothing in this chapter""))
+r2.rule_type = Rule.PROHIBITION
+r2.description = Expression(sb, ""affects any private right of action existing under other law, including contract or tort"")",['#prohibition']
+"(3)
+A person who violates this chapter's provisions is subject to a civil penalty of:
+(a)
+no greater than $2,500 for a violation or series of violations concerning a specific consumer; and
+(b)
+no greater than $100,000 in the aggregate for related violations concerning more than one consumer, unless:
+(i)
+the violations concern:
+(A)
+10,000 or more consumers who are residents of the state; and
+(B)
+10,000 or more consumers who are residents of other states; or
+(ii)
+the person agrees to settle for a greater amount.","s3 = Section(""(3)"")
+
+r1 = Rule(s3, Expression(s3, ""A person who violates this chapter's provisions""))
+r1.rule_type = Rule.PENALTY
+r1.description = Expression(s3, ""is subject to a civil penalty of:"")
+
+s3a = Section(""(a)"")
+s3.add_subsection(s3a)
+r1.description.includes.append(Expression(s3a, ""no greater than $2,500 for a violation or series of violations concerning a specific consumer""))
+
+s3b = Section(""(b)"")
+s3.add_subsection(s3b)
+e=Expression(s3b, ""no greater than $100,000 in the aggregate for related violations concerning more than one consumer, unless:"")
+r1.description.includes.append(e)
+
+s3b_i = Section(""(i)"")
+s3b.add_subsection(s3b_i)
+r1b_i = Expression(s3b_i, ""the violations concern:"")
+e.includes.append(r1b_i)
+
+s3b_i_A = Section(""(A)"")
+s3b_i.add_subsection(s3b_i_A)
+r1b_i.includes.append(Expression(s3b_i_A, ""10,000 or more consumers who are residents of the state""))
+
+s3b_i_B = Section(""(B)"")
+s3b_i.add_subsection(s3b_i_B)
+r1b_i.includes.append(Expression(s3b_i_B, ""10,000 or more consumers who are residents of other states""))
+
+s3b_ii = Section(""(ii)"")
+s3b.add_subsection(s3b_ii)
+e.includes.append(Expression(s3b_ii, ""the person agrees to settle for a greater amount""))","['#penalty', '#continuation']"
+"(4)
+(a)
+In addition to the penalties provided in Subsection (3), the attorney general may seek, in an action brought under this chapter:
+(i)
+injunctive relief to prevent future violations of this chapter; and
+(ii)
+attorney fees and costs.
+(b)
+Notwithstanding Title 78B, Chapter 3a, Venue for Civil Actions, if the attorney general brings an action under this chapter in the district court, the attorney general shall bring the action in:
+(i)
+Salt Lake City; or
+(ii)
+the county in which resides a consumer who is affected by the violation.","s4 = Section(sectionNumber=""(4)"")
+
+sa = Section(sectionNumber=""(a)"")
+s4.add_subsection(sa)
+sb = Section(sectionNumber=""(b)"")
+s4.add_subsection(sb)
+
+r1 = Rule(sa, Expression(sa, ""attorney general""))
+r1.rule_type = Rule.PERMISSION
+r1.description = Expression(sa, ""may seek, in an action brought under this chapter:"")
+r1.conditions.append(Expression(sa, ""In addition to the penalties provided in Subsection (3)""))
+
+# Subsection (a)(i)
+sai = Section(sectionNumber=""(i)"")
+sa.add_subsection(sai)
+e1 = Expression(sai, ""injunctive relief to prevent future violations of this chapter"")
+r1.description.includes.append(e1)
+
+# Subsection (a)(ii)
+saii = Section(sectionNumber=""(ii)"")
+sa.add_subsection(saii)
+e2 = Expression(saii, ""attorney fees and costs"")
+r1.description.includes.append(e2)
+
+r2 = Rule(sb, Expression(sb, ""the attorney general""))
+r2.rule_type = Rule.OBLIGATION
+r2.description = Expression(sb, ""shall bring the action in:"")
+r2.conditions.append(Expression(sb, ""Notwithstanding Title 78B, Chapter 3a, Venue for Civil Actions, if the attorney general brings an action under this chapter in the district court""))
+ref1=Reference(sb, ""Title 78B, Chapter 3a, Venue for Civil Actions"", target=r2)
+r2.add_is_exception_to(ref1)
+
+# Subsection (b)(i)
+sbi = Section(sectionNumber=""(i)"")
+sb.add_subsection(sbi)
+e3 = Expression(sbi, ""Salt Lake City"")
+r2.description.includes.append(e3)
+
+# Subsection (b)(ii)
+sbii = Section(sectionNumber=""(ii)"")
+sb.add_subsection(sbii)
+e4 = Expression(sbii, ""the county in which resides a consumer who is affected by the violation"")
+r2.description.includes.append(e4)","['#obligation', '#continuation', '#is_exception_to', '#reference', '#permission', '#condition']"
+"(5)
+The attorney general shall deposit any amount received under Subsection (3), (4), or (10) into the Attorney General Litigation Fund created in Section 76-10-3114.","s5 = Section(""(5)"")
+r1 = Rule(s5, Expression(s5, ""The attorney general""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(s5, ""shall deposit any amount received under Subsection (3), (4), or (10) into the Attorney General Litigation Fund created in Section 76-10-3114"")
+ref1 = Reference(s5, ""Subsection (3)"", target=r1)
+ref2 = Reference(s5, ""Subsection (4)"", target=r1)
+ref3 = Reference(s5, ""Subsection (10)"", target=r1)
+ref4 = Reference(s5, ""Section 76-10-3114"", target=r1)
+r1.add_follows(ref1)
+r1.add_follows(ref2)
+r1.add_follows(ref3)
+r1.add_is_followed_by(ref4)","['#obligation', '#reference']"
+"(6)
+In enforcing this chapter, the attorney general may:
+(a)
+investigate the actions of any person alleged to violate Section 13-44-201 or 13-44-202;
+(b)
+subpoena a witness;
+(c)
+subpoena a document or other evidence;
+(d)
+require the production of books, papers, contracts, records, or other information relevant to an investigation;
+(e)
+conduct an adjudication in accordance with Title 63G, Chapter 4, Administrative Procedures Act, to enforce a civil provision under this chapter; and
+(f)
+enter into a confidentiality agreement in accordance with Subsection (7).","s = Section(sectionNumber=""(6)"")
+r = Rule(s, Expression(s, ""the attorney general""))
+r.rule_type = Rule.PERMISSION
+r.description = Expression(s, ""may"")
+
+s_a = Section(""(a)"")
+s.add_subsection(s_a)
+r.description.includes.append(Expression(s_a, ""investigate the actions of any person alleged to violate Section 13-44-201 or 13-44-202""))
+ref1 = Reference(s_a, ""Section 13-44-201"", target=r)
+ref2 = Reference(s_a, ""Section 13-44-202"", target=r)
+r.add_follows(ref1)
+r.add_follows(ref2)
+
+s_b = Section(""(b)"")
+s.add_subsection(s_b)
+r.description.includes.append(Expression(s_b, ""subpoena a witness""))
+
+s_c = Section(""(c)"")
+s.add_subsection(s_c)
+r.description.includes.append(Expression(s_c, ""subpoena a document or other evidence""))
+
+s_d = Section(""(d)"")
+s.add_subsection(s_d)
+r.description.includes.append(Expression(s_d, ""require the production of books, papers, contracts, records, or other information relevant to an investigation""))
+
+s_e = Section(""(e)"")
+s.add_subsection(s_e)
+r.description.includes.append(Expression(s_e, ""conduct an adjudication in accordance with Title 63G, Chapter 4, Administrative Procedures Act, to enforce a civil provision under this chapter""))
+
+s_f = Section(""(f)"")
+s.add_subsection(s_f)
+r.description.includes.append(Expression(s_f, ""enter into a confidentiality agreement in accordance with Subsection (7)""))
+ref3 = Reference(s_f, ""Subsection (7)"", target=r)
+r.add_follows(ref3)","['#continuation', '#permission']"
+"(7)
+(a)
+If the attorney general has reasonable cause to believe that an individual is in possession, custody, or control of information that is relevant to enforcing this chapter, the attorney general may enter into a confidentiality agreement with the individual.
+(b)
+In a civil action brought under this chapter, a court may issue a confidentiality order that incorporates the confidentiality agreement described in Subsection (7)(a).
+(c)
+A confidentiality agreement entered into under Subsection (7)(a) or a confidentiality order issued under Subsection (7)(b) may:
+(i)
+address a procedure;
+(ii)
+address testimony taken, a document produced, or material produced under this section;
+(iii)
+provide whom may access testimony taken, a document produced, or material produced under this section;
+(iv)
+provide for safeguarding testimony taken, a document produced, or material produced under this section; or
+(v)
+require that the attorney general:
+(A)
+return a document or material to an individual; or
+(B)
+notwithstanding Section 63A-12-105 or a retention schedule created in accordance with Section 63G-2-604, destroy the document or material at a designated time.","s = Section(sectionNumber=""(7)"")
+
+sa = Section(sectionNumber=""(a)"")
+s.add_subsection(sa)
+r1 = Rule(sa, Expression(sa, ""the attorney general""))
+r1.rule_type = Rule.PERMISSION
+r1.description = Expression(sa, ""may enter into a confidentiality agreement with the individual"")
+r1.conditions.append(Expression(sa, ""the attorney general has reasonable cause to believe that an individual is in possession, custody, or control of information that is relevant to enforcing this chapter""))
+
+# Court's ability to issue confidentiality order
+s.add_subsection(sb)
+r2 = Rule(sb, Expression(sb, ""a court""))
+r2.rule_type = Rule.PERMISSION
+r2.description = Expression(sb, ""may issue a confidentiality order that incorporates the confidentiality agreement described in Subsection (7)(a)"")
+r2.conditions.append(Expression(sb, ""In a civil action brought under this chapter""))
+ref1 = Reference(sb, ""Subsection (7)(a)"", target=r2)
+r2.add_follows(ref1)
+
+sc = Section(sectionNumber=""(c)"")
+s.add_subsection(sc)
+r3=Rule(sc, Expression(sc, ""A confidentiality agreement entered into under Subsection (7)(a) or a confidentiality order issued under Subsection (7)(b):""))
+r3.rule_type=Rule.PERMISSION
+r3.description=Expression(sc, ""may:"")
+ref2 = Reference(sc, ""Subsection (7)(a)"", target=r3)
+ref3 = Reference(sc, ""Subsection (7)(b)"", target=r3)
+r3.add_follows(ref2)
+r3.add_follows(ref3)
+
+sci = Section(sectionNumber=""(i)"")
+sc.add_subsection(sci)
+e1 = Expression(sci, ""address a procedure"")
+r3.description.includes.append(e1)
+
+scii = Section(sectionNumber=""(ii)"")
+sc.add_subsection(scii)
+e2 = Expression(scii, ""address testimony taken, a document produced, or material produced under this section"")
+r3.description.includes.append(e2)
+
+sciii = Section(sectionNumber=""(iii)"")
+sc.add_subsection(sciii)
+e3 = Expression(sciii, ""provide whom may access testimony taken, a document produced, or material produced under this section"")
+r3.description.includes.append(e3)
+
+sciv = Section(sectionNumber=""(iv)"")
+sc.add_subsection(sciv)
+e4 = Expression(sciv, ""provide for safeguarding testimony taken, a document produced, or material produced under this section"")
+r3.description.includes.append(e4)
+
+scv = Section(sectionNumber=""(v)"")
+sc.add_subsection(scv)
+e5=Expression(scv, ""require that the attorney general"")
+r3.description.includes.append(e5)
+
+scva = Section(sectionNumber=""(A)"")
+scv.add_subsection(scva)
+e5a = Expression(scva, ""return a document or material to an individual"")
+e5.includes.append(e5a)
+
+scvb = Section(sectionNumber=""(B)"")
+scv.add_subsection(scvb)
+e5b = Expression(scvb, ""notwithstanding Section 63A-12-105 or a retention schedule created in accordance with Section 63G-2-604, destroy the document or material at a designated time"")
+e5.includes.append(e5b)
+ref4=Reference(scvb, ""Section 63A-12-105 or a retention schedule created in accordance with Section 63G-2-604"", target=r3)
+r3.add_is_exception_to(ref4)","['#exception_to', '#continuation', '#reference', '#refined_by', '#permission', '#refines', '#condition']"
+"(8)
+A subpoena issued under Subsection (6) may be served by certified mail.","s8 = Section(""(8)"")
+r = Rule(s8, Expression(s8, ""A subpoena issued under Subsection (6)""))
+r.rule_type = Rule.PERMISSION
+r.description = Expression(s8, ""may be served by certified mail"")
+ref = Reference(s8, ""Subsection (6)"", target=r)
+r.add_follows(ref)","['#reference', '#permission']"
+"(9)
+A person's failure to respond to a request or subpoena from the attorney general under Subsection (6)(b), (c), or (d) is a violation of this chapter.","s9 = Section(""(9)"")
+r1 = Rule(s9, Expression(s9, ""A person's failure to respond to a request or subpoena from the attorney general under Subsection (6)(b), (c), or (d)""))
+r1.rule_type = Rule.PROHIBITION
+r1.description = Expression(s9, ""is a violation of this chapter"")
+ref1 = Reference(s9, ""Subsection (6)(b), (c), or (d)"", target=r1)
+r1.add_follows(ref1)","['#reference', '#prohibition']"
+"(10)
+(a)
+The attorney general may inspect and copy all records related to the business conducted by the person alleged to have violated this chapter, including records located outside the state.
+(b)
+For records located outside of the state, the person who is found to have violated this chapter shall pay the attorney general's expenses to inspect the records, including travel costs.
+(c)
+Upon notification from the attorney general of the attorney general's intent to inspect records located outside of the state, the person who is found to have violated this chapter shall pay the attorney general $500, or a higher amount if $500 is estimated to be insufficient, to cover the attorney general's expenses to inspect the records.
+(d)
+To the extent an amount paid to the attorney general by a person who is found to have violated this chapter is not expended by the attorney general, the amount shall be refunded to the person who is found to have violated this chapter.
+(e)
+The Division of Corporations and Commercial Code or any other relevant entity shall revoke any authorization to do business in this state of a person who fails to pay any amount required under this Subsection (10).","s10 = Section(sectionNumber=""(10)"")
+
+# Subsection (a)
+sa = Section(sectionNumber=""(a)"")
+s10.add_subsection(sa)
+r1 = Rule(sa, Expression(sa, ""The attorney general""))
+r1.rule_type = Rule.PERMISSION
+r1.description = Expression(sa, ""may inspect and copy all records related to the business conducted by the person alleged to have violated this chapter, including records located outside the state"")
+
+# Subsection (b)
+sb = Section(sectionNumber=""(b)"")
+s10.add_subsection(sb)
+r2 = Rule(sb, Expression(sb, ""the person who is found to have violated this chapter""))
+r2.rule_type = Rule.OBLIGATION
+r2.description = Expression(sb, ""shall pay the attorney general's expenses to inspect the records, including travel costs"")
+r2.conditions.append(Expression(sb, ""For records located outside of the state""))
+
+# Subsection (c)
+sc = Section(sectionNumber=""(c)"")
+s10.add_subsection(sc)
+r3 = Rule(sc, Expression(sc, ""the person who is found to have violated this chapter""))
+r3.rule_type = Rule.OBLIGATION
+r3.description = Expression(sc, ""shall pay the attorney general $500, or a higher amount if $500 is estimated to be insufficient, to cover the attorney general's expenses to inspect the records"")
+r3.conditions.append(Expression(sc, ""Upon notification from the attorney general of the attorney general's intent to inspect records located outside of the state""))
+
+# Subsection (d)
+sd = Section(sectionNumber=""(d)"")
+s10.add_subsection(sd)
+r4 = Rule(sd, Expression(sd, ""The attorney general""))
+r4.rule_type = Rule.OBLIGATION
+r4.description = Expression(sd, ""shall refund to the person who is found to have violated this chapter any amount that is not expended by the attorney general"")
+r4.conditions.append(Expression(sd, ""To the extent an amount paid to the attorney general by a person who is found to have violated this chapter is not expended by the attorney general""))
+
+# Subsection (e)
+se = Section(sectionNumber=""(e)"")
+s10.add_subsection(se)
+r5 = Rule(se, Expression(se, ""The Division of Corporations and Commercial Code or any other relevant entity""))
+r5.rule_type = Rule.OBLIGATION
+r5.description = Expression(se, ""shall revoke any authorization to do business in this state of a person who fails to pay any amount required under this Subsection (10)"")","['#obligation', '#condition', '#prohibition', '#permission']"
+"(11)
+(a)
+Subject to Subsection (11)(c), the attorney general shall keep confidential a procedure agreed to, testimony taken, a document produced, or material produced under this section pursuant to a subpoena, confidentiality agreement, or confidentiality order, unless the individual who agreed to the procedure, provided testimony, produced the document, or produced material waives confidentiality in writing.
+(b)
+Subject to Subsections (11)(c) and (11)(d), the attorney general may use, in an enforcement action taken under this section, testimony taken, a document produced, or material produced under this section to the extent the use is not restricted or prohibited by a confidentiality agreement or a confidentiality order.
+(c)
+The attorney general may use, in an enforcement action taken under this section, testimony taken, a document produced, or material produced under this section that is restricted or prohibited from use by a confidentiality agreement or a confidentiality order if the individual who provided testimony or produced the document or material waives the restriction or prohibition in writing.
+(d)
+The attorney general may disclose testimony taken, a document produced, or material produced under this section, without consent of the individual who provided the testimony or produced the document or material, or the consent of an individual being investigated, to:
+(i)
+a grand jury; or
+(ii)
+a federal or state law enforcement officer, if the person from whom the information was obtained is notified 20 days or greater before the day on which the information is disclosed, and the federal or state law enforcement officer certifies that the federal or state law enforcement officer will:
+(A)
+maintain the confidentiality of the testimony, document, or material; and
+(B)
+use the testimony, document, or material solely for an official law enforcement purpose.","s11 = Section(""(11)"")
+
+s11a = Section(""(a)"")
+s11.add_subsection(s11a)
+r1 = Rule(s11a, Expression(s11a, ""the attorney general""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(s11a, ""shall keep confidential a procedure agreed to, testimony taken, a document produced, or material produced under this section pursuant to a subpoena, confidentiality agreement, or confidentiality order"")
+r1.add_exception(Expression(s11a, ""unless the individual who agreed to the procedure, provided testimony, produced the document, or produced material waives confidentiality in writing""))
+ref1=Reference(s11a, ""Subsection (11)(c)"", target=r1)
+r1.add_follows(ref1)
+
+
+s11b = Section(""(b)"")
+s11.add_subsection(s11b)
+r2 = Rule(s11b, Expression(s11b, ""the attorney general""))
+r2.rule_type = Rule.PERMISSION
+r2.description = Expression(s11b, ""may use, in an enforcement action taken under this section, testimony taken, a document produced, or material produced under this section"")
+r2.conditions.append(Expression(s11b, ""to the extent the use is not restricted or prohibited by a confidentiality agreement or a confidentiality order""))
+ref2=Reference(s11a, ""Subsection (11)(c) and (11)(d)"", target=r2)
+r2.add_follows(ref2)
+
+s11c = Section(""(c)"")
+s11.add_subsection(s11c)
+r3 = Rule(s11c, Expression(s11c, ""the attorney general""))
+r3.rule_type = Rule.PERMISSION
+r3.description = Expression(s11c, ""may use, in an enforcement action taken under this section, testimony taken, a document produced, or material produced under this section that is restricted or prohibited from use by a confidentiality agreement or a confidentiality order"")
+r3.conditions.append(Expression(s11c, ""if the individual who provided testimony or produced the document or material waives the restriction or prohibition in writing""))
+
+s11d = Section(""(d)"")
+s11.add_subsection(s11d)
+r4 = Rule(s11d, Expression(s11d, ""the attorney general""))
+r4.rule_type = Rule.PERMISSION
+r4.description = Expression(s11d, ""may disclose testimony taken, a document produced, or material produced under this section, without consent of the individual who provided the testimony or produced the document or material, or the consent of an individual being investigated"")
+sd11i = Section(""(i)"")
+s11d.add_subsection(sd11i)
+r4.description.includes.append(Expression(sd11i, ""a grand jury""))
+sd11ii = Section(""(ii)"")
+s11d.add_subsection(sd11ii)
+r4.description.includes.append(Expression(sd11ii, ""a federal or state law enforcement officer, if the person from whom the information was obtained is notified 20 days or greater before the day on which the information is disclosed, and the federal or state law enforcement officer certifies that the federal or state law enforcement officer will""))
+sd11iiA = Section(""(A)"")
+sd11ii.add_subsection(sd11iiA)
+r4.description.includes[-1].includes.append(Expression(sd11iiA, ""maintain the confidentiality of the testimony, document, or material""))
+sd11iiB = Section(""(B)"")
+sd11ii.add_subsection(sd11iiB)
+r4.description.includes[-1].includes.append(Expression(sd11iiB, ""use the testimony, document, or material solely for an official law enforcement purpose""))","['#obligation', '#follows', '#reference', '#permission', '#condition']"
+"(12)
+(a)
+An administrative action filed under this chapter shall be commenced no later than 10 years after the day on which the alleged breach of system security last occurred.
+(b)
+A civil action under this chapter shall be commenced no later than five years after the day on which the alleged breach of system security last occurred.","s12 = Section(sectionNumber=""(12)"")
+
+sa = Section(""(a)"")
+s12.add_subsection(sa)
+r1 = Rule(sa, Expression(sa, ""An administrative action filed under this chapter""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(sa, ""shall be commenced no later than 10 years after the day on which the alleged breach of system security last occurred"")
+
+sb = Section(""(b)"")
+s12.add_subsection(sb)
+r2 = Rule(sb, Expression(sb, ""A civil action under this chapter""))
+r2.rule_type = Rule.OBLIGATION
+r2.description = Expression(sb, ""shall be commenced no later than five years after the day on which the alleged breach of system security last occurred"")",['#obligation']
