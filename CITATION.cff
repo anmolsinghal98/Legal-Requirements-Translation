@@ -1,0 +1,51 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Legal Requirements Translation from Law
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Anmol
+    family-names: Singhal
+    email: anmolsinghal@cmu.edu
+    affiliation: Carnegie Mellon University
+    orcid: 'https://orcid.org/0009-0003-9122-4789'
+  - given-names: Travis
+    family-names: Breaux
+    email: tdbreaux@andrew.cmu.edu
+    affiliation: Carnegie Mellon University
+    orcid: 'https://orcid.org/0000-0001-7127-8155'
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.15794182
+    description: >-
+      Artifact for the paper accepted at the Requirements
+      Engineering Conference 2025
+repository-code: >-
+  https://github.com/anmolsinghal98/Legal-Requirements-Translation
+abstract: >-
+  Ensuring software compliance with legal regulations is
+  especially challenging for small organizations, as
+  extracting legal requirements from lengthy and complex
+  texts demands significant effort and expertise. While
+  prior automated approaches have aimed to extract
+  structural and semantic metadata from legal documents,
+  they often overlook the interdependencies between metadata
+  attributes and depend on manual or heuristic-based methods
+  that lack generalizability to new texts. Legal meaning
+  often emerges not from individual metadata elements alone,
+  but from the relationships between them—such as how
+  obligations, conditions, and exceptions interact across
+  clauses and sub-sections. This artifact provides a
+  framework for translating legal requirements into an
+  executable Python code representation using GPT-4o. The
+  representation preserves the structural and semantic
+  metadata relationships in legal text. We envision using
+  this “executable” legal translation for downstream
+  analysis of compliance verification.
+license: Apache-2.0
+version: '1'
+date-released: '2025-07-02'

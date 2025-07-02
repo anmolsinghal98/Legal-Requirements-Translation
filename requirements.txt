@@ -15,3 +15,5 @@ openai>=1.0.0
 langchain>=0.1.0
 langchain-openai>=0.0.2
 python-dotenv>=1.0.0
+transformers>=4.40.0 # not required for the code to run using GPT-4o, but necessary for other HuggingFace models
+torch>=2.0.0 # not required for the code to run using GPT-4o, but necessary for other HuggingFace models

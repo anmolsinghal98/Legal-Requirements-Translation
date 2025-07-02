@@ -1,42 +1,46 @@
 # Legal Requirements Translation from Law
 
-## Summary of Artifact
+![License](https://img.shields.io/github/license/anmolsinghal98/Legal-Requirements-Translation)
+![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)
+![OpenAI GPT-4o](https://img.shields.io/badge/LLM-GPT--4o-lightgrey)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15794182.svg)](https://doi.org/10.5281/zenodo.15794182)
 
-This repository provides a framework for translating legal requirements into an executable Python code representation using GPT-4o. The representation preserves the structural and semantic metadata relationships in legal text. The artifact includes:
+## 📝 Summary of the Artifact
 
-1. **Translation Methodology**
-   - A GPT-4o-based approach for converting legal text into structured code
-   - Custom prompt engineering for legal requirement translation
-   - Integration with a domain-specific class structure for legal requirements
+Ensuring software compliance with legal regulations is especially challenging for small organizations. Extracting legal requirements from lengthy, complex texts demands significant legal expertise.
 
-2. **Core Components**
-   - Structured representation of legal requirements using custom Python classes
-   - Serialization utilities for data conversion
-   - Testing framework for validation and evaluation
+Prior automated approaches often overlook the **interdependencies** between legal metadata attributes. Yet legal meaning frequently arises from these relationships—for example, how obligations, conditions, and exceptions interact across clauses and sections.
 
-3. **Evaluation Framework**
-   - Structural testing for code validation
-   - Semantic testing for requirement accuracy
-   - Compilation testing for code quality
-   - Performance metrics calculation (pass@k, attribute-level scores)
+This artifact provides a **framework for translating legal requirements into executable Python code** using GPT-4o. Our representation preserves **structural and semantic relationships**, enabling downstream **compliance verification**.
 
-4. **Test Suite**
-   - Test cases from multiple US states
-   - development dataset for model development
-   - Comprehensive evaluation metrics
+### ✨ Key Features
 
-This artifact enables researchers and practitioners to:
-- Convert legal requirements into a structured Python code representation
-- Validate translated code through multiple testing methods
-- Evaluate translation quality using various metrics
+- **Translation Methodology**
+  - GPT-4o-based code generation pipeline
+  - Custom prompt engineering for legal text
+  - Integration with a domain-specific class structure
 
-This repository contains code and tools for translating legal requirements into a structured Python code representation and evaluating the translations through various testing methods.
+- **Core Components**
+  - Python classes representing legal constructs
+  - Serialization and data conversion utilities
+  - Test framework for validation
 
-## Description of Artifact
+- **Evaluation Framework**
+  - Structural, semantic, and compilation testing
+  - Metrics: `pass@k`, attribute-level precision/recall
 
-### Core Code Files (`/code`)
+- **Test Suite**
+  - Ground truth from six U.S. state laws
+  - Development and evaluation datasets
+  - Precomputed intermediate results
 
-#### Core Classes and Utilities
+---
+
+## 📂 Artifact Description
+
+### 🔧 Code Directory (`/code`)
+
+#### Core Classes
 - `class_structure.py`: Defines the core data structures for representing legal requirements:
   - `Section`: Represents a bullet point in legal text
   - `Expression`: Represents text snippets within sections
@@ -44,16 +48,11 @@ This repository contains code and tools for translating legal requirements into 
   - `Information`, `Definition`, `Rule`, `Exemption`: Specialized statement types
   - `Reference`: Represents references to other parts of the legal text
 
-- `serialize.py`: Provides serialization utilities for converting between Python objects and structured formats.
+- `serialize.py`: Serialization utilities for converting Python objects to structured formats.
 
-- `test_statements.py`: Contains test cases and validation logic for legal statements, including:
-  - Information description testing
-  - Definition term and meaning testing
-  - Rule entity and type testing
-  - Exemption description testing
-  - Reference relationship testing
+- `test_statements.py`: Tests and validations for metadata types and attributes.
 
-### Method
+#### Main Translation Notebook
 - `Code-with-Demo-with-Class.ipynb`: The main implementation file that contains:
   - GPT-4 prompts and configurations for legal requirement translation
   - Code generation pipeline for converting legal text to structured format
@@ -61,7 +60,7 @@ This repository contains code and tools for translating legal requirements into 
   - Demonstration selection 
   - Integration of the class structure with the prompt
 
-### Testing Notebooks
+#### Testing Notebooks
 - `Code-Gen-Structural-Testing.ipynb`: Implements structural testing for generated code:
   - Section number validation
   - Expression comparison
@@ -77,55 +76,60 @@ This repository contains code and tools for translating legal requirements into 
   - Tests code execution
   - Checks for runtime errors
 
-### Evaluation Notebooks
+#### Evaluation Notebook
+- `Compute-pass-at-k.ipynb`: Calculates `pass@k` and attribute-level metrics.
 
-- `Compute-pass-at-k.ipynb`: Implements pass@k evaluation:
-  - Calculates pass rates across multiple attempts
-  - Consolidates best results
-  - Generates distribution statistics
-  - Analyzes attribute-level scores
+---
 
-### Test Files (`/test files`)
-Contains CSV files with test cases from different states:
-- `OR.csv`: Oregon test cases
-- `MS.csv`: Mississippi test cases
-- `VA.csv`: Virginia test cases
-- `VT.csv`: Vermont test cases
-- `UT.csv`: Utah test cases
-- `WI.csv`: Wisconsin test cases
+## 🧪 Test Files (`/test files`)
 
-### Data
-- `development-set.csv`: Contains the development dataset for the translation model
+These CSV files contain legal paragraphs and their Python translations from six U.S. state data breach laws:
 
-### Intermediate Results
-- Contains the sample output on `MS.csv` in the test set. 
+- `OR.csv` – Oregon  
+- `MS.csv` – Mississippi  
+- `VA.csv` – Virginia  
+- `VT.csv` – Vermont  
+- `UT.csv` – Utah  
+- `WI.csv` – Wisconsin  
 
-## System Requirements
+> Although tailored for U.S. state laws, our class structure is domain-agnostic and supports adaptation to other legal domains.
 
-### Hardware Requirements
-- CPU: 2+ cores
-- RAM: 8GB minimum (16GB recommended)
-- Storage: 1GB free space
+---
 
-### Software Requirements
-- Operating System: Linux, macOS, or Windows
-- Python 3.8 or higher
-- Git
+## 📊 Data
 
-### Required Programs and Libraries
-- Jupyter Notebook or JupyterLab
-- OpenAI API access (for GPT-4o)
-- Python packages (specified in requirements.txt)
+- `development-set.csv`: Dataset used for model development.
+- `intermediate-results/`: Sample outputs from `MS.csv`.
 
-## Installation Instructions
+---
+
+## ⚙️ System Requirements
+
+**Hardware**:  
+- CPU: ≥ 2 cores  
+- RAM: 8GB minimum (16GB recommended)  
+- Disk: 1GB free space  
+
+**Software**:  
+- OS: Linux/macOS/Windows  
+- Python: 3.8 or higher  
+- Tools: Git, Jupyter
+
+**Python Dependencies** (in `requirements.txt`):  
+- `numpy`, `pandas`, `pytest`, `openai`, `langchain`, `scikit-learn`  
+- Optional: `transformers`, `torch` (for HuggingFace LLMs)
+
+---
+
+## 🔧 Installation Instructions
 
 ### 1. Clone the Repository
-```bash
-git clone https://github.com/anmolsinghal98/Legal-Requirements-Translation.git
-cd Legal-Requirements-Translation
-```
+  ```bash
+   git clone https://github.com/anmolsinghal98/Legal-Requirements-Translation.git
+   cd Legal-Requirements-Translation
+  ```
 
-### 2. Set Up Python Virtual Environment
+### 2. Create and Activate Virtual Environment
 ```bash
 # Create virtual environment
 python -m venv venv
@@ -152,6 +156,8 @@ pip install -r requirements.txt
 touch .env
 ```
 
+Instructions to create an OpenAI API Key can be found here: https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key.
+
 2. Add your OpenAI API key to the `.env` file:
 ```
 OPENAI_API_KEY=your_api_key_here
@@ -162,11 +168,11 @@ OPENAI_API_KEY=your_api_key_here
 jupyter notebook
 ```
 
-### Obtaining Intermediate Results within 60 minutes
+### ⏱ Obtaining Intermediate Results within 60 minutes
 Executing the pipeline across all the sentences in the development and test set may take longer than 60 minutes. This is because the OpenAI API response time can depend on several external factors such as downtime, response latency, and request overload. Consequently, we also provide `intermediate-results` by running the pipeline across a single test file `MS.csv`. 
 
 
-## Usage Instructions
+## 🚀 Usage Instructions
 
 1. Start with `Code-with-Demo-with-Class.ipynb` to understand the translation methodology:
    - Review the prompt engineering approach
@@ -180,7 +186,7 @@ Executing the pipeline across all the sentences in the development and test set 
    - Structural testing for running structural tests
    - Semantic testing for running semantic tests
 
-3. Use the pass@k evaluation notebook to compute metrics:
+3. Use `Compute-pass-at-k.ipynb` to compute metrics:
    - Pass@k for checking how many test examples pass all the test cases in k passes
    - Calculate the attribute-level accuracy, precision and recall scores 
 
@@ -193,6 +199,9 @@ Key dependencies include:
 - `openai` and `langchain` for LLM integration
 - `scikit-learn` for metrics calculation
 
+Optional dependencies for running code on HuggingFace Language Models:
+- `transformers`
+- `torch`
 
 ## Steps to Reproduce
 
@@ -202,16 +211,20 @@ Key dependencies include:
 4. A potential issue that may lead to errors in testing and evaluation can be the presence of unwanted spaces and characters at the beginning and end of model output, which can affect code compilability. We have largely mitigated this issue by including the necessary post-processing steps. However, in rare occurrences, we cannot rule out the need for minor updates to post-processing that may be necessary to the output. To support these efforts, we have pointed out the lines in the code that may require changes in the comments. 
 5. Generating the output for all the folds in the development set and the test set may take longer than 60 minutes. Therefore, we have provided intermediate results by executing the code on a single test file `MS.csv`. The notebooks also contain the output after executing the same test file. 
 
-## Author Information
+## 🔄 Using Language Models Other Than GPT-4o
+
+The prompts provided in the `code` directory are model-agnostic, i.e., they can be used with any language model. The notebook provides the code setup to substitute `openai` models with any model hosted on `huggingface`. However, please note that the results reported in the paper using GPT-4o can differ significantly from the results obtained using a different model. The difference in model performance can be attributed to multiple factors that include the number of model parameters, training dataset size and quality, instruction tuning, and other training-specific details.
+
+## 👥 Author Information
 
 1. Anmol Singhal - Carnegie Mellon University (Email ID: anmolsinghal@cmu.edu)
 2. Travis Breaux - Carnegie Mellon University (Email ID: tdbreaux@andrew.cmu.edu)
 
-## Artifact Location
+## 🌍 Artifact Location
 
-The artifact can be found at: https://doi.org/10.5281/zenodo.15670090
+The artifact can be found at: https://doi.org/10.5281/zenodo.15794182
 
-## How to cite
+## 📚 How to cite
 
 If you use this work in your research, please cite:
 
@@ -219,6 +232,8 @@ If you use this work in your research, please cite:
 
 A. Singhal, T.D. Breaux (2025). "Legal Requirements Translation from Law." 33rd IEEE International Requirements Engineering Conference. 
 
-## License
+You can also use the citation file provided in `CITATION.cff`.
+
+## 📄 License
 
 See the [LICENSE](LICENSE) file for details.
