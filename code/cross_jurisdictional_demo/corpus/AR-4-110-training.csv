@@ -1,0 +1,355 @@
+text,code,tags
+"4-110-101. Short title.
+This chapter shall be known and cited as the ""Personal Information Protection Act"".","s = Section(sectionNumber=""4-110-101"", sectionTitle=""Short title."")
+r = Information(s, Expression(s, ""This chapter be known and cited as the 'Personal Information Protection Act'""))",['#information']
+"4-110-102. Findings and purpose.
+(a) It is the intent of the General Assembly to ensure that sensitive personal information about Arkansas residents is protected.
+(b) To that end, the purpose of this chapter is to encourage individuals, businesses, and state agencies that acquire, own, or license personal information about the citizens of the State of Arkansas to provide reasonable security for the information.","s = Section(sectionNumber=""4-110-102"", sectionTitle=""Findings and purpose"")
+s1 = Section(""a"")
+s.add_subsection(s1)
+e1 = Expression(s1, ""It is the intent of the General Assembly to ensure that sensitive personal information about Arkansas residents is protected"")
+i1=Information(s1, e1)
+s2 = Section(""b"")
+s.add_subsection(s2)
+e2 = Expression(s2, ""To that end, the purpose of this chapter is to encourage individuals, businesses, and state agencies that acquire, own, or license personal information about the citizens of the State of Arkansas to provide reasonable security for the information"")
+i2=Information(s2, e2)",['#information']
+"4-110-103. Definitions.
+As used in this chapter:
+(1)
+(A) ""Breach of the security of the system"" means unauthorized acquisition of computerized data that compromises the security, confidentiality, or integrity of personal information maintained by a person or business.
+(B) ""Breach of the security of the system"" does not include the good faith acquisition of personal information by an employee or agent of the person or business for the legitimate purposes of the person or business if the personal information is not otherwise used or subject to further unauthorized disclosure;","s = Section(sectionNumber=""4-110-103"", sectionTitle=""Definitions"")
+i = Information(s, Expression(s, ""As used in this chapter:""))
+s1 = Section(""(1)"")
+s.add_subsection(s1)
+d = Definition(s1, Expression(s1, ""Breach of the security of the system""))
+s1A = Section(""(A)"")
+s1.add_subsection(s1A)
+d.meaning.append(Expression(s1A, ""unauthorized acquisition of computerized data that compromises the security, confidentiality, or integrity of personal information maintained by a person or business""))
+s1B = Section(""(B)"")
+s1.add_subsection(s1B)
+d.exclusions.append(Expression(s1B, ""the good faith acquisition of personal information by an employee or agent of the person or business for the legitimate purposes of the person or business if the personal information is not otherwise used or subject to further unauthorized disclosure""))","['#continuation', '#exclusion', '#definition']"
+"4-110-103. Definitions.
+(2)
+(A) ""Business"" means a sole proprietorship, partnership, corporation, association, or other group, however organized and whether or not organized to operate at a profit, including a financial institution organized, chartered, or holding a license or authorization certificate under the law of this state, any other state, the United States, or of any other country or the parent or the subsidiary of a financial institution.
+(B) ""Business"" includes:
+(i) An entity that destroys records; and
+(ii) A state agency;","s = Section(sectionNumber=""4-110-103"", sectionTitle=""Definitions"")
+s2 = Section(""(2)"")
+s.add_subsection(s2)
+s2A = Section(""(A)"")
+s2.add_subsection(s2A)
+d = Definition(s2A, Expression(s2A, ""Business""))
+e=Expression(s2A, ""a sole proprietorship, partnership, corporation, association, or other group, however organized and whether or not organized to operate at a profit, including a financial institution organized, chartered, or holding a license or authorization certificate under the law of this state, any other state, the United States, or of any other country or the parent or the subsidiary of a financial institution"")
+d.meaning.append(e)
+s2B = Section(""(B)"")
+s2.add_subsection(s2B)
+e.includes.append(Expression(s2B, ""An entity that destroys records""))
+e.includes.append(Expression(s2B, ""A state agency""))","['#continuation', '#definition']"
+"4-110-103. Definitions.
+(3) ""Customer"" means an individual who provides personal information to a business for the purpose of purchasing or leasing a product or obtaining a service from the business;","s = Section(sectionNumber=""4-110-103"", sectionTitle=""Definitions"")
+s_3 = Section(""(3)"")
+s.add_subsection(s_3)
+d = Definition(s_3, Expression(s_3, ""Customer""))
+d.meaning.append(Expression(s_3, ""an individual who provides personal information to a business for the purpose of purchasing or leasing a product or obtaining a service from the business""))",['#definition']
+"4-110-103. Definitions.
+(4) ""Individual"" means a natural person;","s = Section(sectionNumber=""4-110-103"", sectionTitle=""Definitions"")
+s4 = Section(""(4)"")
+s.add_subsection(s4)
+d = Definition(s4, Expression(s4, ""Individual""))
+d.meaning.append(Expression(s4, ""a natural person""))",['#definition']
+"4-110-103. Definitions.
+(5) ""Medical information"" means any individually identifiable information, in electronic or physical form, regarding the individual's medical history or medical treatment or diagnosis by a healthcare professional;","s = Section(sectionNumber=""4-110-103"", sectionTitle=""Definitions"")
+s5 = Section(""(5)"")
+s.add_subsection(s5)
+d = Definition(s5, Expression(s5, ""Medical information""))
+d.meaning.append(Expression(s5, ""any individually identifiable information, in electronic or physical form, regarding the individual's medical history or medical treatment or diagnosis by a healthcare professional""))",['#definition']
+"4-110-103. Definitions.
+(6) ""Owns or licenses"" includes, but is not limited to, personal information that a business retains as part of the internal customer account of the business or for the purpose of using the information in transactions with the person to whom the information relates;","s = Section(sectionNumber=""4-110-103"", sectionTitle=""Definitions"")
+s1 = Section(sectionNumber=""(6)"")
+s.add_subsection(s1)
+d = Definition(s1, Expression(s1, ""Owns or licenses""))
+d.meaning.append(Expression(s1, ""includes, but is not limited to, personal information that a business retains as part of the internal customer account of the business or for the purpose of using the information in transactions with the person to whom the information relates""))",['#definition']
+"4-110-103. Definitions.
+(7) ""Personal information"" means an individual's first name or first initial and his or her last name in combination with any one (1) or more of the following data elements when either the name or the data element is not encrypted or redacted:
+(A) Social Security number;
+(B) Driver's license number or Arkansas identification card number;
+(C) Account number, credit card number, or debit card number in combination with any required security code, access code, or password that would permit access to an individual's financial account;
+(D) Medical information; and
+(E)
+(i) Biometric data.
+(ii) As used in this subdivision (7)(E), ""biometric data"" means data generated by automatic measurements of an individual's biological characteristics, including without limitation:
+(a) Fingerprints;
+(b) Faceprint;
+(c) A retinal or iris scan;
+(d) Hand geometry;
+(e) Voiceprint analysis;
+(f) Deoxyribonucleic acid (DNA); or
+(g) Any other unique biological characteristics of an individual if the characteristics are used by the owner or licensee to uniquely authenticate the individual's identity when the individual accesses a system or account;","s = Section(sectionNumber=""4-110-103"", sectionTitle=""Definitions"")
+s7 = Section(""(7)"")
+s.add_subsection(s7)
+d = Definition(s7, Expression(s7, ""Personal information""))
+e=Expression(s7, ""an individual's first name or first initial and his or her last name in combination with any one (1) or more of the following data elements when either the name or the data element is not encrypted or redacted:"")
+d.meaning.append(e)
+s7a = Section(""(A)"")
+s7.add_subsection(s7a)
+e.includes.append(Expression(s7a, ""Social Security number""))
+s7b = Section(""(B)"")
+s7.add_subsection(s7b)
+e.includes.append(Expression(s7b, ""Driver's license number or Arkansas identification card number""))
+s7c = Section(""(C)"")
+s7.add_subsection(s7c)
+e.includes.append(Expression(s7c, ""Account number, credit card number, or debit card number in combination with any required security code, access code, or password that would permit access to an individual's financial account""))
+s7d = Section(""(D)"")
+s7.add_subsection(s7d)
+e.includes.append(Expression(s7d, ""Medical information""))
+s7e = Section(""(E)"")
+s7.add_subsection(s7e)
+s7ei = Section(""(i)"")
+s7e.add_subsection(s7ei)
+e_biometric = Expression(s7ei, ""Biometric data"")
+e.includes.append(e_biometric)
+s7eii = Section(""(ii)"")
+s7e.add_subsection(s7eii)
+d_biometric = Definition(s7eii, e_biometric)
+e_biometric_exp=Expression(s7eii, ""data generated by automatic measurements of an individual's biological characteristics, including without limitation:"")
+d_biometric.meaning.append(e_biometric_exp)
+d_biometric.add_is_followed_by(Expression(s7eii, ""subdivision (7)(E)""))
+s7eiia = Section(""(a)"")
+s7eii.add_subsection(s7eiia)
+e_biometric_exp.includes.append(Expression(s7eiia, ""Fingerprints""))
+s7eiib = Section(""(b)"")
+s7eii.add_subsection(s7eiib)
+e_biometric_exp.includes.append(Expression(s7eiib, ""Faceprint""))
+s7eiic = Section(""(c)"")
+s7eii.add_subsection(s7eiic)
+e_biometric_exp.includes.append(Expression(s7eiic, ""A retinal or iris scan""))
+s7eiid = Section(""(d)"")
+s7eii.add_subsection(s7eiid)
+e_biometric_exp.includes.append(Expression(s7eiid, ""Hand geometry""))
+s7eiie = Section(""(e)"")
+s7eii.add_subsection(s7eiie)
+e_biometric_exp.includes.append(Expression(s7eiie, ""Voiceprint analysis""))
+s7eiif = Section(""(f)"")
+s7eii.add_subsection(s7eiif)
+e_biometric_exp.includes.append(Expression(s7eiif, ""Deoxyribonucleic acid (DNA)""))
+s7eiig = Section(""(g)"")
+s7eii.add_subsection(s7eiig)
+e_biometric_exp.includes.append(Expression(s7eiig, ""Any other unique biological characteristics of an individual if the characteristics are used by the owner or licensee to uniquely authenticate the individual's identity when the individual accesses a system or account""))","['#condition', '#continuation', '#definition', '#followed_by']"
+"4-110-103. Definitions.
+(8)
+(A) ""Records"" means any material that contains sensitive personal information in electronic form.
+(B) ""Records"" does not include any publicly available directories containing information an individual has voluntarily consented to have publicly disseminated or listed, such as name, address, or telephone number; and
+(9) ""State agencies"" or ""state agency"" means any agency, institution, authority, department, board, commission, bureau, council, or other agency of the State of Arkansas supported by cash funds or the appropriation of state or federal funds.","s = Section(sectionNumber=""4-110-103"", sectionTitle=""Definitions"")
+s8 = Section(""(8)"")
+s.add_subsection(s8)
+d1 = Definition(s8, Expression(s8, ""Records""))
+s8A=Section(""(A)"")
+s8.add_subsection(s8A)
+d1.meaning.append(Expression(s8A, ""any material that contains sensitive personal information in electronic form""))
+s8B=Section(""(B)"")
+s8.add_subsection(s8B)
+d1.exclusions.append(Expression(s8B, ""any publicly available directories containing information an individual has voluntarily consented to have publicly disseminated or listed, such as name, address, or telephone number""))
+s9 = Section(""(9)"")
+s.add_subsection(s9)
+d2 = Definition(s9, Expression(s9, ""State agencies or state agency""))
+d2.meaning.append(Expression(s9, ""any agency, institution, authority, department, board, commission, bureau, council, or other agency of the State of Arkansas supported by cash funds or the appropriation of state or federal funds""))","['#exclusion', '#definition']"
+"4-110-104. Protection of personal information.
+(a) A person or business shall take all reasonable steps to destroy or arrange for the destruction of a customer's records within its custody or control containing personal information that is no longer to be retained by the person or business by shredding, erasing, or otherwise modifying the personal information in the records to make it unreadable or undecipherable through any means.
+(b) A person or business that acquires, owns, or licenses personal information about an Arkansas resident shall implement and maintain reasonable security procedures and practices appropriate to the nature of the information to protect the personal information from unauthorized access, destruction, use, modification, or disclosure.","s = Section(sectionNumber=""4-110-104"", sectionTitle=""Protection of personal information"")
+s_a = Section(""(a)"")
+s.add_subsection(s_a)
+r_a = Rule(s_a, Expression(s_a, ""A person or business""))
+r_a.rule_type = Rule.OBLIGATION
+r_a.description = Expression(s_a, ""shall take all reasonable steps to destroy or arrange for the destruction of a customer's records within its custody or control containing personal information that is no longer to be retained by the person or business by shredding, erasing, or otherwise modifying the personal information in the records to make it unreadable or undecipherable through any means"")
+s_b = Section(""(b)"")
+s.add_subsection(s_b)
+r_b = Rule(s_b, Expression(s_b, ""A person or business that acquires, owns, or licenses personal information about an Arkansas resident""))
+r_b.rule_type = Rule.OBLIGATION
+r_b.description = Expression(s_b, ""shall implement and maintain reasonable security procedures and practices appropriate to the nature of the information to protect the personal information from unauthorized access, destruction, use, modification, or disclosure"")",['#obligation']
+"4-110-105. Disclosure of security breaches.
+(a)
+(1) Any person or business that acquires, owns, or licenses computerized data that includes personal information shall disclose any breach of the security of the system following discovery or notification of the breach of the security of the system to any resident of Arkansas whose unencrypted personal information was, or is reasonably believed to have been, acquired by an unauthorized person.
+(2) The disclosure shall be made in the most expedient time and manner possible and without unreasonable delay, consistent with the legitimate needs of law enforcement as provided in subsection (c) of this section, or any measures necessary to determine the scope of the breach and to restore the reasonable integrity of the data system.","s = Section(sectionNumber=""4-110-105"", sectionTitle=""Disclosure of security breaches"")
+sa = Section(""(a)"")
+s.add_subsection(sa)
+
+sa1 = Section(""(1)"")
+sa.add_subsection(sa1)
+r1 = Rule(sa1, Expression(sa1, ""Any person or business that acquires, owns, or licenses computerized data that includes personal information""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(sa1, ""shall disclose any breach of the security of the system following discovery or notification of the breach to any resident of Arkansas whose unencrypted personal information was, or is reasonably believed to have been, acquired by an unauthorized person"")
+
+sa2 = Section(""(2)"")
+sa.add_subsection(sa2)
+r2 = Rule(sa2, Expression(sa2, ""The disclosure""))
+r2.rule_type = Rule.OBLIGATION
+r2.description = Expression(sa2, ""shall be made in the most expedient time and manner possible and without unreasonable delay, consistent with the legitimate needs of law enforcement as provided in subsection (c) of this section, or any measures necessary to determine the scope of the breach and to restore the reasonable integrity of the data system"")
+r2.add_follows(Expression(sa2, ""subsection (c)""))","['#condition', '#obligation', '#follows']"
+"4-110-105. Disclosure of security breaches.
+(b)
+(1) A person or business that maintains computerized data that includes personal information that the person or business does not own shall notify the owner or licensee that there has been a breach of the security of the system immediately following discovery if the personal information was, or is reasonably believed to have been, acquired by an unauthorized person.
+(2) If a breach of the security of a system affects the personal information of more than one thousand (1,000) individuals, the person or business required to make a disclosure of the security breach under subdivision (b)(1) of this section shall, at the same time the security breach is disclosed to an affected individual or within forty-five (45) days after the person or business determines that there is a reasonable likelihood of harm to customers, whichever occurs first, disclose the security breach to the Attorney General.","s = Section(sectionNumber=""4-110-105"", sectionTitle=""Disclosure of security breaches"")
+s2 = Section(""(b)"")
+s.add_subsection(s2)
+s21 = Section(""(1)"")
+s2.add_subsection(s21)
+r1 = Rule(s21, Expression(s21, ""A person or business that maintains computerized data that includes personal information that the person or business does not own""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(s21, ""shall notify the owner or licensee that there has been a breach of the security of the system immediately following discovery if the personal information was, or is reasonably believed to have been, acquired by an unauthorized person"")
+s22 = Section(""(2)"")
+s2.add_subsection(s22)
+r2 = Rule(s22, Expression(s22, ""a person or business required to make a disclosure of the security breach under subdivision (b)(1)""))
+r2.rule_type = Rule.OBLIGATION
+r2.condition = Expression(s22, ""a breach of the security of a system affects the personal information of more than one thousand (1,000) individuals"")
+r2.description = Expression(s22, ""shall at the same time the security breach is disclosed to an affected individual or within forty-five (45) days after the person or business determines that there is a reasonable likelihood of harm to customers, whichever occurs first, disclose the security breach to the Attorney General"")
+r2.add_follows(Expression(s22, ""subsection (b)(1)""))","['#condition', '#obligation', '#follows']"
+"4-110-105. Disclosure of security breaches.
+(c)
+(1) The notification required by this section may be delayed if a law enforcement agency determines that the notification will impede a criminal investigation.
+(2) The notification required by this section shall be made after the law enforcement agency determines that it will not compromise the investigation.","s = Section(sectionNumber=""4-110-105"", sectionTitle=""Disclosure of security breaches"")
+sc = Section(""(c)"")
+s.add_subsection(sc)
+sc1 = Section(""(1)"")
+sc.add_subsection(sc1)
+r1 = Rule(sc1, Expression(sc1, ""The notification required by this section""))
+r1.rule_type = Rule.PERMISSION
+r1.description = Expression(sc1, ""may be delayed"")
+r1.conditions.append(Expression(sc1, ""a law enforcement agency determines that the notification will impede a criminal investigation""))
+r1.add_is_exception_to(Expression(sc1, ""this section""))
+
+sc2 = Section(""(2)"")
+sc.add_subsection(sc2)
+r2 = Rule(sc2, Expression(sc2, ""The notification required by this section""))
+r2.rule_type = Rule.OBLIGATION
+r2.description = Expression(sc2, ""shall be made after the law enforcement agency determines that it will not compromise the investigation"")
+r2.conditions.append(Expression(sc2, ""after the law enforcement agency determines that it will not compromise the investigation""))","['#condition', '#obligation', '#permission', '#exception_to']"
+"4-110-105. Disclosure of security breaches.
+(d) Notification under this section is not required if, after a reasonable investigation, the person or business determines that there is no reasonable likelihood of harm to customers.","s = Section(sectionNumber=""4-110-105"", sectionTitle=""Disclosure of security breaches."")
+sd = Section(""(d)"")
+s.add_subsection(sd)
+e =Exemption(sd, Expression(sd, ""Notification under this section is not required if, after a reasonable investigation, the person or business determines that there is no reasonable likelihood of harm to customers""))",['#exemption']
+"4-110-105. Disclosure of security breaches.
+(e) For purposes of this section, notice may be provided by one (1) of the following methods:
+(1) Written notice;
+(2) Electronic mail notice if the notice provided is consistent with the provisions regarding electronic records and signatures set forth in 15 U.S.C. § 7001, as it existed on January 1, 2005; or
+(3)
+(A) Substitute notice if the person or business demonstrates that:
+(i) The cost of providing notice would exceed two hundred fifty thousand dollars ($250,000);
+(ii) The affected class of persons to be notified exceeds five hundred thousand (500,000); or
+(iii) The person or business does not have sufficient contact information.
+(B) Substitute notice shall consist of all of the following:
+(i) Electronic mail notice when the person or business has an electronic mail address for the subject persons;
+(ii) Conspicuous posting of the notice on the website of the person or business if the person or business maintains a website; and
+(iii) Notification by statewide media.","s = Section(sectionNumber=""4-110-105"", sectionTitle=""Disclosure of security breaches"")
+se = Section(""(e)"")
+s.add_subsection(se)
+r=Rule(se, Expression(se, ""notice""))
+r.rule_type=Rule.PERMISSION
+r.description=Expression(se, ""may be provided by one (1) of the following methods:"")
+s1 = Section(""(1)"")
+se.add_subsection(s1)
+r.description.includes.append(Expression(s1, ""Written notice""))
+
+s2 = Section(""(2)"")
+se.add_subsection(s2)
+r.description.includes.append(Expression(s2, ""Electronic mail notice if the notice provided is consistent with the provisions regarding electronic records and signatures set forth in 15 U.S.C. § 7001, as it existed on January 1, 2005""))
+r.add_follows(Expression(s2, ""15 U.S.C. § 7001""))
+s3 = Section(""(3)"")
+se.add_subsection(s3)
+s3a = Section(""(A)"")
+s3.add_subsection(s3a)
+e=Expression(s3a, ""Substitute notice if the person or business demonstrates that:"")
+r.description.includes.append(e)
+s3ai=Section(""(i)"")
+s3a.add_subsection(s3ai)
+e.includes.append(Expression(s3ai, ""The cost of providing notice would exceed two hundred fifty thousand dollars ($250,000)""))
+s3aii=Section(""(ii)"")
+s3a.add_subsection(s3aii)
+e.includes.append(Expression(s3a, ""The affected class of persons to be notified exceeds five hundred thousand (500,000)""))
+s3aiii=Section(""(iii)"")
+s3a.add_subsection(s3aiii)
+e.includes.append(Expression(s3a, ""The person or business does not have sufficient contact information""))
+s3b = Section(""(B)"")
+s3.add_subsection(s3b)
+e2 = Rule(s3b, Expression(s3b, ""Substitute notice""))
+e2.rule_type=Rule.OBLIGATION
+e2.description=Expression(s3b, ""shall consist of all of the following:"")
+r.description.includes.append(e2)
+s3b_i = Section(""(i)"")
+s3b.add_subsection(s3b_i)
+e2.description.includes.append(Expression(s3b_i, ""Electronic mail notice when the person or business has an electronic mail address for the subject persons""))
+
+s3b_ii = Section(""(ii)"")
+s3b.add_subsection(s3b_ii)
+e2.description.includes.append(Expression(s3b_ii, ""Conspicuous posting of the notice on the website of the person or business if the person or business maintains a website""))
+
+s3b_iii = Section(""(iii)"")
+s3b.add_subsection(s3b_iii)
+e2.description.includes.append(Expression(s3b_iii, ""Notification by statewide media""))","['#continuation', '#obligation', '#permission', '#follows']"
+"4-110-105. Disclosure of security breaches.
+(f) Notwithstanding subsection (e) of this section, a person or business that maintains its own notification procedures as part of an information security policy for the treatment of personal information and is otherwise consistent with the timing requirements of this section shall be deemed to be in compliance with the notification requirements of this section if the person or business notifies affected persons in accordance with its policies in the event of a breach of the security of the system.","s = Section(sectionNumber=""4-110-105"", sectionTitle=""Disclosure of security breaches"")
+sf = Section(""(f)"")
+s.add_subsection(sf)
+r = Rule(sf, Expression(sf, ""person or business that maintains its own notification procedures as part of an information security policy for the treatment of personal information""))
+r.rule_type = Rule.PERMISSION
+r.description = Expression(sf, ""shall be deemed to be in compliance with the notification requirements of this section"")
+r.conditions.append(Expression(sf, ""otherwise consistent with the timing requirements of this section""))
+r.conditions.append(Expression(sf, ""the person or business notifies affected persons in accordance with its policies in the event of a breach of the security of the system.""))
+r.add_is_exception_to(Expression(sf, ""subsection (e)""))","['#condition', '#permission',
+'#exception_to']"
+"4-110-105. Disclosure of security breaches.
+(g)
+(1) A person or business shall retain a copy of the written determination of a breach of the security of the system and supporting documentation for five (5) years from the date of determination of the breach of the security of the system.
+(2) If the Attorney General submits a written request for the written determination of the breach of the security of the system, the person or business shall send a copy of the written determination of the breach of the security of the system and supporting documentation to the Attorney General no later than thirty (30) days after the date of receipt of the request.
+(3) The determination and documentation retained under this subsection are confidential and not subject to public disclosure.","s = Section(sectionNumber=""4-110-105"", sectionTitle=""Disclosure of security breaches"")
+s7 = Section(""(g)"")
+s.add_subsection(s7)
+
+s71 = Section(""(1)"")
+s7.add_subsection(s71)
+r1 = Rule(s71, Expression(s71, ""A person or business""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(s71, ""shall retain a copy of the written determination of a breach of the security of the system and supporting documentation for five (5) years from the date of determination of the breach of the security of the system"")
+
+s72 = Section(""(2)"")
+s7.add_subsection(s72)
+r2 = Rule(s72, Expression(s72, ""the person or business""))
+r2.rule_type = Rule.OBLIGATION
+r2.description = Expression(s72, ""shall send a copy of the written determination of the breach of the security of the system and supporting documentation to the Attorney General no later than thirty (30) days after the date of receipt of the request"")
+r2.conditions.append(Expression(s72, ""the Attorney General submits a written request for the written determination of the breach of the security of the system""))
+
+s73 = Section(""(3)"")
+s7.add_subsection(s73)
+I=Information(s73, Expression(s73, ""The determination and documentation retained under this subsection are confidential and not subject to public disclosure""))
+i.add_refines(r1)
+i.add_refines(r2)","['#condition', '#obligation', '#refines']"
+"4-110-106. Exemptions.
+(a)
+(1) The provisions of this chapter do not apply to a person or business that is regulated by a state or federal law that provides greater protection to personal information and at least as thorough disclosure requirements for breaches of the security of personal information than that provided by this chapter.
+(2) Compliance with the state or federal law shall be deemed compliance with this chapter with regard to the subjects covered by this chapter.","s = Section(sectionNumber=""4-110-106"", sectionTitle=""Exemptions"")
+sa = Section(""(a)"")
+s.add_subsection(sa)
+sa1 = Section(""(1)"")
+sa.add_subsection(sa1)
+e=Exemption(sa1, Expression(sa1, ""The provisions of this chapter do not apply to a person or business regulated by a state or federal law that provides greater protection to personal information and at least as thorough disclosure requirements for breaches of the security of personal information than that provided by this chapter""))
+sa2 = Section(""(2)"")
+sa.add_subsection(sa2)
+r2 = Rule(sa2, Expression(sa2, ""Compliance with the state or federal law""))
+r2.rule_type = Rule.PERMISSION
+r2.description = Expression(sa2, ""shall be deemed compliance with this chapter with regard to the subjects covered by this chapter"")","['#permission', '#exemption']"
+"4-110-106. Exemptions.
+(b) This section does not relieve a person or business from a duty to comply with any other requirements of other state and federal law regarding the protection and privacy of personal information.","s = Section(sectionNumber=""4-110-106"", sectionTitle=""Exemptions"")
+s2 = Section(""(b)"")
+s.add_subsection(s2)
+r=Rule(s2, Expression(s2, ""This section""))
+r.rule_type=Rule.OBLIGATION
+r.description=Expression(s2, ""does not relieve a person or business from a duty to comply with any other requirements of other state and federal law regarding the protection and privacy of personal information"")",['#obligation']
+"4-110-107. Waiver.
+Any waiver of a provision of this chapter is contrary to public policy, void, and unenforceable.","s = Section(sectionNumber=""4-110-107"", sectionTitle=""Waiver"")
+e = Expression(s, ""Any waiver of a provision of this chapter is contrary to public policy, void, and unenforceable"")
+i = Information(s, e)",['#information']
+"4-110-108. Penalties.
+Any violation of this chapter is punishable by action of the Attorney General under the provisions of § 4-88-101 et seq.","s = Section(sectionNumber=""4-110-108"", sectionTitle=""Penalties"")
+e=Expression(s, ""Any violation of this chapter is punishable by action of the Attorney General under the provisions of § 4-88-101 et seq."")
+I=Information(s, e)
+i.add_is_followed_by(Expression(s, ""§ 4-88-101 et seq.""))","['#information', '#followed_by']"

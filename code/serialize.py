@@ -1,17 +1,7 @@
-# This module provides functions to serialize various classes from the class_structure module into a dictionary format.
-# It includes serialization for Section, Expression, Statement, Information, Definition, Rule, Exemption, and Reference classes.
-
-# Import necessary classes from the class_structure module
+# Serialize the data
 from class_structure import Section, Expression, Statement, Information, Definition, Rule, Exemption, Reference
 
 def serialize_section(section: Section) -> dict:
-    """
-    Serialize a Section object into a dictionary format.
-    Args:
-        section (Section): The Section object to serialize.
-    Returns:
-        dict: A dictionary representation of the Section object.
-    """
     return {
         "sectionNumber": section.sectionNumber,
         "sectionTitle": section.sectionTitle,
@@ -27,13 +17,6 @@ def serialize_section(section: Section) -> dict:
     }
 
 def serialize_expression(expr: Expression) -> dict:
-    """
-    Serialize an Expression object into a dictionary format.
-    Args:
-        expr (Expression): The Expression object to serialize.
-    Returns:
-        dict: A dictionary representation of the Expression object.
-    """
     return {
         "text": expr.text.lower(),
         "includes": [serialize_expression(e) for e in expr.includes],
@@ -41,13 +24,6 @@ def serialize_expression(expr: Expression) -> dict:
     }
 
 def serialize_reference(ref: Reference) -> dict:
-    """
-    Serialize a Reference object into a dictionary format.
-    Args:
-        ref (Reference): The Reference object to serialize.
-    Returns:
-        dict: A dictionary representation of the Reference object.
-    """
     return {
         "text": ref.text.lower(),
         "target": get_statement_or_expression_id(ref.target),
@@ -56,14 +32,8 @@ def serialize_reference(ref: Reference) -> dict:
     }
 
 def serialize_statement(stmt: Statement) -> dict:
-    """
-    Serialize a Statement object into a dictionary format.
-    This function handles different subclasses of Statement and extracts relevant fields.
-    Args:
-        stmt (Statement): The Statement object to serialize.
-    Returns:
-        dict: A dictionary representation of the Statement object.
-    """
+    # Because Statements have various subclasses (Definition, Information, Rule, Exemption),
+    # you can detect the subclass and serialize accordingly:
     base = {
         "section": stmt.sections.sectionNumber if stmt.sections else None,
         "relationships": {
@@ -103,11 +73,9 @@ def serialize_statement(stmt: Statement) -> dict:
 
 def get_statement_or_expression_id(obj):
     """
-    Get a unique identifier for a Statement or Expression object.
-    Args:
-        obj (Statement or Expression): The object to get the identifier for.
-    Returns:
-        str: A string representation of the object, typically its text or a unique identifier.
+    A helper that returns a short string ID for each Statement/Expression object
+    if you want to keep track of references more precisely.
+    For now, we can just return something like repr(obj) or id(obj).
     """
     if isinstance(obj, Reference):
         return obj.text.lower()

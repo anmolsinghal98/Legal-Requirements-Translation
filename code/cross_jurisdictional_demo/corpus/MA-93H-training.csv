@@ -1,0 +1,521 @@
+text,code,tags
+"Section 1: Definitions
+Section 1. (a) As used in this chapter, the following words shall, unless the context clearly requires otherwise, have the following meanings:—
+'Agency'', any agency, executive office, department, board, commission, bureau, division or authority of the commonwealth, or any of its branches, or of any political subdivision thereof.","s = Section(sectionNumber=""1"", sectionTitle=""Definitions"")
+
+s_a = Section(""(a)"")
+s.add_subsection(s_a)
+
+d = Definition(s_a, Expression(s_a, ""Agency""))
+d.meaning.append(Expression(s_a, ""any agency, executive office, department, board, commission, bureau, division or authority of the commonwealth, or any of its branches, or of any political subdivision thereof""))","['#information', '#definition']"
+"Section 1. (a) As used in this chapter, the following words shall, unless the context clearly requires otherwise, have the following meanings:—
+''Breach of security'', the unauthorized acquisition or unauthorized use of unencrypted data or, encrypted electronic data and the confidential process or key that is capable of compromising the security, confidentiality, or integrity of personal information, maintained by a person or agency that creates a substantial risk of identity theft or fraud against a resident of the commonwealth. A good faith but unauthorized acquisition of personal information by a person or agency, or employee or agent thereof, for the lawful purposes of such person or agency, is not a breach of security unless the personal information is used in an unauthorized manner or subject to further unauthorized disclosure.","s = Section(sectionNumber=""1"")
+
+d = Definition(s, Expression(s, ""Breach of security""))
+d.meaning.append(Expression(s, ""the unauthorized acquisition or unauthorized use of unencrypted data or, encrypted electronic data and the confidential process or key that is capable of compromising the security, confidentiality, or integrity of personal information, maintained by a person or agency that creates a substantial risk of identity theft or fraud against a resident of the commonwealth""))
+d.exclusions.append(Expression(s, ""A good faith but unauthorized acquisition of personal information by a person or agency, or employee or agent thereof, for the lawful purposes of such person or agency, is not a breach of security unless the personal information is used in an unauthorized manner or subject to further unauthorized disclosure""))","['#definition', '#exclusion',  '#information']"
+"Section 1. (a) As used in this chapter, the following words shall, unless the context clearly requires otherwise, have the following meanings:—
+''Data'' any material upon which written, drawn, spoken, visual, or electromagnetic information or images are recorded or preserved, regardless of physical form or characteristics.","s = Section(sectionNumber=""1"")
+sa = Section(""(a)"")
+s.add_subsection(sa)
+
+e2 = Expression(sa, ""Data"")
+d1 = Definition(sa, e2)
+d1.meaning.append(Expression(sa, ""any material upon which written, drawn, spoken, visual, or electromagnetic information or images are recorded or preserved, regardless of physical form or characteristics""))","['#definition', '#information']"
+"Section 1. (a) As used in this chapter, the following words shall, unless the context clearly requires otherwise, have the following meanings:—
+''Electronic'', relating to technology having electrical, digital, magnetic, wireless, optical, electromagnetic or similar capabilities.","s = Section(sectionNumber=""1"")
+
+sa = Section(""(a)"")
+s.add_subsection(sa) 
+
+defined_expression = Expression(sa, ""'Electronic'"")
+d = Definition(sa, defined_expression)
+meaning_expression = Expression(sa, ""relating to technology having electrical, digital, magnetic, wireless, optical, electromagnetic or similar capabilities"")
+d.meaning.append(meaning_expression)","['#definition', '#information']"
+"Section 1. (a) As used in this chapter, the following words shall, unless the context clearly requires otherwise, have the following meanings:—
+''Encrypted'' transformation of data through the use of a 128–bit or higher algorithmic process into a form in which there is a low probability of assigning meaning without use of a confidential process or key, unless further defined by regulation of the department of consumer affairs and business regulation.","main_section = Section(sectionNumber=""1."", sectionTitle="""")
+
+sub_section_a = Section(""(a)"")
+main_section.add_subsection(sub_section_a)
+
+d = Definition(sub_section_a, Expression(sub_section_a, ""Encrypted""))
+d.meaning.append(Expression(sub_section_a, ""transformation of data through the use of a 128–bit or higher algorithmic process into a form in which there is a low probability of assigning meaning without use of a confidential process or key""))
+d.add_exception(Expression(sub_section_a, ""unless further defined by regulation of the department of consumer affairs and business regulation""))","['#definition', '#information']"
+"Section 1. (a) As used in this chapter, the following words shall, unless the context clearly requires otherwise, have the following meanings:—
+''Notice'' shall include:—
+(i) written notice;
+(ii) electronic notice, if notice provided is consistent with the provisions regarding electronic records and signatures set forth in § 7001 (c) of Title 15 of the United States Code; and chapter 110G; or
+(iii) substitute notice, if the person or agency required to provide notice demonstrates that the cost of providing written notice will exceed $250,000, or that the affected class of Massachusetts residents to be notified exceeds 500,000 residents, or that the person or agency does not have sufficient contact information to provide notice.","# Creation of the Section object for Section 1 with subsection (a)
+s = Section(sectionNumber=""1"")
+sa = Section(""(a)"")
+s.add_subsection(sa)
+
+d_notice = Definition(sa, Expression(sa, ""Notice""))
+
+sai = Section(""(i)"")
+sa.add_subsection(sai)
+d_notice.meaning.append(Expression(sai, ""written notice""))
+
+saii = Section(""(ii)"")
+sa.add_subsection(saii)
+e_electronic_notice = Expression(saii, ""electronic notice, if notice provided is consistent with the provisions regarding electronic records and signatures set forth in § 7001 (c) of Title 15 of the United States Code; and chapter 110G"")
+d_notice.meaning.append(e_electronic_notice)
+
+d_notice.add_follows(Expression(saii, ""§ 7001 (c) of Title 15 of the United States Code""))
+d_notice.add_follows(Expression(saii, ""chapter 110G""))
+
+saiii = Section(""(iii)"")
+sa.add_subsection(saiii)
+e_substitute_notice = Expression(saiii, ""substitute notice, if the person or agency required to provide notice demonstrates that substitute notice, if the person or agency required to provide notice demonstrates that the cost of providing written notice will exceed $250,000, or that the affected class of Massachusetts residents to be notified exceeds 500,000 residents, or that the person or agency does not have sufficient contact information to provide notice"")
+d_notice.meaning.append(e_substitute_notice)","['#definition', '#follows', '#continuation', '#information']"
+"Section 1. (a) As used in this chapter, the following words shall, unless the context clearly requires otherwise, have the following meanings:—
+''Person'', a natural person, corporation, association, partnership or other legal entity.","section1 = Section(sectionNumber=""1"")
+
+subsection_a = Section(""(a)"")
+section1.add_subsection(subsection_a) 
+
+person_expression = Expression(subsection_a, ""Person"")
+definition_person = Definition(subsection_a, person_expression)
+
+meaning_expression = Expression(subsection_a, ""a natural person, corporation, association, partnership or other legal entity"")
+definition_person.meaning.append(meaning_expression)","['#definition', '#information']"
+"Section 1. (a) As used in this chapter, the following words shall, unless the context clearly requires otherwise, have the following meanings:—
+'Personal information'' a resident's first name and last name or first initial and last name in combination with any 1 or more of the following data elements that relate to such resident:
+(a) Social Security number;
+(b) driver's license number or state-issued identification card number; or
+(c) financial account number, or credit or debit card number, with or without any required security code, access code, personal identification number or password, that would permit access to a resident's financial account; provided, however, that ''Personal information'' shall not include information that is lawfully obtained from publicly available information, or from federal, state or local government records lawfully made available to the general public.","s1 = Section(sectionNumber=""Section 1"", sectionTitle="""")
+
+sa = Section(""(a)"")
+s1.add_subsection(sa)
+
+e_personal_info = Expression(section=sa, text=(""Personal information""))
+
+d_personal_info = Definition(sa, defined_term=e_personal_info)
+
+d_meaning_exp = Expression(sa, ""a resident's first name and last name or first initial and last name in combination with any 1 or more of the following data elements that relate to such resident:"")
+d_personal_info.meaning.append(d_meaning_exp)
+
+sa_a = Section(""(a)"")
+sa.add_subsection(sa_a)
+e_ssn = Expression(sa_a, ""Social Security number"")
+sa_b = Section(""(b)"")
+sa.add_subsection(sa_b)
+e_dl = Expression(sa_b, ""driver's license number or state-issued identification card number"")
+sa_c = Section(""(c)"")
+sa.add_subsection(sa_c)
+e_financial = Expression(sa, ""financial account number, or credit or debit card number, with or without any required security code, access code, personal identification number or password, that would permit access to a resident's financial account"")
+
+d_meaning_exp.includes.extend([e_ssn, e_dl, e_financial])
+
+e_exclusion = Expression( sa, (""information that is lawfully obtained from publicly available information, or from federal, state or local government records lawfully made available to the general public""))
+
+d_personal_info.exclusions.append(e_exclusion)","['#exclusion', '#continuation', '#definition', '#information']"
+"Section 1. (a) As used in this chapter, the following words shall, unless the context clearly requires otherwise, have the following meanings:—
+Substitute notice'', shall consist of all of the following:—
+(i) electronic mail notice, if the person or agency has electronic mail addresses for the members of the affected class of Massachusetts residents;
+(ii) clear and conspicuous posting of the notice on the home page of the person or agency if the person or agency maintains a website; and
+(iii) publication in or broadcast through media or medium that provides notice throughout the commonwealth.","s1 = Section(""1"")
+sa = Section(""(a)"")
+s1.add_subsection(sa)
+
+substitute_notice_expression = Expression(sa, ""Substitute notice"")
+definition = Definition(sa, substitute_notice_expression)
+definition.meaning.append(Expression(sa, ""shall consist of all of the following:""))
+
+sia = Section(""(i)"")
+sa.add_subsection(sia)
+definition.meaning[0].includes.append(Expression(sia, ""electronic mail notice, if the person or agency has electronic mail addresses for the members of the affected class of Massachusetts residents""))
+
+sii = Section(""(ii)"")
+sa.add_subsection(sii)
+definition.meaning[0].includes.append(Expression(sii, ""clear and conspicuous posting of the notice on the home page of the person or agency if the person or agency maintains a website""))
+
+siii = Section(""(iii)"")
+sa.add_subsection(siii)
+definition.meaning[0].includes.append(Expression(siii, ""publication in or broadcast through media or medium that provides notice throughout the commonwealth""))","['#definition', '#continuation', '#information']"
+"Section 1: (b) The department of consumer affairs and business regulation may adopt regulations, from time to time, to revise the definition of ''encrypted'', as used in this chapter, to reflect applicable technological advancements.","s1 = Section(sectionNumber=""1"")
+s1b = Section(""(b)"")
+s1.add_subsection(s1b)
+
+r = Rule(s1b, Expression(s1b, ""The department of consumer affairs and business regulation""))
+r.rule_type = Rule.PERMISSION
+r.description = Expression(s1b, ""may adopt regulations, from time to time, to revise the definition of 'encrypted', as used in this chapter, to reflect applicable technological advancements"")",['#permission']
+"Section 2. (a) The department of consumer affairs and business regulation shall adopt regulations relative to any person that owns or licenses personal information about a resident of the commonwealth. Such regulations shall be designed to safeguard the personal information of residents of the commonwealth and shall be consistent with the safeguards for protection of personal information set forth in the federal regulations by which the person is regulated. The objectives of the regulations shall be to: insure the security and confidentiality of customer information in a manner fully consistent with industry standards; protect against anticipated threats or hazards to the security or integrity of such information; and protect against unauthorized access to or use of such information that may result in substantial harm or inconvenience to any consumer. The regulations shall take into account the person's size, scope and type of business, the amount of resources available to such person, the amount of stored data, and the need for security and confidentiality of both consumer and employee information.","section2 = Section(sectionNumber=""Section 2."")
+
+section2a = Section(sectionNumber=""(a)"")
+section2.add_subsection(section2a)
+
+r = Rule(section2a, Expression(section2a, ""The department of consumer affairs and business regulation""))
+r.rule_type = Rule.OBLIGATION
+r.description = Expression(section2a, ""shall adopt regulations relative to any person that owns or licenses personal information about a resident of the commonwealth"")
+
+r1=Rule(section2a, Expression(section2a, ""Such regulations""))
+r1.rule_type = Rule.OBLIGATION
+r1.description=Expression(section2a, ""shall be designed to safeguard the personal information of residents of the commonwealth and shall be consistent with the safeguards for protection of personal information set forth in the federal regulations by which the person is regulated"")
+r1.add_refines(r)
+
+r2 = Rule(section2a, Expression(section2a, ""The objectives of the regulations:""))
+r2.rule_type = Rule.OBLIGATION
+r2.description = Expression(section2a, ""shall be to: insure the security and confidentiality of customer information in a manner fully consistent with industry standards; protect against anticipated threats or hazards to the security or integrity of such information; and protect against unauthorized access to or use of such information that may result in substantial harm or inconvenience to any consumer"")
+r2.add_refines(r1)
+
+r3 = Rule(section2a, Expression(section2a, ""The regulations""))
+r3.rule_type = Rule.OBLIGATION
+r3.description = Expression(section2a, ""shall take into account the person's size, scope and type of business, the amount of resources available to such person, the amount of stored data, and the need for security and confidentiality of both consumer and employee information"")
+r3.add_refines(r1)","['#refines', '#obligation', '#continuation']"
+"Section 2. (b) The supervisor of records, with the advice and consent of the information technology division to the extent of its jurisdiction to set information technology standards under paragraph (d) of section 4A of chapter 7, shall establish rules or regulations designed to safeguard the personal information of residents of the commonwealth that is owned or licensed. Such rules or regulations shall be applicable to: (1) executive offices and any agencies, departments, boards, commissions and instrumentalities within an executive office; and (2) any authority created by the General Court, and the rules and regulations shall take into account the size, scope and type of services provided thereby, the amount of resources available thereto, the amount of stored data, and the need for security and confidentiality of both consumer and employee information. The objectives of the rules or regulations shall be to: insure the security and confidentiality of personal information; protect against anticipated threats or hazards to the security or integrity of such information; and to protect against unauthorized access to or use of such information that could result in substantial harm or inconvenience to any resident of the commonwealth.","s = Section(sectionNumber=""2"")
+s_b = Section(""(b)"")
+s.add_subsection(s_b) 
+
+rule_expression = Expression(s_b, ""The supervisor of records"")
+r = Rule(s_b, rule_expression)
+r.rule_type = Rule.OBLIGATION 
+r.description = Expression(s_b, ""shall establish rules or regulations designed to safeguard the personal information of residents of the commonwealth that is owned or licensed"")
+r.conditions.append(Expression(s_b, ""with the advice and consent of the information technology division to the extent of its jurisdiction to set information technology standards under paragraph (d) of section 4A of chapter 7""))
+r.add_follows(Expression(s_b, ""paragraph (d) of section 4A of chapter 7""))
+
+applicability_expression = Expression(s_b, ""Such rules or regulations"")
+r2 = Rule(s_b, applicability_expression)
+r2.rule_type = Rule.OBLIGATION
+r2.description = Expression(s_b, ""shall be applicable to:"")
+s_b1= Section(""(1)"")
+s_b.add_subsection(s_b1)
+r2.description.includes.append(Expression(s_b1, ""executive offices and any agencies, departments, boards, commissions and instrumentalities within an executive office""))
+s_b2= Section(""(2)"")
+s_b.add_subsection(s_b2)
+r2.description.includes.append(Expression(s_b2, ""any authority created by the General Court, and the rules and regulations shall take into account the size, scope and type of services provided thereby, the amount of resources available thereto, the amount of stored data, and the need for security and confidentiality of both consumer and employee information""))
+r2.add_refines(r)
+
+objectives_expression = Expression(s_b, ""The objectives of the rules or regulations"")
+r3 = Rule(s_b, objectives_expression)
+r3.rule_type = Rule.OBLIGATION
+r3.description = Expression(s_b, ""shall be to:"")
+r3.description.includes.append(Expression(s_b, ""insure the security and confidentiality of personal information; protect against anticipated threats or hazards to the security or integrity of such information""))
+r3.description.includes.append(Expression(s_b, ""to protect against unauthorized access to or use of such information that could result in substantial harm or inconvenience to any resident of the commonwealth""))
+r3.add_refines(r)","['#continuation', '#refines', '#obligation', '#follows']"
+"Section 2. (c) The legislative branch, the judicial branch, the attorney general, the state secretary, the state treasurer and the state auditor shall adopt rules or regulations designed to safeguard the personal information of residents of the commonwealth for their respective departments and shall take into account the size, scope and type of services provided by their departments, the amount of resources available thereto, the amount of stored data, and the need for security and confidentiality of both consumer and employee information. The objectives of the rules or regulations shall be to: insure the security and confidentiality of customer information in a manner fully consistent with industry standards; protect against anticipated threats or hazards to the security or integrity of such information; and protect against unauthorized access to or use of such information that could result in substantial harm or inconvenience to any resident of the commonwealth.","s = Section(sectionNumber=""2."")
+sc = Section(""(c)"")
+s.add_subsection(sc)
+
+r1 = Rule(sc, Expression(sc, ""The legislative branch, the judicial branch, the attorney general, the state secretary, the state treasurer and the state auditor""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(sc, ""shall adopt rules or regulations designed to safeguard the personal information of residents of the commonwealth for their respective departments and shall shall take into account the size, scope and type of services provided by their departments, the amount of resources available thereto, the amount of stored data, and the need for security and confidentiality of both consumer and employee information"")
+
+r2= Rule(sc, Expression(sc, ""The objectives of the rules or regulations""))
+r2.rule_type = Rule.OBLIGATION
+r2.description = Expression(sc, ""shall be to:"")
+
+# Define the objectives of the rules or regulations
+objective1 = Expression(sc, ""insure the security and confidentiality of customer information in a manner fully consistent with industry standards"")
+r2.description.includes.append(objective1)
+
+objective2 = Expression(sc, ""protect against anticipated threats or hazards to the security or integrity of such information"")
+r2.description.includes.append(objective2)
+
+objective3 = Expression(sc, ""protect against unauthorized access to or use of such information that could result in substantial harm or inconvenience to any resident of the commonwealth"")
+r2.description.includes.append(objective3)
+
+r2.add_refines(r1)","['#continuation', '#obligation', '#refines']"
+"Section 3: Duty to report known security breach or unauthorized use of personal information
+(a) A person or agency that maintains or stores, but does not own or license data that includes personal information about a resident of the commonwealth, shall provide notice, as soon as practicable and without unreasonable delay, when such person or agency (1) knows or has reason to know of a breach of security or (2) when the person or agency knows or has reason to know that the personal information of such resident was acquired or used by an unauthorized person or used for an unauthorized purpose, to the owner or licensor in accordance with this chapter. In addition to providing notice as provided herein, such person or agency shall cooperate with the owner or licensor of such information. Such cooperation shall include, but not be limited to, informing the owner or licensor of the breach of security or unauthorized acquisition or use, the date or approximate date of such incident and the nature thereof, and any steps the person or agency has taken or plans to take relating to the incident, except that such cooperation shall not be deemed to require the disclosure of confidential business information or trade secrets, or to provide notice to a resident that may have been affected by the breach of security or unauthorized acquisition or use.","s3 = Section(""3"", ""Duty to report known security breach or unauthorized use of personal information"") 
+
+sa = Section(""(a)"")
+s3.add_subsection(sa)
+
+r = Rule(sa, Expression(sa, ""person or agency that maintains or stores, but does not own or license data that includes personal information about a resident of the commonwealth""))
+r.rule_type = Rule.OBLIGATION
+r.description = Expression(sa, ""shall provide notice, as soon as practicable and without unreasonable delay"")
+sa1 = Section(""(1)"")
+sa.add_subsection(sa1)
+r.conditions.append(Expression(sa1, ""when such person or agency knows or has reason to know of a breach of security""))
+sa2 = Section(""(2)"")
+sa.add_subsection(sa2)
+r.conditions.append(Expression(sa2, ""when the person or agency knows or has reason to know that the personal information of such resident was acquired or used by an unauthorized person or used for an unauthorized purpose, to the owner or licensor in accordance with this chapter""))
+
+r1 = Rule(sa, Expression(sa, ""such person or agency""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(sa, ""shall cooperate with the owner or licensor of such information"")
+r1.add_follows(Expression(sa, ""provide notice as provided herein""))
+r1.add_refines(r)
+
+r2= Rule(sa, Expression(sa, ""such cooperation""))
+r2.rule_type = Rule.OBLIGATION
+r2.description = Expression(sa, ""shall include, but not be limited to"")
+r2.description.includes.append(Expression(sa, ""informing the owner or licensor of the breach of security or unauthorized acquisition or use""))
+r2.description.includes.append(Expression(sa, ""informing the owner or licensor of the date or approximate date of such incident and the nature thereof""))
+r2.description.includes.append(Expression(sa, ""informing the owner or licensor of any steps the person or agency has taken or plans to take relating to the incident""))
+
+r2.add_exception(Expression(sa, ""require the disclosure of confidential business information or trade secrets""))
+r2.add_exception(Expression(sa, ""provide notice to a resident that may have been affected by the breach of security or unauthorized acquisition or use""))","['#exception', '#refines', '#continuation', '#obligation', '#condition']"
+"Section 3: Duty to report known security breach or unauthorized use of personal information
+(b) A person or agency that owns or licenses data that includes personal information about a resident of the commonwealth, shall provide notice, as soon as practicable and without unreasonable delay, when such person or agency (1) knows or has reason to know of a breach of security or (2) when the person or agency knows or has reason to know that the personal information of such resident was acquired or used by an unauthorized person or used for an unauthorized purpose, to the attorney general, the director of consumer affairs and business regulation and to such resident, in accordance with this chapter. The notice to be provided to the attorney general and said director, and consumer reporting agencies or state agencies if any, shall include, but not be limited to: (i) the nature of the breach of security or unauthorized acquisition or use; (ii) the number of residents of the commonwealth affected by such incident at the time of notification; (iii) the name and address of the person or agency that experienced the breach of security; (iv) name and title of the person or agency reporting the breach of security, and their relationship to the person or agency that experienced the breach of security; (v) the type of person or agency reporting the breach of security; (vi) the person responsible for the breach of security, if known; (vii) the type of personal information compromised, including, but not limited to, social security number, driver's license number, financial account number, credit or debit card number or other data; (viii) whether the person or agency maintains a written information security program; and (ix) any steps the person or agency has taken or plans to take relating to the incident, including updating the written information security program. A person who experienced a breach of security shall file a report with the attorney general and the director of consumer affairs and business regulation certifying their credit monitoring services comply with section 3A.","section3 = Section(""3"", ""Duty to report known security breach or unauthorized use of personal information"")
+subsection_b = Section(""(b)"")
+section3.add_subsection(subsection_b)
+
+rule1 = Rule(subsection_b, Expression(subsection_b, ""A person or agency that owns or licenses data that includes personal information about a resident of the commonwealth""))
+rule1.rule_type = Rule.OBLIGATION
+rule1.description = Expression(subsection_b, ""shall provide notice, as soon as practicable and without unreasonable delay, to the attorney general, the director of consumer affairs and business regulation and to such resident, in accordance with this chapter"")
+condition1 = Expression(subsection_b, ""when such person or agency knows or has reason to know of a breach of security"")
+rule1.conditions.append(condition1)
+condition2 = Expression(subsection_b, ""when such person or agency knows or has reason to know that the personal information of such resident was acquired or used by an unauthorized person or used for an unauthorized purpose"")
+rule1.conditions.append(condition2)
+
+
+r1= Rule(subsection_b, Expression(subsection_b, ""The notice to be provided to the attorney general and said director, and consumer reporting agencies or state agencies if any""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(subsection_b, ""shall include, but not be limited to:"")
+s_i = Section(""(i)"")
+subsection_b.add_subsection(s_i)
+s_ii = Section(""(ii)"")
+subsection_b.add_subsection(s_ii)
+s_iii = Section(""(iii)"")
+subsection_b.add_subsection(s_iii)
+s_iv = Section(""(iv)"")
+subsection_b.add_subsection(s_iv)
+s_v = Section(""(v)"")
+subsection_b.add_subsection(s_v)
+s_vi = Section(""(vi)"")
+subsection_b.add_subsection(s_vi)
+s_vii = Section(""(vii)"")
+subsection_b.add_subsection(s_vii)
+s_viii = Section(""(viii)"")
+subsection_b.add_subsection(s_viii)
+s_ix = Section(""(ix)"")
+subsection_b.add_subsection(s_ix)
+notice_contents = [
+    Expression(s_i, ""the nature of the breach of security or unauthorized acquisition or use""),
+    Expression(s_ii, ""the number of residents of the commonwealth affected by such incident at the time of notification""),
+    Expression(s_iii, ""the name and address of the person or agency that experienced the breach of security""),
+    Expression(s_iv, ""name and title of the person or agency reporting the breach of security, and their relationship to the person or agency that experienced the breach of security""),
+    Expression(s_v, ""the type of person or agency reporting the breach of security""),
+    Expression(s_vi, ""the person responsible for the breach of security, if known""),
+    Expression(s_vii, ""the type of personal information compromised, including, but not limited to, social security number, driver's license number, financial account number, credit or debit card number or other data""),
+    Expression(s_viii, ""whether the person or agency maintains a written information security program""),
+    Expression(s_ix, ""any steps the person or agency has taken or plans to take relating to the incident, including updating the written information security program"")
+]
+r1.description.includes.extend(notice_contents)
+r1.add_refines(rule1)
+
+rule2 = Rule(subsection_b, Expression(subsection_b, ""A person who experienced a breach of security""))
+rule2.rule_type = Rule.OBLIGATION
+rule2.description = Expression(subsection_b, ""shall file a report with the attorney general and the director of consumer affairs and business regulation certifying their credit monitoring services comply with section 3A"")
+rule2.add_follows(Expression(subsection_b, ""section 3A""))
+rule2.add_refines(rule1)","['#follows', '#continuation', '#obligation', '#condition', '#refines']"
+"Section 3 Duty to report known security breach or unauthorized use of personal information 
+(b) Upon receipt of this notice, the director of consumer affairs and business regulation shall identify any relevant consumer reporting agency or state agency, as deemed appropriate by said director, and forward the names of the identified consumer reporting agencies and state agencies to the notifying person or agency. Such person or agency shall, as soon as practicable and without unreasonable delay, also provide notice, in accordance with this chapter, to the consumer reporting agencies and state agencies identified by the director of consumer affairs and business regulation.","s_3 = Section(sectionNumber=""3"", sectionTitle=""Duty to report known security breach or unauthorized use of personal information"")
+
+s_b = Section(sectionNumber=""(b)"")
+s_3.add_subsection(s_b) 
+
+r_b1 = Rule(s_b, Expression(s_b, ""the director of consumer affairs and business regulation""))
+r_b1.rule_type = Rule.OBLIGATION
+r_b1.description = Expression(s_b, ""identify any relevant consumer reporting agency or state agency, as deemed appropriate by said director, and forward the names of the identified consumer reporting agencies and state agencies to the notifying person or agency"")
+r_b1.conditions.append(Expression(s_b, ""Upon receipt of this notice""))
+
+r_b2 = Rule(s_b, Expression(s_b, ""Such person or agency""))
+r_b2.rule_type = Rule.OBLIGATION
+r_b2.description = Expression(s_b, ""shall, as soon as practicable and without unreasonable delay, provide notice, in accordance with this chapter, to the consumer reporting agencies and state agencies identified by the director of consumer affairs and business regulation"")
+r_b2.add_refines(r_b1)","['#refines', '#obligation']"
+"Section 3 Duty to report known security breach or unauthorized use of personal information 
+(b) The notice to be provided to the resident shall include, but shall not be limited to: (i) the resident's right to obtain a police report; (ii) how a resident may request a security freeze and the necessary information to be provided when requesting the security freeze; (iii) that there shall be no charge for a security freeze; and (iv) mitigation services to be provided pursuant to this chapter; provided, however, that said notice shall not include the nature of the breach of security or unauthorized acquisition or use, or the number of residents of the commonwealth affected by said breach of security or unauthorized access or use. The person or agency that experienced the breach of security shall provide a sample copy of the notice it sent to consumers to the attorney general and the office of consumer affairs and business regulation. A notice provided pursuant to this section shall not be delayed on grounds that the total number of residents affected is not yet ascertained. In such case, and where otherwise necessary to update or correct the information required, a person or agency shall provide additional notice as soon as practicable and without unreasonable delay upon learning such additional information.","s = Section(sectionNumber=""3"", sectionTitle=""Duty to report known security breach or unauthorized use of personal information"")
+sb = Section(""(b)"")
+s.add_subsection(sb)
+
+r1 = Rule(sb, Expression(sb, ""The notice to be provided to the resident""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(sb, ""shall include, but shall not be limited to:"")
+
+sbi = Section(""(i)"")
+sb.add_subsection(sbi)
+e1 = Expression(sbi, ""the resident's right to obtain a police report"")
+r1.description.includes.append(e1)
+
+sbii = Section(""(ii)"")
+sb.add_subsection(sbii)
+e2 = Expression(sbii, ""how a resident may request a security freeze and the necessary information to be provided when requesting the security freeze"")
+r1.description.includes.append(e2)
+
+sbiii = Section(""(iii)"")
+sb.add_subsection(sbiii)
+e3 = Expression(sbiii, ""there shall be no charge for a security freeze"")
+r1.description.includes.append(e3)
+
+sbiv = Section(""(iv)"")
+sb.add_subsection(sbiv)
+e4 = Expression(sbiv, ""mitigation services to be provided pursuant to this chapter"")
+r1.description.includes.append(e4)
+
+proviso = Expression(sb, ""said notice shall not include the nature of the breach of security or unauthorized acquisition or use, or the number of residents of the commonwealth affected by said breach of security or unauthorized access or use"")
+r1.add_exception(proviso)
+
+r2 = Rule(sb, Expression(sb, ""The person or agency that experienced the breach of security""))
+r2.rule_type = Rule.OBLIGATION
+r2.description = Expression(sb, ""shall provide a sample copy of the notice it sent to consumers to the attorney general and the office of consumer affairs and business regulation"")
+r2.add_follows(r1)
+
+r3 = Rule(sb, Expression(sb, ""A notice provided pursuant to this section""))
+r3.rule_type = Rule.PROHIBITION
+r3.description = Expression(sb, ""shall not be delayed on the grounds that the total number of residents affected is not yet ascertained"")
+r3.add_refines(r1)
+
+# Define an obligation for providing additional notices when necessary
+r4 = Rule(sb, Expression(sb, ""a person or agency""))
+r4.rule_type = Rule.OBLIGATION
+r4.conditions.append(Expression(sb, ""In such case, and where otherwise necessary to update or correct the information required""))
+r4.description = Expression(sb, ""shall provide additional notice as soon as practicable and without unreasonable delay upon learning such additional information"")
+r4.add_refines(r3)","['#refines', '#continuation', '#prohibition', '#obligation', '#condition', '#follows']"
+"Section 3 Duty to report known security breach or unauthorized use of personal information 
+(c) As practicable and as not to impede active investigation by the attorney general or other law enforcement agency, the office of consumer affairs and business regulation shall: (i) make available electronic copies of the sample notice sent to consumers on its website and post such notice within 1 business day upon receipt from the person that experienced a breach of security; (ii) update the breach of security notification report on its website as soon as practically possible after the information has been verified by said office but not more than 10 business days after receipt unless the information provided is not verifiable; provided, however, that the office shall post said notice as soon as verified; (iii) amend, on a recurring basis, the breach of security notification report to include new information discovered through the investigation process or new subsequent findings from a previously reported breach of security; and (iv) instruct consumers on how they may file a public records request to obtain a copy of the notice provided to the attorney general and said director from the person who experienced a breach of security.","s3 = Section(sectionNumber=""3"", sectionTitle=""Duty to report known security breach or unauthorized use of personal information"")
+
+sc = Section(sectionNumber=""(c)"")
+s3.add_subsection(sc)
+
+sc_i = Section(""(i)"")
+sc.add_subsection(sc_i)
+r_i = Rule(sc_i, Expression(sc_i, ""the office of consumer affairs and business regulation""))
+r_i.rule_type = Rule.OBLIGATION
+r_i.description = Expression(sc_i, ""shall make available electronic copies of the sample notice sent to consumers on its website and post such notice within 1 business day upon receipt from the person that experienced a breach of security"")
+r_i.conditions.append(Expression(sc_i, ""As practicable and as not to impede active investigation by the attorney general or other law enforcement agency""))
+
+sc_ii = Section(""(ii)"")
+sc.add_subsection(sc_ii)
+r_ii = Rule(sc_ii, Expression(sc_ii, ""the office of consumer affairs and business regulation""))
+r_ii.rule_type = Rule.OBLIGATION
+r_ii.description = Expression(sc_ii, ""update the breach of security notification report on its website as soon as practically possible after the information has been verified by said office but not more than 10 business days after receipt unless the information provided is not verifiable; provided, however, that the office shall post said notice as soon as verified"")
+r_ii.conditions.append(Expression(sc_i, ""As practicable and as not to impede active investigation by the attorney general or other law enforcement agency""))
+
+sc_iii = Section(""(iii)"")
+sc.add_subsection(sc_iii)
+r_iii = Rule(sc_iii, Expression(sc_iii, ""the office of consumer affairs and business regulation""))
+r_iii.rule_type = Rule.OBLIGATION
+r_iii.description = Expression(sc_iii, ""amend, on a recurring basis, the breach of security notification report to include new information discovered through the investigation process or new subsequent findings from a previously reported breach of security"")
+r_iii.conditions.append(Expression(sc_i, ""As practicable and as not to impede active investigation by the attorney general or other law enforcement agency""))
+
+sc_iv = Section(""(iv)"")
+sc.add_subsection(sc_iv)
+r_iv = Rule(sc_iv, Expression(sc_iv, ""the office of consumer affairs and business regulation""))
+r_iv.rule_type = Rule.OBLIGATION
+r_iv.description = Expression(sc_iv, ""instruct consumers on how they may file a public records request to obtain a copy of the notice provided to the attorney general and said director from the person who experienced a breach of security"")
+r_iv.conditions.append(Expression(sc, ""As practicable and as not to impede active investigation by the attorney general or other law enforcement agency""))","['#continuation', '#obligation', '#condition']"
+"Section 3 Duty to report known security breach or unauthorized use of personal information 
+(d) If the person or agency that experienced a breach of security is owned by another person or corporation, the notice to the consumer shall include the name of the parent or affiliated corporation.","s = Section(sectionNumber=""3"", sectionTitle=""Duty to report known security breach or unauthorized use of personal information"")
+sd = Section(""(d)"")
+s.add_subsection(sd)  
+
+r1 = Rule(sd, Expression(sd, ""the notice to the consumer""))
+r1.rule_type = Rule.OBLIGATION 
+r1.description = Expression(sd, ""shall include the name of the parent or affiliated corporation"")
+r1.conditions.append(Expression(sd, ""the person or agency that experienced a breach of security is owned by another person or corporation""))","['#obligation', '#condition']"
+"Section 3 Duty to report known security breach or unauthorized use of personal information 
+(e) If an agency is within the executive department, it shall provide written notification of the nature and circumstances of the breach of security or unauthorized acquisition or use to the executive office of technology services and security and the division of public records in the office of the state secretary as soon as practicable and without unreasonable delay following the discovery of a breach of security or unauthorized acquisition or use, and shall comply with all policies and procedures adopted by the executive office of technology services and security pertaining to the reporting and investigation of such an incident.","s = Section(sectionNumber=""3"", sectionTitle=""Duty to report known security breach or unauthorized use of personal information"")
+se = Section(""(e)"")
+s.add_subsection(se)
+
+r1 = Rule(se, Expression(se, ""an agency within the executive department""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(se, ""shall provide written notification of the nature and circumstances of the breach of security or unauthorized acquisition or use to the executive office of technology services and security and the division of public records in the office of the state secretary"")
+r1.conditions.append(Expression(se, ""as soon as practicable and without unreasonable delay following the discovery of a breach of security or unauthorized acquisition or use""))
+
+r2 = Rule(se, Expression(se, ""agency""))
+r2.rule_type = Rule.OBLIGATION
+r2.description = Expression(se, ""shall comply with all policies and procedures adopted by the executive office of technology services and security pertaining to the reporting and investigation of such an incident"")
+r2.add_refines(r1)","['#obligation', '#condition']"
+"Section 3 Duty to report known security breach or unauthorized use of personal information 
+(f) The department of consumer affairs and business regulation may promulgate regulations interpreting and applying this section.","s = Section(sectionNumber=""3"", sectionTitle=""Duty to report known security breach or unauthorized use of personal information"")
+sc = Section(""(f)"")
+s.add_subsection(sc)
+
+r1 = Rule(sc, Expression(sc, ""the department of consumer affairs and business regulation""))
+r1.rule_type = Rule.PERMISSION
+r1.description = Expression(sc, ""promulgate regulations interpreting and applying this section"")",['#permission']
+"Section 3A: Breaches of security including social security numbers; offer of credit monitoring services required
+(a) If a person knows or has reason to know that said person experienced an incident that requires notice pursuant to section 3 and such breach of security includes a social security number, the person shall contract with a third party to offer to each resident whose social security number was disclosed in the breach of security or is reasonably believed to have been disclosed in the breach of security, credit monitoring services at no cost to said resident for a period of not less than 18 months; provided, however, that if the person that has experienced a breach of security is a consumer reporting agency, then said consumer reporting agency shall contract with a third party to offer each resident whose social security number was disclosed in the breach of security or is reasonably believed to have been disclosed in the breach of security, credit monitoring services at no cost to such resident for a period of not less than 42 months. Said contracts shall not include reciprocal agreements for services in lieu of payment or fees. The person or agency shall provide all information necessary for the resident to enroll in credit monitoring services and shall include information on how the resident may place a security freeze on the resident's consumer credit report.","s = Section(sectionNumber=""3A"", sectionTitle=""Breaches of security including social security numbers; offer of credit monitoring services required"")
+s_a = Section(""(a)"")
+s.add_subsection(s_a)
+
+r1 = Rule(s_a, Expression(s_a, ""a person""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression( s_a, ""shall contract with a third party to offer to each resident whose social security number was disclosed in the breach of security or is reasonably believed to have been disclosed in the breach of security, credit monitoring services at no cost to said resident for a period of not less than 18 months"")
+r1.conditions.append(Expression( s_a, ""a person knows or has reason to know that said person experienced an incident that requires notice pursuant to section 3 and such breach of security includes a social security number""))
+r1.add_follows(Expression(s_a, ""section 3""))
+
+r2 = Rule(s_a, Expression(s_a, ""said consumer reporting agency""))
+r2.rule_type = Rule.OBLIGATION
+r2.description = Expression(s_a, ""shall contract with a third party to offer each resident whose social security number was disclosed in the breach of security or is reasonably believed to have been disclosed in the breach of security, credit monitoring services at no cost to such resident for a period of not less than 42 months"")
+r2.conditions.append(Expression(s_a, ""the person that has experienced a breach of security is a consumer reporting agency""))
+r2.add_refines(r1)
+
+r_1a = Rule(s_a, Expression(s_a, ""Said contracts""))
+r_1a.rule_type = Rule.PROHIBITION
+r_1a.description = Expression(s_a, ""include reciprocal agreements for services in lieu of payment or fees"")
+r_1a.add_refines(r1)
+
+r3 = Rule(s_a, Expression(s_a, ""The person or agency""))
+r3.rule_type = Rule.OBLIGATION
+r3.description = Expression(s_a, ""provide all information necessary for the resident to enroll in credit monitoring services and shall include information on how the resident may place a security freeze on the resident's consumer credit report"")
+r3.add_refines(r1)","['#refines', '#prohibition', '#obligation', '#condition']"
+"Section 3A: Breaches of security including social security numbers; offer of credit monitoring services required
+(b) A person that experienced a breach of security shall not require a resident to waive the resident's right to a private right of action as a condition of the offer of credit monitoring services.","s = Section(sectionNumber=""Section 3A"", sectionTitle=""Breaches of security including social security numbers; offer of credit monitoring services required"")
+s_b = Section(sectionNumber=""(b)"")
+s.add_subsection(s_b)
+
+r = Rule(s_b, Expression(s_b, ""A person that experienced a breach of security""))
+r.rule_type = Rule.PROHIBITION
+r.description = Expression(s_b, ""shall not require a resident to waive the resident's right to a private right of action as a condition of the offer of credit monitoring services"")",['#prohibition']
+"Section 3A: Breaches of security including social security numbers; offer of credit monitoring services required
+(c) The department of consumer affairs and business regulation may promulgate regulations interpreting and applying this section.","s3a = Section(sectionNumber=""3A"", sectionTitle=""Breaches of security including social security numbers; offer of credit monitoring services required"")
+s3ac = Section(""(c)"")
+s3a.add_subsection(s3ac)
+
+r1 = Rule(s3ac, Expression(s3ac, ""The department of consumer affairs and business regulation""))
+r1.rule_type = Rule.PERMISSION
+r1.description = Expression(s3ac, ""may promulgate regulations interpreting and applying this section"")",['#permission']
+"Section 4: Delay in notice when notice would impede criminal investigation; cooperation with law enforcement
+Notwithstanding section 3, notice may be delayed if a law enforcement agency determines that provision of such notice may impede a criminal investigation and has notified the attorney general, in writing, thereof and informs the person or agency of such determination. If notice is delayed due to such determination and as soon as the law enforcement agency determines and informs the person or agency that notification no longer poses a risk of impeding an investigation, notice shall be provided, as soon as practicable and without unreasonable delay. The person or agency shall cooperate with law enforcement in its investigation of any breach of security or unauthorized acquisition or use, which shall include the sharing of information relevant to the incident; provided however, that such disclosure shall not require the disclosure of confidential business information or trade secrets.","s4 = Section(sectionNumber=""4"", sectionTitle=""Delay in notice when notice would impede criminal investigation; cooperation with law enforcement"")
+
+r1 = Rule(s4, Expression(s4, ""notice""))
+r1.rule_type = Rule.PERMISSION
+r1.description = Expression(s4, ""may be delayed"")
+r1.add_is_exception_to(Expression(s4, ""section 3""))
+r1.conditions.append(Expression(s4, ""a law enforcement agency determines that provision of such notice may impede a criminal investigation and has notified the attorney general, in writing, thereof and informs the person or agency of such determination""))
+
+r2 = Rule(s4, Expression(s4, ""notice""))
+r2.conditions.append(Expression(s4, ""notice is delayed due to such determination and as soon as the law enforcement agency determines and informs the person or agency that notification no longer poses a risk of impeding an investigation""))
+r2.rule_type = Rule.OBLIGATION
+r2.description = Expression(s4, ""shall be provided, as soon as practicable and without unreasonable delay"")
+r2.add_refines(r1)
+
+r3 =Rule(s4, Expression(s4, ""The person or agency""))
+r3.rule_type = Rule.OBLIGATION
+r3.description = Expression(s4, ""shall cooperate with law enforcement in its investigation of any breach of security or unauthorized acquisition or use, which shall include the sharing of information relevant to the incident"")
+r3.conditions.append(Expression(s4, ""such disclosure shall not require the disclosure of confidential business information or trade secrets""))
+r3.add_refines(r1)","['#permission', '#exception_to', '#obligation', '#condition']"
+"Section 5: Applicability of other state and federal laws
+This chapter does not relieve a person or agency from the duty to comply with requirements of any applicable general or special law or federal law regarding the protection and privacy of personal information; provided however, a person who maintains procedures for responding to a breach of security pursuant to federal laws, rules, regulations, guidance, or guidelines, is deemed to be in compliance with this chapter if the person notifies affected Massachusetts residents in accordance with the maintained or required procedures when a breach occurs; provided further that the person also notifies the attorney general and the director of the office of consumer affairs and business regulation of the breach as soon as practicable and without unreasonable delay following the breach. The notice to be provided to the attorney general and the director of the office of consumer affairs and business regulation shall consist of, but not be limited to, any steps the person or agency has taken or plans to take relating to the breach pursuant to the applicable federal law, rule, regulation, guidance or guidelines; provided further that if said person or agency does not comply with applicable federal laws, rules, regulations, guidance or guidelines, then it shall be subject to the provisions of this chapter.","s = Section(sectionNumber=""5"", sectionTitle=""Applicability of other state and federal laws"")
+
+r1=Rule(s, Expression(s, ""This chapter""))
+r1.rule_type=Rule.OBLIGATION
+r1.description=Expression(s, ""does not relieve a person or agency from the duty to comply with requirements of any applicable general or special law or federal law regarding the protection and privacy of personal information"")
+
+cond1_rule = Rule(s, Expression(s, ""a person who maintains procedures for responding to a breach of security pursuant to federal laws, rules, regulations, guidance, or guidelines""))
+cond1_rule.rule_type=Rule.PERMISSION
+cond1_rule.description = Expression(s, ""is deemed to be in compliance with this chapter"")
+cond1_rule.conditions.append(Expression(s, ""the person notifies affected Massachusetts residents in accordance with the maintained or required procedures when a breach occurs""))
+cond1_rule.conditions.append(Expression(s, ""provided further that the person also notifies the attorney general and the director of the office of consumer affairs and business regulation of the breach as soon as practicable and without unreasonable delay following the breach""))
+cond1_rule.add_is_exception_to(r1)
+
+notice_rule = Rule(s, Expression(s, ""The notice to be provided to the attorney general and the director of the office of consumer affairs and business regulation""))
+notice_rule.rule_type=Rule.OBLIGATION
+notice_rule.description = Expression(s, ""shall consist of, but not be limited to, any steps the person or agency has taken or plans to take relating to the breach pursuant to the applicable federal law, rule, regulation, guidance or guidelines"")
+notice_rule.add_refines(cond1_rule)
+
+noncomp_rule = Rule(s, Expression(s, ""if said person or agency does not comply with applicable federal laws, rules, regulations, guidance or guidelines""))
+noncomp_rule.rule_type=Rule.OBLIGATION
+noncomp_rule.description = Expression(s, ""shall be subject to the provisions of this chapter"")
+noncomp_rule.add_exception(cond1_rule)","['#refines', '#obligation', '#condition', '#permission']"
+"Section 6: Enforcement of chapter
+The attorney general may bring an action pursuant to section 4 of chapter 93A against a person or otherwise to remedy violations of this chapter and for other relief that may be appropriate.","s = Section(sectionNumber=""Section 6"", sectionTitle=""Enforcement of chapter"")
+r = Rule(s, Expression(s, ""The attorney general""))
+r.rule_type = Rule.PERMISSION
+r.description = Expression(s, ""may bring an action pursuant to section 4 of chapter 93A against a person or otherwise to remedy violations of this chapter and for other relief that may be appropriate"")
+r.add_follows(Expression(s, ""section 4 of chapter 93A""))","['#permission', '#follows']"

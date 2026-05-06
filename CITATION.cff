@@ -41,11 +41,18 @@ abstract: >-
   obligations, conditions, and exceptions interact across
   clauses and sub-sections. This artifact provides a
   framework for translating legal requirements into an
-  executable Python code representation using GPT-4o. The
+  executable Python code representation. The framework
+  decomposes the text-to-code task into three sub-tasks
+  (structure identification, statement classification, and
+  reference/relationship detection) and supports four LLMs:
+  GPT-4o, GPT-5.1, GPT-5.3-Codex, and Qwen3.5-397B-A17B. The
   representation preserves the structural and semantic
-  metadata relationships in legal text. We envision using
-  this “executable” legal translation for downstream
-  analysis of compliance verification.
+  metadata relationships in legal text and is intended for
+  downstream compliance verification. The corpus extends the
+  RE 2025 dataset of 13 U.S. state data breach laws (332
+  paragraphs) with 60 paragraphs from the federal
+  Children's Online Privacy Protection Act (COPPA, 16 CFR
+  Part 312).
 license: Apache-2.0
-version: '1'
-date-released: '2025-07-02'
+version: '2'
+date-released: '2026-05-06'

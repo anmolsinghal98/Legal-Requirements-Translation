@@ -135,8 +135,6 @@ exemption.description.append(Expression(s4civ, ""providing publicly available in
 s_4D = Section(""(D)"")
 s_4.add_subsection(s_4D)
 d = Definition(s_4D, Expression(s_4D, ""The phrase \""sells or licenses\""""))
-e_meaning = Expression(s_4D, ""does not include:"")
-d.meaning.append(e_meaning)
 s_4Di = Section(""(i)"")
 s_4D.add_subsection(s_4Di)
 d.exclusions.append(Expression(s_4Di, ""a one-time or occasional sale of assets of a business as part of a transfer of control of those assets that is not part of the ordinary conduct of the business""))
@@ -153,8 +151,7 @@ sB = Section(""(B)"")
 s.add_subsection(sB)
 
 d = Definition(sB, Expression(sB, ""Data broker security breach""))
-d.exclusions.append(Expression(sB, ""good faith but unauthorized acquisition of brokered personal information by an employee or agent of the data broker for a legitimate purpose of the data broker""))
-d.add_exception(Expression( sB, ""provided that the brokered personal information is not used for a purpose unrelated to the data broker's business or subject to further unauthorized disclosure.""))",['#exclusion']
+d.exclusions.append(Expression(sB, ""good faith but unauthorized acquisition of brokered personal information by an employee or agent of the data broker for a legitimate purpose of the data broker, provided that the brokered personal information is not used for a purpose unrelated to the data broker's business or subject to further unauthorized disclosure""))",['#exclusion']
 "(5) (C) In determining whether brokered personal information has been acquired or is reasonably believed to have been acquired by a person without valid authorization, a data broker may consider the following factors, among others:
 (i) indications that the brokered personal information is in the physical possession and control of a person without valid authorization, such as a lost or stolen computer or other device containing brokered personal information;
 (ii) indications that the brokered personal information has been downloaded or copied;
@@ -277,8 +274,7 @@ s.add_subsection(sB)
 
 d = Definition(sB, Expression(sB, ""Security breach""))
 
-d.exclusions.append(Expression(sB, ""good faith but unauthorized acquisition of personally identifiable information or login credentials by an employee or agent of the data collector for a legitimate purpose of the data collector""))
-d.add_exception(Expression(sB,""provided that the personally identifiable information or login credentials are not used for a purpose unrelated to the data collector's business or subject to further unauthorized disclosure.""))","['#exclusion', '#condition']"
+d.exclusions.append(Expression(sB, ""good faith but unauthorized acquisition of personally identifiable information or login credentials by an employee or agent of the data collector for a legitimate purpose of the data collector, provided that the personally identifiable information or login credentials are not used for a purpose unrelated to the data collector's business or subject to further unauthorized disclosure""))","['#exclusion', '#condition']"
 "(13) (C) In determining whether personally identifiable information or login credentials have been acquired or is reasonably believed to have been acquired by a person without valid authorization, a data collector may consider the following factors, among others:
 (i) indications that the information is in the physical possession and control of a person without valid authorization, such as a lost or stolen computer or other device containing information;
 (ii) indications that the information has been downloaded or copied;
@@ -319,7 +315,6 @@ sb.add_subsection(sb1)
 r1 = Rule(sb1, Expression(sb1, ""data collector that owns or licenses computerized personally identifiable information or login credentials""))
 r1.rule_type = Rule.OBLIGATION
 r1.description = Expression(sb1, ""shall notify the consumer that there has been a security breach following discovery or notification to the data collector of the breach"")
-r1.conditions.append(Expression(sb1, ""Except as otherwise provided in subsection (d) of this section""))
 ref1 = Reference(sb1, ""subsection (d) of this section"", target=r1)
 r1.add_exception(ref1)
 
@@ -329,10 +324,8 @@ r2.description = Expression(sb1, ""shall be made in the most expedient time poss
 r2.conditions.append(Expression(sb1, ""consistent with the legitimate needs of the law enforcement agency, as provided in subdivisions (3) and (4) of this subsection, or with any measures necessary to determine the scope of the security breach and restore the reasonable integrity, security, and confidentiality of the data system""))
 r2.add_refines(r1)
 
-ref2 = Reference(sb1, ""subdivision (3) of this subsection"", target=r2)
-ref3 = Reference(sb1, ""subdivision (4) of this subsection"", target=r2)
-r2.add_follows(ref2)
-r2.add_follows(ref3)","['#obligation', '#follows', '#exception', '#reference', '#condition']"
+ref2 = Reference(sb1, ""subdivisions (3) and (4) of this subsection"", target=r2)
+r2.add_follows(ref2)","['#obligation', '#follows', '#exception', '#reference', '#condition']"
 "(b)
 (2) Any data collector that maintains or possesses computerized data containing personally identifiable information or login credentials that the data collector does not own or license or any data collector that acts or conducts business in Vermont that maintains or possesses records or data containing personally identifiable information or login credentials that the data collector does not own or license shall notify the owner or licensee of the information of any security breach immediately following discovery of the breach, consistent with the legitimate needs of law enforcement as provided in subdivisions (3) and (4) of this subsection.","sb = Section(""(b)"")
 sb2 = Section(""(2)"")
@@ -341,10 +334,8 @@ r1 = Rule(sb2, Expression(sb2, ""Any data collector that maintains or possesses 
 r1.rule_type = Rule.OBLIGATION
 r1.description = Expression(sb2, ""shall notify the owner or licensee of the information of any security breach immediately following discovery of the breach"")
 r1.conditions.append(Expression(sb2, ""consistent with the legitimate needs of law enforcement as provided in subdivisions (3) and (4) of this subsection""))
-ref1 = Reference(sb2, ""subdivision (3) of this subsection"", target=r1)
-ref2 = Reference(sb2, ""subdivision (4) of this subsection"", target=r1)
-r1.add_follows(ref1)
-r1.add_follows(ref2)","['#obligation', '#condition', '#follows']"
+ref1 = Reference(sb2, ""subdivisions (3) and (4) of this subsection"", target=r1)
+r1.add_follows(ref1)","['#obligation', '#condition', '#follows']"
 "(3) A data collector or other entity subject to this subchapter shall provide notice of a breach to the Attorney General or to the Department of Financial Regulation, as applicable, as follows:
 (A) A data collector or other entity regulated by the Department of Financial Regulation under Title 8 or this title shall provide notice of a breach to the Department. All other data collectors or other entities subject to this subchapter shall provide notice of a breach to the Attorney General.","s3 = Section(""(3)"")
 r = Rule(s3, Expression(s3, ""A data collector or other entity subject to this subchapter""))
@@ -356,21 +347,22 @@ s3.add_subsection(s3A)
 rA = Rule(s3A, Expression(s3A, ""A data collector or other entity regulated by the Department of Financial Regulation under Title 8 or this title""))
 rA.rule_type = Rule.OBLIGATION
 rA.description = Expression(s3A, ""shall provide notice of a breach to the Department"")
-rA.add_refines(r)
+r.add_refines(rA)
 
 rB = Rule(s3A, Expression(s3A, ""All other data collectors or other entities subject to this subchapter""))
 rB.rule_type = Rule.OBLIGATION
 rB.description = Expression(s3A, ""shall provide notice of a breach to the Attorney General"")
-rB.add_refines(r)","['#obligation', '#reference', '#follows']"
+r.add_refines(rB)","['#obligation', '#reference', '#follows']"
 "(3) A data collector or other entity subject to this subchapter shall provide notice of a breach to the Attorney General or to the Department of Financial Regulation, as applicable, as follows:
 (B)(i) The data collector shall notify the Attorney General or the Department, as applicable, of the date of the security breach and the date of discovery of the breach and shall provide a preliminary description of the breach within 14 business days, consistent with the legitimate needs of the law enforcement agency as provided in this subdivision (3) and subdivision (4) of this subsection (b), of the data collector's discovery of the security breach or when the data collector provides notice to consumers pursuant to this section, whichever is sooner.
 (ii) Notwithstanding subdivision (B)(i) of this subdivision (b)(3), a data collector who, prior to the date of the breach, on a form and in a manner prescribed by the Attorney General, had sworn in writing to the Attorney General that it maintains written policies and procedures to maintain the security of personally identifiable information or login credentials and respond to a breach in a manner consistent with Vermont law shall notify the Attorney General of the date of the security breach and the date of discovery of the breach and shall provide a description of the breach prior to providing notice of the breach to consumers pursuant to subdivision (1) of this subsection (b).
 (iii) If the date of the breach is unknown at the time notice is sent to the Attorney General or to the Department, the data collector shall send the Attorney General or the Department the date of the breach as soon as it is known.
 (iv) Unless otherwise ordered by a court of this State for good cause shown, a notice provided under this subdivision (3)(B) shall not be disclosed to any person other than the Department, the authorized agent or representative of the Attorney General, a State's Attorney, or another law enforcement officer engaged in legitimate law enforcement activities without the consent of the data collector.","s3 = Section(""(3)"")
 
+# General rule for notification to AG or Department
 r1 = Rule(s3, Expression(s3, ""A data collector or other entity subject to this subchapter""))
 r1.rule_type = Rule.OBLIGATION
-r1.description = Expression(s3, ""shall provide notice of a breach to the Attorney General or to the Department of Financial Regulation, as applicable, as follows"")
+r1.description = Expression(s3, ""shall provide notice of a breach to the Attorney General or to the Department of Financial Regulation, as applicable"")
 
 s3B = Section(""(B)"")
 s3.add_subsection(s3B)
@@ -381,18 +373,14 @@ r2 = Rule(s3B_i, Expression(s3B_i, ""The data collector""))
 r2.rule_type = Rule.OBLIGATION
 r2.description = Expression(s3B_i, ""shall notify the Attorney General or the Department, as applicable, of the date of the security breach and the date of discovery of the breach and shall provide a preliminary description of the breach within 14 business days"")
 r2.conditions.append(Expression(s3B_i, ""consistent with the legitimate needs of the law enforcement agency as provided in this subdivision (3) and subdivision (4) of this subsection (b), of the data collector's discovery of the security breach or when the data collector provides notice to consumers pursuant to this section, whichever is sooner.""))
-ref=Reference(s3B_i, "" this subdivision (3)"", r2)
-r2.add_follows(ref)
-ref1=Reference(s3B_i, ""subdivision (4) of this subsection (b)"", r2)
+ref1=Reference(s3B_i, ""subdivision (3) and subdivision (4) of this subsection (b)"", r2)
 r2.add_follows(ref1)
 
 s3B_ii = Section(""(ii)"")
 s3B.add_subsection(s3B_ii)
-r3 = Rule(s3B_ii, Expression(s3B_ii, ""a data collector""))
-r3.conditions.append(Expression(s3B_ii, "" who, prior to the date of the breach, on a form and in a manner prescribed by the Attorney General, had sworn in writing to the Attorney General that it maintains written policies and procedures to maintain the security of personally identifiable information or login credentials and respond to a breach in a manner consistent with Vermont law""))
+r3 = Rule(s3B_ii, Expression(s3B_ii, ""a data collector who, prior to the date of the breach, on a form and in a manner prescribed by the Attorney General, had sworn in writing to the Attorney General that it maintains written policies and procedures to maintain the security of personally identifiable information or login credentials and respond to a breach in a manner consistent with Vermont law""))
 r3.rule_type = Rule.OBLIGATION
 r3.description = Expression(s3B_ii, ""shall notify the Attorney General of the date of the security breach and the date of discovery of the breach and shall provide a description of the breach prior to providing notice of the breach to consumers"")
-r3.conditions.append(Expression(s3B_ii, ""Notwithstanding subdivision (B)(i) of this subdivision (b)(3)""))
 ref2=Reference(s3B_ii, ""subdivision (B)(i) of this subdivision (b)(3)"", r3)
 r3.add_is_exception_to(ref2)
 
@@ -410,10 +398,8 @@ r5 = Rule(s3B_iv, Expression(s3B_iv, ""a notice provided under this subdivision 
 r5.rule_type = Rule.PROHIBITION
 r5.description = Expression(s3B_iv, ""shall not be disclosed to any person other than the Department, the authorized agent or representative of the Attorney General, a State's Attorney, or another law enforcement officer engaged in legitimate law enforcement activities without the consent of the data collector"")
 condition = Expression(s3B_iv, ""Unless otherwise ordered by a court of this State for good cause shown"")
-ref3=Reference(s3B_iv, ""under this subdivision (3)(B)"", r5)
-r5.add_follows(ref3)
 r5.add_exception(condition)
-r5.add_refines(r1)","['#obligation', '#continuation', '#follows', '#exception', '#reference', '#prohibition', '#condition']"
+r5.add_follows(r1)","['#obligation', '#continuation', '#follows', '#exception', '#reference', '#prohibition', '#condition']"
 "(3) A data collector or other entity subject to this subchapter shall provide notice of a breach to the Attorney General or to the Department of Financial Regulation, as applicable, as follows:
 (C)(i) When the data collector provides notice of the breach pursuant to subdivision (1) of this subsection (b), the data collector shall notify the Attorney General or the Department, as applicable, of the number of Vermont consumers affected, if known to the data collector, and shall provide a copy of the notice provided to consumers under subdivision (1) of this subsection (b).
 (ii) The data collector may send to the Attorney General or the Department, as applicable, a second copy of the consumer notice, from which is redacted the type of personally identifiable information or login credentials that was subject to the breach, and which the Attorney General or the Department shall use for any public disclosure of the breach.","s3 = Section(sectionNumber=""(3)"")
@@ -452,8 +438,7 @@ s3.add_subsection(s3D)
 
 r2 = Rule(s3D, Expression(s3D, ""a data collector""))
 r2.rule_type = Rule.OBLIGATION
-r2.description = Expression(s3D, ""is only required to provide notice of the security breach to the Attorney General or Department of Financial Regulation, as applicable"")
-r2.conditions.append(Expression(s3D, "" if the login credentials were acquired directly from the data collector or its agent""))
+r2.description = Expression(s3D, ""is only required to provide notice of the security breach to the Attorney General or Department of Financial Regulation, as applicable, if the login credentials were acquired directly from the data collector or its agent"")
 condition1 = Expression(s3D, ""If a security breach is limited to an unauthorized acquisition of login credentials"")
 r2.conditions.append(condition1)
 r2.add_refines(r1)","['#obligation', '#condition']"
@@ -472,11 +457,11 @@ r2.description = Expression(sA, ""may request the delay"")
 r2.conditions.append(Expression(sA, ""it believes that notification may impede a law enforcement investigation, or a national or Homeland Security investigation, or jeopardize public safety or national or Homeland Security interests""))
 r2.add_is_followed_by(r1)
 
-r2_1 = Rule(sA, Expression(sA, ""the data collector""))
-r2_1.rule_type = Rule.OBLIGATION
-r2_1.description = Expression(sA, ""shall document such request contemporaneously in writing, including the name of the law enforcement officer making the request and the officer's law enforcement agency engaged in the investigation"")
-r2_1.conditions.append(Expression(sA, ""In the event law enforcement makes the request for a delay in a manner other than in writing""))
-r2_1.add_refines(r2)
+r2 = Rule(sA, Expression(sA, ""the data collector""))
+r2.rule_type = Rule.OBLIGATION
+r2.description = Expression(sA, ""shall document such request contemporaneously in writing, including the name of the law enforcement officer making the request and the officer's law enforcement agency engaged in the investigation"")
+r2.conditions.append(Expression(sA, ""In the event law enforcement makes the request for a delay in a manner other than in writing""))
+r2.add_follows(r1)
 
 r3 = Rule(sA, Expression(sA, ""A law enforcement agency""))
 r3.rule_type = Rule.OBLIGATION
@@ -488,22 +473,22 @@ r4 = Rule(sA, Expression(sA, ""The data collector""))
 r4.rule_type = Rule.OBLIGATION
 r4.description = Expression(sA, ""shall provide notice required by this section without unreasonable delay"")
 r4.conditions.append(Expression(sA, ""upon receipt of a written communication, which includes facsimile or electronic communication, from the law enforcement agency withdrawing its request for delay""))
-r4.add_follows(r3)
-r4.add_refines(r1)","['#obligation', '#prohibition', '#condition']"
+r4.add_follows(r3)","['#obligation', '#prohibition', '#condition']"
 "(4) (B) A Vermont law enforcement agency with a reasonable belief that a security breach has or may have occurred at a specific business shall notify the business in writing of its belief. The agency shall also notify the business that additional information on the security breach may need to be furnished to the Office of the Attorney General or the Department of Financial Regulation and shall include the website and telephone number for the Office and the Department in the notice required by this subdivision (4)(B). Nothing in this subdivision (4)(B) shall alter the responsibilities of a data collector under this section or provide a cause of action against a law enforcement agency that fails, without bad faith, to provide the notice required by this subdivision (4)(B).","s4 = Section(""(4)"")
 s4b = Section(""(B)"")
 s4.add_subsection(s4b)
 
-r1 = Rule(s4b, Expression(s4b, ""A Vermont law enforcement agency with a reasonable belief that a security breach has or may have occurred at a specific business""))
+r1 = Rule(s4b, Expression(s4b, ""A Vermont law enforcement agency""))
 r1.rule_type = Rule.OBLIGATION
 r1.description = Expression(s4b, ""shall notify the business in writing of its belief"")
+r1.conditions.append(Expression(s4b, ""with a reasonable belief that a security breach has or may have occurred at a specific business""))
 
 r2 = Rule(s4b, Expression(s4b, ""The agency""))
 r2.rule_type = Rule.OBLIGATION
 r2.description = Expression(s4b, ""shall also notify the business that additional information on the security breach may need to be furnished to the Office of the Attorney General or the Department of Financial Regulation and shall include the website and telephone number for the Office and the Department in the notice required by this subdivision (4)(B)"")
 r2.add_refines(r1)
 
-r3= Rule(s4b, Expression(s4b, ""this subdivision (4)(B)""))
+r3= Rule(s4b, Expression(s4b, ""Nothing in this subdivision (4)(B)""))
 r3.rule_type=Rule.PROHIBITION
 r3.description=Expression(s4b, ""shall alter the responsibilities of a data collector under this section or provide a cause of action against a law enforcement agency that fails, without bad faith, to provide the notice required by this subdivision (4)(B"")","['#obligation', '#information', '#exclusion', '#reference', '#condition']"
 "(5) The notice to a consumer required in subdivision (1) of this subsection shall be clear and conspicuous. A notice to a consumer of a security breach involving personally identifiable information shall include a description of each of the following, if known to the data collector:
@@ -517,13 +502,12 @@ r1 = Rule(s5, Expression(s5, ""The notice to a consumer required in subdivision 
 r1.rule_type = Rule.OBLIGATION
 r1.description = Expression(s5, ""shall be clear and conspicuous."")
 ref1 = Reference(s5, ""subdivision (1) of this subsection"", target=r1)
-r1.add_follows(ref1)
+r1.add_is_refined_by(ref1)
 
 r2 = Rule(s5, Expression(s5, ""A notice to a consumer of a security breach involving personally identifiable information""))
 r2.rule_type = Rule.OBLIGATION
 r2.description = Expression(s5, ""shall include a description of each of the following:"")
 r2.conditions.append(Expression(s5, ""known to the data collector""))
-r2.add_refines(r1)
 
 s5A = Section(""(A)"")
 s5.add_subsection(s5A)
@@ -615,8 +599,6 @@ sBiI = Section(""(I)"")
 sBi.add_subsection(sBiI)
 eBiI = Expression(sBiI, ""the data collector demonstrates that the lowest cost of providing notice to affected consumers pursuant to subdivision (6)(A) of this subsection among written, e-mail, or telephonic notice would exceed $10,000.00"")
 eB.includes.append(eBiI)
-ref1=Reference(sBiI, ""subdivision (6)(A) of this subsection"", r1)
-r1.add_follows(ref1)
 
 sBiII = Section(""(II)"")
 sBi.add_subsection(sBiII)
@@ -651,23 +633,24 @@ ref1 = Reference(s, ""15 U.S.C. § 1681a(p)"", target=r1)
 r1.add_is_refined_by(ref1)
 
 e1 = Exemption(s, Expression(s, ""This subsection shall not apply to a person who is licensed or registered under Title 8 by the Department of Financial Regulation""))
-e1.add_is_exception_to(r1)","['#exemption', '#obligation', '#follows', '#reference', '#refined_by', '#condition']"
+ref2=Reference(s, ""Title 8 by the Department of Financial Regulation"", e1)
+e1.add_is_exception_to(r1)
+e1.add_refines(ref2)","['#exemption', '#obligation', '#follows', '#reference', '#refined_by', '#condition']"
 "(d)(1) Notice of a security breach pursuant to subsection (b) of this section is not required if the data collector establishes that misuse of personally identifiable information or login credentials is not reasonably possible and the data collector provides notice of the determination that the misuse of the personally identifiable information or login credentials is not reasonably possible pursuant to the requirements of this subsection. If the data collector establishes that misuse of the personally identifiable information or login credentials is not reasonably possible, the data collector shall provide notice of its determination that misuse of the personally identifiable information or login credentials is not reasonably possible and a detailed explanation for said determination to the Vermont Attorney General or to the Department of Financial Regulation in the event that the data collector is a person or entity licensed or registered with the Department under Title 8 or this title. The data collector may designate its notice and detailed explanation to the Vermont Attorney General or the Department of Financial Regulation as ""trade secret"" if the notice and detailed explanation meet the definition of trade secret contained in 1 V.S.A. § 317(c)(9).","sd = Section(sectionNumber=""(d)"")
 sd1 = Section(sectionNumber=""(1)"")
 sd.add_subsection(sd1)
 
 exemption=Exemption(sd1, Expression(sd1, ""Notice of a security breach pursuant to subsection (b) of this section is not required""))
 ref1 = Reference(sd1, ""subsection (b) of this section"", target=exemption)
-exemption.add_is_exception_to(ref1)
-exemption.description.append(Expression(sd1, ""the data collector establishes that misuse of personally identifiable information or login credentials is not reasonably possible""))
-exemption.description.append(Expression(sd1, ""and the data collector provides notice of the determination that the misuse of the personally identifiable information or login credentials is not reasonably possible pursuant to the requirements of this subsection""))
+exemption.add_refines(ref1)
+exemption.description.append(Expression(sd1, ""the data collector establishes that misuse of personally identifiable information or login credentials is not reasonably possible and the data collector provides notice of the determination that the misuse of the personally identifiable information or login credentials is not reasonably possible pursuant to the requirements of this subsection""))
 
 r2 = Rule(sd1, Expression(sd1, ""the data collector""))
 r2.rule_type = Rule.OBLIGATION
 r2.conditions.append(Expression(sd1, ""the data collector establishes that misuse of the personally identifiable information or login credentials is not reasonably possible""))
 r2.description = Expression(sd1, ""shall provide notice of its determination that misuse of the personally identifiable information or login credentials is not reasonably possible and a detailed explanation for said determination to the Vermont Attorney General or to the Department of Financial Regulation"")
 r2.conditions.append(Expression(sd1, ""in the event that the data collector is a person or entity licensed or registered with the Department under Title 8 or this title""))
-ref2=Reference(sd1, ""Title 8 or this title"", r2)
+ref2=Reference(sd1, ""Title 8"", r2)
 r2.add_follows(ref2)
 r2.add_refines(exemption)
 
@@ -786,10 +769,8 @@ sg.add_subsection(sg3)
 r = Rule(sg3, Expression(sg3, ""A financial institution regulated by the Department of Financial Regulation that is subject to subdivision (1) or (2) of this subsection""))
 r.rule_type = Rule.OBLIGATION
 r.description = Expression(sg3, ""shall notify the Department as soon as possible after it becomes aware of an incident involving unauthorized access to or use of personally identifiable information."")
-ref1 = Reference(sg3, ""subdivision (1) of this subsection"", target=r)
-ref2 = Reference(sg3, ""subdivision (2) of this subsection"", target=r)
+ref1 = Reference(sg3, ""subdivision (1) or (2) of this subsection"", target=r)
 r.add_follows(ref1)
-r.add_follows(ref2)
 r.add_refines(exemption)","['#condition', '#reference', '#exemption', '#continuation']"
 "(h) Enforcement.
 (1) With respect to all data collectors and other entities subject to this subchapter, other than a person or entity licensed or registered with the Department of Financial Regulation under Title 8 or this title, the Attorney General and State's Attorney shall have sole and full authority to investigate potential violations of this subchapter and to enforce, prosecute, obtain, and impose remedies for a violation of this subchapter or any rules or regulations made pursuant to this chapter as the Attorney General and State's Attorney have under chapter 63 of this title. The Attorney General may refer the matter to the State's Attorney in an appropriate case. The Superior Courts shall have jurisdiction over any enforcement matter brought by the Attorney General or a State's Attorney under this subsection.","sh = Section(""(h)"", sectionTitle=""Enforcement"")
@@ -811,8 +792,9 @@ r2.rule_type = Rule.PERMISSION
 r2.description = Expression(sh1, ""may refer the matter to the State's Attorney in an appropriate case"")
 r2.add_refines(r1)
 
-i1=Information(sh1, Expression(sh1, ""The Superior Courts shall have jurisdiction over any enforcement matter brought by the Attorney General or a State's Attorney under this subsection.""))
-i1.add_follows(r1)","['#exemption', '#follows', '#definition', '#information', '#reference', '#permission']"
+r3 = Rule(sh1, Expression(sh1, ""The Superior Courts""))
+r3.rule_type = Rule.PERMISSION
+r3.description = Expression(sh1, ""shall have jurisdiction over any enforcement matter brought by the Attorney General or a State's Attorney under this subsection"")","['#exemption', '#follows', '#definition', '#information', '#reference', '#permission']"
 "(h) (2) With respect to a data collector that is a person or entity licensed or registered with the Department of Financial Regulation under Title 8 or this title, the Department of Financial Regulation shall have the full authority to investigate potential violations of this subchapter and to prosecute, obtain, and impose remedies for a violation of this subchapter or any rules or regulations adopted pursuant to this subchapter, as the Department has under Title 8 or this title or any other applicable law or regulation.","s = Section(sectionNumber=""(h)"")
 s2 = Section(""(2)"")
 s.add_subsection(s2)

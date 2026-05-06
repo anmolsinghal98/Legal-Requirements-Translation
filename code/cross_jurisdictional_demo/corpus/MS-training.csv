@@ -3,7 +3,6 @@ text,code,tags
 i=Information(s, Expression(s, ""This section applies to any person who conducts business in this state and who, in the ordinary course of the person's business functions, owns, licenses or maintains personal information of any resident of this state.""))",['#condition']
 "(2) For purposes of this section, the following terms shall have the meanings ascribed unless the context clearly requires otherwise:
 (a) ""Breach of security"" means unauthorized acquisition of electronic files, media, databases or computerized data containing personal information of any resident of this state when access to the personal information has not been secured by encryption or by any other method or technology that renders the personal information unreadable or unusable;","s2 = Section(sectionNumber=""(2)"")
-info_purpose = Information(s2, Expression(s2, ""For purposes of this section, the following terms shall have the meanings ascribed unless the context clearly requires otherwise:""))
 sa=Section(""(a)"")
 s2.add_subsection(sa)
 
@@ -21,7 +20,6 @@ d_breach_security.meaning.append(d_meaning_breach_security)","['#definition', '#
 (iii) An account number or credit or debit card number in combination with any required security code, access code or password that would permit access to an individual's financial account; ""personal information"" does not include publicly available information that is lawfully made available to the general public from federal, state or local government records or widely distributed media;
 
 (iv) ""Affected individual"" means any individual who is a resident of this state whose personal information was, or is reasonably believed to have been, intentionally acquired by an unauthorized person through a breach of security.","s2 = Section(""(2)"")
-info_statement = Information(s2, Expression(s2, ""For purposes of this section, the following terms shall have the meanings ascribed unless the context clearly requires otherwise:""))
 sb=Section(""(b)"")
 s2.add_subsection(sb)
 d_personal_info = Definition(sb, Expression(sb, ""Personal information""))
@@ -75,8 +73,7 @@ r1.conditions.append(Expression(s5, ""if a law enforcement agency determines tha
 
 r2 = Rule(s5, Expression(s5, ""Any such delayed notification""))
 r2.rule_type = Rule.OBLIGATION
-r2.description = Expression(s5, ""shall be made"")
-r2.conditions.append(Expression(s5, ""after the law enforcement agency determines that notification will not compromise the criminal investigation or national security and so notifies the person of that determination""))
+r2.description = Expression(s5, ""shall be made after the law enforcement agency determines that notification will not compromise the criminal investigation or national security and so notifies the person of that determination"")
 r2.add_follows(r1)","['#obligation', '#condition']"
 "(6) Any notice required by the provisions of this section may be provided by one (1) of the following methods: (a) written notice; (b) telephone notice; (c) electronic notice, if the person's primary means of communication with the affected individuals is by electronic means or if the notice is consistent with the provisions regarding electronic records and signatures set forth in 15 USCS 7001; or (d) substitute notice, provided the person demonstrates that the cost of providing notice in accordance with paragraph (a), (b) or (c) of this subsection would exceed Five Thousand Dollars ($5,000.00), that the affected class of subject persons to be notified exceeds five thousand (5,000) individuals or the person does not have sufficient contact information. Substitute notice shall consist of the following: electronic mail notice when the person has an electronic mail address for the affected individuals; conspicuous posting of the notice on the website of the person if the person maintains one; and notification to major statewide media, including newspapers, radio and television.","s6 = Section(""(6)"")
 r6 = Rule(s6, Expression(s6, ""Any notice required by the provisions of this section""))
@@ -124,11 +121,10 @@ r1 = Rule(s7, Expression(s7, ""Any person who conducts business in this state"")
 r1.rule_type = Rule.PERMISSION
 r1.conditions.append(Expression(s7, ""maintains its own security breach procedures as part of an information security policy for the treatment of personal information""))
 r1.conditions.append(Expression(s7, ""otherwise complies with the timing requirements of this section""))
-r1.description = Expression(s7, ""shall be deemed to be in compliance with the security breach notification requirements of this section"")
-r1.conditions.append(Expression(s7, ""if the person notifies affected individuals in accordance with the person's policies in the event of a breach of security""))
+r1.description = Expression(s7, ""shall be deemed to be in compliance with the security breach notification requirements of this section if the person notifies affected individuals in accordance with the person's policies in the event of a breach of security"")
 
-r2 = Rule(s7, Expression(s7, ""any person that maintains such a security breach procedure""))
-r1.conditions.append(Expression(s7, ""pursuant to the rules, regulations, procedures or guidelines established by the primary or federal functional regulator""))
+r2 = Rule(s7, Expression(s7, ""any person""))
+r1.conditions.append(Expression(s7, ""that maintains such a security breach procedure pursuant to the rules, regulations, procedures or guidelines established by the primary or federal functional regulator""))
 ref1 = Reference(s7, ""15 USCS 6809(2)"", target=r2)
 r2.add_is_refined_by(ref1)
 r2.rule_type = Rule.PERMISSION
@@ -141,6 +137,6 @@ r1 = Rule(s8, Expression(s8, ""Failure to comply with the requirements of this s
 r1.rule_type = Rule.PENALTY
 r1.description = Expression(s8, ""shall constitute an unfair trade practice and shall be enforced by the Attorney General"")
 
-e1 = Expression(s8, ""however, nothing in this section may be construed to create a private right of action"")
-exemption1 = Exemption(s8, e1)
-exemption1.add_is_exception_to(r1)","['#prohibition', '#penalty', '#condition']"
+r2 = Rule(s8, Expression(s8, ""nothing in this section""))
+r2.rule_type = Rule.PROHIBITION
+r2.description = Expression(s8, ""may be construed to create a private right of action"")","['#prohibition', '#penalty', '#condition']"

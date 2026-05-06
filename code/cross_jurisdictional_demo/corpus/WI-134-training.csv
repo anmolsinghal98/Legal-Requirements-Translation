@@ -13,11 +13,10 @@ b. A city, village, town, or county.
 (am) ""Name"" means an individual's last name combined with the individual's first name or first initial.","# Creation of Section 134.98 with subsection (1)
 s134_98 = Section(""134.98"", ""Notice of unauthorized acquisition of personal information"")
 
-s1 = Section(""(1)"")
+s1 = Section(""(1)"", ""Definitions"")
 s134_98.add_subsection(s1)
 
-i1 = Information(s1, Expression(s1, ""Definitions. In this section:""))
-
+# Define ""Entity"" with its meanings and inclusions
 e_entity = Expression(s1, ""Entity"")
 d_entity = Definition(s1, e_entity)
 
@@ -133,18 +132,18 @@ s2.add_subsection(sa)
 r1 = Rule(sa, Expression(sa, ""an entity whose principal place of business is located in this state or an entity that maintains or licenses personal information in this state""))
 r1.rule_type = Rule.OBLIGATION
 r1.conditions.append(Expression(sa, ""knows that personal information in the entity's possession has been acquired by a person whom the entity has not authorized to acquire the personal information""))
-r1.description = Expression(sa, ""shall make reasonable efforts to notify each subject of the personal information"")
+r1.description = Expression(sa, ""the entity shall make reasonable efforts to notify each subject of the personal information"")
 
 r2 = Rule(sa, Expression(sa, ""the notice""))
 r2.rule_type=Rule.OBLIGATION
 r2.description=Expression(sa, ""shall indicate that the entity knows of the unauthorized acquisition of personal information pertaining to the subject of the personal information"")
-r2.add_refines(r1)","{'#obligation', '#refines' , '#condition'}"
+r2.add_follows(r1)","{'#obligation', '#refines' , '#condition'}"
 "(b) If an entity whose principal place of business is not located in this state knows that personal information pertaining to a resident of this state has been acquired by a person whom the entity has not authorized to acquire the personal information, the entity shall make reasonable efforts to notify each resident of this state who is the subject of the personal information. The notice shall indicate that the entity knows of the unauthorized acquisition of personal information pertaining to the resident of this state who is the subject of the personal information.","s = Section(sectionNumber=""(b)"", sectionTitle="""")
 
 r1 = Rule(s, Expression(s, ""an entity whose principal place of business is not located in this state""))
 r1.rule_type = Rule.OBLIGATION
 r1.description = Expression(s, ""the entity shall make reasonable efforts to notify each resident of this state who is the subject of the personal information"")
-r1.conditions.append(Expression(s, ""If an entity whose principal place of business is not located in this state knows that personal information pertaining to a resident of this state ha""))
+r1.conditions.append(Expression(s, ""if the entity knows that personal information pertaining to a resident of this state has been acquired by a person whom the entity has not authorized to acquire the personal information""))
 
 r2 = Rule(s, Expression(s, ""The notice""))
 r2.rule_type = Rule.OBLIGATION
@@ -171,19 +170,9 @@ r1.add_is_refined_by(ref2)","{'#obligation', '#refines' , '#condition'}"
 1. The acquisition of personal information does not create a material risk of identity theft or fraud to the subject of the personal information.
 2. The personal information was acquired in good faith by an employee or agent of the entity, if the personal information is used for a lawful purpose of the entity.","s_cm = Section(""cm"")
 
-e_cm = Exemption(s_cm, description=Expression(s_cm, ""Notwithstanding pars. (a), (b), (bm), and (br), an entity is not required to provide notice of the acquisition of personal information""))
-ref_a = Reference(s_cm, ""par. (a)"", target=e_cm)
-ref_b = Reference(s_cm, ""par. (b)"", target=e_cm)
-ref_bm = Reference(s_cm, ""par. (bm)"", target=e_cm)
-ref_br = Reference(s_cm, ""par. (br)"", target=e_cm)
-
-# This exemption is an exception to those prior rules
-e_cm.add_is_exception_to(ref_a)
-e_cm.add_is_exception_to(ref_b)
-e_cm.add_is_exception_to(ref_bm)
-e_cm.add_is_exception_to(ref_br)
-
-e_cm.description.append(Expression(s_cm, "" if any of the following applies""))
+e_cm = Exemption(s_cm, description=Expression(s_cm, ""an entity is not required to provide notice of the acquisition of personal information if any of the following applies""))
+ref1=Reference(s_cm, ""pars. (a), (b), (bm), and (br)"", target=e_cm)
+e_cm.add_is_exception_to(ref1)
 
 subsection_1 = Section(""1"")
 s_cm.add_subsection(subsection_1)
@@ -207,8 +196,10 @@ r1.add_follows(ref1)
 ref2=Reference(sa, ""sub. (2)"", target=r1)
 r1.add_is_refined_by(ref2)
 
-info1 = Information(sa,  Expression(sa, ""A determination as to reasonableness under this paragraph shall include consideration of the number of notices that an entity must provide and the methods of communication available to the entity""))
-info1.add_refines(r1)","{'#obligation', '#refined_by' , '#exception_to', '#follows', '#information'}"
+r2=Rule(sa, Expression(sa, ""A determination as to reasonableness under this paragraph""))
+r2.rule_type=Rule.OBLIGATION
+r2.description=Expression(sa, ""shall include consideration of the number of notices that an entity must provide and the methods of communication available to the entity"")
+r2.add_refines(r1)","{'#obligation', '#refined_by' , '#exception_to', '#follows', '#information'}"
 "(b) An entity shall provide the notice required under sub. (2) by mail or by a method the entity has previously employed to communicate with the subject of the personal information. If an entity cannot with reasonable diligence determine the mailing address of the subject of the personal information, and if the entity has not previously communicated with the subject of the personal information, the entity shall provide notice by a method reasonably calculated to provide actual notice to the subject of the personal information.","s = Section(sectionNumber=""(b)"")
 
 r1 = Rule(s, Expression(s, ""entity""))

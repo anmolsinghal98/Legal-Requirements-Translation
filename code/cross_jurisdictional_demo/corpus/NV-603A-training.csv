@@ -1,0 +1,441 @@
+text,code,tags
+"NRS 603A.010  Definitions.;None
+As used in NRS 603A.010 to 603A.290, inclusive, unless the context otherwise requires, the words and terms defined in NRS 603A.020, 603A.030 and 603A.040 have the meanings ascribed to them in those sections.","s = Section(sectionNumber=""603A.010"", sectionTitle=""Definitions"")
+e=Expression(s, ""the words and terms defined in NRS603A.020, 603A.030 and 603A.040 have the meanings ascribed to them in those sections"")
+i1= Information(s, e)
+i1.add_exception(Expression(s, ""the context otherwise requires""))
+i1.add_is_followed_by(Expression(s, ""NRS603A.020, 603A.030 and 603A.040""))","['#information', '#exception', '#followed_by']"
+"NRS 603A.020  ""Breach of the security of the system data"" defined.;None
+""Breach of the security of the system data"" means unauthorized acquisition of computerized data that materially compromises the security, confidentiality or integrity of personal information maintained by the data collector. The term does not include the good faith acquisition of personal information by an employee or agent of the data collector for a legitimate purpose of the data collector, so long as the personal information is not used for a purpose unrelated to the data collector or subject to further unauthorized disclosure.","s = Section(sectionNumber=""603A.020"", sectionTitle=""Breach of the security of the system data defined"")
+d = Definition(s, Expression(s, ""Breach of the security of the system data""))
+d.meaning.append(Expression(s, ""unauthorized acquisition of computerized data that materially compromises the security, confidentiality or integrity of personal information maintained by the data collector""))
+d.exclusions.append(Expression(s, ""the good faith acquisition of personal information by an employee or agent of the data collector for a legitimate purpose of the data collector, so long as the personal information is not used for a purpose unrelated to the data collector or subject to further unauthorized disclosure""))","['#definition', '#exclusion']"
+"NRS 603A.030  ""Data collector"" defined.;None
+""Data collector"" means any governmental agency, institution of higher education, corporation, financial institution or retail operator or any other type of business entity or association that, for any purpose, whether by automated collection or otherwise, handles, collects, disseminates or otherwise deals with nonpublic personal information.","s = Section(sectionNumber=""603A.030"", sectionTitle=""Data collector defined"")
+d = Definition(s, Expression(s, ""Data collector""))
+d.meaning.append(Expression(s, ""any governmental agency, institution of higher education, corporation, financial institution or retail operator or any other type of business entity or association that, for any purpose, whether by automated collection or otherwise, handles, collects, disseminates or otherwise deals with nonpublic personal information""))",['#definition']
+"NRS 603A.040  ""Personal information"" defined.;1.
+""Personal information"" means a natural person's first name or first initial and last name in combination with any one or more of the following data elements, when the name and data elements are not encrypted:
+(a) Social security number.
+(b) Driver's license number, driver authorization card number or identification card number.
+(c) Account number, credit card number or debit card number, in combination with any required security code, access code or password that would permit access to the person's financial account.
+(d) A medical identification number or a health insurance identification number.
+(e) A user name, unique identifier or electronic mail address in combination with a password, access code or security question and answer that would permit access to an online account.","s = Section(sectionNumber=""603A.040"", sectionTitle=""Personal information defined"")
+s1 = Section(sectionNumber=""1."")
+s.add_subsection(s1)
+d = Definition(s1, Expression(s1, ""Personal information""))
+e=Expression(s1, ""a natural persons first name or first initial and last name in combination with any one or more of the following data elements, when the name and data elements are not encrypted:"")
+d.meaning.append(e)
+s1a = Section(sectionNumber=""(a)"")
+s1.add_subsection(s1a)
+e1=Expression(s1a, ""Social security number"")
+e.includes.append(e1)
+s1b = Section(sectionNumber=""(b)"")
+s1.add_subsection(s1b)
+e2=Expression(s1b, ""Drivers license number, driver authorization card number or identification card number"")
+e.includes.append(e2)
+s1c = Section(sectionNumber=""(c)"")
+s1.add_subsection(s1c)
+e3=Expression(s1c, ""Account number, credit card number or debit card number, in combination with any required security code, access code or password that would permit access to the persons financial account."")
+e.includes.append(e3)
+s1d = Section(sectionNumber=""(d)"")
+s1.add_subsection(s1d)
+e4=Expression(s1d, ""A medical identification number or a health insurance identification number."")
+e.includes.append(e4)
+s1e = Section(sectionNumber=""(e)"")
+s1.add_subsection(s1e)
+e5=Expression(s1e, ""A user name, unique identifier or electronic mail address in combination with a password, access code or security question and answer that would permit access to an online account."")
+e.includes.append(e5)","['#definition', '#continuation']"
+"NRS 603A.040  ""Personal information"" defined.;2.
+The term does not include the last four digits of a social security number, the last four digits of a driver's license number, the last four digits of a driver authorization card number or the last four digits of an identification card number or publicly available information that is lawfully made available to the general public from federal, state or local governmental records.","s = Section(sectionNumber=""603A.040"", sectionTitle=""Personal information defined"")
+s2 = Section(sectionNumber=""2."")
+s.add_subsection(s2)
+d = Definition(s2, Expression(s, ""Personal information""))
+d.exclusions.append(Expression(s2, ""the last four digits of a social security number, the last four digits of a driver's license number, the last four digits of a driver authorization card number or the last four digits of an identification card number or publicly available information that is lawfully made available to the general public from federal, state or local governmental records""))","['#definition', '#exclusion']"
+"NRS 603A.100  Applicability; waiver of provisions prohibited.;1.
+The provisions of NRS 603A.010 to 603A.290, inclusive, do not apply to the maintenance or transmittal of information in accordance with NRS 439.581 to 439.597, inclusive, and the regulations adopted pursuant thereto.","s = Section(sectionNumber=""603A.100"", sectionTitle=""Applicability; waiver of provisions prohibited"")
+s1 = Section(sectionNumber=""1."")
+s.add_subsection(s1)
+e=Expression(s1, ""The provisions of NRS 603A.010 to 603A.290, inclusive, do not apply to the maintenance or transmittal of information in accordance with NRS 439.581 to 439.597, inclusive, and the regulations adopted pursuant thereto."")
+i1= Information(s1, e)
+i1.add_follows(Expression(s1, ""NRS 439.581 to 439.597""))","['#information', '#follows']"
+"NRS 603A.100  Applicability; waiver of provisions prohibited.;2.
+A data collector who is also an operator, as defined in NRS 603A.330, shall comply with the provisions of NRS 603A.300 to 603A.360, inclusive.","s = Section(sectionNumber=""603A.100"", sectionTitle=""Applicability; waiver of provisions prohibited"")
+s2 = Section(sectionNumber=""2."")
+s.add_subsection(s2)
+e=Expression(s2, ""A data collector who is also an operator"")
+r=Rule(s2, e)
+r.rule_type=Rule.OBLIGATION
+r.description=Expression(s2, ""shall comply with the provisions of NRS 603A.300 to 603A.360, inclusive"")
+r.add_follows(Expression(s2, ""NRS 603A.330""))
+r.add_follows(Expression(s2, ""NRS 603A.300 to 603A.360 inclusive""))","['#obligation', '#follows']"
+"NRS 603A.100  Applicability; waiver of provisions prohibited.;3.
+Any waiver of the provisions of NRS 603A.010 to 603A.290, inclusive, is contrary to public policy, void and unenforceable.","s = Section(sectionNumber=""603A.100"", sectionTitle=""Applicability; waiver of provisions prohibited"")
+s3 = Section(sectionNumber=""3."")
+s.add_subsection(s3)
+i1= Information(s3, Expression(s3, ""Any waiver of the provisions of NRS 603A.010 to 603A.290, inclusive, is contrary to public policy, void and unenforceable.""))",['#information']
+"NRS 603A.200  Destruction of certain records.;1.
+A business that maintains records which contain personal information concerning the customers of the business shall take reasonable measures to ensure the destruction of those records when the business decides that it will no longer maintain the records.","s = Section(sectionNumber=""NRS 603A.200"", sectionTitle=""Destruction of certain records"")
+s1 = Section(""1."")
+s.add_subsection(s1)
+r = Rule(s1, Expression(s1, ""A business that maintains records which contain personal information concerning the customers of the business""))
+r.rule_type = Rule.OBLIGATION
+r.description = Expression(s1, ""shall take reasonable measures to ensure the destruction of those records when the business decides that it will no longer maintain the records."")",['#obligation']
+"NRS 603A.200  Destruction of certain records.;2.
+As used in this section:
+(a) ""Business"" means a proprietorship, corporation, partnership, association, trust, unincorporated organization or other enterprise doing business in this State.
+(b) ""Reasonable measures to ensure the destruction"" means any method that modifies the records containing the personal information in such a way as to render the personal information contained in the records unreadable or undecipherable, including, without limitation:
+(1) Shredding of the record containing the personal information; or
+(2) Erasing of the personal information from the records.","s = Section(sectionNumber=""NRS 603A.200"", sectionTitle=""Destruction of certain records"")
+s2 = Section(""2."")
+s.add_subsection(s2)
+I=Information(s2, Expression(s2, ""As used in this section:""))
+s2a = Section(""(a)"")
+s2.add_subsection(s2a)
+d1 = Definition(s2a, Expression(s2a, ""Business""))
+d1.meaning.append(Expression(s2a, ""a proprietorship, corporation, partnership, association, trust, unincorporated organization or other enterprise doing business in this State""))
+s2b = Section(""(b)"")
+s2.add_subsection(s2b)
+d2 = Definition(s2b, Expression(s2b, ""Reasonable measures to ensure the destruction""))
+e=Expression(s2b, ""any method that modifies the records containing the personal information in such a way as to render the personal information contained in the records unreadable or undecipherable, including, without limitation:"")
+d2.meaning.append(e)
+s2b1 = Section(""(1)"")
+s2b.add_subsection(s2b1)
+e1=Expression(s2b1, ""Shredding of the record containing the personal information"")
+e.includes.append(e1)
+s2b2 = Section(""(2)"")
+s2b.add_subsection(s2b2)
+e2=Expression(s2b2, ""Erasing of the personal information from the records"")
+e.includes.append(e2)","['#definition', '#continuation', '#information']"
+"NRS 603A.210  Security measures.;1.
+A data collector that maintains records which contain personal information of a resident of this State shall implement and maintain reasonable security measures to protect those records from unauthorized access, acquisition, destruction, use, modification or disclosure.","s = Section(sectionNumber=""NRS 603A.210"", sectionTitle=""Security measures."")
+s1 = Section(""1."")
+s.add_subsection(s1)
+r1 = Rule(s1, Expression(s1, ""A data collector that maintains records which contain personal information of a resident of this State""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(s1, ""shall implement and maintain reasonable security measures to protect those records from unauthorized access, acquisition, destruction, use, modification or disclosure."")",['#obligation']
+"NRS 603A.210  Security measures.;2.
+If a data collector is a governmental agency and maintains records which contain personal information of a resident of this State, the data collector shall, to the extent practicable, with respect to the collection, dissemination and maintenance of those records, comply with the current version of the CIS Controls as published by the Center for Internet Security, Inc. or its successor organization, or corresponding standards adopted by the National Institute of Standards and Technology of the United States Department of Commerce.","s = Section(sectionNumber=""NRS 603A.210"", sectionTitle=""Security measures."")
+s2 = Section(""2."")
+s.add_subsection(s2)
+r = Rule(s2, Expression(s2, ""the data collector""))
+r.rule_type=Rule.OBLIGATION
+r.description = Expression(s2, ""shall, to the extent practicable, with respect to the collection, comply with the current version of the CIS Controls as published by the Center for Internet Security, Inc. or its successor organization, or corresponding standards adopted by the National Institute of Standards and Technology of the United States Department of Commerce"")
+r.conditions.append(Expression(s2, ""a data collector is a governmental agency and maintains records which contain personal information of a resident of this State""))","['#obligation', '#condition']"
+"NRS 603A.210  Security measures.;3.
+A contract for the disclosure of the personal information of a resident of this State which is maintained by a data collector must include a provision requiring the person to whom the information is disclosed to implement and maintain reasonable security measures to protect those records from unauthorized access, acquisition, destruction, use, modification or disclosure.","s = Section(sectionNumber=""NRS 603A.210"", sectionTitle=""Security measures."")
+s3 = Section(""3."")
+s.add_subsection(s3)
+r = Rule(s3, Expression(s3, ""A contract for the disclosure of the personal information of a resident of this State which is maintained by a data collector""))
+r.rule_type = Rule.OBLIGATION
+r.description = Expression(s3, ""must include a provision requiring the person to whom the information is disclosed to implement and maintain reasonable security measures to protect those records from unauthorized access, acquisition, destruction, use, modification or disclosure."")",['#obligation']
+"NRS 603A.210  Security measures.;4.
+If a state or federal law requires a data collector to provide greater protection to records that contain personal information of a resident of this State which are maintained by the data collector and the data collector is in compliance with the provisions of that state or federal law, the data collector shall be deemed to be in compliance with the provisions of this section.","s = Section(sectionNumber=""NRS 603A.210"", sectionTitle=""Security measures."")
+s4 = Section(""4."")
+s.add_subsection(s4)
+r = Rule(s4, Expression(s4, ""the data collector""))
+r.rule_type = Rule.PERMISSION
+r.description = Expression(s4, ""shall be deemed to be in compliance with the provisions of this section"")
+r.conditions.append(Expression(s4, ""a state or federal law requires a data collector to provide greater protection to records that contain personal information of a resident of this State which are maintained by the data collector and the data collector is in compliance with the provisions of that state or federal law""))",['#permission']
+"NRS 603A.210  Security measures.;5.
+The Office of Information Security of the Office of the Chief Information Officer within the Office of the Governor shall create, maintain and make available to the public a list of controls and standards with which the State is required to comply pursuant to any federal law, regulation or framework that also satisfy the controls and standards set forth in subsection 2.","s = Section(sectionNumber=""NRS 603A.210"", sectionTitle=""Security measures."")
+s5 = Section(""5."")
+s.add_subsection(s5)
+r=Rule(s5, Expression(s5, ""The Office of Information Security of the Office of the Chief Information Officer within the Office of the Governor""))
+r.rule_type=Rule.OBLIGATION
+r.description=Expression(s5, ""shall create, maintain and make available to the public a list of controls and standards with which the State is required to comply pursuant to any federal law, regulation or framework that also satisfy the controls and standards set forth in subsection 2"")
+r.add_follows(Expression(s5, ""subsection 2""))","['#obligation', '#follows']"
+"NRS 603A.215  Security measures for data collector that accepts payment card; use of encryption; liability for damages; applicability.;1.
+If a data collector doing business in this State accepts a payment card in connection with a sale of goods or services, the data collector shall comply with the current version of the Payment Card Industry (PCI) Data Security Standard, as adopted by the PCI Security Standards Council or its successor organization, with respect to those transdescriptions, not later than the date for compliance set forth in the Payment Card Industry (PCI) Data Security Standard or by the PCI Security Standards Council or its successor organization.","s = Section(sectionNumber=""NRS 603A.215"", sectionTitle=""Security measures for data collector that accepts payment card; use of encryption; liability for damages; applicability"")
+s1 = Section(""1."")
+s.add_subsection(s1)
+r = Rule(s1, Expression(s1, ""the data collector""))
+r.conditions.append(Expression(s1, ""data collector doing business in this State accepts a payment card in connection with a sale of goods or services""))
+r.rule_type = Rule.OBLIGATION
+r.description = Expression(s1, ""shall comply with the current version of the Payment Card Industry (PCI) Data Security Standard, as adopted by the PCI Security Standards Council or its successor organization, with respect to those transdescriptions, not later than the date for compliance set forth in the Payment Card Industry (PCI) Data Security Standard or by the PCI Security Standards Council or its successor organization"")","['#obligation', '#condition']"
+"NRS 603A.215  Security measures for data collector that accepts payment card; use of encryption; liability for damages; applicability.;2.
+A data collector doing business in this State to whom subsection 1 does not apply shall not:
+(a) Transfer any personal information through an electronic, nonvoice transmission other than a facsimile to a person outside of the secure system of the data collector unless the data collector uses encryption to ensure the security of electronic transmission; or
+(b) Move any data storage device containing personal information beyond the logical or physical controls of the data collector, its data storage contractor or, if the data storage device is used by or is a component of a multifunctional device, a person who assumes the obligation of the data collector to protect personal information, unless the data collector uses encryption to ensure the security of the information.","s = Section(sectionNumber=""NRS 603A.215"", sectionTitle=""Security measures for data collector that accepts payment card; use of encryption; liability for damages; applicability"")
+s2 = Section(""2."")
+s.add_subsection(s2)
+e=Expression(s2, ""A data collector doing business in this State to whom subsection 1 does not apply"")
+r1 = Rule(s2, e)
+r1.add_is_exception_to(Expression(s2, ""subsection 1""))
+r1.rule_type = Rule.PROHIBITION
+s2a = Section(""(a)"")
+s2.add_subsection(s2a)
+r1.description = Expression(s2a, ""shall not transfer any personal information through an electronic, nonvoice transmission other than a facsimile to a person outside of the secure system of the data collector"")
+r1.add_exception(Expression(s2a, ""the data collector uses encryption to ensure the security of electronic transmission""))
+r2 = Rule(s2, e)
+r2.add_is_exception_to(Expression(s2, ""subsection 1""))
+r2.rule_type = Rule.PROHIBITION
+s2b = Section(""(b)"")
+s2.add_subsection(s2b)
+r2.description = Expression(s2b, ""shall not move any data storage device containing personal information beyond the logical or physical controls of the data collector, its data storage contractor or, if the data storage device is used by or is a component of a multifunctional device, a person who assumes the obligation of the data collector to protect personal information"")
+r2.add_exception(Expression(s2b, ""the data collector uses encryption to ensure the security of the information""))","['#prohibition', '#continuation', '#exception_to', '#exception']"
+"NRS 603A.215  Security measures for data collector that accepts payment card; use of encryption; liability for damages; applicability.;3.
+A data collector shall not be liable for damages for a breach of the security of the system data if:
+(a) The data collector is in compliance with this section; and
+(b) The breach is not caused by the gross negligence or intentional misconduct of the data collector, its officers, employees or agents.","s = Section(sectionNumber=""NRS 603A.215"", sectionTitle=""Security measures for data collector that accepts payment card; use of encryption; liability for damages; applicability"")
+s3 = Section(""3."")
+s.add_subsection(s3)
+r = Rule(s3, Expression(s3, ""A data collector""))
+r.rule_type = Rule.PROHIBITION
+r.description = Expression(s3, ""shall not be liable for damages for a breach of the security of the system data if:"")
+s3a = Section(""(a)"")
+s3.add_subsection(s3a)
+r.conditions.append(Expression(s3a, ""The data collector complies with this section""))
+s3b = Section(""(b)"")
+s3.add_subsection(s3b)
+r.conditions.append(Expression(s3b, ""The breach is not caused by the gross negligence or intentional misconduct of the data collector, its officers, employees or agents""))","['#prohibition', '#continuation', '#condition']"
+"NRS 603A.215  Security measures for data collector that accepts payment card; use of encryption; liability for damages; applicability.;4.
+The requirements of this section do not apply to:
+(a) A telecommunication provider acting solely in the role of conveying the communications of other persons, regardless of the mode of conveyance used, including, without limitation:
+(1) Optical, wire line and wireless facilities;
+(2) Analog transmission; and
+(3) Digital subscriber line transmission, voice over Internet protocol and other digital transmission technology.
+(b) Data transmission over a secure, private communication channel for:
+(1) Approval or processing of negotiable instruments, electronic fund transfers or similar payment methods; or
+(2) Issuance of reports regarding account closures due to fraud, substantial overdrafts, abuse of automatic teller machines or related information regarding a customer.","s = Section(sectionNumber=""NRS 603A.215"", sectionTitle=""Security measures for data collector that accepts payment card; use of encryption; liability for damages; applicability"")
+s4 = Section(""4."")
+s.add_subsection(s4)
+intro_exp = Expression(s4, ""The requirements of this section do not apply to:"")
+e = Exemption(s4, intro_exp)
+s4a = Section(""(a)"")
+s4.add_subsection(s4a)
+ex_a=Expression(s4a, ""A telecommunication provider acting solely in the role of conveying the communications of other persons, regardless of the mode of conveyance used, including, without limitation:"")
+intro_exp.includes.append(ex_a)
+s4a1 = Section(""(1)"")
+s4a.add_subsection(s4a1)
+ex_a_1=Expression(s4a1, ""Optical, wire line and wireless facilities"")
+ex_a.includes.append(ex_a_1)
+s4a2 = Section(""(2)"")
+s4a.add_subsection(s4a2)
+ex_a_2=Expression(s4a2, ""Analog transmission"")
+ex_a.includes.append(ex_a_2)
+s4a3 = Section(""(3)"")
+s4a.add_subsection(s4a3)
+ex_a_3=Expression(s4a3, ""Digital subscriber line transmission, voice over Internet protocol and other digital transmission technology"")
+ex_a.includes.append(ex_a_3)
+s4b = Section(""(b)"")
+s4.add_subsection(s4b)
+ex_b=Expression(s4b, ""Data transmission over a secure, private communication channel for:"")
+intro_exp.includes.append(ex_b)
+s4b1 = Section(""(1)"")
+s4b.add_subsection(s4b1)
+ex_b_1=Expression(s4b1, ""Approval or processing of negotiable instruments, electronic fund transfers or similar payment methods"")
+ex_b.includes.append(ex_b_1)
+s4b2 = Section(""(2)"")
+s4b.add_subsection(s4b2)
+ex_b_2=Expression(s4b2, ""Issuance of reports regarding account closures due to fraud, substantial overdrafts, abuse of automatic teller machines or related information regarding a customer"")
+ex_b.includes.append(ex_b_2)","['#exemption', '#continuation']"
+"NRS 603A.215  Security measures for data collector that accepts payment card; use of encryption; liability for damages; applicability.;5.
+As used in this section:
+(a) ""Data storage device"" means any device that stores information or data from any electronic or optical medium, including, but not limited to, computers, cellular telephones, magnetic tape, electronic computer drives and optical computer drives, and the medium itself.
+(b) ""Encryption"" means the protection of data in electronic or optical form, in storage or in transit, using:
+(1) An encryption technology that has been adopted by an established standards setting body, including, but not limited to, the Federal Information Processing Standards issued by the National Institute of Standards and Technology, which renders such data indecipherable in the absence of associated cryptographic keys necessary to enable decryption of such data;
+(2) Appropriate management and safeguards of cryptographic keys to protect the integrity of the encryption using guidelines promulgated by an established standards setting body, including, but not limited to, the National Institute of Standards and Technology; and
+(3) Any other technology or method identified by the Office of Information Security of the Office of the Chief Information Officer within the Office of the Governor in regulations adopted pursuant to NRS 603A.217","s = Section(sectionNumber=""NRS 603A.215"", sectionTitle=""Security measures for data collector that accepts payment card; use of encryption; liability for damages; applicability"")
+s5 = Section(""5."")
+s.add_subsection(s5)
+i=Information(s5, Expression(s5, ""As used in this section:""))
+s5a = Section(""(a)"")
+s5.add_subsection(s5a)
+d1 = Definition(s5a, Expression(s5a, ""Data storage device""))
+d1.meaning.append(Expression(s5a, ""any device that stores information or data from any electronic or optical medium, including, but not limited to, computers, cellular telephones, magnetic tape, electronic computer drives and optical computer drives, and the medium itself""))
+s5b = Section(""(b)"")
+s5.add_subsection(s5b)
+d2 = Definition(s5b, Expression(s5b, ""Encryption""))
+e=Expression(s5b, ""the protection of data in electronic or optical form, in storage or in transit, using:"")
+d2.meaning.append(e)
+s5b1 = Section(""(1)"")
+s5b.add_subsection(s5b1)
+e1=Expression(s5b1, ""An encryption technology that has been adopted by an established standards setting body, including, but not limited to, the Federal Information Processing Standards issued by the National Institute of Standards and Technology, which renders such data indecipherable in the absence of associated cryptographic keys necessary to enable decryption of such data"")
+e.includes.append(e1)
+s5b2 = Section(""(2)"")
+s5b.add_subsection(s5b2)
+e2=Expression(s5b2, ""Appropriate management and safeguards of cryptographic keys to protect the integrity of the encryption using guidelines promulgated by an established standards setting body, including, but not limited to, the National Institute of Standards and Technology"")
+e.includes.append(e2)
+s5b3 = Section(""(3)"")
+s5b.add_subsection(s5b3)
+e3=Expression(s5b3, ""Any other technology or method identified by the Office of Information Security of the Office of the Chief Information Officer within the Office of the Governor in regulations adopted pursuant to NRS 603A.217"")
+e.includes.append(e3)
+d2.add_follows(Expression(s5b3, ""NRS 603A.217""))","['#definition', '#continuation', '#information']"
+"NRS 603A.215  Security measures for data collector that accepts payment card; use of encryption; liability for damages; applicability.;5.
+As used in this section:
+(c) ""Facsimile"" means an electronic transmission between two dedicated fax machines using Group 3 or Group 4 digital formats that conform to the International Telecommunications Union T.4 or T.38 standards or computer modems that conform to the International Telecommunications Union T.31 or T.32 standards. The term does not include onward transmission to a third device after protocol conversion, including, but not limited to, any data storage device.
+(d) ""Multifunctional device"" means a machine that incorporates the functionality of devices, which may include, without limitation, a printer, copier, scanner, facsimile machine or electronic mail terminal, to provide for the centralized management, distribution or production of documents.
+(e) ""Payment card"" has the meaning ascribed to it in NRS 205.","s = Section(sectionNumber=""NRS 603A.215"", sectionTitle=""Security measures for data collector that accepts payment card; use of encryption; liability for damages; applicability"")
+s5 = Section(""5."")
+s.add_subsection(s5)
+I=Information(s5, Expression(s5, ""As used in this section:""))
+s5c = Section(""(c)"")
+s5.add_subsection(s5c) 
+d3 = Definition(s5c, Expression(s5c, ""Facsimile""))
+d3.meaning.append(Expression(s5c, ""an electronic transmission between two dedicated fax machines using Group 3 or Group 4 digital formats that conform to the International Telecommunications Union T.4 or T.38 standards or computer modems that conform to the International Telecommunications Union T.31 or T.32 standards""))
+d3.exclusions.append(Expression(s5c, ""onward transmission to a third device after protocol conversion, including, but not limited to, any data storage device""))
+s5d = Section(""(d)"")
+s5.add_subsection(s5d)
+d4 = Definition(s5d, Expression(s5d, ""Multifunctional device""))
+d4.meaning.append(Expression(s5d, ""a machine that incorporates the functionality of devices, which may include, without limitation, a printer, copier, scanner, facsimile machine or electronic mail terminal, to provide for the centralized management, distribution or production of documents.""))
+s5e = Section(""(e)"")
+s5.add_subsection(s5e)
+d5 = Definition(s5e, Expression(s5e, ""Payment card""))
+d5.meaning.append(Expression(s5e, ""meaning ascribed to it in NRS 205.602""))
+d5.add_is_refined_by(Expression(s5e, ""NRS 205.602""))","['#definition', '#exclusion', '#continuation', '#refined_by']"
+"NRS 603A.215  Security measures for data collector that accepts payment card; use of encryption; liability for damages; applicability.;5.
+As used in this section:
+(f) ""Telecommunication provider"" has the meaning ascribed to it in NRS 704.027.","s = Section(sectionNumber=""NRS 603A.215"", sectionTitle=""Security measures for data collector that accepts payment card; use of encryption; liability for damages; applicability"")
+s5 = Section(""5."")
+s.add_subsection(s5)
+I=Information(s5, Expression(s5, ""As used in this section:""))
+s5f = Section(""(f)"")
+s5.add_subsection(s5f) 
+d6 = Definition(s5f, Expression(s5f, ""Telecommunication provider""))
+d6.meaning.append(Expression(s5f, ""meaning ascribed to it in NRS 704.027.""))
+d6.add_is_refined_by(Expression(s5f, ""NRS 704.027""))","['#definition', '#continuation', '#refined_by']"
+"NRS 603A.217  Alternative methods of and technologies for encryption: Adoption of regulations.;None
+Upon receipt of a well-founded petition, the Office of the Chief Information Officer within the Office of the Governor may, pursuant to chapter 233B of NRS, adopt regulations which identify alternative methods or technologies which may be used to encrypt data pursuant to NRS 603A.215.","s = Section(sectionNumber=""NRS 603A.217"", sectionTitle=""Alternative methods of and technologies for encryption: Adoption of regulations"")
+r = Rule(s, Expression(s, ""the Office of the Chief Information Officer within the Office of the Governor""))
+r.rule_type = Rule.PERMISSION
+r.description = Expression(s, ""may adopt regulations which identify alternative methods or technologies which may be used to encrypt data pursuant to NRS 603A.215"")
+r.conditions.append(Expression(s, ""Upon receipt of a well-founded petition""))
+r.add_follows(Expression(s, ""chapter 233B of NRS""))
+r.add_is_followed_by(Expression(s, ""NRS 603A.215""))","['#permission', '#condition', '#followed_by']"
+"NRS 603A.220  Disclosure of breach of security of system data; methods of disclosure; applicability.;1.
+Except as otherwise provided in subsection 7, a data collector that owns or licenses computerized data which includes personal information shall disclose any breach of the security of the system data following discovery or notification of the breach to any resident of this State whose unencrypted personal information was, or is reasonably believed to have been, acquired by an unauthorized person. The disclosure must be made in the most expedient time possible and without unreasonable delay, consistent with the legitimate needs of law enforcement, as provided in subsection 3, or any measures necessary to determine the scope of the breach and restore the reasonable integrity of the system data.","s = Section(sectionNumber=""NRS 603A.220"", sectionTitle=""Disclosure of breach of security of system data; methods of disclosure"")
+s1 = Section(""1."")
+s.add_subsection(s1)
+r1 = Rule(s1, Expression(s1, ""data collector that owns or licenses computerized data which includes personal information""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(s1, ""shall disclose any breach of the security of the system data following discovery or notification of the breach to any resident of this State whose unencrypted personal information was, or is reasonably believed to have been, acquired by an unauthorized person"")
+r1.add_exception(Expression(s, ""subsection 7""))
+r2 = Rule(s1, Expression(s1, ""The disclosure""))
+r2.rule_type = Rule.OBLIGATION
+r2.description = Expression(s, ""must be made in the most expedient time possible and without unreasonable delay, consistent with the legitimate needs of law enforcement, as provided in subsection 3, or any measures necessary to determine the scope of the breach and restore the reasonable integrity of the system data."")
+r2.add_refines(r1)
+r2.add_follows(Expression(s, ""subsection 3""))
+r2.add_exception(Expression(s, ""subsection 7""))","['#obligation', '#follows', '#exception', '#refines']"
+"NRS 603A.220  Disclosure of breach of security of system data; methods of disclosure; applicability.;2.
+Any data collector that maintains computerized data which includes personal information that the data collector does not own shall notify the owner or licensee of the information of any breach of the security of the system data immediately following discovery if the personal information was, or is reasonably believed to have been, acquired by an unauthorized person.","s = Section(sectionNumber=""NRS 603A.220"", sectionTitle=""Disclosure of breach of security of system data; methods of disclosure"")
+s2 = Section(""2."")
+s.add_subsection(s2)
+r2 = Rule(s2, Expression(s2, ""Any data collector that maintains computerized data which includes personal information that the data collector does not own""))
+r2.rule_type = Rule.OBLIGATION
+r2.description = Expression(s2, ""shall notify the owner or licensee of the information of any breach of the security of the system data immediately following discovery"")
+r2.conditions.append(Expression(s2, ""the personal information was, or is reasonably believed to have been, acquired by an unauthorized person""))","['#obligation', '#condition']"
+"NRS 603A.220  Disclosure of breach of security of system data; methods of disclosure; applicability.;3.
+The notification required by this section may be delayed if a law enforcement agency determines that the notification will impede a criminal investigation. The notification required by this section must be made after the law enforcement agency determines that the notification will not compromise the investigation.","s = Section(sectionNumber=""NRS 603A.220"", sectionTitle=""Disclosure of breach of security of system data; methods of disclosure"")
+s3 = Section(""3."")
+s.add_subsection(s3)
+r3 = Rule(s3, Expression(s3, ""The notification required by this section""))
+r3.rule_type = Rule.PERMISSION
+r3.description = Expression(s3, ""may be delayed"")
+r3.add_is_exception_to(Expression(s3, ""this section""))
+r3.conditions.append(Expression(s3, ""a law enforcement agency determines that the notification will impede a criminal investigation""))
+
+r = Rule(s3, Expression(s3, ""The notification""))
+r.rule_type = Rule.OBLIGATION
+r.description = Expression(s, ""must be made"")
+r.conditions.append(Expression(s, ""after the law enforcement agency determines that the notification will not compromise the investigation""))
+r.add_refines(r3)","['#permission', '#condition', '#refines', '#exception_to']"
+"NRS 603A.220  Disclosure of breach of security of system data; methods of disclosure; applicability.;4.
+For purposes of this section, except as otherwise provided in subsection 5, the notification required by this section may be provided by one of the following methods:
+(a) Written notification.
+(b) Electronic notification, if the notification provided is consistent with the provisions of the Electronic Signatures in Global and National Commerce Act, 15 U.S.C. §§ 7001 et seq.
+(c) Substitute notification, if the data collector demonstrates that the cost of providing notification would exceed $250,000, the affected class of subject persons to be notified exceeds 500,000 or the data collector does not have sufficient contact information. Substitute notification must consist of all the following:
+(1) Notification by electronic mail when the data collector has electronic mail addresses for the subject persons.
+(2) Conspicuous posting of the notification on the Internet website of the data collector, if the data collector maintains an Internet website.
+(3) Notification to major statewide media.","s = Section(sectionNumber=""NRS 603A.220"", sectionTitle=""Disclosure of breach of security of system data; methods of disclosure"")
+s4 = Section(""4."")
+s.add_subsection(s4)
+r=Rule(s4, Expression(s4, ""the notification required by this section""))
+r.rule_type=Rule.PERMISSION
+r.description=Expression(s4, ""may be provided by one of the following methods:"")
+r.add_exception(Expression(s4, ""as otherwise provided in subsection 5""))
+s4a = Section(""(a)"")
+s4.add_subsection(s4a)
+r.description.includes.append(Expression(s4a, ""Written notification.""))
+s4b = Section(""(b)"")
+s4.add_subsection(s4b)
+r.description.includes.append(Expression(s4b, ""Electronic notification, if the notification provided is consistent with the provisions of the Electronic Signatures in Global and National Commerce Act, 15 U.S.C. §§ 7001 et seq.""))
+r.add_follows(Expression(s4b, ""the Electronic Signatures in Global and National Commerce Act, 15 U.S.C. §§ 7001 et seq.""))
+s4c = Section(""(c)"")
+s4.add_subsection(s4c)
+e=Expression(s4c, ""Substitute notification, if the data collector demonstrates that the cost of providing notification would exceed $250,000, the affected class of subject persons to be notified exceeds 500,000 or the data collector does not have sufficient contact information. Substitute notification must consist of all the following:"")
+r.description.includes.append(e)
+s4c1 = Section(""(1)"")
+s4c.add_subsection(s4c1)
+e.includes.append(Expression(s4c1, ""Notification by electronic mail when the data collector has electronic mail addresses for the subject persons.""))
+s4c2 = Section(""(2)"")
+s4c.add_subsection(s4c2)
+e.includes.append(Expression(s4c2, ""Conspicuous posting of the notification on the Internet website of the data collector, if the data collector maintains an Internet website.""))
+s4c3 = Section(""(3)"")
+s4c.add_subsection(s4c3)
+e.includes.append(Expression(s4c3, ""Notification to major statewide media.""))","['#permission', '#continuation', '#exception', '#follows']"
+"NRS 603A.220  Disclosure of breach of security of system data; methods of disclosure; applicability.;5.
+A data collector which:
+(a) Maintains its own notification policies and procedures as part of an information security policy for the treatment of personal information that is otherwise consistent with the timing requirements of this section shall be deemed to be in compliance with the notification requirements of this section if the data collector notifies subject persons in accordance with its policies and procedures in the event of a breach of the security of the system data.
+(b) Is subject to and complies with the privacy and security provisions of the Gramm-Leach-Bliley Act, 15 U.S.C. §§ 6801 et seq., shall be deemed to be in compliance with the notification requirements of this section.","s = Section(sectionNumber=""NRS 603A.220"", sectionTitle=""Disclosure of breach of security of system data; methods of disclosure"")
+s5 = Section(""5."")
+s.add_subsection(s5)
+s5a= Section(""(a)"")
+s5.add_subsection(s5a)
+r1=Rule(s5a, Expression(s5a, ""A data collector""))
+r1.conditions.append(Expression(s5a, ""Maintains its own notification policies and procedures as part of an information security policy for the treatment of personal information that is otherwise consistent with the timing requirements of this section""))
+r1.rule_type=Rule.PERMISSION
+r1.description=Expression(s5a, ""shall be deemed to be in compliance with the notification requirements of this section"")
+r1.conditions.append(Expression(s5a, "" the data collector notifies subject persons in accordance with its policies and procedures in the event of a breach of the security of the system data""))
+s5b= Section(""(b)"")
+s5.add_subsection(s5b)
+r2=Rule(s5b, Expression(s5b, ""A data collector""))
+r2.conditions.append(Expression(s5b, ""Is subject to and complies with the privacy and security provisions of the Gramm-Leach-Bliley Act, 15 U.S.C. §§ 6801 et seq.""))
+r2.add_follows(Expression(s5b, ""Gramm-Leach-Bliley Act, 15 U.S.C. §§ 6801 et seq.""))
+r2.rule_type=Rule.PERMISSION
+r2.description = Expression(s5b, ""shall be deemed to be in compliance with the notification requirements of this section"")","['#permission', '#continuation', '#condition', '#follows']"
+"NRS 603A.220  Disclosure of breach of security of system data; methods of disclosure; applicability.;6.
+If a data collector determines that notification is required to be given pursuant to the provisions of this section to more than 1,000 persons at any one time, the data collector shall also notify, without unreasonable delay, any consumer reporting agency that compiles and maintains files on consumers on a nationwide basis, as that term is defined in 15 U.S.C. § 1681a(p), of the time the notification is distributed and the content of the notification.","s = Section(sectionNumber=""NRS 603A.220"", sectionTitle=""Disclosure of breach of security of system data; methods of disclosure"")
+s6 = Section(""6."")
+s.add_subsection(s6)
+r=Rule(s6, Expression(s6, ""the data collector""))
+r.conditions.append(Expression(s6, ""data collector determines that notification is required to be given pursuant to the provisions of this section to more than 1,000 persons at any one time""))
+r.rule_type=Rule.OBLIGATION
+r.description = Expression(s6, ""shall notify, without unreasonable delay, any consumer reporting agency that compiles and maintains files on consumers on a nationwide basis, as that term is defined in 15 U.S.C. § 1681a(p), of the time the notification is distributed and the content of the notification"")
+r.add_is_refined_by(Expression(s6, ""15 U.S.C. § 1681a(p)""))","['#obligation', '#condition', '#refined_by']"
+"NRS 603A.220  Disclosure of breach of security of system data; methods of disclosure; applicability.;7.
+The provisions of this section do not apply to a person licensed pursuant to chapter 675 of NRS.","s = Section(sectionNumber=""NRS 603A.220"", sectionTitle=""Disclosure of breach of security of system data; methods of disclosure"")
+s7 = Section(""7."")
+s.add_subsection(s7)
+ex=Expression(s7, ""The provisions of this section do not apply to a person licensed pursuant to chapter 675 of NRS."")
+e=Exemption(s7, ex)
+e.add_is_followed_by(Expression(s7, ""chapter 675 of NRS""))","['#exemption', '#followed_by']"
+"NRS 603A.260  Violation constitutes deceptive trade practice.;None
+A violation of the provisions of NRS 603A.010 to 603A.290, inclusive, constitutes a deceptive trade practice for the purposes of NRS 598.0903 to 598.0999, inclusive.","s = Section(sectionNumber=""NRS 603A.260"", sectionTitle=""Violation constitutes deceptive trade practice"")
+e=Expression(s, ""A violation of the provisions of NRS 603A.010 to 603A.290, inclusive, constitutes a deceptive trade practice for the purposes of NRS 598.0903 to 598.0999, inclusive."")
+I=Information(s, e)
+i.add_is_followed_by(Expression(s, ""NRS 598.0903 to 598.0999""))","['#information', '#followed_by']"
+"NRS 603A.270  Civil description.;None
+A data collector that provides the notification required pursuant to NRS 603A.220 may commence an description for damages against a person that unlawfully obtained or benefited from personal information obtained from records maintained by the data collector. A data collector that prevails in such an description may be awarded damages which may include, without limitation, the reasonable costs of notification, reasonable attorney's fees and costs and punitive damages when appropriate. The costs of notification include, without limitation, labor, materials, postage and any other costs reasonably related to providing the notification.","s = Section(sectionNumber=""NRS 603A.270"", sectionTitle=""Civil description"")
+r1=Rule(s, Expression(s, ""A data collector that provides the notification required pursuant to NRS 603A.220""))
+r1.rule_type=Rule.PERMISSION
+r1.description=Expression(s, ""may commence an description for damages against a person that unlawfully obtained or benefited from personal information obtained from records maintained by the data collector"")
+r1.add_follows(Expression(s, ""603A.220""))
+r2=Rule(s, Expression(s, ""A data collector that prevails in such an description""))
+r2.rule_type=Rule.PERMISSION
+r2.description=Expression(s, ""may be awarded damages which may include, without limitation, the reasonable costs of notification, reasonable attorney's fees and costs and punitive damages when appropriate."")
+r2.description.includes.append(Expression(s, ""The costs of notification include, without limitation, labor, materials, postage and any other costs reasonably related to providing the notification.""))
+r2.add_refines(r1)","['#permission', '#refines', '#follows']"
+"NRS 603A.280  Restitution.;None
+In addition to any other penalty provided by law for the breach of the security of the system data maintained by a data collector, the court may order a person who is convicted of unlawfully obtaining or benefiting from personal information obtained as a result of such breach to pay restitution to the data collector for the reasonable costs incurred by the data collector in providing the notification required pursuant to NRS 603A.220, including, without limitation, labor, materials, postage and any other costs reasonably related to providing such notification.","s = Section(sectionNumber=""NRS 603A.280"", sectionTitle=""Restitution"")
+r1=Rule(s, Expression(s, ""the court""))
+r1.rule_type=Rule.PERMISSION
+r1.description=Expression(s, ""may order a person who is convicted of unlawfully obtaining or benefiting from personal information obtained as a result of such breach to pay restitution to the data collector for the reasonable costs incurred by the data collector in providing the notification required pursuant to NRS 603A.220, including, without limitation, labor, materials, postage and any other costs reasonably related to providing such notification."")
+r1.description.includes.append(Expression(s, ""In addition to any other penalty provided by law for the breach of the security of the system data maintained by a data collector""))
+r1.add_follows(Expression(s, ""NRS 603A.020""))","['#permission', '#follows']"
+"NRS 603A.290  Injunction.;None
+If the Attorney General or a district attorney of any county has reason to believe that any person is violating, proposes to violate or has violated the provisions of NRS 603A.010 to 603A.290, inclusive, the Attorney General or district attorney may bring an description against that person to obtain a temporary or permanent injunction against the violation.","s = Section(sectionNumber=""NRS 603A.290"", sectionTitle=""Injunction"")
+r1=Rule(s, Expression(s, ""the Attorney General or district attorney""))
+r1.conditions.append(Expression(s, ""the Attorney General or a district attorney of any county has reason to believe that any person is violating, proposes to violate or has violated the provisions of NRS 603A.010 to 603A.290, inclusive""))
+r1.rule_type=Rule.PERMISSION
+r1.description=Expression(s, ""bring an description against that person to obtain a temporary or permanent injunction against the violation."")","['#permission', '#condition']"

@@ -1,0 +1,382 @@
+text,code,tags
+"(a) A person or business that conducts business in California, and that owns or licenses computerized data that includes personal information, shall disclose a breach of the security of the system following discovery or notification of the breach in the security of the data to a resident of California (1) whose unencrypted personal information was, or is reasonably believed to have been, acquired by an unauthorized person, or, (2) whose encrypted personal information was, or is reasonably believed to have been, acquired by an unauthorized person and the encryption key or security credential was, or is reasonably believed to have been, acquired by an unauthorized person and the person or business that owns or licenses the encrypted information has a reasonable belief that the encryption key or security credential could render that personal information readable or usable. The disclosure shall be made in the most expedient time possible and without unreasonable delay, consistent with the legitimate needs of law enforcement, as provided in subdivision (c), or any measures necessary to determine the scope of the breach and restore the reasonable integrity of the data system.","s = Section(sectionNumber=""(a)"")
+r1 = Rule(s, Expression(s, ""A person or business that conducts business in California, and that owns or licenses computerized data that includes personal information""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(s, ""shall disclose a breach of the security of the system following discovery or notification of the breach in the security of the data to a resident of California"")
+r1.conditions.append(Expression(s, ""(1) whose unencrypted personal information was, or is reasonably believed to have been, acquired by an unauthorized person""))
+r1.conditions.append(Expression(s, ""(2) whose encrypted personal information was, or is reasonably believed to have been, acquired by an unauthorized person and the encryption key or security credential was, or is reasonably believed to have been, acquired by an unauthorized person and the person or business that owns or licenses the encrypted information has a reasonable belief that the encryption key or security credential could render that personal information readable or usable""))
+
+r2 = Rule(s, Expression(s, ""The disclosure""))
+r2.rule_type = Rule.OBLIGATION
+r2.description = Expression(s, ""shall be made in the most expedient time possible and without unreasonable delay, consistent with the legitimate needs of law enforcement, as provided in subdivision (c), or any measures necessary to determine the scope of the breach and restore the reasonable integrity of the data system"")
+r2.add_refines(r1)
+r2.add_follows(Expression(s, ""subdivision (c)""))","{'#obligation', '#follows', '#condition', '#refines'}"
+"(b) A person or business that maintains computerized data that includes personal information that the person or business does not own shall notify the owner or licensee of the information of the breach of the security of the data immediately following discovery, if the personal information was, or is reasonably believed to have been, acquired by an unauthorized person.
+","s = Section(sectionNumber=""(b)"")
+
+r1 = Rule(s, Expression(s, ""A person or business that maintains computerized data that includes personal information that the person or business does not own""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(s, ""shall notify the owner or licensee of the information of the breach of the security of the data immediately following discovery"")
+r1.conditions.append(Expression(s, ""if the personal information was, or is reasonably believed to have been, acquired by an unauthorized person""))","{'#obligation', '#condition'}"
+(c) The notification required by this section may be delayed if a law enforcement agency determines that the notification will impede a criminal investigation. The notification required by this section shall be made promptly after the law enforcement agency determines that it will not compromise the investigation.,"s = Section(sectionNumber=""(c)"", sectionTitle="""")
+r1 = Rule(s, Expression(s, ""the notification required by this section""))
+r1.rule_type = Rule.PERMISSION
+r1.description = Expression(s, ""may be delayed"")
+r1.conditions.append(Expression(s, ""if a law enforcement agency determines that the notification will impede a criminal investigation""))
+
+r2 = Rule(s, Expression(s, ""the notification required by this section""))
+r2.rule_type = Rule.OBLIGATION
+r2.description = Expression(s, ""shall be made promptly after the law enforcement agency determines that it will not compromise the investigation"")
+r2.add_follows(r1)","{'#permission', '#obligation', '#condition', '#refines'}"
+"(d) A person or business that is required to issue a security breach notification pursuant to this section shall meet all of the following requirements:
+(1) The security breach notification shall be written in plain language, shall be titled ""Notice of Data Breach,"" and shall present the information described in paragraph (2) under the following headings: ""What Happened,"" ""What Information Was Involved,"" ""What We Are Doing,"" ""What You Can Do,"" and ""For More Information."" Additional information may be provided as a supplement to the notice.
+(A) The format of the notice shall be designed to call attention to the nature and significance of the information it contains.
+(B) The title and headings in the notice shall be clearly and conspicuously displayed.
+(C) The text of the notice and any other notice provided pursuant to this section shall be no smaller than 10-point type.
+(D) For a written notice described in paragraph (1) of subdivision (j), use of the model security breach notification form prescribed below or use of the headings described in this paragraph with the information described in paragraph (2), written in plain language, shall be deemed to be in compliance with this subdivision.
+(E) For an electronic notice described in paragraph (2) of subdivision (j), use of the headings described in this paragraph with the information described in paragraph (2), written in plain language, shall be deemed to be in compliance with this subdivision.","s = Section(sectionNumber=""(d)"")
+
+# Statement for the overarching requirement
+r = Rule(s, Expression(s, ""A person or business that is required to issue a security breach notification""))
+r.rule_type = Rule.OBLIGATION
+r.description = Expression(s, ""shall meet all of the following requirements:"")
+
+# Subsection (1) for detailed requirements
+s1 = Section(sectionNumber=""(1)"")
+s.add_subsection(s1)
+
+# Obligation: Plain language and structured information
+r1 = Rule(s1, Expression(s1, ""security breach notification""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(s1, ""shall be written in plain language, shall be titled 'Notice of Data Breach,' and shall present the information described in paragraph (2) under the following headings: 'What Happened,' 'What Information Was Involved,' 'What We Are Doing,' 'What You Can Do,' and 'For More Information.' Additional information may be provided as a supplement to the notice."")
+r.add_is_refined_by(r1)
+
+# Subsections under (1) for specific format requirements
+s1a = Section(sectionNumber=""(A)"")
+s1.add_subsection(s1a)
+r1.description.includes.append(Expression(s1a, ""The format of the notice shall be designed to call attention to the nature and significance of the information it contains.""))
+
+s1b = Section(sectionNumber=""(B)"")
+s1.add_subsection(s1b)
+r1.description.includes.append(Expression(s1b, ""The title and headings in the notice shall be clearly and conspicuously displayed.""))
+
+
+s1c = Section(sectionNumber=""(C)"")
+s1.add_subsection(s1c)
+r1.description.includes.append(Expression(s1c, ""The text of the notice and any other notice provided pursuant to this section shall be no smaller than 10-point type.""))
+
+s1d = Section(sectionNumber=""(D)"")
+s1.add_subsection(s1d)
+r2 = Rule(s1d, Expression(s1d, ""For a written notice described in paragraph (1) of subdivision (j)""))
+r2.rule_type = Rule.PERMISSION
+r2.description = Expression(s1d, ""use of the model security breach notification form prescribed below or use of the headings described in this paragraph with the information described in paragraph (2), written in plain language, shall be deemed to be in compliance with this subdivision."")
+r2.add_is_followed_by(Expression(s1d, ""paragraph (1) of subdivision (j)""))
+r2.add_is_refined_by(Expression(s1d, ""paragraph (2)""))
+r2.add_is_refined_by(r1)
+
+s1e = Section(sectionNumber=""(E)"")
+s1.add_subsection(s1e)
+r3 = Rule(s1e, Expression(s1e, ""For an electronic notice described in paragraph (2) of subdivision (j)""))
+r3.rule_type = Rule.PERMISSION
+r3.description = Expression(s1e, ""use of the headings described in this paragraph with the information described in paragraph (2), written in plain language, shall be deemed to be in compliance with this subdivision."") 
+r3.add_is_followed_by(Expression(s1d, ""paragraph (2) of subdivision (j)""))
+r3.add_is_refined_by(Expression(s1d, ""paragraph (2)""))
+r2.add_is_refined_by(r1)","{'#continuation', '#obligation', '#followed_by', '#refines', '#refined_by', '#permission'}"
+"(2) The security breach notification described in paragraph (1) shall include, at a minimum, the following information:
+(A) The name and contact information of the reporting person or business subject to this section.
+(B) A list of the types of personal information that were or are reasonably believed to have been the subject of a breach.
+(C) If the information is possible to determine at the time the notice is provided, then any of the following: (i) the date of the breach, (ii) the estimated date of the breach, or (iii) the date range within which the breach occurred. The notification shall also include the date of the notice.
+(D) Whether notification was delayed as a result of a law enforcement investigation, if that information is possible to determine at the time the notice is provided.
+(E) A general description of the breach incident, if that information is possible to determine at the time the notice is provided.
+(F) The toll-free telephone numbers and addresses of the major credit reporting agencies if the breach exposed a social security number or a driver's license or California identification card number.
+(G) If the person or business providing the notification was the source of the breach, an offer to provide appropriate identity theft prevention and mitigation services, if any, shall be provided at no cost to the affected person for not less than 12 months along with all information necessary to take advantage of the offer to any person whose information was or may have been breached if the breach exposed or may have exposed personal information defined in subparagraphs (A) and (B) of paragraph (1) of subdivision (h).","s2 = Section(""(2)"")
+r1 = Rule(s2, Expression(s2, ""The security breach notification described in paragraph (1)""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(s2, ""shall include, at a minimum, the following information:"")
+
+s2A = Section(""(A)"")
+s2.add_subsection(s2A)
+e1 = Expression(s2A, ""The name and contact information of the reporting person or business subject to this section"")
+r1.description.includes.append(e1)
+
+s2B = Section(""(B)"")
+s2.add_subsection(s2B)
+e2 = Expression(s2B, ""A list of the types of personal information that were or are reasonably believed to have been the subject of a breach"")
+r1.description.includes.append(e2)
+
+s2C = Section(""(C)"")
+s2.add_subsection(s2C)
+e3_condition = Expression(s2C, ""the information is possible to determine at the time the notice is provided, then any of the following: "")
+r1.description.includes.append(e3_condition)
+s2Ci = Section(""(i)"")
+s2C.add_subsection(s2Ci)
+e3_condition.includes.append(Expression(s2Ci, ""the date of the breach""))
+s2Cii = Section(""(ii)"")
+s2C.add_subsection(s2Cii)
+e3_condition.includes.append(Expression(s2Cii, ""the estimated date of the breach""))
+s2Ciii = Section(""(iii)"")
+s2C.add_subsection(s2Ciii)
+e3_condition.includes.append(Expression(s2Ciii, ""the date range within which the breach occurred""))
+
+s2D = Section(""(D)"")
+s2.add_subsection(s2D)
+e4_condition = Expression(s2D, ""information is possible to determine at the time the notice is provided"")
+e4 = Expression(s2D, ""Whether notification was delayed as a result of a law enforcement investigation"")
+r1.description.includes.append(e4)
+e4.includes.append(e4_condition)
+
+s2E = Section(""(E)"")
+s2.add_subsection(s2E)
+e5_condition = Expression(s2E, ""information is possible to determine at the time the notice is provided"")
+e5 = Expression(s2E, ""A general description of the breach incident"")
+r1.description.includes.append(e5)
+e5.includes.append(e5_condition)
+
+s2F = Section(""(F)"")
+s2.add_subsection(s2F)
+e6 = Expression(s2F, ""The toll-free telephone numbers and addresses of the major credit reporting agencies if the breach exposed a social security number or a driver's license or California identification card number"")
+r1.description.includes.append(e6)
+
+s2G = Section(""(G)"")
+s2.add_subsection(s2G)
+r2 = Rule(s2G, Expression(s2G, ""an offer to provide appropriate identity theft prevention and mitigation services, if any""))
+r2.rule_type = Rule.OBLIGATION
+r2.description = Expression(s2G, ""shall be provided at no cost to the affected person for not less than 12 months along with all information necessary to take advantage of the offer to any person whose information was or may have been breached if the breach exposed or may have exposed personal information defined in subparagraphs (A) and (B) of paragraph (1) of subdivision (h)"")
+r2.conditions.append(Expression(s2G, ""If the person or business providing the notification was the source of the breach""))
+r2.add_is_refined_by(Expression(s2G, ""defined in subparagraphs (A) and (B) of paragraph (1) of subdivision (h)""))
+r2.add_refines(r1)","{'#continuation', '#obligation', '#condition', ‘#refines', '#refined_by'}"
+"(3) At the discretion of the person or business, the security breach notification may also include any of the following:
+(A) Information about what the person or business has done to protect individuals whose information has been breached.
+(B) Advice on steps that people whose information has been breached may take to protect themselves.
+(C) In breaches involving biometric data, instructions on how to notify other entities that used the same type of biometric data as an authenticator to no longer rely on data for authentication purposes.","s3 = Section(""(3)"")
+r = Rule(s3, Expression(s3, ""the security breach notification""))
+r.rule_type = Rule.PERMISSION
+r.description = Expression(s3, ""may also include any of the following:"")
+r.conditions.append(Expression(s3, ""At the discretion of the person or business""))
+
+s3a = Section(""(A)"")
+s3.add_subsection(s3a)
+r.description.includes.append(Expression(s3a, ""Information about what the person or business has done to protect individuals whose information has been breached""))
+
+s3b = Section(""(B)"")
+s3.add_subsection(s3b)
+r.description.includes.append(Expression(s3b, ""Advice on steps that people whose information has been breached may take to protect themselves""))
+
+s3c = Section(""(C)"")
+s3.add_subsection(s3c)
+r.description.includes.append(Expression(s3c, ""In breaches involving biometric data, instructions on how to notify other entities that used the same type of biometric data as an authenticator to no longer rely on data for authentication purposes""))","{'#continuation', '#permission'}"
+"(e) A covered entity under the federal Health Insurance Portability and Accountability Act of 1996 (42 U.S.C. Sec. 1320d et seq.) will be deemed to have complied with the notice requirements in subdivision (d) if it has complied completely with Section 13402(f) of the federal Health Information Technology for Economic and Clinical Health Act (Public Law 111-5). However, nothing in this subdivision shall be construed to exempt a covered entity from any other provision of this section.","s = Section(sectionNumber=""(e)"")
+r1 = Rule(s, Expression(s, ""A covered entity under the federal Health Insurance Portability and Accountability Act of 1996 (42 U.S.C. Sec. 1320d et seq.)""))
+r1.rule_type = Rule.PERMISSION
+r1.description = Expression(s, ""will be deemed to have complied with the notice requirements in subdivision (d)"")
+r1.conditions.append(Expression(s, ""it has complied completely with Section 13402(f) of the federal Health Information Technology for Economic and Clinical Health Act (Public Law 111-5)""))
+r1.add_refines(Expression(s, ""subdivision (d)""))
+r1.add_follows(Expression(s, ""Section 13402(f) of the federal Health Information Technology for Economic and Clinical Health Act (Public Law 111-5)""))
+r1.add_follows(Expression(s, ""Health Insurance Portability and Accountability Act of 1996 (42 U.S.C. Sec. 1320d et seq.""))
+
+r2 = Rule(s, Expression(s, ""nothing in this subdivision""))
+r2.rule_type = Rule.PROHIBITION
+r2.description = Expression(s, ""shall be construed to exempt a covered entity from any other provision of this section"")
+r2.add_exception(r1)","{'#refines', '#prohibition', '#condition', '#permission', '#follows'}"
+"(f) A person or business that is required to issue a security breach notification pursuant to this section to more than 500 California residents as a result of a single breach of the security system shall electronically submit a single sample copy of that security breach notification, excluding any personally identifiable information, to the Attorney General. A single sample copy of a security breach notification shall not be deemed to be within Article 1 (commencing with Section 7923.600) of Chapter 1 of Part 5 of Division 10 of Title 1 of the Government Code.","s = Section(sectionNumber=""(f)"")
+
+r1 = Rule(s, Expression(s, ""A person or business""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(s, ""is required to issue a security breach notification pursuant to this section to more than 500 California residents as a result of a single breach of the security system"")
+r1.description.includes.append(Expression(s, ""shall electronically submit a single sample copy of that security breach notification, excluding any personally identifiable information, to the Attorney General""))
+
+r2=Rule(s, Expression(s, ""A single sample copy of a security breach notification""))
+r2.rule_type=Rule.PROHIBITION
+r2.description=Expression(s, ""shall not be deemed to be within Article 1 (commencing with Section 7923.600) of Chapter 1 of Part 5 of Division 10 of Title 1 of the Government Code"")
+r2.add_follows(Expression(s, ""Article 1 (commencing with Section 7923.600) of Chapter 1 of Part 5 of Division 10 of Title 1 of the Government Code""))
+r2.add_is_exception_to(r1)","{'#obligation', '#prohibition', '#refines'}"
+"(g) For purposes of this section, ""breach of the security of the system"" means unauthorized acquisition of computerized data that compromises the security, confidentiality, or integrity of personal information maintained by the person or business. Good faith acquisition of personal information by an employee or agent of the person or business for the purposes of the person or business is not a breach of the security of the system, provided that the personal information is not used or subject to further unauthorized disclosure.
+","s = Section(sectionNumber=""(g)"")
+
+d = Definition(s, defined_term=Expression(s, ""breach of the security of the system""))
+
+d.meaning.append(Expression(s, ""unauthorized acquisition of computerized data that compromises the security, confidentiality, or integrity of personal information maintained by the person or business""))
+
+d.exclusions.append(Expression(s, ""Good faith acquisition of personal information by an employee or agent of the person or business for the purposes of the person or business is not a breach of the security of the system, provided that the personal information is not used or subject to further unauthorized disclosure""))","{'#exclusion', '#definition'}"
+"(h) For purposes of this section, ""personal information"" means either of the following:
+(1) An individual's first name or first initial and last name in combination with any one or more of the following data elements, when either the name or the data elements are not encrypted:
+(A) Social security number.
+(B) Driver's license number, California identification card number, tax identification number, passport number, military identification number, or other unique identification number issued on a government document commonly used to verify the identity of a specific individual.
+(C) Account number or credit or debit card number, in combination with any required security code, access code, or password that would permit access to an individual's financial account.
+(D) Medical information.
+(E) Health insurance information.
+(F) Unique biometric data generated from measurements or technical analysis of human body characteristics, such as a fingerprint, retina, or iris image, used to authenticate a specific individual. Unique biometric data does not include a physical or digital photograph, unless used or stored for facial recognition purposes.
+(G) Information or data collected through the use or operation of an automated license plate recognition system, as defined in Section 1798.90.5.
+(H) Genetic data.
+(2) A username or email address, in combination with a password or security question and answer that would permit access to an online account.","sec_h = Section(sectionNumber=""(h)"", sectionTitle=""For purposes of this section, personal information means either of the following:"")
+d_personal_info_h = Definition(sec_h, Expression(sec_h, ""personal information""))
+
+s1_h = Section(""(1)"")
+sec_h.add_subsection(s1_h)
+e1_h = Expression(s1_h, ""An individual's first name or first initial and last name in combination with any one or more of the following data elements, when either the name or the data elements are not encrypted:"")
+d_personal_info_h.meaning.append(e1_h)
+
+s1A_h = Section(""(A)"")
+s1_h.add_subsection(s1A_h)
+d_personal_info_h.meaning[-1].includes.append(Expression(s1A_h, ""Social security number""))
+
+s1B_h = Section(""(B)"")
+s1_h.add_subsection(s1B_h)
+d_personal_info_h.meaning[-1].includes.append(Expression(s1B_h, ""Driver's license number, California identification card number, tax identification number, passport number, military identification number, or other unique identification number issued on a government document commonly used to verify the identity of a specific individual.""))
+
+s1C_h = Section(""(C)"")
+s1_h.add_subsection(s1C_h)
+d_personal_info_h.meaning[-1].includes.append(Expression(s1C_h, ""Account number or credit or debit card number, in combination with any required security code, access code, or password that would permit access to an individual's financial account""))
+
+s1D_h = Section(""(D)"")
+s1_h.add_subsection(s1D_h)
+d_personal_info_h.meaning[-1].includes.append(Expression(s1D_h, ""Medical information""))
+
+s1E_h = Section(""(E)"")
+s1_h.add_subsection(s1E_h)
+d_personal_info_h.meaning[-1].includes.append(Expression(s1E_h, ""Health insurance information""))
+
+s1F_h = Section(""(F)"")
+s1_h.add_subsection(s1F_h)
+d_personal_info_h.meaning[-1].includes.append(Expression(s1F_h, ""Unique biometric data generated from measurements or technical analysis of human body characteristics, such as a fingerprint, retina, or iris image, used to authenticate a specific individual. Unique biometric data does not include a physical or digital photograph, unless used or stored for facial recognition purposes.""))
+
+s1G_h = Section(""(G)"")
+s1_h.add_subsection(s1G_h)
+d_personal_info_h.meaning[-1].includes.append(Expression(s1G_h, ""Information or data collected through the use or operation of an automated license plate recognition system, as defined in Section 1798.90.5.""))
+d_personal_info_h.add_refines(Expression(s1G_h, ""Section 1798.90.5.""))
+
+s1H_h = Section(""(H)"")
+s1_h.add_subsection(s1H_h)
+d_personal_info_h.meaning[-1].includes.append(Expression(s1H_h, ""Genetic data""))
+
+s2_h = Section(""(2)"")
+sec_h.add_subsection(s2_h)
+e2_h = Expression(s2_h, ""A username or email address, in combination with a password or security question and answer that would permit access to an online account"")
+d_personal_info_h.meaning.append(e2_h)","{'#definition', '#continuation',  '#refines'}"
+"(i) (1) For purposes of this section, ""personal information"" does not include publicly available information that is lawfully made available to the general public from federal, state, or local government records.
+(2) For purposes of this section, ""medical information"" means any information regarding an individual's medical history, mental or physical condition, or medical treatment or diagnosis by a health care professional.
+(3) For purposes of this section, ""health insurance information"" means an individual's health insurance policy number or subscriber identification number, any unique identifier used by a health insurer to identify the individual, or any information in an individual's application and claims history, including any appeals records.
+(4) For purposes of this section, ""encrypted"" means rendered unusable, unreadable, or indecipherable to an unauthorized person through a security technology or methodology generally accepted in the field of information security.
+(5) ""Genetic data"" means any data, regardless of its format, that results from the analysis of a biological sample of an individual, or from another source enabling equivalent information to be obtained, and concerns genetic material. Genetic material includes, but is not limited to, deoxyribonucleic acids (DNA), ribonucleic acids (RNA), genes, chromosomes, alleles, genomes, alterations or modifications to DNA or RNA, single nucleotide polymorphisms (SNPs), uninterpreted data that results from analysis of the biological sample or other source, and any information extrapolated, derived, or inferred therefrom.","sec_i = Section(sectionNumber=""(i)"")
+
+s1 = Section(""(1)"")
+sec_i.add_subsection(s1)
+d_personal_info = Definition(s1, Expression(s1, ""personal information""))
+d_personal_info.exclusions.append(Expression(s1, ""publicly available information that is lawfully made available to the general public from federal, state, or local government records""))
+
+s2 = Section(""(2)"")
+sec_i.add_subsection(s2)
+d_medical_info = Definition(s2, Expression(s2, ""medical information""))
+d_medical_info.meaning.append(Expression(s2, ""any information regarding an individual's medical history, mental or physical condition, or medical treatment or diagnosis by a health care professional""))
+
+s3 = Section(""(3)"")
+sec_i.add_subsection(s3)
+d_health_insurance_info = Definition(s3, Expression(s3, ""health insurance information""))
+d_health_insurance_info.meaning.append(Expression(s3, ""an individual's health insurance policy number or subscriber identification number, any unique identifier used by a health insurer to identify the individual, or any information in an individual's application and claims history, including any appeals records""))
+
+s4 = Section(""(4)"")
+sec_i.add_subsection(s4)
+d_encrypted = Definition(s4, Expression(s4, ""encrypted""))
+d_encrypted.meaning.append(Expression(s4, ""rendered unusable, unreadable, or indecipherable to an unauthorized person through a security technology or methodology generally accepted in the field of information security""))
+
+s5 = Section(""(5)"")
+sec_i.add_subsection(s5)
+d_genetic_data = Definition(s5, Expression(s5, ""Genetic data""))
+d_genetic_data.meaning.append(Expression(s5, ""any data, regardless of its format, that results from the analysis of a biological sample of an individual, or from another source enabling equivalent information to be obtained, and concerns genetic material. Genetic material includes, but is not limited to, deoxyribonucleic acids (DNA), ribonucleic acids (RNA), genes, chromosomes, alleles, genomes, alterations or modifications to DNA or RNA, single nucleotide polymorphisms (SNPs), uninterpreted data that results from analysis of the biological sample or other source, and any information extrapolated, derived, or inferred therefrom.""))","{'#exclusion', '#definition'}"
+"(j) For purposes of this section, ""notice"" may be provided by one of the following methods:
+(1) Written notice.
+(2) Electronic notice, if the notice provided is consistent with the provisions regarding electronic records and signatures set forth in Section 7001 of Title 15 of the United States Code.
+(3) Substitute notice, if the person or business demonstrates that the cost of providing notice would exceed two hundred fifty thousand dollars ($250,000), or that the affected class of subject persons to be notified exceeds 500,000, or the person or business does not have sufficient contact information. Substitute notice shall consist of all of the following:
+(A) Email notice when the person or business has an email address for the subject persons.
+(B) Conspicuous posting, for a minimum of 30 days, of the notice on the internet website page of the person or business, if the person or business maintains one. For purposes of this subparagraph, conspicuous posting on the person's or business's internet website means providing a link to the notice on the home page or first significant page after entering the internet website that is in larger type than the surrounding text, or in contrasting type, font, or color to the surrounding text of the same size, or set off from the surrounding text of the same size by symbols or other marks that call attention to the link.
+(C) Notification to major statewide media.
+(4) In the case of a breach of the security of the system involving personal information defined in paragraph (2) of subdivision (h) for an online account, and no other personal information defined in paragraph (1) of subdivision (h), the person or business may comply with this section by providing the security breach notification in electronic or other form that directs the person whose personal information has been breached promptly to change the person's password and security question or answer, as applicable, or to take other steps appropriate to protect the online account with the person or business and all other online accounts for which the person whose personal information has been breached uses the same username or email address and password or security question or answer.
+(5) In the case of a breach of the security of the system involving personal information defined in paragraph (2) of subdivision (h) for login credentials of an email account furnished by the person or business, the person or business shall not comply with this section by providing the security breach notification to that email address, but may, instead, comply with this section by providing notice by another method described in this subdivision or by clear and conspicuous notice delivered to the resident online when the resident is connected to the online account from an Internet Protocol address or online location from which the person or business knows the resident customarily accesses the account.","s = Section(sectionNumber=""(j)"", sectionTitle="""")
+
+# Provide notice by one of the following methods - General Rule
+r1 = Rule(s, Expression(s, ""notice""))
+r1.rule_type = Rule.PERMISSION
+r1.description = Expression(s, ""may be provided by one of the following methods:"")
+
+# Method 1: Written notice
+s1 = Section(""(1)"")
+s.add_subsection(s1)
+e1 = Expression(s1, ""Written notice"")
+r1.description.includes.append(e1)
+
+# Method 2: Electronic notice
+s2 = Section(""(2)"")
+s.add_subsection(s2)
+e2 = Expression(s2, ""Electronic notice, if the notice provided is consistent with the provisions regarding electronic records and signatures set forth in Section 7001 of Title 15 of the United States Code"")
+r1.description.includes.append(e2)
+r1.add_follows(Expression(s2, ""Section 7001 of Title 15 of the United States Code""))
+
+# Method 3: Substitute notice
+s3 = Section(""(3)"")
+s.add_subsection(s3)
+e3 = Expression(s3, ""Substitute notice, if the person or business demonstrates that the cost of providing notice would exceed two hundred fifty thousand dollars ($250,000), or that the affected class of subject persons to be notified exceeds 500,000, or the person or business does not have sufficient contact information"")
+r1.description.includes.append(e3)
+
+r2=Rule(s3, Expression(s3, ""Substitute notice""))
+r2.rule_type=Rule.OBLIGATION
+r2.description=Expression(s3, ""shall consist of all of the following:"")
+r2.add_refines(r1)
+
+# Substitute notice - A: Email notice
+s3a = Section(""(A)"")
+s3.add_subsection(s3a)
+e3a = Expression(s3a, ""Email notice when the person or business has an email address for the subject persons"")
+r2.description.includes.append(e3a)
+
+# Substitute notice - B: Conspicuous posting
+s3b = Section(""(B)"")
+s3.add_subsection(s3b)
+e3b = Expression(s3b, ""Conspicuous posting, for a minimum of 30 days, of the notice on the internet website page of the person or business, if the person or business maintains one"")
+r2.description.includes.append(e3b)
+
+# Substitute notice - B details
+d=Definition(s3b, Expression(s3b, ""conspicuous posting on the person's or business's internet website""))
+d.meaning.append(Expression(s3b, ""providing a link to the notice on the home page or first significant page after entering the internet website that is in larger type than the surrounding text, or in contrasting type, font, or color to the surrounding text of the same size, or set off from the surrounding text of the same size by symbols or other marks that call attention to the link""))
+d.add_refines(r2)
+
+# Substitute notice - C: Notification to major statewide media
+s3c = Section(""(C)"")
+s3.add_subsection(s3c)
+e3c = Expression(s3c, ""Notification to major statewide media"")
+r2.description.includes.append(e3c)
+
+# Method 4: Security breach involving online account information
+s4 = Section(""(4)"")
+s.add_subsection(s4)
+r4 = Rule(s4, Expression(s4, ""the person or business""))
+r4.rule_type = Rule.PERMISSION
+r4.description = Expression(s4, ""may comply with this section by providing the security breach notification in electronic or other form that directs the person whose personal information has been breached promptly to change the person's password and security question or answer, as applicable, or to take other steps appropriate to protect the online account with the person or business and all other online accounts for which the person whose personal information has been breached uses the same username or email address and password or security question or answer"")
+r4.conditions.append(Expression(s4, ""In the case of a breach of the security of the system involving personal information defined in paragraph (2) of subdivision (h) for an online account, and no other personal information defined in paragraph (1) of subdivision (h)""))
+r4.add_is_refined_by(Expression(s4, ""paragraph (2) of subdivision (h)""))
+r4.add_is_refined_by(Expression(s4, ""paragraph (1) of subdivision (h)""))
+r4.add_refines(r1)
+
+# Method 5: Email account breach notification restriction
+s5 = Section(""(5)"")
+s.add_subsection(s5)
+r5 = Rule(s5, Expression(s5, ""the person or business""))
+r5.rule_type = Rule.PROHIBITION
+r5.description = Expression(s5, ""shall not comply with this section by providing the security breach notification to that email address"")
+r5.add_exception(Expression(s5, ""but may, instead, comply with this section by providing notice by another method described in this subdivision or by clear and conspicuous notice delivered to the resident online when the resident is connected to the online account from an Internet Protocol address or online location from which the person or business knows the resident customarily accesses the account""))
+r5.conditions.append(Expression(s5, ""In the case of a breach of the security of the system involving personal information defined in paragraph (2) of subdivision (h) for login credentials of an email account furnished by the person or business""))
+r5.add_is_refined_by(Expression(s5, ""paragraph (2) of subdivision (h)""))
+r5.add_refines(r1)","{'#continuation', '#obligation', '#prohibition', '#condition', '#permission', '#exception', '#refined_by', '#follows'}"
+"(k) For purposes of this section, ""encryption key"" and ""security credential"" mean the confidential key or process designed to render data usable, readable, and decipherable.","s_k = Section(sectionNumber=""(k)"")
+
+d = Definition(s_k, Expression(s_k, ""encryption key""))
+d.meaning.append(Expression(s_k, ""the confidential key or process designed to render data usable, readable, and decipherable""))
+
+d2 = Definition(s_k, Expression(s_k, ""security credential""))
+d2.meaning.append(Expression(s_k, ""the confidential key or process designed to render data usable, readable, and decipherable""))",{'#definition'}
+"(l) Notwithstanding subdivision (j), a person or business that maintains its own notification procedures as part of an information security policy for the treatment of personal information and is otherwise consistent with the timing requirements of this part, shall be deemed to be in compliance with the notification requirements of this section if the person or business notifies subject persons in accordance with its policies in the event of a breach of security of the system.","sl = Section(sectionNumber=""(l)"")
+
+r1 = Rule(sl, Expression(sl, ""a person or business that maintains its own notification procedures as part of an information security policy for the treatment of personal information""))
+r1.rule_type = Rule.PERMISSION
+r1.conditions.append(Expression(sl, ""otherwise consistent with the timing requirements of this part""))
+r1.description = Expression(sl, ""shall be deemed to be in compliance with the notification requirements of this section if the person or business notifies subject persons in accordance with its policies in the event of a breach of security of the system"")
+r1.add_is_exception_to(Expression(sl, ""subdivision (j)""))","{'#exception_to', '#condition', '#permission'}"

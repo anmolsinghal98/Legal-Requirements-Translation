@@ -1,0 +1,456 @@
+text,code,tags
+"§14–3501.;(a)
+In this subtitle the following words have the meanings indicated.","s = Section(sectionNumber=""§14–3501"")
+a = Section(""a"")
+s.add_subsection(a)
+i= Information(a, Expression(a, ""In this subtitle the following words have the meanings indicated""))",['#information']
+"§14–3501.;(b)
+(1) ""Business"" means a sole proprietorship, partnership, corporation, association, or any other business entity, whether or not organized to operate at a profit.
+(2) ""Business"" includes a financial institution organized, chartered, licensed, or otherwise authorized under the laws of this State, any other state, the United States, or any other country, and the parent or subsidiary of a financial institution.","s = Section(sectionNumber=""§14–3501"")
+s_b = Section(""(b)"")
+s.add_subsection(s_b)
+s_b1 = Section(""(1)"")
+s_b.add_subsection(s_b1)
+d1 = Definition(s_b1, Expression(s_b1, ""Business""))
+d1.meaning.append(Expression(s_b1, ""a sole proprietorship, partnership, corporation, association, or any other business entity, whether or not organized to operate at a profit""))
+s_b2 = Section(""(2)"")
+s_b.add_subsection(s_b2)
+d1.meaning.append(Expression(s_b2, ""a financial institution organized, chartered, licensed, or otherwise authorized under the laws of this State, any other state, the United States, or any other country, and the parent or subsidiary of a financial institution""))",['#definition']
+"§14–3501.;(c)
+""Encrypted"" means the transformation of data through the use of an algorithmic process into a form in which there is a low probability of assigning meaning without use of a confidential process or key.","s = Section(sectionNumber=""14–3501"")
+sc = Section(""(c)"")
+s.add_subsection(sc)
+d = Definition(sc, Expression(sc, ""Encrypted""))
+d.meaning.append(Expression(sc, ""the transformation of data through the use of an algorithmic process into a form in which there is a low probability of assigning meaning without use of a confidential process or key""))",['#definition']
+"§14–3501.;(d)
+(1) ""Personal information"" means an individual's first name or first initial and last name in combination with any one or more of the following data elements, when the name or the data elements are not encrypted, redacted, or otherwise protected by another method that renders the information unreadable or unusable:
+(i) A Social Security number;
+(ii) A driver's license number;
+(iii) A financial account number, including a credit card number or debit card number, that in combination with any required security code, access code, or password, would permit access to an individual's financial account; or
+(iv) An Individual Taxpayer Identification Number.
+(2) ""Personal information"" does not include:
+(i) Publicly available information that is lawfully made available to the general public from federal, State, or local government records;
+(ii) Information that an individual has consented to have publicly disseminated or listed; or
+(iii) Information that is disseminated or listed in accordance with the federal Health Insurance Portability and Accountability Act.","s = Section(sectionNumber=""§14–3501"")
+s_d = Section(""(d)"")
+s.add_subsection(s_d)
+d = Definition(s_d, Expression(s_d, ""Personal information""))
+s_d1 = Section(""(1)"")
+s_d.add_subsection(s_d1)
+e1=Expression(s_d1, ""an individual's first name or first initial and last name in combination with any one or more of the following data elements, when the name or the data elements are not encrypted, redacted, or otherwise protected by another method that renders the information unreadable or unusable:"")
+d.meaning.append(e1)
+s_d1i = Section(""(i)"")
+s_d1.add_subsection(s_d1i)
+e1.includes.append(Expression(s_d1i, ""A Social Security number""))
+s_d1ii = Section(""(ii)"")
+s_d1.add_subsection(s_d1ii)
+e1.includes.append(Expression(s_d1ii, ""A driver's license number""))
+s_d1iii = Section(""(iii)"")
+s_d1.add_subsection(s_d1iii)
+e1.includes.append(Expression(s_d1iii, ""A financial account number, including a credit card number or debit card number, that in combination with any required security code, access code, or password, would permit access to an individual's financial account""))
+s_d1iv = Section(""(iv)"")
+s_d1.add_subsection(s_d1iv)
+e1.includes.append(Expression(s_d1iv, ""An Individual Taxpayer Identification Number""))
+s_d2 = Section(""(2)"")
+s_d.add_subsection(s_d2)
+s_d2i = Section(""(i)"")
+s_d2.add_subsection(s_d2i)
+d.exclusions.append(Expression(s_d2i, ""Publicly available information that is lawfully made available to the general public from federal, State, or local government records""))
+s_d2ii = Section(""(ii)"")
+s_d2.add_subsection(s_d2ii)
+d.exclusions.append(Expression(s_d2ii, ""Information that an individual has consented to have publicly disseminated or listed""))
+s_d2iii = Section(""(iii)"")
+s_d2.add_subsection(s_d2iii)
+d.exclusions.append(Expression(s_d2iii, ""Information that is disseminated or listed in accordance with the federal Health Insurance Portability and Accountability Act""))
+d.add_follows(Expression(s_d2iii, ""the federal Health Insurance Portability and Accountability Act""))","['#continuation', '#definition', '#exclusion', '#follows']"
+"§14–3501.;(e)
+""Records"" means information that is inscribed on a tangible medium or that is stored in an electronic or other medium and is retrievable in perceivable form.","s = Section(sectionNumber=""§14–3501"")
+se = Section(""(e)"")
+s.add_subsection(se)
+d = Definition(se, Expression(se, ""Records""))
+d.meaning.append(Expression(se, ""information that is inscribed on a tangible medium or that is stored in an electronic or other medium and is retrievable in perceivable form""))",['#definition']
+"§14–3502.;(a)
+In this section, ""customer"" means an individual residing in the State who provides personal information to a business for the purpose of purchasing or leasing a product or obtaining a service from the business.","s = Section(sectionNumber=""14–3502"")
+sa = Section(""(a)"")
+s.add_subsection(sa)
+d = Definition(sa, Expression(sa, ""customer""))
+d.meaning.append(Expression(sa, ""an individual residing in the State who provides personal information to a business for the purpose of purchasing or leasing a product or obtaining a service from the business""))",['#definition']
+"§14–3502.;(b)
+When a business is destroying a customer's records that contain personal information of the customer, the business shall take reasonable steps to protect against unauthorized access to or use of the personal information, taking into account:
+(1) The sensitivity of the records;
+(2) The nature and size of the business and its operations;
+(3) The costs and benefits of different destruction methods; and
+(4) Available technology.","s = Section(sectionNumber=""§14–3502"")
+sb = Section(""(b)"")
+s.add_subsection(sb)
+r = Rule(sb, Expression(sb, ""the business""))
+r.conditions.append(Expression(sb, ""When a business is destroying a customer's records that contain personal information of the customer""))
+r.rule_type = Rule.OBLIGATION
+r.description = Expression(sb, ""shall take reasonable steps to protect against unauthorized access to or use of the personal information taking into account:"")
+sb1 = Section(""(1)"")
+sb.add_subsection(sb1)
+c1 = Expression(sb1, ""The sensitivity of the records"")
+r.description.includes.append(c1)
+sb2 = Section(""(2)"")
+sb.add_subsection(sb2)
+c2 = Expression(sb2, ""The nature and size of the business and its operations"")
+r.description.includes.append(c2)
+sb3 = Section(""(3)"")
+sb.add_subsection(sb3)
+c3 = Expression(sb3, ""The costs and benefits of different destruction methods"")
+r.conditions.append(c3)
+sb4 = Section(""(4)"")
+sb.add_subsection(sb4)
+c4 = Expression(sb4, ""Available technology"")
+r.description.includes.append(c4)","['#condition', '#continuation', '#obligation']"
+"§14–3503.;(a)
+To protect personal information from unauthorized access, use, modification, or disclosure, a business that owns or licenses personal information of an individual residing in the State shall implement and maintain reasonable security procedures and practices that are appropriate to the nature of the personal information owned or licensed and the nature and size of the business and its operations.","s = Section(sectionNumber=""§14–3503"")
+s1 = Section(""(a)"")
+s.add_subsection(s1)
+r1 = Rule(s1, Expression(s1, ""a business that owns or licenses personal information of an individual residing in the State""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(s1, ""shall implement and maintain reasonable security procedures and practices that are appropriate to the nature of the personal information owned or licensed and the nature and size of the business and its operations"")
+r1.description.includes.append(Expression(s1, ""To protect personal information from unauthorized access, use, modification, or disclosure""))",['#obligation']
+"§14–3503.;(b)
+(1) A business that uses a nonaffiliated third party as a service provider to perform services for the business and discloses personal information about an individual residing in the State under a written contract with the third party shall require by contract that the third party implement and maintain reasonable security procedures and practices that:
+(i) Are appropriate to the nature of the personal information disclosed to the nonaffiliated third party; and
+(ii) Are reasonably designed to help protect the personal information from unauthorized access, use, modification, disclosure, or destruction.
+(2) This subsection shall apply to a written contract that is entered into on or after January 1, 2009.","s = Section(sectionNumber=""§14–3503"")
+sb = Section(""(b)"")
+s.add_subsection(sb)
+sb1 = Section(""(1)"")
+sb.add_subsection(sb1)
+r1 = Rule(sb1, Expression(sb1, ""A business that uses a nonaffiliated third party as a service provider to perform services for the business and discloses personal information about an individual residing in the State under a written contract with the third party""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(sb1, ""shall require by contract that the third party implement and maintain reasonable security procedures and practices that:"")
+sb1i = Section(""(i)"")
+sb1.add_subsection(sb1i)
+r1.description.includes.append(Expression(sb1i, ""are appropriate to the nature of the personal information disclosed to the nonaffiliated third party""))
+sb1ii = Section(""(ii)"")
+sb1.add_subsection(sb1ii)
+r1.description.includes.append(Expression(sb1ii, ""are reasonably designed to help protect the personal information from unauthorized access, use, modification, disclosure, or destruction""))
+sb2 = Section(""(2)"")
+sb.add_subsection(sb2)
+r2 = Rule(sb2, Expression(sb2, ""This subsection""))
+r2.rule_type = Rule.OBLIGATION
+r2.description=Expression(sb2, ""shall apply to a written contract that is entered into on or after January 1, 2009"")","['#continuation', '#obligation']"
+"§14–3504.;(a)
+In this section:
+(1) ""Breach of the security of a system"" means the unauthorized acquisition of computerized data that compromises the security, confidentiality, or integrity of the personal information maintained by a business; and
+(2) ""Breach of the security of a system"" does not include the good faith acquisition of personal information by an employee or agent of a business for the purposes of the business, provided that the personal information is not used or subject to further unauthorized disclosure.","s = Section(sectionNumber=""14-3504"")
+sa = Section(""(a)"")
+s.add_subsection(sa)
+sa1 = Section(""(1)"")
+sa.add_subsection(sa1)
+d1 = Definition(sa1, Expression(sa1, ""Breach of the security of a system""))
+d1.meaning.append(Expression(sa1, ""unauthorized acquisition of computerized data that compromises the security, confidentiality, or integrity of the personal information maintained by a business""))
+sa2 = Section(""(2)"")
+sa.add_subsection(sa2)
+d2 = Definition(sa2, Expression(sa2, ""Breach of the security of a system""))
+d2.exclusions.append(Expression(sa2, ""good faith acquisition of personal information by an employee or agent of a business for the purposes of the business, provided that the personal information is not used or subject to further unauthorized disclosure""))","['#exclusion', '#continuation', '#definition']"
+"§14–3504.;(b)
+(1) A business that owns or licenses computerized data that includes personal information of an individual residing in the State, when it discovers or is notified of a breach of the security of a system, shall conduct in good faith a reasonable and prompt investigation to determine the likelihood that personal information of the individual has been or will be misused as a result of the breach.
+(2) If, after the investigation is concluded, the business determines that misuse of the individual's personal information has occurred or is reasonably likely to occur as a result of a breach of the security of a system, the business shall notify the individual of the breach.
+(3) Except as provided in subsection (d) of this section, the notification required under paragraph (2) of this subsection shall be given as soon as reasonably practicable after the business conducts the investigation required under paragraph (1) of this subsection.
+(4) If after the investigation required under paragraph (1) of this subsection is concluded, the business determines that notification under paragraph (2) of this subsection is not required, the business shall maintain records that reflect its determination for 3 years after the determination is made.","s = Section(sectionNumber=""§14–3504"")
+sb = Section(""(b)"")
+s.add_subsection(sb)
+
+sb1 = Section(""(1)"")
+sb.add_subsection(sb1)
+r1 = Rule(sb1, Expression(sb1, ""A business that owns or licenses computerized data that includes personal information of an individual residing in the State""))
+r1.rule_type = Rule.OBLIGATION
+r1.conditions.append(Expression(sb1, ""when it discovers or is notified of a breach of the security of a system""))
+r1.description = Expression(sb1, ""shall conduct in good faith a reasonable and prompt investigation to determine the likelihood that personal information of the individual has been or will be misused as a result of the breach"")
+
+sb2 = Section(""(2)"")
+sb.add_subsection(sb2)
+r2 = Rule(sb2, Expression(sb2, ""the business""))
+r2.rule_type = Rule.OBLIGATION
+r2.conditions.append(Expression(sb2, ""after the investigation is concluded, the business determines that misuse of the individual's personal information has occurred or is reasonably likely to occur as a result of a breach of the security of a system""))
+r2.description = Expression(sb2, ""shall notify the individual of the breach"")
+r2.add_follows(r1)
+
+sb3 = Section(""(3)"")
+sb.add_subsection(sb3)
+r3 = Rule(sb3, Expression(sb3, ""the notification required under paragraph (2) of this subsection""))
+r3.rule_type = Rule.OBLIGATION
+r3.description = Expression(sb3, ""shall be given as soon as reasonably practicable after the business conducts the investigation required under paragraph (1) of this subsection"")
+r3.add_exception(Expression(sb3, ""subsection (d) of this section""))
+r3.add_refines(Expression(sb3, ""paragraph (2) of this subsection""))
+r3.add_follows(Expression(sb3, ""paragraph (1) of this subsection""))
+
+sb4 = Section(""(4)"")
+sb.add_subsection(sb4)
+r4 = Rule(sb4, Expression(sb4, ""the business""))
+r4.rule_type = Rule.OBLIGATION
+r4.conditions.append(Expression(sb4, ""after the investigation required under paragraph (1) of this subsection is concluded, the business determines that notification under paragraph (2) of this subsection is not required""))
+r4.description = Expression(sb4, ""shall maintain records that reflect its determination for 3 years after the determination is made"")
+r4.add_follows(Expression(sb4, ""paragraph (1) of this subsection""))
+r4.add_is_exception_to(Expression(sb4, ""paragraph (2) of this subsection""))","['#condition', '#obligation', '#follows', '#refines', '#exception_to']"
+"§14–3504.;(c)
+(1) A business that maintains computerized data that includes personal information that the business does not own or license shall notify the owner or licensee of the personal information of a breach of the security of a system if it is likely that the breach has resulted or will result in the misuse of personal information of an individual residing in the State.
+(2) Except as provided in subsection (d) of this section, the notification required under paragraph (1) of this subsection shall be given as soon as reasonably practicable after the business discovers or is notified of the breach of the security of a system.
+(3) A business that is required to notify an owner or licensee of personal information of a breach of the security of a system under paragraph (1) of this subsection shall share with the owner or licensee information relative to the breach.","s = Section(sectionNumber=""§14–3504"")
+sc = Section(""(c)"")
+s.add_subsection(sc)
+
+sc1 = Section(""(1)"")
+sc.add_subsection(sc1)
+r1 = Rule(sc1, Expression(sc1, ""A business that maintains computerized data that includes personal information that the business does not own or license""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(sc1, ""shall notify the owner or licensee of the personal information of a breach of the security of a system"")
+r1.conditions.append(Expression(sc1, ""it is likely that the breach has resulted or will result in the misuse of personal information of an individual residing in the State""))
+
+sc2 = Section(""(2)"")
+sc.add_subsection(sc2)
+r2 = Rule(sc2, Expression(sc2, ""the notification required under paragraph (1) of this subsection""))
+r2.rule_type = Rule.OBLIGATION
+r2.description = Expression(sc2, ""shall be given as soon as reasonably practicable after the business discovers or is notified of the breach of the security of a system"")
+r2.add_exception(Expression(sc2, ""subsection (d) of this section""))
+r2.add_refines(Expression(sc2, ""paragraph (1) of this subsection""))
+
+sc3 = Section(""(3)"")
+sc.add_subsection(sc3)
+r3 = Rule(sc3, Expression(sc3, ""A business that is required to notify an owner or licensee of personal information of a breach of the security of a system under paragraph (1) of this subsection""))
+r3.rule_type = Rule.OBLIGATION
+r3.description = Expression(sc3, ""shall share with the owner or licensee information relative to the breach"")
+r3.add_follows(Expression(sc3, ""paragraph (1) of this subsection""))","['#condition', '#obligation', '#follows', '#refines', '#exception']"
+"§14–3504.;(d)
+(1) The notification required under subsections (b) and (c) of this section may be delayed:
+(i) If a law enforcement agency determines that the notification will impede a criminal investigation or jeopardize homeland or national security; or
+(ii) To determine the scope of the breach of the security of a system, identify the individuals affected, or restore the integrity of the system.
+(2) If notification is delayed under paragraph (1)(i) of this subsection, notification shall be given as soon as reasonably practicable after the law enforcement agency determines that it will not impede a criminal investigation and will not jeopardize homeland or national security.","s = Section(sectionNumber=""§14–3504."")
+sd = Section(sectionNumber=""(d)"")
+s.add_subsection(sd)
+sd1 = Section(sectionNumber=""(1)"")
+sd.add_subsection(sd1)
+r1 = Rule(sd1, Expression(sd1, ""The notification required under subsections (b) and (c) of this section""))
+r1.rule_type = Rule.PERMISSION
+r1.description = Expression(sd1, ""may be delayed"")
+r1.add_is_exception_to(Expression(sd1, ""subsection (b) of this section""))
+r1.add_is_exception_to(Expression(sd1, ""subsection (c) of this section""))
+sd1i = Section(""(i)"")
+sd1.add_subsection(sd1i)
+r1.conditions.append(Expression(sd1i, ""a law enforcement agency determines that the notification will impede a criminal investigation or jeopardize homeland or national security""))
+sd1ii = Section(""(ii)"")
+sd1.add_subsection(sd1ii)
+r1.conditions.append(Expression(sd1ii, ""To determine the scope of the breach of the security of a system, identify the individuals affected, or restore the integrity of the system""))
+
+sd2 = Section(sectionNumber=""(2)"")
+sd.add_subsection(sd2)
+r2 = Rule(sd2, Expression(sd2, ""notification""))
+r2.conditions.append(Expression(sd2, ""notification is delayed under paragraph (1)(i) of this subsection""))
+r2.rule_type = Rule.OBLIGATION
+r2.description = Expression(sd2, ""shall be given as soon as reasonably practicable after the law enforcement agency determines that it will not impede a criminal investigation and will not jeopardize homeland or national security"")
+r2.add_follows(Expression(sd2, ""paragraph (1)(i) of this subsection""))","['#condition', '#continuation', '#obligation', '#permission', '#exception_to', '#follows']"
+"§14–3504.;(e)
+The notification required under subsections (b) and (c) of this section may be given:
+(1) By written notice sent to the most recent address of the individual in the records of the business;
+(2) By electronic mail to the most recent electronic mail address of the individual in the records of the business, if:
+(i) The individual has expressly consented to receive electronic notice; or
+(ii) The business conducts its business primarily through Internet account transdescriptions or the Internet;
+(3) By telephonic notice, to the most recent telephone number of the individual in the records of the business; or
+(4) By substitute notice as provided in subsection (f) of this section, if:
+(i) The business demonstrates that the cost of providing notice would exceed $100,000 or that the affected class of individuals to be notified exceeds 175,000; or
+(ii) The business does not have sufficient contact information to give notice in accordance with item (1), (2), or (3) of this subsection.","s = Section(sectionNumber=""§14–3504"")
+se = Section(""(e)"")
+s.add_subsection(se)
+r=Rule(se, Expression(se, ""The notification required under subsections (b) and (c) of this section""))
+r.rule_type=Rule.PERMISSION
+r.description=Expression(se, ""may be given:"")
+r.add_refines(Expression(se, ""subsection (b) of this section""))
+r.add_refines(Expression(se, ""subsection (c) of this section""))
+se1 = Section(""(1)"")
+se.add_subsection(se1)
+e1=Expression(se1, ""By written notice sent to the most recent address of the individual in the records of the business"")
+r.description.includes.append(e1)
+se2 = Section(""(2)"")
+se.add_subsection(se2)
+e2=Expression(se2, ""By electronic mail to the most recent electronic mail address of the individual in the records of the business, if:"")
+r.description.includes.append(e2)
+se2i = Section(""(i)"")
+se2.add_subsection(se2i)
+e2.includes.append(Expression(se2i, ""the individual has expressly consented to receive electronic notice""))
+se2ii = Section(""(ii)"")
+se2.add_subsection(se2ii)
+e2.includes.append(Expression(se2ii, ""the business conducts its business primarily through Internet account transdescriptions or the Internet""))
+se3 = Section(""(3)"")
+se.add_subsection(se3)
+e3 = Expression(se3, ""By telephonic notice, to the most recent telephone number of the individual in the records of the business"")
+r.description.includes.append(e3)
+se4 = Section(""(4)"")
+se.add_subsection(se4)
+e4 = Expression(se4, ""By substitute notice as provided in subsection (f) of this section"")
+r.add_is_refined_by(Expression(se4, ""subsection (f) of this section""))
+r.description.includes.append(e4)
+se4i = Section(""(i)"")
+se4.add_subsection(se4i)
+e4.includes.append(Expression(se4, ""the business demonstrates that the cost of providing notice would exceed $100,000 or that the affected class of individuals to be notified exceeds 175,000""))
+se4ii = Section(""(ii)"")
+se4.add_subsection(se4ii)
+e4.includes.append(Expression(se4, ""the business does not have sufficient contact information to give notice in accordance with item (1), (2), or (3) of this subsection""))
+r.add_is_exception_to(Expression(se4ii, ""item (1) of this subsection""))
+r.add_is_exception_to(Expression(se4ii, ""item (2) of this subsection""))
+r.add_is_exception_to(Expression(se4ii, ""item (3) of this subsection""))","['#continuation', '#permission', '#refines', '#exception_to']"
+"§14–3504.;(f)
+Substitute notice under subsection (e)(4) of this section shall consist of:
+(1) Electronically mailing the notice to an individual entitled to notification under subsection (b) of this section, if the business has an electronic mail address for the individual to be notified;
+(2) Conspicuous posting of the notice on the Web site of the business, if the business maintains a Web site; and
+(3) Notification to statewide media.","s = Section(sectionNumber=""§14–3504"")
+sf = Section(""(f)"")
+s.add_subsection(sf)
+r = Rule(sf, Expression(sf, ""Substitute notice under subsection (e)(4) of this section""))
+r.rule_type = Rule.OBLIGATION
+r.description = Expression(sf, ""shall consist of:"")
+r.add_refines(Expression(sf, ""subsection (e)(4) of this section""))
+sf1 = Section(""(1)"")
+sf.add_subsection(sf1)
+e1=Expression(sf1, ""Electronically mailing the notice to an individual entitled to notification under subsection (b) of this section, if the business has an electronic mail address for the individual to be notified"")
+r.description.includes.append(e1)
+r.add_follows(Expression(sf1, ""subsection (b) of this section""))
+sf2 = Section(""(2)"")
+sf.add_subsection(sf2)
+e2=Expression(sf2, ""Conspicuous posting of the notice on the Web site of the business, if the business maintains a Web site"")
+r.description.includes.append(e2)
+sf3 = Section(""(3)"")
+sf.add_subsection(sf3)
+e3=Expression(sf3, ""Notification to statewide media"")
+r.description.includes.append(e3)","['#continuation', '#obligation', '#refines', '#follows']"
+"§14–3504.;(g)
+The notification required under subsection (b) of this section shall include:
+(1) To the extent possible, a description of the categories of information that were, or are reasonably believed to have been, acquired by an unauthorized person, including which of the elements of personal information were, or are reasonably believed to have been, acquired;
+(2) Contact information for the business making the notification, including the business' address, telephone number, and toll–free telephone number if one is maintained;
+(3) The toll–free telephone numbers and addresses for the major consumer reporting agencies; and
+(4) (i) The toll–free telephone numbers, addresses, and Web site addresses for:
+1. The Federal Trade Commission; and
+2. The Office of the Attorney General; and
+(ii) A statement that an individual can obtain information from these sources about steps the individual can take to avoid identity theft.","s = Section(sectionNumber=""§14–3504"")
+sg = Section(""(g)"")
+s.add_subsection(sg)
+r1 = Rule(sg, Expression(sg, ""The notification required under subsection (b) of this section""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(sg, ""shall include:"")
+r1.add_refines(Expression(sg, ""subsection (b) of this section""))
+
+sg1 = Section(""(1)"")
+sg.add_subsection(sg1)
+e1 = Expression(sg1, ""To, the extent possible, a description of the categories of information that were, or are reasonably believed to have been, acquired by an unauthorized person including which of the elements of personal information were, or are reasonably believed to have been, acquired"")
+r1.description.includes.append(e1)
+
+sg2 = Section(""(2)"")
+sg.add_subsection(sg2)
+e2 =Expression(sg2, ""contact information for the business making the notification including the business' address, telephone number, and toll–free telephone number if one is maintained"")
+r1.description.includes.append(e2)
+
+sg3 = Section(""(3)"")
+sg.add_subsection(sg3)
+e3 = Expression(sg3, ""the toll–free telephone numbers and addresses for the major consumer reporting agencies"")
+r1.description.includes.append(e3)
+
+sg4 = Section(""(4)"")
+sg.add_subsection(sg4)
+sg4i = Section(""(i)"")
+sg4.add_subsection(sg4i)
+e4i = Expression(sg4i, ""the toll–free telephone numbers, addresses, and Web site addresses for:"")
+r1.description.includes.append(e4i)
+sg4i1 = Section(""1."")
+sg4i.add_subsection(sg4i1)
+e4i1 = Expression(sg4i1, ""The Federal Trade Commission"")
+e4i.includes.append(e4i1)
+sg4i2 = Section(""2."")
+sg4i.add_subsection(sg4i2)
+e4i2 =Expression(sg, ""The Office of the Attorney General"")
+e4i.includes.append(e4i2)
+sg4ii = Section(""(ii)"")
+sg4.add_subsection(sg4ii)
+e4ii = Expression(sg4ii, ""a statement that an individual can obtain information from these sources about steps the individual can take to avoid identity theft"")
+r1.description.includes.append(e4ii)","['#continuation', '#obligation', '#refines']"
+"§14–3504.;(h)
+Prior to giving the notification required under subsection (b) of this section and subject to subsection (d) of this section, a business shall provide notice of a breach of the security of a system to the Office of the Attorney General.
+(i) A waiver of any provision of this section is contrary to public policy and is void and unenforceable.","s=Section(sectionNumber=""§14–3504"")
+sh = Section(""(h)"")
+s.add_subsection(sh)
+r1 = Rule(sh, Expression(sh, ""business""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(sh, ""shall provide notice of a breach of the security of a system to the Office of the Attorney General"")
+r1.conditions.append(Expression(sh, ""Prior to giving the notification required under subsection (b) of this section and subject to subsection (d) of this section subject to subsection (d)""))
+r1.add_is_followed_by(Expression(sh, ""subsection (b) of this section""))
+r1.add_follows(Expression(sh, ""subsection (d) of this section""))
+si = Section(""(i)"")
+s.add_subsection(si)
+r2 = Rule(si, Expression(si, ""waiver of any provision of this section""))
+r2.rule_type = Rule.PROHIBITION
+r2.description = Expression(si, ""be void and unenforceable"")","['#condition', '#obligation', '#prohibition', '#follows', '#followed_by']"
+"§14–3504.;(j)
+Compliance with this section does not relieve a business from a duty to comply with any other requirements of federal law relating to the protection and privacy of personal information.","s = Section(sectionNumber=""§14–3504"")
+s1 = Section(sectionNumber=""(j)"")
+s.add_subsection(s1)
+i1 = Information(s1, Expression(s1, ""Compliance with this section does not relieve a business from a duty to comply with any other requirements of federal law relating to the protection and privacy of personal information.""))",['#information']
+"§14–3505.;None
+The provisions of this subtitle are exclusive and shall preempt any provision of local law.","s = Section(sectionNumber=""§14–3505"")
+r = Rule(s, Expression(s, ""provisions of this subtitle""))
+r.rule_type = Rule.OBLIGATION
+r.description = Expression(s, ""are exclusive and shall preempt any provision of local law"")",['#obligation']
+"§14–3506.;(a)
+If a business is required under § 14–3504 of this subtitle to give notice of a breach of the security of a system to 1,000 or more individuals, the business also shall notify, without unreasonable delay, each consumer reporting agency that compiles and maintains files on consumers on a nationwide basis, as defined by 15 U.S.C. § 1681a(p), of the timing, distribution, and content of the notices.","s = Section(sectionNumber=""§14–3506"")
+s_a = Section(""(a)"")
+s.add_subsection(s_a)
+r = Rule(s_a, Expression(s_a, ""a business""))
+r.conditions.append(Expression(s_a, ""required under § 14–3504 to give notice of a breach of the security of a system to 1,000 or more individuals""))
+r.rule_type = Rule.OBLIGATION
+r.description = Expression(s_a, ""shall notify without unreasonable delay each consumer reporting agency that compiles and maintains files on consumers on a nationwide basis, as defined by 15 U.S.C. § 1681a(p), of the timing, distribution, and content of the notices"")
+r.add_follows(Expression(s_a, ""§ 14–3504""))
+r.add_is_refined_by(Expression(s_a, ""15 U.S.C. § 1681a(p)""))","['#obligation', '#follows', '#condition', '#refined_by']"
+"§14–3506.;(b)
+This section does not require the inclusion of the names or other personal identifying information of recipients of notices of the breach of the security of a system.","s = Section(sectionNumber=""§14–3506"")
+s2 = Section(""(b)"")
+s.add_subsection(s2)
+e = Exemption(s2, Expression(s2, ""This section does not require the inclusion of the names or other personal identifying information of recipients of notices of the breach of the security of a system""))",['#exemption']
+"§14–3507.;(a)
+In this section, ""affiliate"" means a company that controls, is controlled by, or is under common control with a business described in subsection (c)(1) of this section.","s = Section(sectionNumber=""§14–3507"")
+s_a = Section(""(a)"")
+s.add_subsection(s_a)
+d = Definition(s_a, Expression(s_a, ""affiliate""))
+e=Expression(s_a, ""a company that controls, is controlled by, or is under common control with a business described in subsection (c)(1) of this section"")
+d.meaning.append(e)
+d.add_is_refined_by(Expression(s_a, ""subsection (c)(1) of this section""))","['#definition', '#refined_by']"
+"§14–3507.;(b)
+A business that complies with the requirements for notification procedures, the protection or security of personal information, or the destruction of personal information under the rules, regulations, procedures, or guidelines established by the primary or functional federal or State regulator of the business shall be deemed to be in compliance with this subtitle.","s = Section(sectionNumber=""§14–3507"")
+s_b = Section(""(b)"")
+s.add_subsection(s_b)
+r = Rule(s_b, Expression(s_b, ""A business complies with the requirements for notification procedures, the protection or security of personal information, or the destruction of personal information under the rules, regulations, procedures, or guidelines established by the primary or functional federal or State regulator of the business""))
+r.rule_type = Rule.PERMISSION
+r.description = Expression(s_b, ""shall be deemed to be in compliance with this subtitle"")",['#permission']
+"§14–3507.;(c)
+(1) A business that is subject to and in compliance with § 501(b) of the federal Gramm–Leach–Bliley Act, 15 U.S.C. § 6801, § 216 of the federal Fair and Accurate Credit Transdescriptions Act, 15 U.S.C. § 1681w, the federal Interagency Guidelines Establishing Information Security Standards, and the federal Interagency Guidance on Response Programs for Unauthorized Access to Customer Information and Customer Notice, and any revisions, additions, or substitutions, shall be deemed to be in compliance with this subtitle.
+(2) An affiliate that complies with § 501(b) of the federal Gramm–Leach–Bliley Act, 15 U.S.C. § 6801, § 216 of the federal Fair and Accurate Credit Transdescriptions Act, 15 U.S.C. § 1681w, the federal Interagency Guidelines Establishing Information Security Standards, and the federal Interagency Guidance on Response Programs for Unauthorized Access to Customer Information and Customer Notice, and any revisions, additions, or substitutions, shall be deemed to be in compliance with this subtitle.","s = Section(sectionNumber=""§14–3507"")
+sc = Section(""(c)"")
+s.add_subsection(sc)
+
+sc1 = Section(""(1)"")
+sc.add_subsection(sc1)
+r1 = Rule(sc1, Expression(sc1, ""A business that is subject to and in compliance with § 501(b) of the federal Gramm–Leach–Bliley Act, 15 U.S.C. § 6801, § 216 of the federal Fair and Accurate Credit Transdescriptions Act, 15 U.S.C. § 1681w, the federal Interagency Guidelines Establishing Information Security Standards, and the federal Interagency Guidance on Response Programs for Unauthorized Access to Customer Information and Customer Notice, and any revisions, additions, or substitutions""))
+r1.rule_type = Rule.PERMISSION
+r1.description = Expression(sc1, ""shall deemed be in compliance with this subtitle"")
+r1.add_follows(Expression(sc1, ""§ 501(b) of the federal Gramm–Leach–Bliley Act, 15 U.S.C. § 6801, § 216 of the federal Fair and Accurate Credit Transdescriptions Act, 15 U.S.C. § 1681w, the federal Interagency Guidelines Establishing Information Security Standards, and the federal Interagency Guidance on Response Programs for Unauthorized Access to Customer Information and Customer Notice, and any revisions, additions, or substitutions""))
+
+sc2 = Section(""(2)"")
+sc.add_subsection(sc2)
+r2 = Rule(sc2, Expression(sc2, ""An affiliate that complies with § 501(b) of the federal Gramm–Leach–Bliley Act, 15 U.S.C. § 6801, § 216 of the federal Fair and Accurate Credit Transdescriptions Act, 15 U.S.C. § 1681w, the federal Interagency Guidelines Establishing Information Security Standards, and the federal Interagency Guidance on Response Programs for Unauthorized Access to Customer Information and Customer Notice, and any revisions, additions, or substitutions""))
+r2.rule_type = Rule.PERMISSION
+r2.description = Expression(sc2, ""shall be deemed to be in compliance with this subtitle"")
+r2.add_follows(Expression(sc2, ""affiliate that complies with § 501(b) of the federal Gramm–Leach–Bliley Act, 15 U.S.C. § 6801, § 216 of the federal Fair and Accurate Credit Transdescriptions Act, 15 U.S.C. § 1681w, the federal Interagency Guidelines Establishing Information Security Standards, and the federal Interagency Guidance on Response Programs for Unauthorized Access to Customer Information and Customer Notice, and any revisions, additions, or substitutions""))","['#permission', '#follows']"
+"§14–3508.;None
+A violation of this subtitle:
+(1) Is an unfair or deceptive trade practice within the meaning of Title 13 of this article; and
+(2) Is subject to the enforcement and penalty provisions contained in Title 13 of this article.","s = Section(sectionNumber=""§14–3508"")
+e=Expression(s, ""A violation of this subtitle:"")
+i = Information( s,e)
+s1=Section(""(1)"")
+s.add_subsection(s1)
+e.includes.append(Expression(s1, ""Is an unfair or deceptive trade practice within the meaning of Title 13 of this article""))
+s2=Section(""(2)"")
+s.add_subsection(s2)
+e.includes.append(Expression(s2, ""Is subject to the enforcement and penalty provisions contained in Title 13 of this article""))
+i.add_is_refined_by(Expression(s, ""Title 13 of this article""))","['#continuation', '#information', '#refined_by']"

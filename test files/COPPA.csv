@@ -1,0 +1,1455 @@
+﻿text,code
+"312.1 Scope of regulations in this part.
+This part implements the Children's Online Privacy Protection Act of 1998 (15 U.S.C. 6501,et seq.), which prohibits unfair or deceptive acts or practices in connection with the collection, use, and/or disclosure of personal information from and about children on the internet","
+s = Section(sectionNumber=""312.1"", sectionTitle=""Scope of regulations in this part"")
+
+e_coppa = Expression(s, ""This part implements the Children's Online Privacy Protection Act of 1998 (15 U.S.C. 6501, et seq.)"")
+
+r_coppa = Rule(s, entity=e_coppa)
+r_coppa.rule_type = Rule.PROHIBITION
+
+r_description = Expression(s, ""prohibits unfair or deceptive acts or practices in connection with the collection, use, and/or disclosure of personal information from and about children on the internet."")
+
+r_coppa.description = r_description
+
+ref1 = Reference(s, ""Children's Online Privacy Protection Act of 1998 (15 U.S.C. 6501, et seq.)"", target=r_coppa)
+r_coppa.add_is_refined_by(ref1)"
+"312.2 Definitions.
+Child means an individual under the age of 13.","
+section = Section(sectionNumber=""312.2"", sectionTitle=""Definitions"")
+
+child_definition = Definition(section, Expression(section, ""Child""))
+child_definition.meaning.append(Expression(section, ""an individual under the age of 13""))"
+"312.2 Definitions. Collects or collection means the gathering of any personal information from a child by any means, including but not limited to:
+(1) Requesting, prompting, or encouraging a child to submit personal information online;
+(2) Enabling a child to make personal information publicly available in identifiable form. An operator shall not be considered to have collected personal information under this paragraph if it takes reasonable measures to delete all or virtually all personal information from a child's postings before
+they are made public and also to delete such information from its records; or
+(3) Passive tracking of a child online.","
+s312_2 = Section(sectionNumber=""312.2"", sectionTitle=""Definitions"")
+d_collects = Definition(s312_2, Expression(s312_2, ""Collects or collection""))
+
+d_meaning_exp = Expression(s312_2, ""means the gathering of any personal information from a child by any means, including but not limited to:"")
+d_collects.meaning.append(d_meaning_exp)
+
+s1_312_2 = Section(""(1)"")
+s312_2.add_subsection(s1_312_2)
+e1_312_2 = Expression(s1_312_2, ""Requesting, prompting, or encouraging a child to submit personal information online"")
+d_meaning_exp.includes.append(e1_312_2)
+
+s2_312_2 = Section(""(2)"")
+s312_2.add_subsection(s2_312_2)
+e2_312_2 = Expression(s2_312_2, ""Enabling a child to make personal information publicly available in identifiable form. An operator shall not be considered to have collected personal information under this paragraph if it takes reasonable measures to delete all or virtually all personal information from a child's postings before they are made public and also to delete such information from its records"")
+d_meaning_exp.includes.append(e2_312_2)
+
+s3_312_2 = Section(""(3)"")
+s312_2.add_subsection(s3_312_2)
+e3_312_2 = Expression(s3_312_2, ""Passive tracking of a child online"")
+d_meaning_exp.includes.append(e3_312_2)"
+312.2 Definitions. Commission means the Federal Trade Commission.,"
+s = Section(sectionNumber=""312.2"", sectionTitle=""Definitions"")
+defined_expression = Expression(s, ""Commission"")
+d = Definition(s, defined_expression)
+meaning_expression = Expression(s, ""the Federal Trade Commission."")
+d.meaning.append(meaning_expression)"
+"312.2 Definitions. Delete means to remove personal information such that it is not maintained in retrievable form and cannot be
+retrieved in the normal course of business.","
+s = Section(sectionNumber=""312.2"", sectionTitle=""Definitions"")
+d = Definition(s, Expression(s, ""Delete""))
+d.meaning.append(Expression(s, ""to remove personal information such that it is not maintained in retrievable form and cannot be retrieved in the normal course of business""))"
+"312.2 Definitions. Disclose or disclosure means, with respect to personal information:
+(1) The release of personal information collected by an operator from a child in identifiable form for any purpose, except where an operator provides such information to a person who provides support for the internal operations of the website or online service; and
+(2) Making personal information collected by an operator from a child publicly available in identifiable form by any means, including but not limited to a public posting through the internet, or through a personal home page or screen posted on a website or online service; a pen pal service; an electronic mail service; a message board; or a chat room.","
+s312_2 = Section(sectionNumber=""312.2"", sectionTitle=""Definitions"")
+d_disclose = Definition(s312_2, Expression(s312_2, ""Disclose or disclosure""))
+
+s1 = Section(""(1)"")
+s312_2.add_subsection(s1)
+d_disclose.meaning.append(Expression(s1, ""The release of personal information collected by an operator from a child in identifiable form for any purpose, except where an operator provides such information to a person who provides support for the internal operations of the website or online service; and""))
+
+s2 = Section(""(2)"")
+s312_2.add_subsection(s2)
+d_disclose.meaning.append(Expression(s2, ""Making personal information collected by an operator from a child publicly available in identifiable form by any means, including but not limited to a public posting through the internet, or through a personal home page or screen posted on a website or online service; a pen pal service; an electronic mail service; a message board; or a chat room.""))"
+"312.2 Definitions. Federal agency means an agency, as that term is defined in section 551(1) of title 5, United States Code.","
+s = Section(sectionNumber=""312.2"", sectionTitle=""Definitions"")
+d_federal_agency = Definition(s, Expression(s, ""Federal agency""))
+d_federal_agency.meaning.append(Expression(s, ""an agency, as that term is defined in section 551(1) of title 5, United States Code.""))
+ref1 = Reference(s, ""section 551(1) of title 5, United States Code"", target=d_federal_agency)
+d_federal_agency.add_is_refined_by(ref1)"
+"312.2 Definitions. Internet means collectively the myriad of computer and telecommunications facilities, including equipment and operating software, which comprise the interconnected world-wide network of networks that employ the Transmission Control Protocol/Internet Protocol, or any predecessor or successor protocols to such protocol, to communicate information of all kinds by wire, radio, or other methods of transmission","
+s = Section(sectionNumber=""312.2"", sectionTitle=""Definitions"")
+
+e_internet = Expression(section=s, text=""Internet"")
+
+d_internet = Definition(s, defined_term=e_internet)
+
+d_meaning_exp = Expression(s, ""means collectively the myriad of computer and telecommunications facilities, including equipment and operating software, which comprise the interconnected world-wide network of networks that employ the Transmission Control Protocol/Internet Protocol, or any predecessor or successor protocols to such protocol, to communicate information of all kinds by wire, radio, or other methods of transmission"")
+d_internet.meaning.append(d_meaning_exp)"
+"312.2 Definitions. Mixed audience website or online service means a website or online service that is directed to children under the criteria set forth in paragraph (1) of the definition ofwebsite or online service directed to children, but that does not target children as its primary audience, and does not collect personal information from any visitor, other than for the limited purposes set forth in§ 312.5(c), prior to collecting age information or using another means that is reasonably calculated, in light of available technology, to determine whether the visitor is a child. Any collection of age information, or other means of determining whether a visitor is a child, must be done in a neutral manner that does not default to a set age or encourage visitors to falsify age information.","
+s = Section(sectionNumber=""312.2"", sectionTitle=""Definitions"")
+
+e1 = Expression(s, ""Mixed audience website or online service means a website or online service that is directed to children under the criteria set forth in paragraph (1) of the definition of website or online service directed to children, but that does not target children as its primary audience, and does not collect personal information from any visitor, other than for the limited purposes set forth in ¬ß 312.5(c), prior to collecting age information or using another means that is reasonably calculated, in light of available technology, to determine whether the visitor is a child."")
+definition1 = Definition(s, e1)
+ref1 = Reference(s, ""paragraph (1) of the definition of website or online service directed to children"", target=definition1)
+definition1.add_is_refined_by(ref1)
+ref2 = Reference(s, ""¬ß 312.5(c)"", target=definition1)
+definition1.add_is_refined_by(ref2)
+
+e2 = Expression(s, ""Any collection of age information, or other means of determining whether a visitor is a child"")
+r1 = Rule(s, e2)
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(s, ""must be done in a neutral manner that does not default to a set age or encourage visitors to falsify age information."")
+r1.add_refines(definition1)
+"
+"312.2 Definitions. Obtaining verifiable consent means making any reasonable effort (taking into consideration available technology) to ensure that before personal information is collected from a child, a parent of the child:
+(1) Receives notice of the operator's personal information collection, use, and disclosure practices; and
+(2) Authorizes any collection, use, and/or disclosure of the personal information.","
+section_312_2 = Section(sectionNumber=""312.2"", sectionTitle=""Definitions"")
+d_verifiable_consent = Definition(section_312_2, Expression(section_312_2, ""Obtaining verifiable consent""))
+exp_consent_meaning = Expression(section_312_2, ""means making any reasonable effort (taking into consideration available technology) to ensure that before personal information is collected from a child, a parent of the child:"")
+d_verifiable_consent.meaning.append(exp_consent_meaning)
+
+s1 = Section(sectionNumber=""(1)"")
+section_312_2.add_subsection(s1)
+exp1 = Expression(s1, ""Receives notice of the operator's personal information collection, use, and disclosure practices"")
+exp_consent_meaning.includes.append(exp1)
+
+s2 = Section(sectionNumber=""(2)"")
+section_312_2.add_subsection(s2)
+exp2 = Expression(s2, ""Authorizes any collection, use, and/or disclosure of the personal information"")
+exp_consent_meaning.includes.append(exp2)"
+"312.2 Definitions. Online contact information means an email address or any other substantially similar identifier that permits direct contact with a person online, including but not limited to, an instant messaging user identifier, a voice over Internet Protocol (VOIP) identifier, a video chat user identifier, or a mobile telephone number provided the operator uses it only to send text messages to a parent in connection with obtaining parental consent.","
+s = Section(sectionNumber=""312.2"", sectionTitle=""Definitions"")
+d = Definition(s, Expression(s, ""Online contact information""))
+e = Expression(s, ""an email address or any other substantially similar identifier that permits direct contact with a person online, including but not limited to, an instant messaging user identifier, a voice over Internet Protocol (VOIP) identifier, a video chat user identifier, or a mobile telephone number provided the operator uses it only to send text messages to a parent in connection with obtaining parental consent."")
+d.meaning.append(e)"
+"312.2 Definitions. Operator means any person who operates a website located on the internet or an online service and who collects or maintains personal information from or about the users of or visitors to such website or online service, or on whose behalf such information is collected or maintained, or offers products or services for sale through that website or online service, where such website or online service is operated forcommercial purposes involving commerce among the several States or with one or more foreign nations; in any territory of the United States or in the District of Columbia, or between any such territory and another such territory or any State or foreign nation; or between the District of Columbia and any State, territory, or foreign nation. This definition does not include any nonprofit entity that would otherwise be exempt from coverage under Section 5 of the Federal Trade Commission Act (15 U.S.C. 45). Personal information is collected or maintained on behalf of an operator when:
+(1) It is collected or maintained by an agent or service provider of the operator; or
+(2) The operator benefits by allowing another person to collect personal information directly from users
+of such website or online service.","s = Section(sectionNumber=""312.2"", sectionTitle=""Definitions"")
+d = Definition(s, Expression(s, ""Operator""))
+d_meaning = Expression(s, ""any person who operates a website located on the internet or an online service and who collects or maintains personal information from or about the users of or visitors to such website or online service, or on whose behalf such information is collected or maintained, or offers products or services for sale through that website or online service, where such website or online service is operated for commercial purposes involving commerce among the several States or with one or more foreign nations; in any territory of the United States or in the District of Columbia, or between any such territory and another such territory or any State or foreign nation; or between the District of Columbia and any State, territory, or foreign nation."")
+d.meaning.append(d_meaning)
+d.exclusions.append(Expression(s, ""This definition does not include any nonprofit entity that would otherwise be exempt from coverage under Section 5 of the Federal Trade Commission Act (15 U.S.C. 45)""))
+ref1 = Reference(s, ""Section 5 of the Federal Trade Commission Act (15 U.S.C. 45)"", target=d)
+d.add_follows(ref1)
+d.meaning.append(Expression(s, ""Personal information is collected or maintained on behalf of an operator when:""))
+
+s1 = Section(""(1)"")
+s.add_subsection(s1)
+d_meaning.includes.append(Expression(s1, ""it is collected or maintained by an agent or service provider of the operator""))
+
+s2 = Section(""(2)"")
+s.add_subsection(s2)
+d_meaning.includes.append(Expression(s2, ""The operator benefits by allowing another person to collect personal information directly from users of such website or online service""))"
+312.2 Definitions. Parent includes a legal guardian.,"
+s = Section(sectionNumber=""312.2"", sectionTitle=""Definitions"")
+s1 = Section(sectionNumber=""(a)"")
+s.add_subsection(s1)
+d = Definition(s1, Expression(s1, ""Parent""))
+d.meaning.append(Expression(s1, ""includes a legal guardian""))"
+"312.2 Definitions. Person means any individual, partnership, corporation, trust, estate, cooperative, association, or other entity.","
+section_312_2 = Section(sectionNumber=""312.2"", sectionTitle=""Definitions"")
+
+person_expression = Expression(section_312_2, ""Person"")
+definition_person = Definition(section_312_2, defined_term=person_expression)
+
+meaning_expression = Expression(section_312_2, ""means any individual, partnership, corporation, trust, estate, cooperative, association, or other entity"")
+definition_person.meaning.append(meaning_expression)"
+"312.2 Definitions. Personal information means individually identifiable information about an individual collected online, including:
+(1) A first and last name;
+(2) A home or other physical address including street name and name of a city or town;
+(3) Online contact information as defined in this section;
+(4) A screen or user name where it functions in the same manner as online contact information, as defined in this section;
+(5) A telephone number;
+(6) A government-issued identifier, such as a Social Security, State identification card, birth certificate, or passport number;
+(7) A persistent identifier that can be used to recognize a user over time and across different websites or online services. Such persistent identifier includes, but is not limited to, a customer number held in a cookie, an Internet Protocol (IP) address, a processor or device serial number, or unique device identifier;
+(8) A photograph, video, or audio file where such file contains a child's image or voice;
+(9) Geolocation information sufficient to identify street name and name of a city or town;
+(10) A biometric identifier that can be used for the automated or semi-automated recognition of an individual, such as fingerprints; handprints; retina patterns; iris patterns; genetic data, including a DNA sequence; voiceprints; gait patterns; facial templates; or faceprints; or
+(11) Information concerning the child or the parents of that child that the operator collects online from the child and combines with an identifier described in this definition.","s = Section(sectionNumber=""312.2"", sectionTitle=""Definitions"")
+
+defined_term_expression = Expression(s, ""Personal information"")
+d = Definition(s, defined_term_expression)
+d.meaning.append(Expression(s, ""means individually identifiable information about an individual collected online, including:""))
+
+s1 = Section(""(1)"")
+s.add_subsection(s1)
+d.meaning.append(Expression(s1, ""A first and last name""))
+
+s2 = Section(""(2)"")
+s.add_subsection(s2)
+d.meaning.append(Expression(s2, ""A home or other physical address including street name and name of a city or town""))
+
+s3 = Section(""(3)"")
+s.add_subsection(s3)
+d.meaning.append(Expression(s3, ""Online contact information as defined in this section""))
+ref1 = Reference(s3, ""this section"", d)
+d.add_is_refined_by(ref1)
+
+s4 = Section(""(4)"")
+s.add_subsection(s4)
+d.meaning.append(Expression(s4, ""A screen or user name where it functions in the same manner as online contact information, as defined in this section""))
+ref2 = Reference(s4, ""this section"", d)
+d.add_is_refined_by(ref2)
+
+s5 = Section(""(5)"")
+s.add_subsection(s5)
+d.meaning.append(Expression(s5, ""A telephone number""))
+
+s6 = Section(""(6)"")
+s.add_subsection(s6)
+d.meaning.append(Expression(s6, ""A government-issued identifier, such as a Social Security, State identification card, birth certificate, or passport number""))
+
+s7 = Section(""(7)"")
+s.add_subsection(s7)
+d.meaning.append(Expression(s7, ""A persistent identifier that can be used to recognize a user over time and across different websites or online services. Such persistent identifier includes, but is not limited to, a customer number held in a cookie, an Internet Protocol (IP) address, a processor or device serial number, or unique device identifier""))
+
+s8 = Section(""(8)"")
+s.add_subsection(s8)
+d.meaning.append(Expression(s8, ""A photograph, video, or audio file where such file contains a child's image or voice""))
+
+s9 = Section(""(9)"")
+s.add_subsection(s9)
+d.meaning.append(Expression(s9, ""Geolocation information sufficient to identify street name and name of a city or town""))
+
+s10 = Section(""(10)"")
+s.add_subsection(s10)
+d.meaning.append(Expression(s10, ""A biometric identifier that can be used for the automated or semi-automated recognition of an individual, such as fingerprints; handprints; retina patterns; iris patterns; genetic data, including a DNA sequence; voiceprints; gait patterns; facial templates; or faceprints""))
+
+s11 = Section(""(11)"")
+s.add_subsection(s11)
+d.meaning.append(Expression(s11, ""Information concerning the child or the parents of that child that the operator collects online from the child and combines with an identifier described in this definition""))"
+"312.2 Definitions. Release of personal information means the sharing, selling, renting, or transfer of personal information to any
+third party.","
+s = Section(sectionNumber=""312.2"", sectionTitle=""Definitions"")
+
+e_release_info = Expression(s, ""Release of personal information"")
+d_release_info = Definition(s, defined_term=e_release_info)
+
+d_meaning_exp = Expression(s, ""means the sharing, selling, renting, or transfer of personal information to any third party."")
+d_release_info.meaning.append(d_meaning_exp)"
+"312.2 Definitions. Support for the internal operations of the website or online service means:
+(1) Those activities necessary to:
+(i) Maintain or analyze the functioning of the website or online service;
+(ii) Perform network communications;
+(iii) Authenticate users of, or personalize the content on, the website or online service;
+(iv) Serve contextual advertising on the website or online service or cap the frequency of advertising;
+(v) Protect the security or integrity of the user, website, or online service;
+(vi) Ensure legal or regulatory compliance; or
+(vii) Fulfill a request of a child as permitted by§ 312.5(c)(3)and(4).
+(2) Provided, however, that, except as specifically permitted by paragraphs (1)(i) through (vii) of this definition, the information collected for the activities listed in paragraphs (1)(i) through (vii) of this definition cannot be used or disclosed to contact a specific individual, including through behavioral advertising, to amass a profile on a specific individual, or for any other purpose.","s = Section(sectionNumber=""312.2"", sectionTitle=""Definitions"")
+d = Definition(s, Expression(s, ""Support for the internal operations of the website or online service""))
+s1 = Section(""(1)"")
+s.add_subsection(s1)
+e1 = Expression(s1, ""Those activities necessary to:"")
+d.meaning.append(e1)
+
+s1i = Section(""(i)"")
+s1.add_subsection(s1i)
+e1.includes.append(Expression(s1i, ""Maintain or analyze the functioning of the website or online service""))
+
+s1ii = Section(""(ii)"")
+s1.add_subsection(s1ii)
+e1.includes.append(Expression(s1ii, ""Perform network communications""))
+
+s1iii = Section(""(iii)"")
+s1.add_subsection(s1iii)
+e1.includes.append(Expression(s1iii, ""Authenticate users of, or personalize the content on, the website or online service""))
+
+s1iv = Section(""(iv)"")
+s1.add_subsection(s1iv)
+e1.includes.append(Expression(s1iv, ""Serve contextual advertising on the website or online service or cap the frequency of advertising""))
+
+s1v = Section(""(v)"")
+s1.add_subsection(s1v)
+e1.includes.append(Expression(s1v, ""Protect the security or integrity of the user, website, or online service""))
+
+s1vi = Section(""(vi)"")
+s1.add_subsection(s1vi)
+e1.includes.append(Expression(s1vi, ""Ensure legal or regulatory compliance""))
+
+s1vii = Section(""(vii)"")
+s1.add_subsection(s1vii)
+e1.includes.append(Expression(s1vii, ""Fulfill a request of a child as permitted by ¬ß 312.5(c)(3) and (4)""))
+ref1 = Reference(s1vii, ""¬ß 312.5(c)(3) and (4)"", target=d)
+d.add_is_refined_by(ref1)
+
+s2 = Section(""(2)"")
+s.add_subsection(s2)
+d.exclusions.append(Expression(s2, ""Provided, however, that, except as specifically permitted by paragraphs (1)(i) through (vii) of this definition, the information collected for the activities listed in paragraphs (1)(i) through (vii) of this definition cannot be used or disclosed to contact a specific individual, including through behavioral advertising, to amass a profile on a specific individual, or for any other purpose""))"
+"312.2 Definitions. Third party means any person who is not:
+(1) An operator with respect to the collection or maintenance of personal information on the website or online service; or
+(2) A person who provides support for the internal operations of the website or online service and who does not use or disclose information protected under this part for any other purpose.","
+s = Section(sectionNumber=""312.2"", sectionTitle=""Definitions"")
+d = Definition(s, Expression(s, ""Third party""))
+d_exclusion = Expression(s, ""means any person who is not:"")
+d.exclusions.append(d_exclusion)
+
+s1 = Section(sectionNumber=""(1)"")
+s.add_subsection(s1)
+e1 = Expression(s1, ""An operator with respect to the collection or maintenance of personal information on the website or online service"")
+d_exclusion.includes.append(e1)
+
+s2 = Section(sectionNumber=""(2)"")
+s.add_subsection(s2)
+e2 = Expression(s2, ""A person who provides support for the internal operations of the website or online service and who does not use or disclose information protected under this part for any other purpose."")
+d_exclusion.includes.append(e2)"
+"312.2 Definitions. Website or online service directed to children means a commercial website or online service, or portion thereof, that is targeted to children.
+(1) In determining whether a website or online service, or a portion thereof, is directed to children, the Commission will consider its subject matter, visual content, use of animated characters or child-oriented activities and incentives, music or other audio content, age of models, presence of child
+celebrities or celebrities who appeal to children, language or other characteristics of the website or online service, as well as whether advertising promoting or appearing on the website or online service is directed to children. The Commission will also consider competent and reliable empirical evidence regarding audience composition and evidence regarding the intended audience, including marketing or promotional materials or plans, representations to consumers or to third parties, reviews by users or third parties, and the age of users on similar websites or services.
+(2) A website or online service shall be deemed directed to children when it has actual knowledge that it is collecting personal information directly from users of another website or online service directed to children.
+(3) A mixed audience website or online service shall not be deemed directed to children with regard to any visitor not identified as under 13.
+A website or online service shall not be deemed directed to children solely because it refers or links to a commercial website or online service directed to children by using information location tools, including a directory, index, reference, pointer, or hypertext link.","
+s312_2 = Section(sectionNumber=""312.2"", sectionTitle=""Definitions"")
+
+d1 = Definition(s312_2, Expression(s312_2, ""Website or online service directed to children""))
+d1.meaning.append(Expression(s312_2, ""means a commercial website or online service, or portion thereof, that is targeted to children.""))
+
+s1 = Section(sectionNumber=""(1)"")
+s312_2.add_subsection(s1)
+r1 = Rule(s1, Expression(s1, ""the Commission""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(s1, ""will consider its subject matter, visual content, use of animated characters or child-oriented activities and incentives, music or other audio content, age of models, presence of child celebrities or celebrities who appeal to children, language or other characteristics of the website or online service, as well as whether advertising promoting or appearing on the website or online service is directed to children"")
+r1.conditions.append(Expression(s1, ""In determining whether a website or online service, or a portion thereof, is directed to children""))
+
+r2 = Rule(s1, Expression(s1, ""the Commission""))
+r2.rule_type = Rule.OBLIGATION
+r2.description = Expression(s1, ""will also consider competent and reliable empirical evidence regarding audience composition and evidence regarding the intended audience, including marketing or promotional materials or plans, representations to consumers or to third parties, reviews by users or third parties, and the age of users on similar websites or services"")
+r2.add_refines(r1)
+
+s2 = Section(sectionNumber=""(2)"")
+s312_2.add_subsection(s2)
+r3 = Rule(s2, Expression(s2, ""A website or online service""))
+r3.rule_type = Rule.OBLIGATION
+r3.description = Expression(s2, ""shall be deemed directed to children when it has actual knowledge that it is collecting personal information directly from users of another website or online service directed to children"")
+r3.add_refines(r1)
+
+s3 = Section(sectionNumber=""(3)"")
+s312_2.add_subsection(s3)
+exemption1=Exemption(s312_2, Expression(s312_2, ""A mixed audience website or online service shall not be deemed directed to children with regard to any visitor not identified as under 13.""))
+exemption1.add_is_exception_to(r3)
+
+exemption2=Exemption(s312_2, Expression(s312_2, ""A website or online service shall not be deemed directed to children solely because it refers or links to a commercial website or online service directed to children by using information location tools, including a directory, index, reference, pointer, or hypertext link.""))
+exemption2.add_is_exception_to(r3)"
+"312.3 Regulation of unfair or deceptive acts or practices in connection with the collection, use, and/or disclosure of personal information from and about children on the internet. It shall be unlawful for any operator of a website or online service directed to children, or any operator that has
+actual knowledge that it is collecting or maintaining personal information from a child, to collect personal information from a child in a manner that violates the regulations prescribed under this part. Generally, under this part, an operator must:
+(a) Provide notice on the website or online service of what information it collects from children, how it uses such information, and its disclosure practices for such information (312.4(b));
+(b) Obtain verifiable parental consent prior to any collection, use, and/or disclosure of personal information from children (312.5);
+(c) Provide a reasonable means for a parent to review the personal information collected from a child and to refuse to permit its further use or maintenance (312.6);
+(d) Not condition a child's participation in a game, the offering of a prize, or another activity on the child disclosing more personal information than is reasonably necessary to participate in such activity (312.7); and
+(e) Establish and maintain reasonable procedures to protect the confidentiality, security, and integrity of personal information collected from children ( 312.8).","s = Section(sectionNumber=""312.3"", sectionTitle=""Regulation of unfair or deceptive acts or practices in connection with the collection, use, and/or disclosure of personal information from and about children on the internet."")
+
+r1 = Rule(s, Expression(s, ""any operator of a website or online service directed to children, or any operator that has actual knowledge that it is collecting or maintaining personal information from a child""))
+r1.rule_type = Rule.PROHIBITION
+r1.description = Expression(s, ""to collect personal information from a child in a manner that violates the regulations prescribed under this part"")
+
+r2 = Rule(s, Expression(s, ""an operator""))
+r2.rule_type = Rule.OBLIGATION
+r2.description = Expression(s, ""must:"")
+
+sa = Section(""(a)"")
+s.add_subsection(sa)
+exp1 = Expression(sa, ""Provide notice on the website or online service of what information it collects from children, how it uses such information, and its disclosure practices for such information (312.4(b))"")
+r2.description.includes.append(exp1)
+
+sb = Section(""(b)"")
+s.add_subsection(sb)
+exp2 = Expression(sb, ""Obtain verifiable parental consent prior to any collection, use, and/or disclosure of personal information from children (312.5)"")
+r2.description.includes.append(exp2)
+
+sc = Section(""(c)"")
+s.add_subsection(sc)
+exp3 = Expression(sc, ""Provide a reasonable means for a parent to review the personal information collected from a child and to refuse to permit its further use or maintenance (312.6)"")
+r2.description.includes.append(exp3)
+
+sd = Section(""(d)"")
+s.add_subsection(sd)
+exp4 = Expression(sd, ""Not condition a child's participation in a game, the offering of a prize, or another activity on the child disclosing more personal information than is reasonably necessary to participate in such activity (312.7)"")
+r2.description.includes.append(exp4)
+
+se = Section(""(e)"")
+s.add_subsection(se)
+exp5 = Expression(se, ""Establish and maintain reasonable procedures to protect the confidentiality, security, and integrity of personal information collected from children (312.8)"")
+r2.description.includes.append(exp5)
+
+r2.add_refines(r1)"
+"312.4 Notice.
+(a) General principles of notice.It shall be the obligation of the operator to provide notice and obtain verifiable parental consent prior to collecting, using, or disclosing personal information from children. Such notice must be clearly and understandably written, complete, and must contain no unrelated, confusing, or contradictory materials.","
+s312_4 = Section(""312.4"", ""Notice"")
+sa = Section(""(a)"", ""General principles of notice"")
+s312_4.add_subsection(sa)
+
+r = Rule(sa, Expression(sa, ""the operator""))
+r.rule_type = Rule.OBLIGATION
+r.description = Expression(sa, ""to provide notice and obtain verifiable parental consent prior to collecting, using, or disclosing personal information from children"")
+r.conditions.append(Expression(sa, ""Such notice must be clearly and understandably written, complete, and must contain no unrelated, confusing, or contradictory materials""))"
+"(b) Direct notice to the parent.An operator must make reasonable efforts, taking into account available technology, to ensure that a parent of a child receives direct notice of the operator's practices with regard to the collection, use, or disclosure of personal information from children, including notice of any material change in the collection, use, or disclosure practices to which the parent has previously consented.","
+s = Section(sectionNumber=""(b)"", sectionTitle=""Direct notice to the parent"")
+
+r1 = Rule(s, Expression(s, ""An operator""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(s, ""must make reasonable efforts, taking into account available technology, to ensure that a parent of a child receives direct notice of the operator's practices with regard to the collection, use, or disclosure of personal information from children"")
+r1.conditions.append(Expression(s, ""including notice of any material change in the collection, use, or disclosure practices to which the parent has previously consented""))"
+"(c) Content of the direct notice to the parent—
+(1) Content of the direct notice to the parent for purposes of obtaining consent.The direct notice to obtain the parent's affirmative consent to the collection, use, or disclosure of a child's personal information (including under§ 312.5(c)(1)) shall set forth:
+(i) If applicable, that the operator has collected the parent's or child's online contact information from the child, and, if such is the case, the name of the child or the parent, in order to obtain the parent's consent;
+(ii) That the parent's consent is required for the collection, use, or disclosure of personal information, and that the operator will not collect, use, or disclose any personal information from the child if the parent does not provide such consent;
+(iii) The items of personal information the operator intends to collect from the child, how the operator intends to use such information, and the potential opportunities for the disclosure of personal information, should the parent provide consent;
+(iv) Where the operator discloses personal information to one or more third parties, the identities or specific categories of such third parties (including the public if making it publicly available) and the purposes for such disclosure, should the parent provide consent, and that the parent can consent to the collection and use of the child's personal information without consenting to the disclosure of such personal information to third parties except to the extent such disclosure is integral to the website or online service;
+(v) A hyperlink to the operator's online notice of its information practices required underparagraph (d)of this section;
+(vi) The means by which the parent can provide verifiable consent to the collection, use, and disclosure of the information; and
+(vii) If the operator has collected the name or online contact information of the parent or child to provide notice and obtain parental consent, that if the parent does not provide consent within a reasonable time from the date the direct notice was sent, the operator will delete the","s_c = Section(""(c)"", ""Content of the direct notice to the parent‚Äî"")
+s1 = Section(""(1)"", ""Content of the direct notice to the parent for purposes of obtaining consent."")
+s_c.add_subsection(s1)
+
+r1 = Rule(s1, Expression(s1, ""The direct notice to obtain the parent's affirmative consent to the collection, use, or disclosure of a child's personal information""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(s1, ""shall set forth:"")
+ref=Reference(s1, ""312.5(c)(1))"", r1)
+r1.add_follows(ref)
+
+s1_i = Section(""(i)"")
+s1.add_subsection(s1_i)
+exp1 = Expression(s1_i, ""If applicable, that the operator has collected the parent's or child's online contact information from the child, and, if such is the case, the name of the child or the parent, in order to obtain the parent's consent;"")
+r1.description.includes.append(exp1)
+
+s1_ii = Section(""(ii)"")
+s1.add_subsection(s1_ii)
+exp2 = Expression(s1_ii, ""That the parent's consent is required for the collection, use, or disclosure of personal information, and that the operator will not collect, use, or disclose any personal information from the child if the parent does not provide such consent;"")
+r1.description.includes.append(exp2)
+
+s1_iii = Section(""(iii)"")
+s1.add_subsection(s1_iii)
+exp3 = Expression(s1_iii, ""The items of personal information the operator intends to collect from the child, how the operator intends to use such information, and the potential opportunities for the disclosure of personal information, should the parent provide consent;"")
+r1.description.includes.append(exp3)
+
+s1_iv = Section(""(iv)"")
+s1.add_subsection(s1_iv)
+exp4 = Expression(s1_iv, ""Where the operator discloses personal information to one or more third parties, the identities or specific categories of such third parties (including the public if making it publicly available) and the purposes for such disclosure, should the parent provide consent, and that the parent can consent to the collection and use of the child's personal information without consenting to the disclosure of such personal information to third parties except to the extent such disclosure is integral to the website or online service;"")
+r1.description.includes.append(exp4)
+
+s1_v = Section(""(v)"")
+s1.add_subsection(s1_v)
+exp5 = Expression(s1_v, ""A hyperlink to the operator's online notice of its information practices required under paragraph (d) of this section;"")
+r1.description.includes.append(exp5)
+ref1 = Reference(s1_v, ""paragraph (d) of this section"", target=r1)
+r1.add_follows(ref1)
+
+s1_vi = Section(""(vi)"")
+s1.add_subsection(s1_vi)
+exp6 = Expression(s1_vi, ""The means by which the parent can provide verifiable consent to the collection, use, and disclosure of the information; and"")
+r1.description.includes.append(exp6)
+
+s1_vii = Section(""(vii)"")
+s1.add_subsection(s1_vii)
+exp7 = Expression(s1_vii, ""If the operator has collected the name or online contact information of the parent or child to provide notice and obtain parental consent, that if the parent does not provide consent within a reasonable time from the date the direct notice was sent, the operator will delete the"")
+r1.description.includes.append(exp7)"
+"(2) Content of the direct notice to the parent of a child's online activities not involving the collection, use or disclosure of personal information.Where an operator chooses to notify a parent of a child's participation in a website or online service, and where such site or service does not collect any personal information other than the parent's online contact information, the voluntary direct notice to the parent of a child's online activities not involving the collection, use or disclosure of personal information (required under§ 312.5(c)(2)) shall set forth:
+(i) That the operator has collected the parent's online contact information from the child in order to provide notice to, and subsequently update the parent about, a child's participation in a website or online service that does not otherwise collect, use, or disclose children's personal information;
+(ii) That the parent's online contact information will not be used or disclosed for any other purpose;
+(iii) That the parent may refuse to permit the child's participation in the website or online service and may require the deletion of the parent's online contact information, and how the parent can do so; and
+(iv) A hyperlink to the operator's online notice of its information practices required underparagraph (d)of this section.","s = Section(sectionNumber=""(2)"", sectionTitle=""Content of the direct notice to the parent of a child's online activities not involving the collection, use or disclosure of personal information"")
+
+r1 = Rule(s, Expression(s, ""the voluntary direct notice to the parent of a child's online activities not involving the collection, use or disclosure of personal information""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(s, ""shall set forth:"")
+r1.conditions.append(Expression(s, ""Where an operator chooses to notify a parent of a child's participation in a website or online service, and where such site or service does not collect any personal information other than the parent's online contact information""))
+ref=Reference(s, "" 312.5(c)(2)"", r1)
+r1.add_follows(ref)
+
+
+s_i = Section(""(i)"")
+s.add_subsection(s_i)
+r1.description.includes.append(Expression(s_i, ""That the operator has collected the parent's online contact information from the child in order to provide notice to, and subsequently update the parent about, a child's participation in a website or online service that does not otherwise collect, use, or disclose children's personal information""))
+
+s_ii = Section(""(ii)"")
+s.add_subsection(s_ii)
+r1.description.includes.append(Expression(s_ii, ""That the parent's online contact information will not be used or disclosed for any other purpose""))
+
+s_iii = Section(""(iii)"")
+s.add_subsection(s_iii)
+r1.description.includes.append(Expression(s_iii, ""That the parent may refuse to permit the child's participation in the website or online service and may require the deletion of the parent's online contact information, and how the parent can do so""))
+
+s_iv = Section(""(iv)"")
+s.add_subsection(s_iv)
+e_iv = Expression(s_iv, ""A hyperlink to the operator's online notice of its information practices required under paragraph (d) of this section"")
+r1.description.includes.append(e_iv)
+ref1 = Reference(s_iv, ""paragraph (d) of this section"", target=r1)
+r1.add_follows(ref1)"
+"(3) Content of the direct notice to the parent of operator's intent to communicate with the child multiple times.The direct notice to the parent of the operator's intent to communicate with the child multiple times (required under§ 312.5(c)(4)) shall set forth:
+(i) That the operator has collected the child's online contact information from the child in order to provide multiple online communications to the child;
+(ii) That the operator has collected the parent's online contact information from the child in order to notify the parent that the child has registered to receive multiple online communications from the operator;
+(iii) That the online contact information collected from the child will not be used for any other purpose, disclosed, or combined with any other information collected from the child;
+(iv) That the parent may refuse to permit further contact with the child and require the deletion of the parent's and child's online contact information, and how the parent can do so;
+(v) That if the parent fails to respond to this direct notice, the operator may use the online contact information collected from the child for the purpose stated in the direct notice; and
+(vi) A hyperlink to the operator's online notice of its information practices required underparagraph (d)of this section.","
+s3 = Section(sectionNumber=""(3)"", sectionTitle=""Content of the direct notice to the parent of operator's intent to communicate with the child multiple times"")
+
+r1 = Rule(s3, Expression(s3, ""The direct notice to the parent of the operator's intent to communicate with the child multiple times ""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(s3, ""shall set forth:"")
+ref1 = Reference(s3, ""312.5(c)(4)"", target=r1)
+r1.add_follows(ref1)
+
+s3i = Section(sectionNumber=""(i)"")
+s3.add_subsection(s3i)
+r1.description.includes.append(Expression(s3i, ""That the operator has collected the child's online contact information from the child in order to provide multiple online communications to the child""))
+
+s3ii = Section(sectionNumber=""(ii)"")
+s3.add_subsection(s3ii)
+r1.description.includes.append(Expression(s3ii, ""That the operator has collected the parent's online contact information from the child in order to notify the parent that the child has registered to receive multiple online communications from the operator""))
+
+s3iii = Section(sectionNumber=""(iii)"")
+s3.add_subsection(s3iii)
+r1.description.includes.append(Expression(s3iii, ""That the online contact information collected from the child will not be used for any other purpose, disclosed, or combined with any other information collected from the child""))
+
+s3iv = Section(sectionNumber=""(iv)"")
+s3.add_subsection(s3iv)
+r1.description.includes.append(Expression(s3iv, ""That the parent may refuse to permit further contact with the child and require the deletion of the parent's and child's online contact information, and how the parent can do so""))
+
+s3v = Section(sectionNumber=""(v)"")
+s3.add_subsection(s3v)
+r1.description.includes.append(Expression(s3v, ""That if the parent fails to respond to this direct notice, the operator may use the online contact information collected from the child for the purpose stated in the direct notice""))
+
+s3vi = Section(sectionNumber=""(vi)"")
+s3.add_subsection(s3vi)
+r1.description.includes.append(Expression(s3vi, ""A hyperlink to the operator's online notice of its information practices required under paragraph (d) of this section""))
+ref2 = Reference(s3vi, ""paragraph (d) of this section"", target=r1)
+r1.add_follows(ref2)"
+"4) Content of the direct notice to the parent in order to protect a child's safety.The direct notice to the parent in order to protect a child's safety (required under§ 312.5(c)(5)) shall set forth:
+(i) That the operator has collected the name and the online contact information of the child and the parent in order to protect the safety of a child;
+ (ii) That the information will not be used or disclosed for any purpose unrelated to the child's safety;
+(iii) That the parent may refuse to permit the use, and require the deletion, of the information collected, and how the parent can do so;
+(iv) That if the parent fails to respond to this direct notice, the operator may use the information for the purpose stated in the direct notice; and
+(v)  A hyperlink to the operator's online notice of its information practices required underparagraph (d)of this section.","
+s4 = Section(""4"", ""Content of the direct notice to the parent in order to protect a child's safety"")
+r = Rule(s4, Expression(s4, ""The direct notice to the parent in order to protect a child's safety ""))
+r.rule_type = Rule.OBLIGATION
+r.description = Expression(s4, ""shall set forth:"")
+ref1 = Reference(s4, ""312.5(c)(5)"", target=r)
+r.add_follows(ref1)
+
+s4_i = Section(""(i)"")
+s4.add_subsection(s4_i)
+e1 = Expression(s4_i, ""That the operator has collected the name and the online contact information of the child and the parent in order to protect the safety of a child;"")
+r.description.includes.append(e1)
+
+s4_ii = Section(""(ii)"")
+s4.add_subsection(s4_ii)
+e2 = Expression(s4_ii, ""That the information will not be used or disclosed for any purpose unrelated to the child's safety;"")
+r.description.includes.append(e2)
+
+s4_iii = Section(""(iii)"")
+s4.add_subsection(s4_iii)
+e3 = Expression(s4_iii, ""That the parent may refuse to permit the use, and require the deletion, of the information collected, and how the parent can do so;"")
+r.description.includes.append(e3)
+
+s4_iv = Section(""(iv)"")
+s4.add_subsection(s4_iv)
+e4 = Expression(s4_iv, ""That if the parent fails to respond to this direct notice, the operator may use the information for the purpose stated in the direct notice;"")
+r.description.includes.append(e4)
+
+s4_v = Section(""(v)"")
+s4.add_subsection(s4_v)
+e5 = Expression(s4_v, ""A hyperlink to the operator's online notice of its information practices required under paragraph (d) of this section."")
+r.description.includes.append(e5)
+ref2 = Reference(s4_v, ""paragraph (d) of this section"", target=r)
+r.add_follows(ref2)"
+"(d) Notice on the website or online service.In addition to the direct notice to the parent, an operator must post a prominent and clearly labeled link to an online notice of its information practices with regard to children on the home or landing page or screen of its website or online service,and, at each area of the website or online service where personal information is collected from children. The link must be in close proximity to the requests for information in each such area. An operator of a general audience website or online service that has a separate children's area must post a link to a notice of its information practices with regard to children on the home or landing page or screen of the children's area. To be complete, the online
+notice of the website or online service's information practices must state the following:
+(1) The name, address, telephone number, and email address of all operators collecting or maintaining personal information from children through the website or online service. Provided that: The operators of a website or online service may list the name, address, phone number, and email
+address of one operator who will respond to all inquiries from parents concerning the operators' privacy policies and use of children's information, as long as the names of all the operators collecting or maintaining personal information from children through the website or online service are also listed in the notice;
+(2) A description of what information the operator collects from children, including whether the website or online service enables a child to make personal information publicly available; how the operator uses such information; the operator's disclosure practices for such information, including the identities and specific categories of any third parties to which the operator discloses personal information and the purposes for such disclosures; and the operator's data retention policy as required under§ 312.10;
+(3) If applicable, the specific internal operations for which the operator has collected a persistent identifier pursuant to§ 312.5(c)(7); and the means the operator uses to ensure that such identifier is not used or disclosed to contact a specific individual, including through behavioral advertising, to amass a profile on a specific individual, or for any other purpose (except as specifically permitted to provide support for the internal operations of the website or online service);
+(4) Where the operator collects audio files containing a child's voice pursuant to§ 312.5(c)(9), a description of how the operator uses such audio files and that the operator deletes such audio files immediately after responding to the request for which they were collected; and
+(5) If applicable, that the parent can review or have deleted the child's personal information, and refuse to permit further collection or use of the child's information, and state the procedures for doing so.","sd = Section(""(d)"", ""Notice on the website or online service"")
+
+rule1 = Rule(sd, Expression(sd, ""an operator""))
+rule1.rule_type = Rule.OBLIGATION
+rule1.description = Expression(sd, ""must post a prominent and clearly labeled link to an online notice of its information practices with regard to children on the home or landing page or screen of its website or online service, and, at each area of the website or online service where personal information is collected from children."")
+rule1.conditions.append(Expression(sd, ""In addition to the direct notice to the parent""))
+
+rule2 = Rule(sd, Expression(sd, ""The link""))
+rule2.rule_type = Rule.OBLIGATION
+rule2.description = Expression(sd, ""must be in close proximity to the requests for information in each such area."")
+rule2.add_refines(rule1)
+
+rule3 = Rule(sd, Expression(sd, ""An operator of a general audience website or online service that has a separate children's area""))
+rule3.rule_type = Rule.OBLIGATION
+rule3.description = Expression(sd, ""must post a link to a notice of its information practices with regard to children on the home or landing page or screen of the children's area."")
+rule3.add_refines(rule1)
+
+rule4 = Rule(sd, Expression(sd, ""To be complete, the online notice of the website or online service's information practices""))
+rule4.rule_type = Rule.OBLIGATION
+rule4.description = Expression(sd, ""must state the following:"")
+rule4.add_refines(rule3)
+
+sd1 = Section(""(1)"")
+sd.add_subsection(sd1)
+rule4.description.includes.append(Expression(sd1, ""The name, address, telephone number, and email address of all operators collecting or maintaining personal information from children through the website or online service. Provided that: The operators of a website or online service may list the name, address, phone number, and email address of one operator who will respond to all inquiries from parents concerning the operators' privacy policies and use of children's information, as long as the names of all the operators collecting or maintaining personal information from children through the website or online service are also listed in the notice""))
+
+sd2 = Section(""(2)"")
+sd.add_subsection(sd2)
+rule4.description.includes.append(Expression(sd2, ""A description of what information the operator collects from children, including whether the website or online service enables a child to make personal information publicly available; how the operator uses such information; the operator's disclosure practices for such information, including the identities and specific categories of any third parties to which the operator discloses personal information and the purposes for such disclosures; and the operator's data retention policy as required under ¬ß 312.10""))
+ref1 = Reference(sd2, ""¬ß 312.10"", target=rule4)
+rule4.add_follows(ref1)
+
+sd3 = Section(""(3)"")
+sd.add_subsection(sd3)
+rule4.description.includes.append(Expression(sd3, ""If applicable, the specific internal operations for which the operator has collected a persistent identifier pursuant to ¬ß 312.5(c)(7); and the means the operator uses to ensure that such identifier is not used or disclosed to contact a specific individual, including through behavioral advertising, to amass a profile on a specific individual, or for any other purpose (except as specifically permitted to provide support for the internal operations of the website or online service)""))
+ref2 = Reference(sd3, ""¬ß 312.5(c)(7)"", target=rule4)
+rule4.add_follows(ref2)
+
+sd4 = Section(""(4)"")
+sd.add_subsection(sd4)
+rule4.description.includes.append(Expression(sd4, ""Where the operator collects audio files containing a child's voice pursuant to ¬ß 312.5(c)(9), a description of how the operator uses such audio files and that the operator deletes such audio files immediately after responding to the request for which they were collected""))
+ref3 = Reference(sd4, ""¬ß 312.5(c)(9)"", target=rule4)
+rule4.add_follows(ref3)
+
+sd5 = Section(""(5)"")
+sd.add_subsection(sd5)
+rule4.description.includes.append(Expression(sd5, ""If applicable, that the parent can review or have deleted the child's personal information, and refuse to permit further collection or use of the child's information, and state the procedures for doing so""))
+"
+"312.5 Parental consent.
+(a) General requirements.
+(1) An operator is required to obtain verifiable parental consent before any collection, use, or disclosure of personal information from children, including consent to any material change in the collection, use, or disclosure practices to which the parent has previously consented.
+(2) An operator must give the parent the option to consent to the collection and use of the child's personal information without consenting to disclosure of his or her personal information to third parties, unless such disclosure is integral to the website or online service. An operator required to give the parent this option must obtain separate verifiable parental consent to such disclosure.","s312_5 = Section(sectionNumber=""312.5"", sectionTitle=""Parental consent."")
+sa = Section(sectionNumber=""(a)"", sectionTitle=""General requirements."")
+s312_5.add_subsection(sa)
+
+sa1 = Section(sectionNumber=""(1)"")
+sa.add_subsection(sa1)
+r1 = Rule(sa1, Expression(sa1, ""An operator""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(sa1, ""is required to obtain verifiable parental consent before any collection, use, or disclosure of personal information from children, including consent to any material change in the collection, use, or disclosure practices to which the parent has previously consented."")
+
+sa2 = Section(sectionNumber=""(2)"")
+sa.add_subsection(sa2)
+r2 = Rule(sa2, Expression(sa2, ""An operator""))
+r2.rule_type = Rule.OBLIGATION
+r2.description = Expression(sa2, ""must give the parent the option to consent to the collection and use of the child's personal information without consenting to disclosure of his or her personal information to third parties, unless such disclosure is integral to the website or online service."")
+r2.add_refines(r1)
+
+r3=Rule(sa2, Expression(sa2, ""An operator""))
+r3.rule_type=Rule.OBLIGATION
+r3.description=Expression(sa2, ""must obtain separate verifiable parental consent to such disclosure"")
+r3.add_refines(r2)"
+"(b) Methods for verifiable parental consent.
+(1) An operator must make reasonable efforts to obtain verifiable parental consent, taking into consideration available technology. Any method to obtain verifiable parental consent must be reasonably calculated, in light of available technology, to ensure that the person providing consent is the child's parent.","
+sb = Section(sectionNumber=""(b)"", sectionTitle=""Methods for verifiable parental consent."")
+sb1 = Section(""(1)"")
+sb.add_subsection(sb1)
+
+r1 = Rule(sb1, Expression(sb1, ""An operator""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(sb1, ""must make reasonable efforts to obtain verifiable parental consent, taking into consideration available technology."")
+
+r2 = Rule(sb1, Expression(sb1, ""Any method to obtain verifiable parental consent""))
+r2.rule_type = Rule.OBLIGATION
+r2.description = Expression(sb1, ""must be reasonably calculated, in light of available technology, to ensure that the person providing consent is the child's parent."")
+r2.add_refines(r1)"
+"(2) Existing methods to obtain verifiable parental consent that satisfy the requirements of this paragraph include:
+(i) Providing a consent form to be signed by the parent and returned to the operator by postal mail, facsimile, or electronic scan;
+(ii) Requiring a parent, in connection with a transaction, to use a credit card, debit card, or other online payment system that provides notification of each discrete transaction to the primary account holder;
+(iii) Having a parent call a toll-free telephone number staffed by trained personnel;
+(iv) Having a parent connect to trained personnel via video-conference;
+(v) Verifying a parent's identity by checking a form of government-issued identification against databases of such information, where the parent's identification is deleted by the operator from its records promptly after such verification is complete;
+(vi) Verifying a parent's identity using knowledge-based authentication provided:
+(A) the verification process uses dynamic, multiple-choice questions, where there are a reasonable number of questions with an adequate number of possible answers such that the probability of correctly guessing the answers is low; and
+(B) the questions are of sufficient difficulty that a child age 12 or younger in the parent's household could not reasonably ascertain the answers;
+(vii) Having a parent submit a government-issued photographic identification that is verified to be authentic and is compared against an image of the parent's face taken with a phone camera or webcam using facial recognition technology and confirmed by personnel trained to confirm that the photos match; provided that the parent's identification and images are promptly deleted by the operator from its records after the match is confirmed; or
+(viii) Provided that, an operator that does not “disclose” (as defined by§ 312.2) children's personal information, may use an email coupled with additional steps to provide assurances that the person providing the consent is the parent. Such additional steps include: Sending a confirmatory email to the parent following receipt of consent, or obtaining a postal address or telephone number from the parent and confirming the parent's consent by letter or telephone call. An operator that uses this method must provide notice that the parent can revoke any consent given in response to the earlier email.
+(ix) Provided that, an operator that does not “disclose” (as defined by§ 312.2) children's personal information, may use a text message coupled with additional steps to provide assurances that the person providing the consent is the parent. Such additional steps include: Sending a confirmatory text message to the parent following receipt of consent, or obtaining a postal address or telephone number from the parent and confirming the parent's consent by letter or telephone call. An operator that uses this method must provide notice that the parent can revoke any consent given in response to the earlier text message.","s2 = Section(""(2)"")
+
+r1 = Rule(s2, Expression(s2, ""Existing methods to obtain verifiable parental consent""))
+r1.rule_type = Rule.PERMISSION
+r1.description = Expression(s2, ""include:"")
+
+s2_i = Section(""(i)"")
+s2.add_subsection(s2_i)
+expression1 = Expression(s2_i, ""Providing a consent form to be signed by the parent and returned to the operator by postal mail, facsimile, or electronic scan"")
+r1.description.includes.append(expression1)
+
+s2_ii = Section(""(ii)"")
+s2.add_subsection(s2_ii)
+expression2 = Expression(s2_ii, ""Requiring a parent, in connection with a transaction, to use a credit card, debit card, or other online payment system that provides notification of each discrete transaction to the primary account holder"")
+r1.description.includes.append(expression2)
+
+s2_iii = Section(""(iii)"")
+s2.add_subsection(s2_iii)
+expression3 = Expression(s2_iii, ""Having a parent call a toll-free telephone number staffed by trained personnel"")
+r1.description.includes.append(expression3)
+
+s2_iv = Section(""(iv)"")
+s2.add_subsection(s2_iv)
+expression4 = Expression(s2_iv, ""Having a parent connect to trained personnel via video-conference"")
+r1.description.includes.append(expression4)
+
+s2_v = Section(""(v)"")
+s2.add_subsection(s2_v)
+expression5 = Expression(s2_v, ""Verifying a parent's identity by checking a form of government-issued identification against databases of such information, where the parent's identification is deleted by the operator from its records promptly after such verification is complete"")
+r1.description.includes.append(expression5)
+
+s2_vi = Section(""(vi)"")
+s2.add_subsection(s2_vi)
+expression6 = Expression(s2_vi, ""Verifying a parent's identity using knowledge-based authentication provided:"")
+r1.description.includes.append(expression6)
+
+s2_viA = Section(""(A)"")
+s2_vi.add_subsection(s2_viA)
+expression7 = Expression(s2_viA, ""the verification process uses dynamic, multiple-choice questions, where there are a reasonable number of questions with an adequate number of possible answers such that the probability of correctly guessing the answers is low"")
+expression6.includes.append(expression7)
+
+s2_viB = Section(""(B)"")
+s2_vi.add_subsection(s2_viB)
+expression8 = Expression(s2_viB, ""the questions are of sufficient difficulty that a child age 12 or younger in the parent's household could not reasonably ascertain the answers"")
+expression6.includes.append(expression8)
+
+s2_vii = Section(""(vii)"")
+s2.add_subsection(s2_vii)
+expression9 = Expression(s2_vii, ""Having a parent submit a government-issued photographic identification that is verified to be authentic and is compared against an image of the parent's face taken with a phone camera or webcam using facial recognition technology and confirmed by personnel trained to confirm that the photos match; provided that the parent's identification and images are promptly deleted by the operator from its records after the match is confirmed"")
+r1.description.includes.append(expression9)
+
+s2_viii = Section(""(viii)"")
+s2.add_subsection(s2_viii)
+expression10 = Expression(s2_viii, ""Provided that, an operator that does not ‚Äúdisclose‚Äù (as defined by¬ß 312.2) children's personal information, may use an email coupled with additional steps to provide assurances that the person providing the consent is the parent. Such additional steps include: Sending a confirmatory email to the parent following receipt of consent, or obtaining a postal address or telephone number from the parent and confirming the parent's consent by letter or telephone call. An operator that uses this method must provide notice that the parent can revoke any consent given in response to the earlier email."")
+r1.description.includes.append(expression10)
+
+s2_ix = Section(""(ix)"")
+s2.add_subsection(s2_ix)
+expression11 = Expression(s2_ix, ""Provided that, an operator that does not ‚Äúdisclose‚Äù (as defined by¬ß 312.2) children's personal information, may use a text message coupled with additional steps to provide assurances that the person providing the consent is the parent. Such additional steps include: Sending a confirmatory text message to the parent following receipt of consent, or obtaining a postal address or telephone number from the parent and confirming the parent's consent by letter or telephone call. An operator that uses this method must provide notice that the parent can revoke any consent given in response to the earlier text message."")
+r1.description.includes.append(expression11)
+
+ref1 = Reference(s2_viii, ""¬ß 312.2"", r1)
+r1.add_is_refined_by(ref1)
+
+ref2 = Reference(s2_ix, ""¬ß 312.2"", r1)
+r1.add_is_refined_by(ref2)"
+(3) Safe harbor approval of parental consent methods.A safe harbor program approved by the Commission under§ 312.11may approve its member operators' use of a parental consent method not currently enumerated inparagraph (b)(2)of this section where the safe harbor program determines that such parental consent method meets the requirements ofparagraph (b)(1)of this section.,"
+s3 = Section(sectionNumber=""(3)"", sectionTitle=""Safe harbor approval of parental consent methods"")
+r1 = Rule(s3, Expression(s3, ""A safe harbor program approved by the Commission under ¬ß 312.11""))
+r1.rule_type = Rule.PERMISSION
+r1.description = Expression(s3, ""may approve its member operators' use of a parental consent method not currently enumerated in paragraph (b)(2) of this section"")
+ref1 = Reference(s3, ""¬ß 312.11"", target=r1)
+r1.add_follows(ref1)
+ref2 = Reference(s3, ""paragraph (b)(2) of this section"", target=r1)
+r1.add_is_refined_by(ref2)
+r1.conditions.append(Expression(s3, ""the safe harbor program determines that such parental consent method meets the requirements of paragraph (b)(1) of this section""))
+ref3 = Reference(s3, ""paragraph (b)(1) of this section"", target=r1)
+r1.add_follows(ref3)"
+"(c) Exceptions to prior parental consent.Verifiable parental consent is required prior to any collection, use, or disclosure of personal information from a child except as set forth in this paragraph:
+(1) Where the sole purpose of collecting the name or online contact information of the parent or child is to provide notice and obtain parental consent under§ 312.4(c)(1). If the operator has not obtained parental consent after a reasonable time from the date of the information collection, the operator must delete such information from its records;","s = Section(sectionNumber=""(c)"", sectionTitle=""Exceptions to prior parental consent."")
+r1 = Rule(s, Expression(s, ""Verifiable parental consent""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(s, ""is required prior to any collection, use, or disclosure of personal information from a child"")
+r1.conditions.append(Expression(s, ""except as set forth in this paragraph""))
+
+s1 = Section(sectionNumber=""(1)"")
+s.add_subsection(s1)
+exemption1=Exemption(s1, Expression(s1, ""Where the sole purpose of collecting the name or online contact information of the parent or child is to provide notice and obtain parental consent under¬ß 312.4(c)(1). If the operator has not obtained parental consent after a reasonable time from the date of the information collection, the operator must delete such information from its records;""))
+ref1 = Reference(s1, ""¬ß 312.4(c)(1)"", target=exemption1)
+exemption1.add_follows(ref1)
+exemption1.add_is_exception_to(r1)
+
+r3 = Rule(s1, Expression(s1, ""the operator""))
+r3.rule_type = Rule.OBLIGATION
+r3.description = Expression(s1, ""must delete such information from its records"")
+r3.conditions.append(Expression(s1, ""If the operator has not obtained parental consent after a reasonable time from the date of the information collection""))
+r3.add_refines(exemption1)"
+"(c) Exceptions to prior parental consent.Verifiable parental consent is required prior to any collection, use, or disclosure of personal information from a child except as set forth in this paragraph:
+(2) Where the purpose of collecting a parent's online contact information is to provide voluntary notice to, and subsequently update the parent about, the child's participation in a website or online service that does not otherwise collect, use, or disclose children's personal information. In such cases, the
+parent's online contact information may not be used or disclosed for any other purpose. In such cases, the operator must make reasonable efforts, taking into consideration available technology, to ensure that the parent receives notice as described in 312.4(c)(2);","sc = Section(""(c)"", sectionTitle=""Exceptions to prior parental consent"")
+
+r1 = Rule(sc, Expression(sc, ""Verifiable parental consent""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(sc, ""is required prior to any collection, use, or disclosure of personal information from a child"")
+r1.conditions.append(Expression(sc, ""except as set forth in this paragraph""))
+
+sc2 = Section(""(2)"")
+sc.add_subsection(sc2)
+
+exemption1=Exemption(sc2, Expression(sc2, ""Where the purpose of collecting a parent's online contact information is to provide voluntary notice to, and subsequently update the parent about, the child's participation in a website or online service that does not otherwise collect, use, or disclose children's personal information.""))
+exemption1.add_is_exception_to(r1)
+
+r3 = Rule(sc2, Expression(sc2, ""the parent's online contact information""))
+r3.rule_type = Rule.PROHIBITION
+r3.description = Expression(sc2, ""may not be used or disclosed for any other purpose"")
+r3.add_refines(exemption1)
+
+r4 = Rule(sc2, Expression(sc2, ""the operator""))
+r4.rule_type = Rule.OBLIGATION
+r4.description = Expression(sc2, ""must make reasonable efforts, taking into consideration available technology, to ensure that the parent receives notice as described in 312.4(c)(2)"")
+ref1 = Reference(sc2, ""312.4(c)(2)"", target=r4)
+r4.add_is_refined_by(ref1)"
+"(c) Exceptions to prior parental consent.Verifiable parental consent is required prior to any collection, use, or disclosure of personal information from a child except as set forth in this paragraph:
+(3) Where the sole purpose of collecting online contact information from a child is to respond directly on a one-time basis to a specific request from the child, and where such information is not used to re- contact the child or for any other purpose, is not disclosed, and is deleted by the operator from its records promptly after responding to the child's request;","
+s = Section(sectionNumber=""(c)"", sectionTitle=""Exceptions to prior parental consent."")
+
+r1 = Rule(s, Expression(s, ""Verifiable parental consent""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(s, ""is required prior to any collection, use, or disclosure of personal information from a child"")
+r1.conditions.append(Expression(s, ""except as set forth in this paragraph:""))
+
+s3 = Section(""(3)"")
+s.add_subsection(s3)
+
+exemption1=Exemption(s3, Expression(s3, ""Where the sole purpose of collecting online contact information from a child is to respond directly on a one-time basis to a specific request from the child, and where such information is not used to re- contact the child or for any other purpose, is not disclosed, and is deleted by the operator from its records promptly after responding to the child's request;""))
+exemption1.add_is_exception_to(r1)"
+"(c) Exceptions to prior parental consent.Verifiable parental consent is required prior to any collection, use, or disclosure of personal information from a child except as set forth in this paragraph:
+(4) Where the purpose of collecting a child's and a parent's online contact information is to respond directly more than once to the child's specific request, and where such information is not used for any other purpose, disclosed, or combined with any other information collected from the child. In such cases, the operator must make reasonable efforts, taking into consideration available technology, to ensure that the parent receives notice as described in§ 312.4(c)(3). An operator will not be deemed to have made reasonable efforts to ensure that a parent receives notice where the notice to the parent was unable to be delivered;","sc = Section(sectionNumber=""(c)"", sectionTitle=""Exceptions to prior parental consent"")
+
+r1 = Rule(sc, Expression(sc, ""Verifiable parental consent""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(sc, ""is required prior to any collection, use, or disclosure of personal information from a child"")
+r1.conditions.append(Expression(sc, ""except as set forth in this paragraph:""))
+
+s4 = Section(sectionNumber=""(4)"")
+sc.add_subsection(s4)
+
+exemption1=Exemption(s4, Expression(s4, ""Where the purpose of collecting a child's and a parent's online contact information is to respond directly more than once to the child's specific request, and where such information is not used for any other purpose, disclosed, or combined with any other information collected from the child""))
+exemption1.add_is_exception_to(r1)
+
+r3 = Rule(s4, Expression(s4, ""the operator""))
+r3.rule_type = Rule.OBLIGATION
+r3.description = Expression(s4, ""must make reasonable efforts, taking into consideration available technology, to ensure that the parent receives notice as described in ¬ß 312.4(c)(3)"")
+ref1 = Reference(s4, ""¬ß 312.4(c)(3)"", target=r3)
+r3.add_refines(exemption1)
+
+r4 = Rule(s4, Expression(s4, ""An operator""))
+r4.rule_type = Rule.PROHIBITION
+r4.description = Expression(s4, ""will not be deemed to have made reasonable efforts to ensure that a parent receives notice"")
+r4.conditions.append(Expression(s4, ""where the notice to the parent was unable to be delivered""))
+r4.add_is_exception_to(r3)"
+"(c) Exceptions to prior parental consent.Verifiable parental consent is required prior to any collection, use, or disclosure of personal information from a child except as set forth in this paragraph:
+(5) Where the purpose of collecting a child's and a parent's name and online contact information, is to protect the safety of a child, and where such information is not used or disclosed for any purpose unrelated to the child's safety. In such cases, the operator must make reasonable efforts, taking into consideration available technology, to provide a parent with notice as described in 312.4(c)(4);","
+sc = Section(sectionNumber=""(c)"", sectionTitle=""Exceptions to prior parental consent"")
+
+r1 = Rule(sc, Expression(sc, ""Verifiable parental consent""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(sc, ""is required prior to any collection, use, or disclosure of personal information from a child"")
+r1.conditions.append(Expression(sc, ""except as set forth in this paragraph""))
+
+sc5 = Section(""(5)"")
+sc.add_subsection(sc5)
+
+exemption1=Exemption(sc5, Expression(sc5, ""Where the purpose of collecting a child's and a parent's name and online contact information, is to protect the safety of a child, and where such information is not used or disclosed for any purpose unrelated to the child's safety""))
+exemption1.add_is_exception_to(r1)
+
+r2=Rule(sc5, Expression(sc5, "" the operator""))
+r2.rule_type=Rule.OBLIGATION
+r2.description=Expression(sc5, "" must make reasonable efforts, taking into consideration available technology, to provide a parent with notice as described in 312.4(c)(4)"")
+ref1 = Reference(sc5, ""312.4(c)(4)"", target=r2)
+r2.add_is_refined_by(ref1)
+r2.add_refines(exemption1)
+"
+"(c) Exceptions to prior parental consent.Verifiable parental consent is required prior to any collection, use, or disclosure of personal information from a child except as set forth in this paragraph:
+(6) Where the purpose of collecting a child's name and online contact information is to:
+(i) Protect the security or integrity of the website or online service;
+(ii) Take precautions against liability;
+(iii) Respond to judicial process; or
+(iv) To the extent permitted under other provisions of law, to provide information to law enforcement agencies or for an investigation on a matter related to public safety; and where such information is not used for any other purpose;","```python
+sc = Section(""(c)"", ""Exceptions to prior parental consent"")
+
+r1 = Rule(sc, Expression(sc, ""Verifiable parental consent""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(sc, ""is required prior to any collection, use, or disclosure of personal information from a child"")
+r1.conditions.append(Expression(sc, ""except as set forth in this paragraph:""))
+
+s6 = Section(""(6)"")
+sc.add_subsection(s6)
+
+exemption1=Exemption(sc, Expression(sc, ""Where the purpose of collecting a child's name and online contact information is to:""))
+r1.add_exception(exemption1)
+
+s6_i = Section(""(i)"")
+s6.add_subsection(s6_i)
+expression1 = Expression(s6_i, ""Protect the security or integrity of the website or online service"")
+exemption1.description.append(expression1)
+
+s6_ii = Section(""(ii)"")
+s6.add_subsection(s6_ii)
+expression2 = Expression(s6_ii, ""Take precautions against liability"")
+exemption1.description.append(expression2)
+
+s6_iii = Section(""(iii)"")
+s6.add_subsection(s6_iii)
+expression3 = Expression(s6_iii, ""Respond to judicial process"")
+exemption1.description.append(expression3)
+
+s6_iv = Section(""(iv)"")
+s6.add_subsection(s6_iv)
+expression4 = Expression(s6_iv, ""To the extent permitted under other provisions of law, to provide information to law enforcement agencies or for an investigation on a matter related to public safety; and where such information is not used for any other purpose"")
+exemption1.description.append(expression4)"
+"(c) Exceptions to prior parental consent.Verifiable parental consent is required prior to any collection, use, or disclosure of personal information from a child except as set forth in this paragraph:
+(7) Where an operator collects a persistent identifier and no other personal information and such identifier is used for the sole purpose of providing support for the internal operations of the website or online service. In such case, the operator shall provide notice under 312.4(d)(3);","
+sc = Section(""(c)"", ""Exceptions to prior parental consent."")
+
+rc = Rule(sc, Expression(sc, ""Verifiable parental consent""))
+rc.rule_type = Rule.OBLIGATION
+rc.description = Expression(sc, ""is required prior to any collection, use, or disclosure of personal information from a child"")
+rc.conditions.append(Expression(sc, ""except as set forth in this paragraph:""))
+
+s7 = Section(""(7)"")
+sc.add_subsection(s7)
+exemption1=Exemption(s7, Expression(s7, ""Where an operator collects a persistent identifier and no other personal information and such identifier is used for the sole purpose of providing support for the internal operations of the website or online service""))
+exemption1.add_is_exception_to(rc)
+
+r7_obligation = Rule(s7, Expression(s7, ""operator""))
+r7_obligation.rule_type = Rule.OBLIGATION
+r7_obligation.description = Expression(s7, ""shall provide notice under 312.4(d)(3)"")
+ref1 = Reference(s7, ""312.4(d)(3)"", target=r7_obligation)
+r7_obligation.add_follows(ref1)
+r7_obligation.add_refines(exemption1)"
+"(c) Exceptions to prior parental consent.Verifiable parental consent is required prior to any collection, use, or disclosure of personal information from a child except as set forth in this paragraph:
+(8) Where an operator covered under paragraph (2) of the definition ofwebsite or online service directed to children in§ 312.2collects a persistent identifier and no other personal information from a user who affirmatively interacts with the operator and whose previous registration with that operator indicates that such user is not a child. In such case, there also shall be no obligation to provide notice under 312.4; or","
+s = Section(sectionNumber=""(c)"", sectionTitle=""Exceptions to prior parental consent"")
+
+r1 = Rule(s, Expression(s, ""Verifiable parental consent""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(s, ""is required prior to any collection, use, or disclosure of personal information from a child except as set forth in this paragraph:"")
+
+s8 = Section(""(8)"")
+s.add_subsection(s8)
+
+exemption1=Exemption(s8, Expression(s8, ""Where an operator covered under paragraph (2) of the definition ofwebsite or online service directed to children in¬ß 312.2collects a persistent identifier and no other personal information from a user who affirmatively interacts with the operator and whose previous registration with that operator indicates that such user is not a child""))
+ref1 = Reference(s8, ""paragraph (2) of the definition of website or online service directed to children in ¬ß 312.2"", target=exemption1)
+exemption1.add_follows(ref1)
+exemption1.add_is_exception_to(r1)
+
+exemption2=Exemption(s8, Expression(s8, "" there also shall be no obligation to provide notice under 312.4;""))
+ref2 = Reference(s8, ""312.4"", target=exemption1)
+exemption2.add_is_exception_to(ref2)"
+"(c) Exceptions to prior parental consent.Verifiable parental consent is required prior to any collection, use, or
+disclosure of personal information from a child except as set forth in this paragraph:
+(9) Where an operator collects an audio file containing a child's voice, and no other personal information, for use in responding to a child's specific request and where the operator does not use such information for any other purpose, does not disclose it, and deletes it immediately after responding to the child's request. In such case, there also shall be no obligation to provide a direct notice, but notice shall be required under 312.4(d).","sc = Section(sectionNumber=""(c)"", sectionTitle=""Exceptions to prior parental consent"")
+
+r1 = Rule(sc, Expression(sc, ""Verifiable parental consent""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(sc, ""is required prior to any collection, use, or disclosure of personal information from a child"")
+r1.conditions.append(Expression(sc, ""except as set forth in this paragraph:""))
+
+s9 = Section(""(9)"")
+sc.add_subsection(s9)
+
+ex1 = Exemption(s9, Expression(s9, ""Where an operator collects an audio file containing a child's voice, and no other personal information, for use in responding to a child's specific request and where the operator does not use such information for any other purpose, does not disclose it, and deletes it immediately after responding to the child's request""))
+ex1.add_is_exception_to(r1)
+
+ex2=Exemption(s9, Expression(s9, ""In such case, there also shall be no obligation to provide a direct notice""))
+ex1.add_refines(ex2)
+
+r3=Rule(s9, Expression(s9, ""notice""))
+r3.rule_type=Rule.OBLIGATION
+r3.description=Expression(s9, "" shall be required under 312.4(d)"")
+ref1 = Reference(s9, ""312.4(d)"", target=r3)
+r3.add_follows(ref1)
+r3.add_is_exception_to(ex2)
+"
+"312.6 Right of parent to review personal information provided by a child.
+(a) Upon request of a parent whose child has provided personal information to a website or online service, the operator of that website or online service is required to provide to that parent the following:
+(1) A description of the specific types or categories of personal information collected from children by the operator, such as name, address, telephone number, email address, hobbies, and extracurricular activities;
+(2) The opportunity at any time to refuse to permit the operator's further use or future online collection of personal information from that child, and to direct the operator to delete the child's personal information; and
+(3) Notwithstanding any other provision of law, a means of reviewing any personal information collected from the child. The means employed by the operator to carry out this provision must:
+(i) Ensure that the requestor is a parent of that child, taking into account available technology; and
+(ii) Not be unduly burdensome to the parent.","s312_6 = Section(sectionNumber=""312.6"", sectionTitle=""Right of parent to review personal information provided by a child."")
+
+sa = Section(sectionNumber=""(a)"")
+s312_6.add_subsection(sa)
+
+r1 = Rule(sa, Expression(sa, ""the operator of that website or online service""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(sa, ""is required to provide to that parent the following:"")
+r1.conditions.append(Expression(sa, ""Upon request of a parent whose child has provided personal information to a website or online service""))
+
+sa1 = Section(sectionNumber=""(1)"")
+sa.add_subsection(sa1)
+r1.description.includes.append(Expression(sa1, ""A description of the specific types or categories of personal information collected from children by the operator, such as name, address, telephone number, email address, hobbies, and extracurricular activities""))
+
+sa2 = Section(sectionNumber=""(2)"")
+sa.add_subsection(sa2)
+r1.description.includes.append(Expression(sa2, ""The opportunity at any time to refuse to permit the operator's further use or future online collection of personal information from that child, and to direct the operator to delete the child's personal information""))
+
+sa3 = Section(sectionNumber=""(3)"")
+sa.add_subsection(sa3)
+
+r2 = Rule(sa3, Expression(sa3, ""a means of reviewing any personal information collected from the child""))
+r2.rule_type = Rule.OBLIGATION
+r2.description = Expression(sa3, ""The means employed by the operator to carry out this provision must:"")
+r2.conditions.append(Expression(sa3, ""Notwithstanding any other provision of law""))
+
+sa3i = Section(sectionNumber=""(i)"")
+sa3.add_subsection(sa3i)
+r2.description.includes.append(Expression(sa3i, ""Ensure that the requestor is a parent of that child, taking into account available technology""))
+
+sa3ii = Section(sectionNumber=""(ii)"")
+sa3.add_subsection(sa3ii)
+r2.description.includes.append(Expression(sa3ii, ""Not be unduly burdensome to the parent""))
+
+r2.add_is_exception_to(r1)"
+(b) Neither an operator nor the operator's agent shall be held liable under any Federal or State law for any disclosure made in good faith and following reasonable procedures in responding to a request for disclosure of personal information under this section.,"
+s_b = Section(""(b)"")
+exemption1=Exemption(s_b, Expression(s_b, ""Neither an operator nor the operator's agent shall be held liable under any Federal or State law for any disclosure made in good faith and following reasonable procedures in responding to a request for disclosure of personal information under this section.""))"
+"(c) Subject to the limitations set forth in§ 312.7, an operator may terminate any service provided to a child whose parent has refused, underparagraph (a)(2)of this section, to permit the operator's further use or collection of personal information from his or her child or has directed the operator to delete the child's personal information.","sc = Section(sectionNumber=""(c)"")
+r = Rule(sc, Expression(sc, ""an operator""))
+r.rule_type = Rule.PERMISSION
+r.description = Expression(sc, ""may terminate any service provided to a child"")
+r.conditions.append(Expression(sc, ""Subject to the limitations set forth in ¬ß 312.7""))
+ref1 = Reference(sc, ""¬ß 312.7"", target=r)
+r.add_follows(ref1)
+r.conditions.append(Expression(sc, ""whose parent has refused, under paragraph (a)(2) of this section, to permit the operator's further use or collection of personal information from his or her child or has directed the operator to delete the child's personal information""))
+ref2 = Reference(sc, ""paragraph (a)(2) of this section"", target=r)
+r.add_follows(ref2)"
+"312.7 Prohibition against conditioning a child's participation on collection of personal information.
+An operator is prohibited from conditioning a child's participation in a game, the offering of a prize, or another activity on the child's disclosing more personal information than is reasonably necessary to participate in such activity.","
+s = Section(sectionNumber=""312.7"", sectionTitle=""Prohibition against conditioning a child's participation on collection of personal information."")
+e = Expression(s, ""An operator"")
+r = Rule(s, e)
+r.rule_type = Rule.PROHIBITION
+r.description = Expression(s, ""is prohibited from conditioning a child's participation in a game, the offering of a prize, or another activity on the child's disclosing more personal information than is reasonably necessary to participate in such activity."")"
+"312.8 Confidentiality, security, and integrity of personal information collected from children.
+The operator must establish and maintain reasonable procedures to protect the confidentiality, security, and integrity of personal information collected from children.","s = Section(sectionNumber=""312.8"", sectionTitle=""Confidentiality, security, and integrity of personal information collected from children."")
+r_1 = Rule(s, Expression(s, ""The operator""))
+r_1.rule_type = Rule.OBLIGATION
+r_1.description = Expression(s, ""must establish and maintain reasonable procedures to protect the confidentiality, security, and integrity of personal information collected from children."")"
+"(b) At a minimum, the operator must establish, implement, and maintain a written information security program that contains safeguards that are appropriate to the sensitivity of the personal information collected from children and the operator's size, complexity, and nature and scope of activities. To satisfy this requirement, the operator must:
+(1) Designate one or more employees to coordinate the operator's information security program;
+(2) Identify and, at least annually, perform additional assessments to identify internal and external risks to the confidentiality, security, and integrity of personal information collected from children and the sufficiency of any safeguards in place to control such risks;
+(3) Design, implement, and maintain safeguards to control risks identified through the risk assessments required underparagraph (b)(2)of this section. Each safeguard must be based on the volume and sensitivity of the children's personal information that is at risk, and the likelihood that the risk could result in the unauthorized disclosure, misuse, alteration, destruction or other compromise of such information;
+(4) Regularly test and monitor the effectiveness of the safeguards in place to control risks identified through the risk assessments required underparagraph (b)(2)of this section; and
+(5) At least annually, evaluate and modify the information security program to address identified risks, results of required testing and monitoring, new or more efficient technological or operational methods to control for identified risks, or any other circumstances that an operator knows or has reason to know may have a material impact on its information security program or any safeguards in place to protect personal information collected from children.","sb = Section(sectionNumber=""(b)"")
+
+rule = Rule(sb, Expression(sb, ""the operator""))
+rule.rule_type = Rule.OBLIGATION
+rule.description = Expression(sb, ""must establish, implement, and maintain a written information security program that contains safeguards that are appropriate to the sensitivity of the personal information collected from children and the operator's size, complexity, and nature and scope of activities"")
+rule.conditions.append(Expression(sb, ""At a minimum""))
+
+r2=Rule(sb, Expression(sb, ""the operator""))
+r2.rule_type=Rule.OBLIGATION
+r2.description=Expression(sb, ""must:"")
+r2.add_refines(rule)
+
+s1 = Section(""(1)"")
+sb.add_subsection(s1)
+exp1 = Expression(s1, ""Designate one or more employees to coordinate the operator's information security program"")
+r2.description.includes.append(exp1)
+
+s2 = Section(""(2)"")
+sb.add_subsection(s2)
+exp2 = Expression(s2, ""Identify and, at least annually, perform additional assessments to identify internal and external risks to the confidentiality, security, and integrity of personal information collected from children and the sufficiency of any safeguards in place to control such risks"")
+r2.description.includes.append(exp2)
+
+s3 = Section(""(3)"")
+sb.add_subsection(s3)
+exp3 = Expression(s3, ""Design, implement, and maintain safeguards to control risks identified through the risk assessments required under paragraph (b)(2) of this section. Each safeguard must be based on the volume and sensitivity of the children's personal information that is at risk, and the likelihood that the risk could result in the unauthorized disclosure, misuse, alteration, destruction or other compromise of such information"")
+r2.description.includes.append(exp3)
+ref1 = Reference(s3, ""paragraph (b)(2) of this section"", target=exp2)
+r2.add_follows(ref1)
+
+s4 = Section(""(4)"")
+sb.add_subsection(s4)
+exp4 = Expression(s4, ""Regularly test and monitor the effectiveness of the safeguards in place to control risks identified through the risk assessments required under paragraph (b)(2) of this section"")
+r2.description.includes.append(exp4)
+ref2 = Reference(s4, ""paragraph (b)(2) of this section"", target=exp2)
+r2.add_follows(ref2)
+
+s5 = Section(""(5)"")
+sb.add_subsection(s5)
+exp5 = Expression(s5, ""At least annually, evaluate and modify the information security program to address identified risks, results of required testing and monitoring, new or more efficient technological or operational methods to control for identified risks, or any other circumstances that an operator knows or has reason to know may have a material impact on its information security program or any safeguards in place to protect personal information collected from children"")
+r2.description.includes.append(exp5)"
+"(c) Before allowing other operators, service providers, or third parties to collect or maintain personal information from children on the operator's behalf, or before releasing children's personal information to such entities, the operator must take reasonable steps to determine that such entities are capable of
+maintaining the confidentiality, security, and integrity of the information and must obtain written assurances that such entities will employ reasonable measures to maintain the confidentiality, security, and integrity of the information.","
+sc = Section(""(c)"")
+r = Rule(sc, Expression(sc, ""the operator""))
+r.rule_type = Rule.OBLIGATION
+r.description = Expression(sc, ""must take reasonable steps to determine that such entities are capable of maintaining the confidentiality, security, and integrity of the information and must obtain written assurances that such entities will employ reasonable measures to maintain the confidentiality, security, and integrity of the information"")
+r.conditions.append(Expression(sc, ""Before allowing other operators, service providers, or third parties to collect or maintain personal information from children on the operator's behalf""))
+r.conditions.append(Expression(sc, ""before releasing children's personal information to such entities""))"
+"312.9 Enforcement.
+Subject to sections 6503 and 6505 of the Children's Online Privacy Protection Act of 1998, a violation of a regulation prescribed under section 6502(a) of this Act shall be treated as a violation of a rule defining an unfair or deceptive act or practice prescribed under section 18(a)(1)(B) of the Federal Trade Commission Act (15 U.S.C. 57a(a)(1)(B)).","
+s = Section(sectionNumber=""312.9"", sectionTitle=""Enforcement."")
+
+r1 = Rule(s, Expression(s, ""a violation of a regulation prescribed under section 6502(a) of this Act""))
+r1.rule_type = Rule.PENALTY
+r1.conditions.append(Expression(s, ""Subject to sections 6503 and 6505 of the Children's Online Privacy Protection Act of 1998""))
+r1.description = Expression(s, ""shall be treated as a violation of a rule defining an unfair or deceptive act or practice prescribed under section 18(a)(1)(B) of the Federal Trade Commission Act (15 U.S.C. 57a(a)(1)(B))"")
+
+ref1 = Reference(s, ""section 6502(a) of this Act"", target=r1)
+r1.add_follows(ref1)
+
+ref2 = Reference(s, ""sections 6503 and 6505 of the Children's Online Privacy Protection Act of 1998"", target=r1)
+r1.add_follows(ref2)
+
+ref3 = Reference(s, ""section 18(a)(1)(B) of the Federal Trade Commission Act (15 U.S.C. 57a(a)(1)(B))"", target=r1)
+r1.add_is_refined_by(ref3)"
+"312.10 Data retention and deletion requirements.
+An operator of a website or online service shall retain personal information collected online from a child for only as long as is reasonably necessary to fulfill the specific purpose(s) for which the information was collected. When such information is no longer reasonably necessary for the purposes for which it was collected, the operator must delete the information using reasonable measures to protect against unauthorized access to, or use of, the information in connection with its deletion. Personal information collected online from a child may not be retained indefinitely. At a minimum, the operator must establish, implement, and maintain a written data retention policy that sets forth the purposes for which children's personal information is collected, the business need for retaining such information, and a timeframe for deletion of such information. The operator must provide its written data retention policy addressing personal information collected from children in the notice on the website or online service provided in accordance with§ 312.4(d).","s = Section(sectionNumber=""312.10"", sectionTitle=""Data retention and deletion requirements"")
+
+r1 = Rule(s, Expression(s, ""An operator of a website or online service""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(s, ""shall retain personal information collected online from a child for only as long as is reasonably necessary to fulfill the specific purpose(s) for which the information was collected"")
+
+r2 = Rule(s, Expression(s, ""the operator""))
+r2.rule_type = Rule.OBLIGATION
+r2.conditions.append(Expression(s, ""When such information is no longer reasonably necessary for the purposes for which it was collected""))
+r2.description = Expression(s, ""must delete the information using reasonable measures to protect against unauthorized access to, or use of, the information in connection with its deletion"")
+r2.add_follows(r1)
+
+r3 = Rule(s, Expression(s, ""Personal information collected online from a child""))
+r3.rule_type = Rule.PROHIBITION
+r3.description = Expression(s, ""may not be retained indefinitely"")
+r3.add_refines(r1)
+
+r4 = Rule(s, Expression(s, ""the operator""))
+r4.rule_type = Rule.OBLIGATION
+r4.description = Expression(s, ""must establish, implement, and maintain a written data retention policy that sets forth the purposes for which children's personal information is collected, the business need for retaining such information, and a timeframe for deletion of such information"")
+r4.conditions.append(Expression(s, ""At a minimum""))
+r4.add_follows(r1)
+
+r5 = Rule(s, Expression(s, ""The operator""))
+r5.rule_type = Rule.OBLIGATION
+r5.description = Expression(s, ""must provide its written data retention policy addressing personal information collected from children in the notice on the website or online service provided in accordance with ¬ß 312.4(d)"")
+ref1 = Reference(s, ""¬ß 312.4(d)"", target=r5)
+r5.add_follows(ref1)
+r5.add_refines(r4)"
+"312.11 Safe harbor programs.
+(a) In general.Industry groups or other persons may apply to the Commission for approval of self-regulatory program guidelines (“safe harbor programs”). The application shall be filed with the Commission's Office of the Secretary. The Commission will publish in theFEDERAL REGISTERa document seeking public comment on the application. The Commission shall issue a written determination within 180 days of the filing of the application.","
+s312_11 = Section(sectionNumber=""312.11"", sectionTitle=""Safe harbor programs"")
+s312_11a = Section(""(a)"", sectionTitle=""In general"")
+s312_11.add_subsection(s312_11a)
+
+r1 = Rule(s312_11a, Expression(s312_11a, ""Industry groups or other persons""))
+r1.rule_type = Rule.PERMISSION
+r1.description = Expression(s312_11a, ""may apply to the Commission for approval of self-regulatory program guidelines (‚Äúsafe harbor programs‚Äù)."")
+
+r2 = Rule(s312_11a, Expression(s312_11a, ""The application""))
+r2.rule_type = Rule.OBLIGATION
+r2.description = Expression(s312_11a, ""shall be filed with the Commission's Office of the Secretary."")
+r2.add_follows(r1)
+
+r3 = Rule(s312_11a, Expression(s312_11a, ""The Commission""))
+r3.rule_type = Rule.OBLIGATION
+r3.description = Expression(s312_11a, ""will publish in the FEDERAL REGISTER a document seeking public comment on the application."")
+r3.add_follows(r2)
+
+r4 = Rule(s312_11a, Expression(s312_11a, ""The Commission""))
+r4.rule_type = Rule.OBLIGATION
+r4.description = Expression(s312_11a, ""shall issue a written determination within 180 days of the filing of the application."")
+r4.add_follows(r3)"
+"(b) Criteria for approval of self-regulatory program guidelines.Proposed safe harbor programs must demonstrate that they meet the following performance standards:
+(1) Program requirements that ensure operators subject to the self-regulatory program guidelines (“subject operators”) provide substantially the same or greater protections for children as those contained in§§ 312.2through312.8, and312.10.
+(2) An effective, mandatory mechanism for the independent assessment of subject operators' compliance with the self-regulatory program guidelines. At a minimum, this mechanism must include a comprehensive review by the safe harbor program, to be conducted not less than annually, of each subject operator's information privacy and security policies, practices, and representations.
+The assessment mechanism required under this paragraph can be provided by an independent enforcement program, such as a seal program.
+(3) Disciplinary actions for subject operators' non-compliance with self-regulatory program guidelines. This performance standard may be satisfied by:
+(i) Mandatory, public reporting of any action taken against subject operators by the industry group issuing the self-regulatory guidelines;
+(ii) Consumer redress;
+(iii) Voluntary payments to the United States Treasury in connection with an industry-directed program for violators of the self-regulatory guidelines;
+(iv) Referral to the Commission of operators who engage in a pattern or practice of violating the self-regulatory guidelines; or
+(v) Any other equally effective action.","sb = Section(sectionNumber=""(b)"", sectionTitle=""Criteria for approval of self-regulatory program guidelines"")
+
+r1 = Rule(sb, Expression(sb, ""Proposed safe harbor programs""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(sb, ""must demonstrate that they meet the following performance standards:"")
+
+s1 = Section(""(1)"")
+sb.add_subsection(s1)
+e1 = Expression(s1, ""Program requirements that ensure operators subject to the self-regulatory program guidelines (‚Äúsubject operators‚Äù) provide substantially the same or greater protections for children as those contained in ¬ß¬ß 312.2 through 312.8, and 312.10."")
+r1.description.includes.append(e1)
+ref1 = Reference(s1, ""¬ß¬ß 312.2 through 312.8, and 312.10"", target=r1)
+r1.add_follows(ref1)
+
+s2 = Section(""(2)"")
+sb.add_subsection(s2)
+e2 = Expression(s2, ""An effective, mandatory mechanism for the independent assessment of subject operators' compliance with the self-regulatory program guidelines."")
+r1.description.includes.append(e2)
+
+r2=Rule(s2, Expression(s2, ""this mechanism""))
+r2.rule_type=Rule.OBLIGATION
+r2.description=Expression(s2, ""must include a comprehensive review by the safe harbor program, to be conducted not less than annually, of each subject operator's information privacy and security policies, practices, and representations."")
+r2.conditions.append(Expression(s2, ""At a minimum""))
+r2.add_refines(r1)
+
+r3=Rule(s2, Expression(s2, ""The assessment mechanism required under this paragraph""))
+r3.rule_type=Rule.PERMISSION
+r3.description=Expression(s2, ""can be provided by an independent enforcement program, such as a seal program."")
+r3.add_refines(r1)
+
+s3 = Section(""(3)"")
+sb.add_subsection(s3)
+e4 = Expression(s3, ""Disciplinary actions for subject operators' non-compliance with self-regulatory program guidelines."")
+r1.description.includes.append(e4)
+
+r4=Rule(s3, Expression(s3, ""This performance standard""))
+r4.rule_type=Rule.PERMISSION
+r4.description=Expression(s3, ""may be satisfied by:"")
+r4.add_refines(r1)
+
+s3i = Section(""(i)"")
+s3.add_subsection(s3i)
+e5 = Expression(s3i, ""Mandatory, public reporting of any action taken against subject operators by the industry group issuing the self-regulatory guidelines"")
+r4.description.includes.append(e5)
+
+s3ii = Section(""(ii)"")
+s3.add_subsection(s3ii)
+e6 = Expression(s3ii, ""Consumer redress"")
+r4.description.includes.append(e6)
+
+s3iii = Section(""(iii)"")
+s3.add_subsection(s3iii)
+e7 = Expression(s3iii, ""Voluntary payments to the United States Treasury in connection with an industry-directed program for violators of the self-regulatory guidelines"")
+r4.description.includes.append(e7)
+
+s3iv = Section(""(iv)"")
+s3.add_subsection(s3iv)
+e8 = Expression(s3iv, ""Referral to the Commission of operators who engage in a pattern or practice of violating the self-regulatory guidelines"")
+r4.description.includes.append(e8)
+
+s3v = Section(""(v)"")
+s3.add_subsection(s3v)
+e9 = Expression(s3v, ""Any other equally effective action"")
+r4.description.includes.append(e9)"
+"(c) Request for Commission approval of self-regulatory program guidelines.A proposed safe harbor program's request for approval shall be accompanied by the following:
+(1) A detailed explanation of the applicant's business model, and the technological capabilities and mechanisms that will be used for initial and continuing assessment of subject operators' fitness for membership in the safe harbor program;
+(2) A copy of the full text of the guidelines for which approval is sought and any accompanying commentary;
+(3) A comparison of each provision of§§ 312.2through312.8, and312.10with the corresponding provisions of the guidelines; and
+(4) A statement explaining:
+(i) How the self-regulatory program guidelines, including the applicable assessment mechanisms, meet the requirements of this part; and
+(ii) How the assessment mechanisms and compliance consequences required underparagraphs (b)(2)and(b)(3)of this section provide effective enforcement of the requirements of this part.","sc = Section(""(c)"")
+
+r1 = Rule(sc, Expression(sc, ""Request for Commission approval of self-regulatory program guidelines""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(sc, ""A proposed safe harbor program's request for approval shall be accompanied by the following:"")
+
+sc1 = Section(""(1)"")
+sc.add_subsection(sc1)
+r1.description.includes.append(Expression(sc1, ""A detailed explanation of the applicant's business model, and the technological capabilities and mechanisms that will be used for initial and continuing assessment of subject operators' fitness for membership in the safe harbor program""))
+
+sc2 = Section(""(2)"")
+sc.add_subsection(sc2)
+r1.description.includes.append(Expression(sc2, ""A copy of the full text of the guidelines for which approval is sought and any accompanying commentary""))
+
+sc3 = Section(""(3)"")
+sc.add_subsection(sc3)
+r1.description.includes.append(Expression(sc3, ""A comparison of each provision of ¬ß¬ß 312.2 through 312.8, and 312.10 with the corresponding provisions of the guidelines""))
+ref1 = Reference(sc3, ""¬ß¬ß 312.2 through 312.8, and 312.10"", target=r1)
+r1.add_refines(ref1)
+
+sc4 = Section(""(4)"")
+sc.add_subsection(sc4)
+exp=Expression(sc4, ""A statement explaining:"")
+r1.description.includes.append(exp)
+
+sc4i = Section(""(i)"")
+sc4.add_subsection(sc4i)
+exp.includes.append(Expression(sc4i, ""How the self-regulatory program guidelines, including the applicable assessment mechanisms, meet the requirements of this part""))
+
+sc4ii = Section(""(ii)"")
+sc4.add_subsection(sc4ii)
+exp.includes.append(Expression(sc4ii, ""How the assessment mechanisms and compliance consequences required under paragraphs (b)(2) and (b)(3) of this section provide effective enforcement of the requirements of this part""))
+ref2 = Reference(sc4ii, ""paragraphs (b)(2) and (b)(3) of this section"", target=r1)
+r1.add_refines(ref2)"
+"(d) Reporting and recordkeeping requirements.Approved safe harbor programs shall:
+(1) By October 22, 2025, and annually thereafter, submit a report to the Commission that identifies each subject operator and all approved websites or online services, as well as any subject operators thathave left the safe harbor program. The report must also contain, at a minimum:
+(i) a narrative description of the safe harbor program's business model, including whether it provides additional services such as training to subject operators;
+(ii) copies of each consumer complaint related to each subject operator's violation of a safe harbor program's guidelines;
+(iii) an aggregated summary of the results of the independent assessments conducted under paragraph (b)(2)of this section;
+(iv) a description of each disciplinary action taken against any subject operator underparagraph (b)(3)of this section, as well as a description of the process for determining whether a subject operator is subject to discipline; and
+(v) a description of any approvals of member operators' use of a parental consent mechanism, pursuant to§ 312.5(b)(3);
+(2) Promptly respond to Commission requests for additional information;
+(3) Maintain for a period not less than three years, and upon request make available to the Commission for inspection and copying:
+(i) Consumer complaints alleging violations of the guidelines by subject operators;
+(ii) Records of disciplinary actions taken against subject operators; and
+(iii) Results of the independent assessments of subject operators' compliance required under paragraph (b)(2)of this section; and
+4) No later than July 21, 2025, publicly post on each of the approved safe harbor program's websites and online services a list of all current subject operators and, for each such operator, list each certified website or online service. Approved safe harbor programs shall update this list every six months thereafter to reflect any changes to the approved safe harbor programs' subject operators or their applicable websites and online services.","s = Section(sectionNumber=""(d)"", sectionTitle=""Reporting and recordkeeping requirements."")
+
+r1 = Rule(s, Expression(s, ""Approved safe harbor programs""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(s, ""shall"")
+
+s1 = Section(""(1)"")
+s.add_subsection(s1)
+r1.description.includes.append(Expression(s1, ""By October 22, 2025, and annually thereafter, submit a report to the Commission that identifies each subject operator and all approved websites or online services, as well as any subject operators that have left the safe harbor program""))
+
+r1_1 = Rule(s1, Expression(s1, ""The report""))
+r1_1.rule_type = Rule.OBLIGATION
+r1_1.description = Expression(s1, ""must also contain, at a minimum:"")
+
+s1_i = Section(""(i)"")
+s1.add_subsection(s1_i)
+e1 = Expression(s1_i, ""a narrative description of the safe harbor program's business model, including whether it provides additional services such as training to subject operators"")
+r1_1.description.includes.append(e1)
+
+s1_ii = Section(""(ii)"")
+s1.add_subsection(s1_ii)
+e2 = Expression(s1_ii, ""copies of each consumer complaint related to each subject operator's violation of a safe harbor program's guidelines"")
+r1_1.description.includes.append(e2)
+
+s1_iii = Section(""(iii)"")
+s1.add_subsection(s1_iii)
+e3 = Expression(s1_iii, ""an aggregated summary of the results of the independent assessments conducted under paragraph (b)(2) of this section"")
+r1_1.description.includes.append(e3)
+ref1 = Reference(s1_iii, ""paragraph (b)(2) of this section"", target=r1_1)
+r1_1.add_refines(ref1)
+
+s1_iv = Section(""(iv)"")
+s1.add_subsection(s1_iv)
+e4 = Expression(s1_iv, ""a description of each disciplinary action taken against any subject operator under paragraph (b)(3) of this section, as well as a description of the process for determining whether a subject operator is subject to discipline"")
+r1_1.description.includes.append(e4)
+ref2 = Reference(s1_iv, ""paragraph (b)(3) of this section"", target=r1_1)
+r1_1.add_refines(ref2)
+
+s1_v = Section(""(v)"")
+s1.add_subsection(s1_v)
+e5 = Expression(s1_v, ""a description of any approvals of member operators' use of a parental consent mechanism, pursuant to ¬ß 312.5(b)(3)"")
+r1_1.description.includes.append(e5)
+ref3 = Reference(s1_v, ""¬ß 312.5(b)(3)"", target=r1_1)
+r1_1.add_refines(ref3)
+
+s2 = Section(""(2)"")
+s.add_subsection(s2)
+r1.description.includes.append(Expression(s2, ""Promptly respond to Commission requests for additional information""))
+
+s3 = Section(""(3)"")
+s.add_subsection(s3)
+exp=Expression(s3, ""Maintain for a period not less than three years, and upon request make available to the Commission for inspection and copying:"")
+r1.description.includes.append(exp)
+
+s3_i = Section(""(i)"")
+s3.add_subsection(s3_i)
+e6 = Expression(s3_i, ""Consumer complaints alleging violations of the guidelines by subject operators"")
+exp.includes.append(e6)
+
+s3_ii = Section(""(ii)"")
+s3.add_subsection(s3_ii)
+e7 = Expression(s3_ii, ""Records of disciplinary actions taken against subject operators"")
+exp.includes.append(e7)
+
+s3_iii = Section(""(iii)"")
+s3.add_subsection(s3_iii)
+e8 = Expression(s3_iii, ""Results of the independent assessments of subject operators' compliance required under paragraph (b)(2) of this section"")
+exp.includes.append(e8)
+ref4 = Reference(s3_iii, ""paragraph (b)(2) of this section"", target=r1)
+r1.add_refines(ref4)
+
+s4 = Section(""(4)"")
+s.add_subsection(s4)
+r1.description.includes.append(Expression(s4, ""No later than July 21, 2025, publicly post on each of the approved safe harbor program's websites and online services a list of all current subject operators and, for each such operator, list each certified website or online service.""))
+
+r2=Rule(s4, Expression(s4, ""Approved safe harbor programs ""))
+r2.rule_type=Rule.OBLIGATION
+r2.description=Expression(s4, ""shall update this list every six months thereafter to reflect any changes to the approved safe harbor programs' subject operators or their applicable websites and online services."")
+r2.add_follows(r1)"
+(e) Post-approval modifications to self-regulatory program guidelines.Approved safe harbor programs must submit proposed changes to their guidelines for review and approval by the Commission in the manner required for initial approval of guidelines underparagraph (c)(2)of this section. The statement required underparagraph (c)(4)of this section must describe how the proposed changes affect existing provisions of the guidelines.,"se = Section(sectionNumber=""(e)"", sectionTitle=""Post-approval modifications to self-regulatory program guidelines."")
+
+r1 = Rule(se, Expression(se, ""Approved safe harbor programs""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(se, ""must submit proposed changes to their guidelines for review and approval by the Commission in the manner required for initial approval of guidelines under paragraph (c)(2) of this section."")
+ref1 = Reference(se, ""paragraph (c)(2) of this section"", target=r1)
+r1.add_follows(ref1)
+
+r2 = Rule(se, Expression(se, ""The statement required under paragraph (c)(4) of this section""))
+r2.rule_type = Rule.OBLIGATION
+r2.description = Expression(se, ""must describe how the proposed changes affect existing provisions of the guidelines."")
+ref2 = Reference(se, ""paragraph (c)(4) of this section"", target=r2)
+r2.add_follows(ref2)"
+"(f) Review of self-regulatory program guidelines.No later than April 22, 2028, and every three years thereafter, approved safe harbor programs shall submit to the Commission a report detailing the safe harbor program's technological capabilities and mechanisms for assessing subject operators' fitness for membership in the safe harbor program.","s = Section(sectionNumber=""(f)"", sectionTitle=""Review of self-regulatory program guidelines"")
+
+r1 = Rule(s, Expression(s, ""approved safe harbor programs""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(s, ""shall submit to the Commission a report detailing the safe harbor program's technological capabilities and mechanisms for assessing subject operators' fitness for membership in the safe harbor program"")
+r1.conditions.append(Expression(s, ""No later than April 22, 2028, and every three years thereafter""))"
+"(g) Revocation of approval of self-regulatory program guidelines.The Commission reserves the right to revoke any approval granted under this section if at any time it determines that the approved self-regulatory program guidelines or their implementation do not meet the requirements of this part. Safe harbor programs shall, by October 22, 2025, submit proposed modifications to their guidelines.","s = Section(sectionNumber=""(g)"", sectionTitle=""Revocation of approval of self-regulatory program guidelines"")
+
+r1 = Rule(s, Expression(s, ""The Commission""))
+r1.rule_type = Rule.PERMISSION
+r1.description = Expression(s, ""reserves the right to revoke any approval granted under this section"")
+r1.conditions.append(Expression(s, ""if at any time it determines that the approved self-regulatory program guidelines or their implementation do not meet the requirements of this part""))
+
+r2 = Rule(s, Expression(s, ""Safe harbor programs""))
+r2.rule_type = Rule.OBLIGATION
+r2.description = Expression(s, ""shall submit proposed modifications to their guidelines"")
+r2.conditions.append(Expression(s, ""by October 22, 2025""))
+r2.add_follows(r1)"
+"(h) Operators' participation in a safe harbor program.An operator will be deemed to be in compliance with the requirements of§§ 312.2through312.8, and312.10if that operator complies with Commission-approved safe harbor program guidelines. In considering whether to initiate an investigation or bring an enforcement action against a subject operator for violations of this part, the Commission will take into account the history of the subject operator's participation in the safe harbor program, whether the subject operator has taken action to remedy such non-compliance, and whether the operator's non-compliance resulted in any one of the disciplinary actions set forth inparagraph (b)(3)of this section. [78 FR 4008, Jan. 17, 2013, as amended at78 FR 76986, Dec. 20, 2013]","sh = Section(sectionNumber=""(h)"", sectionTitle=""Operators' participation in a safe harbor program"")
+
+r1 = Rule(sh, Expression(sh, ""An operator""))
+r1.rule_type = Rule.PERMISSION
+r1.description = Expression(sh, ""will be deemed to be in compliance with the requirements of ¬ß¬ß 312.2 through 312.8, and 312.10"")
+r1.conditions.append(Expression(sh, ""if that operator complies with Commission-approved safe harbor program guidelines""))
+ref1 = Reference(sh, ""¬ß¬ß 312.2 through 312.8, and 312.10"", target=r1)
+r1.add_follows(ref1)
+
+r2 = Rule(sh, Expression(sh, ""the Commission""))
+r2.rule_type = Rule.PERMISSION
+r2.description = Expression(sh, ""will take into account the history of the subject operator's participation in the safe harbor program"")
+r2.conditions.append(Expression(sh, ""In considering whether to initiate an investigation or bring an enforcement action against a subject operator for violations of this part""))
+r2.conditions.append(Expression(sh, ""whether the subject operator has taken action to remedy such non-compliance""))
+r2.conditions.append(Expression(sh, ""whether the operator's non-compliance resulted in any one of the disciplinary actions set forth in paragraph (b)(3) of this section""))
+ref2 = Reference(sh, ""paragraph (b)(3) of this section"", target=r2)
+r2.add_follows(ref2)"
+"312.12 Voluntary Commission approval processes.
+(a) Parental consent methods.An interested party may file a written request for Commission approval of parental consent methods not currently enumerated in§ 312.5(b). To be considered for approval, a party must provide a detailed description of the proposed parental consent methods, together with an analysis of how the methods meet§ 312.5(b)(1). The request shall be filed with the Commission's Office of the Secretary. The Commission will publish in theFEDERAL REGISTERa document seeking public comment on the request. The Commission shall issue a written determination within 120 days of the filing of the request.","s = Section(sectionNumber=""312.12"", sectionTitle=""Voluntary Commission approval processes"")
+s_a = Section(""(a)"", sectionTitle=""Parental consent methods"")
+s.add_subsection(s_a)
+
+r1 = Rule(s_a, Expression(s_a, ""An interested party""))
+r1.rule_type = Rule.PERMISSION
+r1.description = Expression(s_a, ""may file a written request for Commission approval of parental consent methods not currently enumerated in ¬ß 312.5(b)."")
+ref1 = Reference(s_a, ""¬ß 312.5(b)"", target=r1)
+r1.add_follows(ref1)
+
+r2 = Rule(s_a, Expression(s_a, ""a party""))
+r2.conditions.append(Expression(s_a, ""To be considered for approval""))
+r2.rule_type = Rule.OBLIGATION
+r2.description = Expression(s_a, ""must provide a detailed description of the proposed parental consent methods, together with an analysis of how the methods meet ¬ß 312.5(b)(1)."")
+ref2 = Reference(s_a, ""¬ß 312.5(b)(1)"", target=r2)
+r2.add_refines(ref1)
+
+r3 = Rule(s_a, Expression(s_a, ""The request""))
+r3.rule_type = Rule.OBLIGATION
+r3.description = Expression(s_a, ""shall be filed with the Commission's Office of the Secretary."")
+r3.add_follows(r1)
+
+r4 = Rule(s_a, Expression(s_a, ""The Commission""))
+r4.rule_type = Rule.OBLIGATION
+r4.description = Expression(s_a, ""will publish in the FEDERAL REGISTER a document seeking public comment on the request."")
+r4.add_follows(r3)
+
+r5 = Rule(s_a, Expression(s_a, ""The Commission""))
+r5.rule_type = Rule.OBLIGATION
+r5.description = Expression(s_a, ""shall issue a written determination within 120 days of the filing of the request."")
+r5.add_follows(r4)"
+"(b) Support for the internal operations of the website or online service.An interested party may file a written request for Commission approval of additional activities to be included within the definition of support for the internal operations of the website or online service. To be considered for approval, a party must provide a detailed justification why such activities should be deemed support for the internal operations of the website or online service, and an analysis of their potential effects on children's online privacy. The request shall be filed with the Commission's Office of the Secretary. The Commission will publish in the FEDERAL REGISTERa document seeking public comment on the request. The Commission shall issue a written determination within 120 days of the filing of the request.","s = Section(sectionNumber=""(b)"", sectionTitle=""Support for the internal operations of the website or online service."")
+
+r1 = Rule(s, Expression(s, ""An interested party""))
+r1.rule_type = Rule.PERMISSION
+r1.description = Expression(s, ""may file a written request for Commission approval of additional activities to be included within the definition of support for the internal operations of the website or online service."")
+
+r2 = Rule(s, Expression(s, ""a party""))
+r2.rule_type = Rule.OBLIGATION
+r2.description = Expression(s, ""must provide a detailed justification why such activities should be deemed support for the internal operations of the website or online service, and an analysis of their potential effects on children's online privacy."")
+r2.conditions.append(Expression(s, ""To be considered for approval""))
+r2.add_follows(r1)
+
+r3 = Rule(s, Expression(s, ""The request""))
+r3.rule_type = Rule.OBLIGATION
+r3.description = Expression(s, ""shall be filed with the Commission's Office of the Secretary."")
+r3.add_follows(r2)
+
+r4 = Rule(s, Expression(s, ""The Commission""))
+r4.rule_type = Rule.OBLIGATION
+r4.description = Expression(s, ""will publish in the FEDERAL REGISTER a document seeking public comment on the request."")
+r4.add_follows(r3)
+
+r5 = Rule(s, Expression(s, ""The Commission""))
+r5.rule_type = Rule.OBLIGATION
+r5.description = Expression(s, ""shall issue a written determination within 120 days of the filing of the request."")
+r5.add_follows(r4)"
+"312.13 Severability.
+The provisions of this part are separate and severable from one another. If any provision is stayed or determined to be invalid, it is the Commission's intention that the remaining provisions shall continue in effect.","
+s = Section(sectionNumber=""312.13"", sectionTitle=""Severability"")
+i1 = Information(s, Expression(s, ""The provisions of this part are separate and severable from one another.""))
+
+c1 = Expression(s, ""If any provision is stayed or determined to be invalid"")
+r1 = Rule(s, Expression(s, ""it is the Commission's intention that the remaining provisions""))
+r1.rule_type = Rule.OBLIGATION
+r1.description = Expression(s, ""shall continue in effect"")
+r1.conditions.append(c1)"

@@ -1,6 +1,3 @@
-# This module provides functions to run code strings, serialize statements and references, and compare attribute values.
-
-# # Import necessary classes from the class_structure module
 from class_structure import Section, Expression, Statement, Information, Definition, Rule, Exemption, Reference
 from serialize import serialize_statement, serialize_reference
 from typing import List
@@ -9,15 +6,6 @@ def run_code_string(code_str: str) -> List[Section]:
     """
     Executes the given code string in a fresh namespace and
     returns a list of all Section objects created by that code.
-    This function is designed to run code that defines sections, expressions, statements,
-    information, definitions, rules, and exemptions.
-    Args:
-        code_str (str): The code string to execute.
-    Returns:
-        List[Section]: A list containing all Section objects created by the code.
-    Raises:
-        SyntaxError: If the code string has syntax errors.
-        Exception: If any other error occurs during execution.
     """
     try:
         namespace = {}
@@ -53,13 +41,6 @@ def run_code_string_references(code_str: str) -> List[Section]:
     """
     Executes the given code string in a fresh namespace and
     returns a list of all Reference objects created by that code.
-    Args:
-        code_str (str): The code string to execute.
-    Returns:
-        List[Section]: A list containing all Reference objects created by the code.
-    Raises:
-        SyntaxError: If the code string has syntax errors.
-        Exception: If any other error occurs during execution.
     """
     try:
         namespace = {}
@@ -84,17 +65,16 @@ def run_code_string_references(code_str: str) -> List[Section]:
     
 def compare_strings_with_threshold(s1, s2, threshold=10):
     """
-    Compare two strings using the edit distance algorithm.
-    The edit distance is the minimum number of operations (insertions, deletions, substitutions)
-    required to change one string into the other.
+    Compute the Levenshtein (edit) distance between two strings and compare it against a threshold.
+    
     Parameters:
-      s1 (str): First string to compare.
-      s2 (str): Second string to compare.
-      threshold (int): Edit distance threshold for string comparisons.
+      s1 (str): First string.
+      s2 (str): Second string.
+      threshold (int): Maximum allowable edit distance to consider the strings similar.
+    
     Returns:
-      tuple: A tuple containing:
-        - bool: True if the strings are considered similar (edit distance <= threshold), False otherwise.
-        - int: The actual edit distance between the two strings.
+      tuple: (bool, int) where the bool is True if the edit distance is <= threshold,
+             and the int is the computed edit distance.
     """
     m, n = len(s1), len(s2)
     dp = [[0]*(n+1) for _ in range(m+1)]
@@ -116,6 +96,7 @@ def compare_strings_with_threshold(s1, s2, threshold=10):
     edit_distance = dp[m][n]
     return (edit_distance <= threshold, edit_distance)
 
+# compare list of strings with threshold
 def compare_list_strings_with_threshold(list1, list2, threshold=10):
     """
     Compare two lists of strings using the edit distance.
@@ -314,16 +295,6 @@ def compare_serialized_references_lists(list1, list2, threshold=10):
 
 
 def test_information_description(self, gt_code, generated_code):
-    """
-    Test case to compare the information description of two code snippets.
-    Args:
-        gt_code (str): The ground truth code snippet.
-        generated_code (str): The generated code snippet to compare against the ground truth.
-    Returns:
-        tuple: A tuple containing two integers:
-            - First integer: 1 if the test passed, 0 if it failed.
-            - Second integer: 1 if the generated code has a true positive (TP), 0 if it has a true negative (TN), or 2 if it has no information description.
-    """
     try:
         count1=0
         count2=0
@@ -359,16 +330,6 @@ def test_information_description(self, gt_code, generated_code):
             return 0,2
     
 def test_definition_term(self, gt_code, generated_code):
-    """
-    Test case to compare the defined terms of two code snippets.
-    Args:
-        gt_code (str): The ground truth code snippet.
-        generated_code (str): The generated code snippet to compare against the ground truth.
-    Returns:
-        tuple: A tuple containing two integers:
-            - First integer: 1 if the test passed, 0 if it failed.
-            - Second integer: 1 if the generated code has a true positive (TP), 0 if it has a true negative (TN), or 2 if it has no defined terms.
-    """
     try:
         count1 = 0
         count2 = 0
@@ -418,15 +379,6 @@ def test_definition_term(self, gt_code, generated_code):
     
 
 def test_definition_meaning(self, gt_code, generated_code):
-    """ Test case to compare the meanings of defined terms in two code snippets.
-    Args:
-        gt_code (str): The ground truth code snippet.
-        generated_code (str): The generated code snippet to compare against the ground truth.
-    Returns:
-        tuple: A tuple containing two integers:
-            - First integer: 1 if the test passed, 0 if it failed.
-            - Second integer: 1 if the generated code has a true positive (TP), 0 if it has a true negative (TN), or 2 if it has no meanings.
-    """
     try:
         count1 = 0
         count2 = 0
@@ -476,15 +428,6 @@ def test_definition_meaning(self, gt_code, generated_code):
         return 0, 2      
     
 def test_definition_exclusions(self, gt_code, generated_code):
-    """ Test case to compare the exclusions of defined terms in two code snippets.
-    Args:
-        gt_code (str): The ground truth code snippet.
-        generated_code (str): The generated code snippet to compare against the ground truth.
-    Returns:
-        tuple: A tuple containing two integers:
-            - First integer: 1 if the test passed, 0 if it failed.
-            - Second integer: 1 if the generated code has a true positive (TP), 0 if it has a true negative (TN), or 2 if it has no exclusions.
-    """
     try:
         count1=0
         count2=0
@@ -519,15 +462,6 @@ def test_definition_exclusions(self, gt_code, generated_code):
         return 0, 2
     
 def test_rule_entity(self, gt_code, generated_code):
-    """ Test case to compare the rule entities of two code snippets.
-    Args:
-        gt_code (str): The ground truth code snippet.
-        generated_code (str): The generated code snippet to compare against the ground truth.
-    Returns:
-        tuple: A tuple containing two integers:
-            - First integer: 1 if the test passed, 0 if it failed.
-            - Second integer: 1 if the generated code has a true positive (TP), 0 if it has a true negative (TN), or 2 if it has no rule entities.
-    """
     try:
         count1=0
         count2=0
@@ -562,15 +496,6 @@ def test_rule_entity(self, gt_code, generated_code):
         return 0, 2
 
 def test_rule_type(self, gt_code, generated_code):
-    """ Test case to compare the rule types of two code snippets.
-    Args:
-        gt_code (str): The ground truth code snippet.
-        generated_code (str): The generated code snippet to compare against the ground truth.
-    Returns:
-        tuple: A tuple containing two integers:
-            - First integer: 1 if the test passed, 0 if it failed.
-            - Second integer: 1 if the generated code has a true positive (TP), 0 if it has a true negative (TN), or 2 if it has no rule types.
-    """
     try:
         count1=0
         count2=0
@@ -606,15 +531,6 @@ def test_rule_type(self, gt_code, generated_code):
         return 0, 2
     
 def test_rule_description(self, gt_code, generated_code):
-    """ Test case to compare the rule descriptions of two code snippets.
-    Args:
-        gt_code (str): The ground truth code snippet.
-        generated_code (str): The generated code snippet to compare against the ground truth.
-    Returns:
-        tuple: A tuple containing two integers:
-            - First integer: 1 if the test passed, 0 if it failed.
-            - Second integer: 1 if the generated code has a true positive (TP), 0 if it has a true negative (TN), or 2 if it has no rule descriptions.
-    """
     try:
         count1=0
         count2=0
@@ -650,15 +566,6 @@ def test_rule_description(self, gt_code, generated_code):
         return 0, 2
 
 def test_rule_conditions(self, gt_code, generated_code):
-    """ Test case to compare the rule conditions of two code snippets.
-    Args:
-        gt_code (str): The ground truth code snippet.
-        generated_code (str): The generated code snippet to compare against the ground truth.
-    Returns:
-        tuple: A tuple containing two integers:
-            - First integer: 1 if the test passed, 0 if it failed.
-            - Second integer: 1 if the generated code has a true positive (TP), 0 if it has a true negative (TN), or 2 if it has no rule conditions.
-    """
     try:
         count1=0
         count2=0
@@ -694,15 +601,6 @@ def test_rule_conditions(self, gt_code, generated_code):
         return 0, 2
 
 def test_exemption_description(self, gt_code, generated_code):
-    """ Test case to compare the exemption descriptions of two code snippets.
-    Args:
-        gt_code (str): The ground truth code snippet.
-        generated_code (str): The generated code snippet to compare against the ground truth.
-    Returns:
-        tuple: A tuple containing two integers:
-            - First integer: 1 if the test passed, 0 if it failed.
-            - Second integer: 1 if the generated code has a true positive (TP), 0 if it has a true negative (TN), or 2 if it has no exemption descriptions.
-    """
     try:
         count1=0
         count2=0
@@ -738,15 +636,6 @@ def test_exemption_description(self, gt_code, generated_code):
         return 0, 2
     
 def test_reference_relationship(self, gt_code, generated_code):
-    """ Test case to compare the reference relationships of two code snippets.
-    Args:
-        gt_code (str): The ground truth code snippet.
-        generated_code (str): The generated code snippet to compare against the ground truth.
-    Returns:
-        tuple: A tuple containing two integers:
-            - First integer: 1 if the test passed, 0 if it failed.
-            - Second integer: 1 if the generated code has a true positive (TP), 0 if it has a true negative (TN), or 2 if it has no references.
-    """
     try:
         count1=0
         count2=0
@@ -783,16 +672,6 @@ def test_reference_relationship(self, gt_code, generated_code):
         return 0, 2
 
 def test_statement_relationship(self, gt_code, generated_code, relation):
-    """ Test case to compare the statement relationships of two code snippets.
-    Args:
-        gt_code (str): The ground truth code snippet.
-        generated_code (str): The generated code snippet to compare against the ground truth.
-        relation (str): The relationship to compare (e.g., "refines", "is_a", etc.).
-    Returns:
-        tuple: A tuple containing two integers:
-            - First integer: 1 if the test passed, 0 if it failed.
-            - Second integer: 1 if the generated code has a true positive (TP), 0 if it has a true negative (TN), or 2 if it has no relationships.
-    """
     try:
         count1=0
         count2=0
